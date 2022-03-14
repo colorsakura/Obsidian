@@ -1,0 +1,14 @@
+{
+  "legacyEditor": false,
+  "showLineNumber": true,
+  "spellcheck": false,
+  "trashOption": "local",
+  "alwaysUpdateLinks": true,
+  "vimMode": false,
+  "spellcheckLanguages": [
+    "zh-CN",
+    "en-US"
+  ],
+  "livePreview": false,
+  "showUnsupportedFiles": true
+}

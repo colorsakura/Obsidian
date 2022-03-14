@@ -1,0 +1,144 @@
+{
+  "main": {
+    "id": "04745fe36b4f3aa6",
+    "type": "split",
+    "children": [
+      {
+        "id": "2b4dbc058993a4c1",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "tools/tmux.md",
+            "mode": "source",
+            "source": true
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "ed4e21ec05f47029",
+    "type": "split",
+    "children": [
+      {
+        "id": "84a5da59e277235e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "187d93dc811889a3",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "79f32a3fb0d7f51c",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "0322412a73a85ce0",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 158
+  },
+  "right": {
+    "id": "666143042e79164b",
+    "type": "split",
+    "children": [
+      {
+        "id": "679598380ac5c060",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "3b67ff3c61639569",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "tools/tmux.md",
+                "collapseAll": true,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "5a160c1607c3e34d",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "tools/tmux.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "ff177973121932df",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "d24a4c3b12cfbfd3",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "tools/tmux.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "2b4dbc058993a4c1",
+  "lastOpenFiles": [
+    "tools/tmux.md",
+    "tmux.md",
+    "tools/screen.md",
+    "system/Linux.md",
+    "system/Windows subsystem Linux.md",
+    "数据结构.md",
+    "域名.md",
+    "名词.md",
+    "static/imgs/Pasted image 20220312145724.png",
+    "数据结构与算法/02-链表、栈、队列、递归、哈希表、顺序表.md"
+  ]
+}
