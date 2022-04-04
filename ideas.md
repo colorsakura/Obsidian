@@ -12,8 +12,8 @@ Type: Notes
 
 ### 目的
 
-[ ] 熟悉 Go 语言。
-[ ] 学习 DNS 的技术细节。
-[ ] 为学习 Adguard Home 打下基础。 
+- [ ] 熟悉 Go 语言。
+- [ ] 学习 DNS 的技术细节。
+- [ ] 为学习 Adguard Home 打下基础。 
 
 ## 命令行翻译

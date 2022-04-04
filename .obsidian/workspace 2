@@ -9,10 +9,9 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "ideas.md",
-            "mode": "source",
-            "backlinks": false,
-            "source": false
+            "file": "tools/Scrapy.md",
+            "mode": "preview",
+            "source": true
           }
         }
       }
@@ -20,15 +19,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "3d58612cb5324508",
+    "id": "9071e1a8355a3593",
     "type": "split",
     "children": [
       {
-        "id": "6477893c773742d9",
+        "id": "3b4d1e21daf4939e",
         "type": "tabs",
         "children": [
           {
-            "id": "dd638d0b992ab4c0",
+            "id": "b0458df86c7df470",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -36,7 +35,7 @@
             }
           },
           {
-            "id": "b8f7a0d4ac3610be",
+            "id": "0759961fbad298fd",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -51,7 +50,7 @@
             }
           },
           {
-            "id": "d72f46c7e9058226",
+            "id": "93cf499a219853d7",
             "type": "leaf",
             "state": {
               "type": "starred",
@@ -65,21 +64,21 @@
     "width": 300
   },
   "right": {
-    "id": "b34fac7e88c4e1ff",
+    "id": "2f11e0bdcd81ac36",
     "type": "split",
     "children": [
       {
-        "id": "16085689f4a4980e",
+        "id": "6d2b1ce8eb59138c",
         "type": "tabs",
         "children": [
           {
-            "id": "457b6fb25c0f35d4",
+            "id": "ce56d4b87d62ba6d",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ideas.md",
-                "collapseAll": false,
+                "file": "tools/Scrapy.md",
+                "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
@@ -90,19 +89,19 @@
             }
           },
           {
-            "id": "686a5cc207067565",
+            "id": "c07317d371070ec0",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "ideas.md",
+                "file": "tools/Scrapy.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "8774147f4708086e",
+            "id": "dbe0031ad296119a",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -113,16 +112,17 @@
             }
           },
           {
-            "id": "6daef6e8bf74d32d",
+            "id": "1302928294fb4914",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "ideas.md"
+                "file": "tools/Scrapy.md"
               }
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -131,15 +131,15 @@
   },
   "active": "28775fbd6424f93a",
   "lastOpenFiles": [
-    "ideas.md",
-    "tools/openzfs.md",
-    "tools/Podman.md",
-    "数学.md",
+    "tools/Scrapy.md",
+    "language/Go学习笔记.md",
+    "system/Linux.md",
     "数据结构.md",
+    "tools/域名.md",
     "名词.md",
-    "Java语法基础.md",
-    "Java.md",
-    "数据结构与算法/02-链表、栈、队列、递归、哈希表、顺序表.md",
-    "数据结构与算法/01-复杂度、排序、二分、异或.md"
+    "static/imgs/Pasted image 20220315210611.png",
+    "tools/tmux.md",
+    "tmux.md",
+    "tools/screen.md"
   ]
 }

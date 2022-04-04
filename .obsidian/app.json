@@ -9,6 +9,8 @@
     "zh-CN",
     "en-US"
   ],
-  "livePreview": false,
-  "showUnsupportedFiles": true
+  "livePreview": true,
+  "showUnsupportedFiles": true,
+  "showFrontmatter": true,
+  "communityThemeSortOrder": "download"
 }
