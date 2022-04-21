@@ -9,7 +9,7 @@
     "zh-CN",
     "en-US"
   ],
-  "livePreview": true,
+  "livePreview": false,
   "showUnsupportedFiles": true,
   "showFrontmatter": true,
   "communityThemeSortOrder": "download"
