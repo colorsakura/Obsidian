@@ -14,11 +14,8 @@ tags: ["Markdown Obsidian"]
 6. **Down** 的核心：坐 **下** 来，就能把思维写 **下** 来 
    - **牛津高阶英汉双解词典第九版** 中，关于 **down** 的释义：
 
-<br>
-
 ![牛津9 down释义](https://z3.ax1x.com/2021/10/12/5mqsGF.png "牛津9 down释义")
 
-<br>
 
 ## 为什么要使用 Markdown?
 
@@ -53,7 +50,6 @@ tags: ["Markdown Obsidian"]
 
 如果你有一定的MD语法基础，可以直接[[#19 避免标识符的滥用|点击跳转]]
 
-<br>
 
 ## Markdown 相关软件推荐
 
@@ -63,7 +59,6 @@ tags: ["Markdown Obsidian"]
 - **Markdown** **笔记软件** 推荐：**Obsidian**    **银河系最强** **MD+双向链** 笔记软件 
   - [点击跳转下载地址](https://obsidian.md/ "银河系第一笔记软件 Obsidian")
 
-<br><br>
 
 # Markdown 语法
 

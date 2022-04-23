@@ -4,12 +4,12 @@
     "type": "split",
     "children": [
       {
-        "id": "ecbe7ed22a127b96",
+        "id": "ae02577440bd5133",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "数据结构.md",
+            "file": "系统相关/manjaro.md",
             "mode": "source",
             "backlinks": false,
             "source": false
@@ -78,8 +78,8 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "数据结构.md",
-                "collapseAll": false,
+                "file": "系统相关/manjaro.md",
+                "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
@@ -95,7 +95,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "数据结构.md",
+                "file": "系统相关/manjaro.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,28 +118,29 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "数据结构.md"
+                "file": "系统相关/manjaro.md"
               }
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
     "width": 300,
     "collapsed": true
   },
-  "active": "ecbe7ed22a127b96",
+  "active": "ae02577440bd5133",
   "lastOpenFiles": [
+    "系统相关/manjaro.md",
     "数据结构.md",
+    "MarkDown超级教程.md",
     "Java语法基础.md",
+    "系统相关/Linux.md",
+    "编程语言/Go学习笔记.md",
     "名词.md",
-    "MarkDown超级教程 Obsidian版 2022.1.12.md",
     "tools/iptables.md",
     "tools/mpv.md",
-    "系统相关/Windwos 技巧.md",
-    "系统相关/Windows subsystem Linux.md",
-    "系统相关/truenas.md",
-    "系统相关/Linux.md"
+    "系统相关/Windwos 技巧.md"
   ]
 }
