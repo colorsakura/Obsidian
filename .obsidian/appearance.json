@@ -3,5 +3,6 @@
   "theme": "moonstone",
   "translucency": false,
   "cssTheme": "Minimal",
-  "baseFontSizeAction": false
+  "baseFontSizeAction": false,
+  "textFontFamily": ""
 }
