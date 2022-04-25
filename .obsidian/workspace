@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "主机运维/manjaro/蓝牙相关问题.md",
+            "file": "主机运维/manjaro/manjaro.md",
             "mode": "source",
             "backlinks": false,
             "source": false
@@ -78,7 +78,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "主机运维/manjaro/蓝牙相关问题.md",
+                "file": "主机运维/manjaro/manjaro.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -95,7 +95,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "主机运维/manjaro/蓝牙相关问题.md",
+                "file": "主机运维/manjaro/manjaro.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +118,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "主机运维/manjaro/蓝牙相关问题.md"
+                "file": "主机运维/manjaro/manjaro.md"
               }
             }
           }
@@ -132,8 +132,8 @@
   },
   "active": "ae02577440bd5133",
   "lastOpenFiles": [
-    "主机运维/manjaro/蓝牙相关问题.md",
     "主机运维/manjaro/manjaro.md",
+    "主机运维/manjaro/蓝牙相关问题.md",
     "数据结构.md",
     "MarkDown超级教程.md",
     "Java语法基础.md",
