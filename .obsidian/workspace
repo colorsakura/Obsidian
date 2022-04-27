@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "主机运维/manjaro/manjaro.md",
+            "file": "dd.md",
             "mode": "source",
             "backlinks": false,
             "source": false
@@ -78,7 +78,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "主机运维/manjaro/manjaro.md",
+                "file": "dd.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -95,7 +95,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "主机运维/manjaro/manjaro.md",
+                "file": "dd.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +118,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "主机运维/manjaro/manjaro.md"
+                "file": "dd.md"
               }
             }
           }
@@ -132,6 +132,7 @@
   },
   "active": "ae02577440bd5133",
   "lastOpenFiles": [
+    "dd.md",
     "主机运维/manjaro/manjaro.md",
     "主机运维/manjaro/蓝牙相关问题.md",
     "数据结构.md",
@@ -140,7 +141,6 @@
     "主机运维/Linux.md",
     "编程语言/Go学习笔记.md",
     "名词.md",
-    "tools/iptables.md",
-    "tools/mpv.md"
+    "tools/iptables.md"
   ]
 }
