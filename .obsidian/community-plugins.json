@@ -4,5 +4,9 @@
   "calendar",
   "obsidian-contextual-typography",
   "obsidian-minimal-settings",
-  "dataview"
+  "dataview",
+  "obsidian-admonition",
+  "table-editor-obsidian",
+  "code-block-copy",
+  "obsidian-excalidraw-plugin"
 ]

@@ -4,15 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "aa157cfd4747e13c",
+        "id": "fc352e84cbbd7a01",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "数据结构.md",
-            "mode": "source",
-            "source": false
-          }
+          "type": "empty",
+          "state": {}
         }
       }
     ],
@@ -77,7 +73,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "数据结构.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -86,6 +81,14 @@
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
               }
+            }
+          },
+          {
+            "id": "3acc1cfc898d2008",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
+              "state": {}
             }
           }
         ]
@@ -110,9 +113,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "数据结构.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -121,17 +122,17 @@
     "direction": "horizontal",
     "width": 244.5
   },
-  "active": "aa157cfd4747e13c",
+  "active": "fc352e84cbbd7a01",
   "lastOpenFiles": [
+    "Excalidraw/数据结构.md",
+    "每日笔记/2022-05-02.md",
+    "MarkDown超级教程.md",
+    "编程语言/Java语法基础.md",
+    "数学.md",
     "数据结构.md",
     "Untitled.md",
     "pages/说明.md",
     "advanced/Tag List.md",
-    "advanced/Random Note.md",
-    "journals/2022-04-22.md",
-    "pages/读《余生皆假期》.md",
-    "pages/读《指数基金投资指南》.md",
-    "pages/《拉丁美洲被切开的血管》笔记.md",
-    "pages/《江海寄余生》笔记.md"
+    "advanced/Random Note.md"
   ]
 }
