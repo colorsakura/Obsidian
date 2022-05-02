@@ -1,16 +1,17 @@
 {
   "main": {
-    "id": "ec821402f08c769b",
+    "id": "04745fe36b4f3aa6",
     "type": "split",
     "children": [
       {
-        "id": "aa157cfd4747e13c",
+        "id": "ae02577440bd5133",
         "type": "leaf",
         "state": {
           "type": "markdown",
           "state": {
-            "file": "数据结构.md",
+            "file": "主机运维/dmesg.md",
             "mode": "source",
+            "backlinks": false,
             "source": false
           }
         }
@@ -19,15 +20,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "3bff42b77a33b91b",
+    "id": "9b07b28f41a12d72",
     "type": "split",
     "children": [
       {
-        "id": "72c1cba91b53d945",
+        "id": "bbb31f3b99b1599e",
         "type": "tabs",
         "children": [
           {
-            "id": "4d0f2db098c15946",
+            "id": "1369d54102750728",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -35,7 +36,7 @@
             }
           },
           {
-            "id": "fe62a92797a23092",
+            "id": "100d754743775c64",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -48,37 +49,37 @@
                 "sortOrder": "alphabetical"
               }
             }
+          },
+          {
+            "id": "941cf9023fe38cd0",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
+            }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 154
+    "width": 300
   },
   "right": {
-    "id": "2081f9f9c3b7e1f1",
+    "id": "dad223e23388ec24",
     "type": "split",
     "children": [
       {
-        "id": "2672a96f35edca09",
+        "id": "0e93985d6a08e64f",
         "type": "tabs",
         "children": [
           {
-            "id": "c59ae87c93164216",
-            "type": "leaf",
-            "state": {
-              "type": "calendar",
-              "state": {}
-            }
-          },
-          {
-            "id": "9d6e0a57ad3cd6e0",
+            "id": "afd7b518139e1b03",
             "type": "leaf",
             "state": {
               "type": "backlink",
               "state": {
-                "file": "数据结构.md",
-                "collapseAll": false,
+                "file": "主机运维/dmesg.md",
+                "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
@@ -87,15 +88,21 @@
                 "unlinkedCollapsed": true
               }
             }
-          }
-        ]
-      },
-      {
-        "id": "34b8b9846a08df67",
-        "type": "tabs",
-        "children": [
+          },
           {
-            "id": "aae86988a70c4b69",
+            "id": "60068be5e0c40a51",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "主机运维/dmesg.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "7649f742de1677f7",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -106,32 +113,34 @@
             }
           },
           {
-            "id": "5a46ad54b95c613c",
+            "id": "100d0ebb5adbc620",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
-                "file": "数据结构.md"
+                "file": "主机运维/dmesg.md"
               }
             }
           }
-        ]
+        ],
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 244.5
+    "width": 300,
+    "collapsed": true
   },
-  "active": "aa157cfd4747e13c",
+  "active": "ae02577440bd5133",
   "lastOpenFiles": [
+    "主机运维/dmesg.md",
+    "主机运维/manjaro/锁屏.md",
+    "主机运维/manjaro/自动锁屏和休眠.md",
+    "主机运维/manjaro/更换内核.md",
+    "主机运维/manjaro/蓝牙相关问题.md",
+    "主机运维/manjaro/manjaro.md",
+    "主机运维/dd.md",
     "数据结构.md",
-    "Untitled.md",
-    "pages/说明.md",
-    "advanced/Tag List.md",
-    "advanced/Random Note.md",
-    "journals/2022-04-22.md",
-    "pages/读《余生皆假期》.md",
-    "pages/读《指数基金投资指南》.md",
-    "pages/《拉丁美洲被切开的血管》笔记.md",
-    "pages/《江海寄余生》笔记.md"
+    "MarkDown超级教程.md",
+    "Java语法基础.md"
   ]
 }

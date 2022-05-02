@@ -1,8 +1,20 @@
 {
-  "baseFontSize": 16,
-  "theme": "moonstone",
-  "translucency": false,
   "cssTheme": "Minimal",
-  "baseFontSizeAction": false,
-  "textFontFamily": ""
+  "theme": "obsidian",
+  "translucency": false,
+  "interfaceFontFamily": "",
+  "textFontFamily": "",
+  "baseFontSize": 14,
+  "enabledCssSnippets": [
+    "external-link-edit-mode",
+    "column",
+    "admonition-highlight-block",
+    "font",
+    "tag-pills",
+    "folder-icons",
+    "external-link-icons",
+    "image-grid",
+    "general",
+    "clutter-free-headings"
+  ]
 }
