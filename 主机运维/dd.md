@@ -1,7 +1,5 @@
 # Ubuntu使用dd命令制作U盘系统启动盘
 
-1年前 ⋅ 0
-
 【dd命令是比较推荐的一种Linux环境中制作U盘启动盘的方式，无需安装额外的工具，基本上所有Linux发行版都集成了这个命令。】
 
 制作方法示例：
@@ -85,4 +83,4 @@ root :~$ sudo umount /dev/sdc1
 root :~$ sudo mkfs.fat /dev/sdc1
 ```
 
-Ps：dd命令直接将Linux的iso写入U盘就能开机引导的原因是，这些Linux的iso自带了引导文
+Ps：dd命令直接将Linux的iso写入U盘就能开机引导的原因是，这些Linux的iso自带了引导文件。

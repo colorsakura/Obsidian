@@ -4,15 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "fc352e84cbbd7a01",
+        "id": "4f9ed3808f673800",
         "type": "leaf",
         "state": {
-          "type": "markdown",
-          "state": {
-            "file": "每日笔记/2022-05-02.md",
-            "mode": "source",
-            "source": false
-          }
+          "type": "empty",
+          "state": {}
         }
       }
     ],
@@ -53,7 +49,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 154
+    "width": 232
   },
   "right": {
     "id": "2081f9f9c3b7e1f1",
@@ -77,7 +73,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "每日笔记/2022-05-02.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -96,8 +91,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 2
+        ]
       },
       {
         "id": "34b8b9846a08df67",
@@ -119,28 +113,28 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "每日笔记/2022-05-02.md"
-              }
+              "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 244.5
+    "width": 244.5,
+    "collapsed": true
   },
-  "active": "fc352e84cbbd7a01",
+  "active": "4f9ed3808f673800",
   "lastOpenFiles": [
-    "每日笔记/2022-05-02.md",
-    "picgopc.test.upcdn.net/202205022235338.jpg.md",
-    "Excalidraw/数据结构.md",
+    "主机运维/vscode 手动安装.md",
     "MarkDown超级教程.md",
-    "编程语言/Java语法基础.md",
-    "数学.md",
-    "数据结构.md",
-    "Untitled.md",
-    "pages/说明.md",
-    "advanced/Tag List.md"
+    "主机运维/manjaro/锁屏.md",
+    "主机运维/manjaro/蓝牙相关问题.md",
+    "主机运维/manjaro/自动锁屏和休眠.md",
+    "主机运维/manjaro/更换内核.md",
+    "主机运维/manjaro/manjaro.md",
+    "主机运维/tools/域名.md",
+    "主机运维/tools/tmux.md",
+    "主机运维/tools/SMB.md"
   ]
 }
