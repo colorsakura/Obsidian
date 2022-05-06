@@ -7,8 +7,12 @@
         "id": "4f9ed3808f673800",
         "type": "leaf",
         "state": {
-          "type": "empty",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "主机运维/manjaro/manjaro.md",
+            "mode": "source",
+            "source": false
+          }
         }
       }
     ],
@@ -73,6 +77,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "主机运维/manjaro/manjaro.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,7 +118,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "主机运维/manjaro/manjaro.md"
+              }
             }
           }
         ],
@@ -126,15 +133,15 @@
   },
   "active": "4f9ed3808f673800",
   "lastOpenFiles": [
+    "主机运维/manjaro/manjaro.md",
+    "Excalidraw/数据结构.md",
     "主机运维/vscode 手动安装.md",
     "MarkDown超级教程.md",
     "主机运维/manjaro/锁屏.md",
     "主机运维/manjaro/蓝牙相关问题.md",
     "主机运维/manjaro/自动锁屏和休眠.md",
     "主机运维/manjaro/更换内核.md",
-    "主机运维/manjaro/manjaro.md",
     "主机运维/tools/域名.md",
-    "主机运维/tools/tmux.md",
-    "主机运维/tools/SMB.md"
+    "主机运维/tools/tmux.md"
   ]
 }
