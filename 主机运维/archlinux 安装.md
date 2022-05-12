@@ -20,7 +20,7 @@
 
 2.  进入安装环境后（看见牛牛），便可以开始通过命令安装 archlinux 了
 
-## [#](https://arch.icekylin.online/rookie/basic-install.html#_1-禁用-reflector-服务) 1. 禁用 reflector 服务
+### 1. 禁用 reflector 服务
 
 2020 年，archlinux 安装镜像中加入了 `reflector` 服务，它会自己更新 `mirrorlist`（软件包管理器 `pacman` 的软件源）。在特定情况下，它会误删某些有用的源信息。这里进入安装环境后的第一件事就是将其禁用。也许它是一个好用的工具，但是很明显，因为地理上造成的特殊网络环境，这项服务并不适合启用。
 
@@ -60,7 +60,9 @@ ls /sys/firmware/efi/efivars
 
 ###  3. 连接网络
 
+```ad-note
 archlinux 的安装**必须**要求网络环境。
+```
 
 若为虚拟机且按照上一节 [虚拟机安装前的准备](https://arch.icekylin.online/rookie/pre-virt.html#_3-%E9%85%8D%E7%BD%AE-virtualbox) 进行了配置；同时宿主机连接了网络，那么虚拟机应该已经连接网络了。
 

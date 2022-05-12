@@ -1,5 +1,4 @@
 [
-  "obsidian-hider",
   "obsidian-banners",
   "calendar",
   "obsidian-contextual-typography",
@@ -7,6 +6,5 @@
   "dataview",
   "obsidian-admonition",
   "table-editor-obsidian",
-  "code-block-copy",
   "obsidian-excalidraw-plugin"
 ]
