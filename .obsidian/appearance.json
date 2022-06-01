@@ -4,7 +4,7 @@
   "translucency": false,
   "interfaceFontFamily": "",
   "textFontFamily": "",
-  "baseFontSize": 14,
+  "baseFontSize": 12,
   "enabledCssSnippets": [
     "external-link-edit-mode",
     "column",
