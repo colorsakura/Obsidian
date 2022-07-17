@@ -1,6 +1,6 @@
 {
   "cssTheme": "Minimal",
-  "theme": "moonstone",
+  "theme": "obsidian",
   "translucency": false,
   "interfaceFontFamily": "",
   "textFontFamily": "",
@@ -17,5 +17,5 @@
     "general",
     "clutter-free-headings"
   ],
-  "monospaceFontFamily": "JetBrains Mono"
+  "monospaceFontFamily": ""
 }
