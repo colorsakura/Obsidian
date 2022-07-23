@@ -23,3 +23,6 @@ tutorial/
         spiders/          # a directory where you'll later put your spiders
             __init__.py
 ```
+
+
+Scrapy

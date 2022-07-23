@@ -9,8 +9,8 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "编程语言/C语言（二）.md",
-            "mode": "preview",
+            "file": "项目记录.md",
+            "mode": "source",
             "source": false
           }
         }
@@ -69,7 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "编程语言/C语言（二）.md",
+                "file": "项目记录.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -119,7 +119,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "编程语言/C语言（二）.md"
+                "file": "项目记录.md"
               }
             }
           }
@@ -131,17 +131,17 @@
     "width": 244.5,
     "collapsed": true
   },
-  "active": "4d0f2db098c15946",
+  "active": "4f9ed3808f673800",
   "lastOpenFiles": [
     "主机运维/tools/Scrapy.md",
-    "编程语言/C语言（二）.md",
-    "编程语言/C语言（三）.md",
-    "编程语言/C语言（一）.md",
-    "编程语言/C Language.md",
-    "cargo.md",
-    "ideas.md",
+    "项目记录.md",
     "MD教程.md",
+    "cargo.md",
+    "数学.md",
+    "数据结构.md",
     "每日笔记/2022-05-02.md",
-    "每日笔记/2022-05-03.md"
+    "每日笔记/2022-05-03.md",
+    "每日笔记/2022-05-09.md",
+    "每日笔记/2022-05-10.md"
   ]
 }
