@@ -1,0 +1,144 @@
+{
+  "main": {
+    "id": "3161ea528514f826",
+    "type": "split",
+    "children": [
+      {
+        "id": "f504a49403f4643c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "147fa13194044314",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "项目记录.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "580d3d01a79333f1",
+    "type": "split",
+    "children": [
+      {
+        "id": "8637fcf8d91e61c7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9976163a69209abf",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "e5265671da606cbe",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "26711adbd0148b59",
+    "type": "split",
+    "children": [
+      {
+        "id": "c0fb8ee729656c74",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "17f565e3a3617521",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          },
+          {
+            "id": "506456b99c32f3f8",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "项目记录.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "d6af472faf33d9bf",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "3cb319fe45a5b6b6",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "项目记录.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "ribbon": {
+    "mostRecentAction": ""
+  },
+  "active": "147fa13194044314",
+  "lastOpenFiles": [
+    "计算机基础.md",
+    "项目记录.md",
+    "学习记录.md",
+    "Untitled.md",
+    "truenas scale.md",
+    "python 学习笔记.md",
+    "Python 记录.md",
+    "数据分析/jupyter.md",
+    "绘图文件/数据结构.md",
+    "绘图文件/Drawing 2022-10-17 13.32.43.excalidraw.md"
+  ]
+}
