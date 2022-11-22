@@ -13,7 +13,20 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "项目记录.md",
+                "file": "主机运维/Linux 字体调教指南.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "7d9a841581a9433c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "JWT.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +99,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "项目记录.md",
+                "file": "主机运维/Linux 字体调教指南.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +127,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "项目记录.md"
+                "file": "主机运维/Linux 字体调教指南.md"
               }
             }
           }
@@ -125,20 +138,17 @@
     "width": 300,
     "collapsed": true
   },
-  "ribbon": {
-    "mostRecentAction": ""
-  },
   "active": "147fa13194044314",
   "lastOpenFiles": [
+    "JWT.md",
+    "主机运维/Linux 字体调教指南.md",
     "计算机基础.md",
+    "项目记录.md",
+    "学习记录.md",
+    "truenas scale.md",
     "python 学习笔记.md",
     "Python 记录.md",
-    "学习记录.md",
-    "项目记录.md",
-    "truenas scale.md",
     "Untitled.md",
-    "数据分析/jupyter.md",
-    "绘图文件/数据结构.md",
-    "绘图文件/Drawing 2022-10-17 13.32.43.excalidraw.md"
+    "数据分析/jupyter.md"
   ]
 }
