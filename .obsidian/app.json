@@ -1,9 +1,16 @@
 {
   "promptDelete": false,
-  "readableLineLength": false,
+  "readableLineLength": true,
   "legacyEditor": false,
   "livePreview": true,
   "communityThemeSortOrder": "download",
   "alwaysUpdateLinks": true,
-  "showLineNumber": true
+  "showLineNumber": true,
+  "strictLineBreaks": true,
+  "showFrontmatter": true,
+  "spellcheck": true,
+  "spellcheckLanguages": [
+    "zh-CN",
+    "en-US"
+  ]
 }
