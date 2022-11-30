@@ -4,19 +4,19 @@
     "type": "split",
     "children": [
       {
-        "id": "237029e6d42e05f1",
+        "id": "359ed15b7f85e022",
         "type": "tabs",
         "children": [
           {
-            "id": "55626a2a314b7959",
+            "id": "224c42aeb28ca6f9",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "编程语言/C/C 异常记录.md",
-                "mode": "source",
+                "file": "输入法.md",
+                "mode": "preview",
                 "backlinks": false,
-                "source": false
+                "source": true
               }
             }
           }
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "编程语言/C/C 异常记录.md",
+                "file": "输入法.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "编程语言/C/C 异常记录.md"
+                "file": "输入法.md"
               }
             }
           }
@@ -125,17 +125,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "55626a2a314b7959",
+  "active": "224c42aeb28ca6f9",
   "lastOpenFiles": [
     "项目记录.md",
-    "编程语言/C/C 异常记录.md",
-    "主机运维/tools/openzfs.md",
-    "知识宝库/正则表达式.md",
-    "编程语言/Python/Pycahrm 调试.md",
+    "输入法.md",
+    "知识宝库/MD教程.md",
+    "[.md",
+    "知识宝库/Git 提交规范.md",
+    "主机运维/Ubuntu.md",
+    "主机运维/Truenas Scale.md",
+    "主机运维/iwd.md",
     "计算机基础.md",
-    "学习记录.md",
-    "绘图文件/数据结构.md",
-    "绘图文件/NAS-Tools.md",
-    "编程语言/C/C Language.md"
+    "学习记录.md"
   ]
 }

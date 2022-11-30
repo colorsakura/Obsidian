@@ -9,5 +9,7 @@
   "strictLineBreaks": true,
   "showFrontmatter": true,
   "spellcheck": false,
-  "spellcheckLanguages": null
+  "spellcheckLanguages": null,
+  "smartIndentList": true,
+  "showInlineTitle": false
 }
