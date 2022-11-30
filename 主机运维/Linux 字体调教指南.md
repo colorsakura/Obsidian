@@ -1,6 +1,5 @@
-# Linux 下的字体调校指南
-
 ## Linux 下的字体可以很漂亮! 当然，这里是 Linux，你需要一点小小的配置。
+
 
 很长时间以来，Linux上的中文字体呈现一直……不容乐观。但是随着 FreeType2 由于专利过期默认开启了高质量的 LCD 优化，以及一批高质量的开源字体的公布，Linux 上的中文字体渲染已经可以和 macOS 扳扳手腕了。
 
@@ -9,6 +8,7 @@
 （Windows 的字体渲染从技术上来说是相当先进的，问题是在中文字体的选择上实在是不忍直视……）
 
 （其实 macOS 的糊成一片的渲染方式也有它的问题，但这就不在本文讨论范围之内了。）
+
 
 ## 太长不看版
 
@@ -272,5 +272,3 @@ DPI 即为 Dots per inch (每英尺点数), 可简单理解为显示器的像素
     
 
 [1](https://szclsya.me/zh-cn/posts/fonts/linux-config-guide/#footnote-reference-1)
-
-Noto 字体家族正是得名于此. Noto -> No Toufu -> 没有豆腐块.
