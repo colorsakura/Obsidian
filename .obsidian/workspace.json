@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "25484dbb439c3950",
+        "id": "237029e6d42e05f1",
         "type": "tabs",
         "children": [
           {
-            "id": "aeb955962b961b15",
+            "id": "55626a2a314b7959",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "计算机基础.md",
+                "file": "编程语言/C/C 异常记录.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -49,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#30_哔哩哔哩_bilibili",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "计算机基础.md",
+                "file": "编程语言/C/C 异常记录.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "计算机基础.md"
+                "file": "编程语言/C/C 异常记录.md"
               }
             }
           }
@@ -125,17 +125,17 @@
     "width": 300,
     "collapsed": true
   },
-  "active": "aeb955962b961b15",
+  "active": "55626a2a314b7959",
   "lastOpenFiles": [
-    "绘图文件/数据结构.md",
     "项目记录.md",
+    "编程语言/C/C 异常记录.md",
+    "主机运维/tools/openzfs.md",
+    "知识宝库/正则表达式.md",
+    "编程语言/Python/Pycahrm 调试.md",
+    "计算机基础.md",
     "学习记录.md",
-    "绘图文件/Drawing 2022-10-17 13.32.43.excalidraw.md",
-    "其他文件/模板/笔记.md",
-    "Untitled.md",
-    "编程语言/Python/Python 记录.md",
-    "编程语言/Python/python 学习笔记.md",
-    "知识宝库/JWT.md",
-    "每日笔记/2022-05-22.md"
+    "绘图文件/数据结构.md",
+    "绘图文件/NAS-Tools.md",
+    "编程语言/C/C Language.md"
   ]
 }

@@ -8,9 +8,6 @@
   "showLineNumber": true,
   "strictLineBreaks": true,
   "showFrontmatter": true,
-  "spellcheck": true,
-  "spellcheckLanguages": [
-    "zh-CN",
-    "en-US"
-  ]
+  "spellcheck": false,
+  "spellcheckLanguages": null
 }
