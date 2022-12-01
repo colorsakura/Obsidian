@@ -31,6 +31,7 @@ dmesg [options]
 ## 应用举例
 
 查看前20行开机信息
+`dmesg | head -n 20`
 
 ```text
 [root@centos7 ~]# dmesg | head -n 20
@@ -57,6 +58,7 @@ dmesg [options]
 ```
 
 查看与内存相关的开机信息
+`dmesg | grep -i memory`
 
 ```text
 [root@centos7 ~]# dmesg | grep -i memory
@@ -85,6 +87,7 @@ dmesg [options]
 ```
 
 查看与磁盘相关的开机信息
+`dmesg | grep -i disk`
 
 ```text
 [root@centos7 ~]# dmesg | grep -i disk
