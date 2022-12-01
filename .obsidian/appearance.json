@@ -1,14 +1,15 @@
 {
   "cssTheme": "Minimal",
-  "theme": "moonstone",
+  "theme": "system",
   "translucency": false,
-  "interfaceFontFamily": "Sarasa Gothic SC",
-  "textFontFamily": "Sarasa Gothic SC,Noto Sans CJK SC",
+  "interfaceFontFamily": "",
+  "textFontFamily": "Noto Sans CJK SC",
   "baseFontSize": 16,
   "enabledCssSnippets": [
     "external-link-edit-mode",
     "column",
-    "admonition-highlight-block"
+    "admonition-highlight-block",
+    "custom-admonitions.ace703"
   ],
   "monospaceFontFamily": "JetBrains Mono,Noto Sans Mono CJK SC",
   "accentColor": "",

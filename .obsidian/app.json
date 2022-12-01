@@ -1,6 +1,6 @@
 {
   "promptDelete": false,
-  "readableLineLength": true,
+  "readableLineLength": false,
   "legacyEditor": false,
   "livePreview": true,
   "communityThemeSortOrder": "download",
