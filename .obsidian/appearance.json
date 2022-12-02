@@ -8,8 +8,7 @@
   "enabledCssSnippets": [
     "external-link-edit-mode",
     "column",
-    "admonition-highlight-block",
-    "custom-admonitions.ace703"
+    "admonition-highlight-block"
   ],
   "monospaceFontFamily": "JetBrains Mono,Noto Sans Mono CJK SC",
   "accentColor": "",
