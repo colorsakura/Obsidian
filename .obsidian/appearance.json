@@ -1,6 +1,6 @@
 {
   "cssTheme": "Minimal",
-  "theme": "system",
+  "theme": "obsidian",
   "translucency": false,
   "interfaceFontFamily": "",
   "textFontFamily": "Noto Sans CJK SC",
@@ -8,7 +8,8 @@
   "enabledCssSnippets": [
     "external-link-edit-mode",
     "column",
-    "admonition-highlight-block"
+    "admonition-highlight-block",
+    "custom-admonitions.ace703"
   ],
   "monospaceFontFamily": "JetBrains Mono,Noto Sans Mono CJK SC",
   "accentColor": "",
