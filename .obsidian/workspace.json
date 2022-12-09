@@ -4,15 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "f65c820b5b0e6345",
+        "id": "167ac507818a0458",
         "type": "tabs",
         "children": [
           {
-            "id": "c594e5da9fc2d1e7",
+            "id": "098282290446d648",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "主机运维/Arch/安装手册.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "主机运维/Arch/安装手册.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -107,27 +113,38 @@
             "type": "leaf",
             "state": {
               "type": "outline",
+              "state": {
+                "file": "主机运维/Arch/安装手册.md"
+              }
+            }
+          },
+          {
+            "id": "7d90dc27df4edf1e",
+            "type": "leaf",
+            "state": {
+              "type": "advanced-tables-toolbar",
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
     "width": 300,
     "collapsed": true
   },
-  "active": "9976163a69209abf",
+  "active": "098282290446d648",
   "lastOpenFiles": [
-    "项目管理/irik.md",
-    "项目记录.md",
-    "绘图文件/irik-1206.md",
-    "网络安全.md",
-    "绘图文件/irik.png",
-    "Wireshark.md",
-    "绘图文件/calculator.md",
+    "Linux 软件列表.md",
+    "主机运维/Arch/安装手册.md",
     "Linux 权限管理.md",
-    "知识宝库/正则表达式.md",
-    "主机运维/Gnome 桌面环境.md"
+    "主机运维/Arch/kde 配置.md",
+    "主机运维/Arch/静态网络.md",
+    "每日笔记/2022-12-08.md",
+    "Untitled.md",
+    "主机运维/vscode 手动安装.md",
+    "主机运维/输入法.md",
+    "项目记录.md"
   ]
 }
