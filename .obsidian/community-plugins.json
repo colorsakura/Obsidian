@@ -5,6 +5,7 @@
   "obsidian-admonition",
   "table-editor-obsidian",
   "obsidian-excalidraw-plugin",
-  "obsidian-kanban",
-  "obsidian-tasks-plugin"
+  "obsidian-tasks-plugin",
+  "obsidian-minimal-settings",
+  "obsidian-contextual-typography"
 ]
