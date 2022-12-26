@@ -121,7 +121,7 @@ Fontconfig 是一个用来 配置 字体渲染的程序。也就是说，fontcon
       <bool>true</bool>
     </edit>
   </match>
-  
+  j
   <!-- 关于lcdfilter, 因为我们在使用 FreeType2 自带的 Harmony 子像素渲染, 应该是不需要设置的. -->
 ```
 

@@ -3,7 +3,7 @@
   "theme": "moonstone",
   "translucency": false,
   "interfaceFontFamily": "",
-  "textFontFamily": "Noto Sans CJK SC",
+  "textFontFamily": "",
   "baseFontSize": 16,
   "enabledCssSnippets": [
     "external-link-edit-mode",

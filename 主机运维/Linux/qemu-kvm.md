@@ -32,7 +32,7 @@ QEMU/KVM 环境需要安装很多的组件，它们各司其职：
 
 ```shell
 # archlinux/manjaro
-sudo pacman -S qemu virt-manager virt-viewer dnsmasq vde2 bridge-utils openbsd-netcat
+sudo pacman -S qemu-desktop virt-manager virt-viewer dnsmasq vde2 bridge-utils openbsd-netcat
 
 # ubuntu,参考了官方文档，但未测试
 sudo apt install qemu-kvm libvirt-daemon-system virt-manager virt-viewer virtinst bridge-utils
