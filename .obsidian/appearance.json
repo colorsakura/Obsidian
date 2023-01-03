@@ -12,7 +12,7 @@
     "custom-admonitions.ace703"
   ],
   "monospaceFontFamily": "JetBrains Mono,Noto Sans Mono CJK SC",
-  "accentColor": "",
+  "accentColor": "#3a77a6",
   "nativeMenus": true,
   "baseFontSizeAction": false,
   "showViewHeader": false
