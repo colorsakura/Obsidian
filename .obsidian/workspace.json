@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "4f181f1a4df5c31f",
+        "id": "659114db17cda539",
         "type": "tabs",
         "children": [
           {
-            "id": "16740330a0021a16",
+            "id": "f79d2603f0febc5a",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -140,17 +140,17 @@
       "obsidian-excalidraw-plugin:New Excalidraw drawing": false
     }
   },
-  "active": "16740330a0021a16",
+  "active": "f79d2603f0febc5a",
   "lastOpenFiles": [
+    "主机运维/Arch/arch tty 自动登陆.md",
+    "项目记录.md",
+    "计算机基础.md",
+    "网络管理.md",
+    "网络安全.md",
+    "学习记录.md",
+    "Wireshark.md",
     "Untitled.canvas",
     "Untitled.md",
-    "主机运维/Arch/arch tty 自动登陆.md",
-    "主机运维/fish.md",
-    "主机运维/Linux/qemu-kvm.md",
-    "dnsmasq.md",
-    "主机运维/Others/Linux 字体调教指南.md",
-    "iptables.md",
-    "网络管理.md",
-    "Wireshark.md"
+    "iptables.md"
   ]
 }

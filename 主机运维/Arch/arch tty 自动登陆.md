@@ -19,7 +19,7 @@ fi
 # 原来是
 ExecStart=-/sbin/agetty -a <user> -o '-p -- \\u' --noclear %I $TERM
 # 改成，就是加一个 -a 参数，后面跟你的用户名
-ExecStart=-/sbin/agetty -a c -o '-p -- \\u' --noclear %I $TERM
+ExecStart=-/sbin/agetty -a <user> -o '-p -- \\u' --noclear %I $TERM
 Type=idle
 ```
 
