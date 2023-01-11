@@ -4,15 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "659114db17cda539",
+        "id": "ddba7ac683f374d7",
         "type": "tabs",
         "children": [
           {
-            "id": "f79d2603f0febc5a",
+            "id": "c81a35683f55e79b",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Linux 权限管理.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Linux 权限管理.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -107,7 +113,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Linux 权限管理.md"
+              }
             }
           },
           {
@@ -140,8 +148,10 @@
       "obsidian-excalidraw-plugin:New Excalidraw drawing": false
     }
   },
-  "active": "f79d2603f0febc5a",
+  "active": "c81a35683f55e79b",
   "lastOpenFiles": [
+    "Untitled.md",
+    "Untitled 1.md",
     "主机运维/Arch/arch tty 自动登陆.md",
     "项目记录.md",
     "计算机基础.md",
@@ -149,8 +159,6 @@
     "网络安全.md",
     "学习记录.md",
     "Wireshark.md",
-    "Untitled.canvas",
-    "Untitled.md",
-    "iptables.md"
+    "Untitled.canvas"
   ]
 }
