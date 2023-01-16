@@ -243,7 +243,7 @@ let apc = new apCapacitor();
 let ape = new apElectron();
 module.exports = class ProxyGithub extends Plugin {
     onload() {
-        new window.Notice("添加 ProxyGithub 代理访问社区插件！");
+        new window.Notice("正在使用 ProxyGithub 代理访问社区插件！");
         this.addSettingTab(new ProxyGithubSettingTab(this.app, this));
         ape.regedit();
         apc.regedit();

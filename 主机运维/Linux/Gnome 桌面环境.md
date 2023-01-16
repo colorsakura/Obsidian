@@ -1,5 +1,9 @@
 ---
-Tag: Linux, Arch, Gnome, Desktop
+id: "主机运维/Gnome 桌面环境.md"
+aliases:
+  - "Arch 桌面环境选择"
+tags: []
+Tag: "Linux, Arch, Gnome, Desktop"
 ---
 
 ## Arch 桌面环境选择

@@ -4,20 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "ddba7ac683f374d7",
+        "id": "90c610cc93392c69",
         "type": "tabs",
         "children": [
           {
-            "id": "c81a35683f55e79b",
+            "id": "e3f99109bd4c6e49",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Linux 权限管理.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -86,7 +81,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Linux 权限管理.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -113,9 +107,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "Linux 权限管理.md"
-              }
+              "state": {}
             }
           },
           {
@@ -145,20 +137,21 @@
       "markdown-importer:Open format converter": false,
       "workspaces:Manage workspace layouts": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
-      "obsidian-excalidraw-plugin:New Excalidraw drawing": false
+      "obsidian-excalidraw-plugin:New Excalidraw drawing": false,
+      "obsidian-projects:Open projects": false
     }
   },
-  "active": "c81a35683f55e79b",
+  "active": "e3f99109bd4c6e49",
   "lastOpenFiles": [
+    "项目管理/Why You Should Be Taking More Notes.md",
+    "项目管理/5 Mistakes I Made When I Started Using Obsidian.md",
+    "项目管理/What I Learned From Taking 15,000 Notes.md",
+    "主机运维/dnsmasq.md",
+    "主机运维/iptables.md",
+    "主机运维/Linux/Linux 权限管理.md",
     "Untitled.md",
     "Untitled 1.md",
     "主机运维/Arch/arch tty 自动登陆.md",
-    "项目记录.md",
-    "计算机基础.md",
-    "网络管理.md",
-    "网络安全.md",
-    "学习记录.md",
-    "Wireshark.md",
-    "Untitled.canvas"
+    "项目记录.md"
   ]
 }
