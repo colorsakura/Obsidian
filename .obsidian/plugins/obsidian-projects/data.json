@@ -1,18 +1,20 @@
 {
-  "version": 1,
+  "version": 2,
   "projects": [
     {
-      "path": "项目管理",
-      "recursive": false,
       "fieldConfig": {},
       "defaultName": "",
       "templates": [],
-      "dataview": false,
-      "query": "",
       "excludedNotes": [],
       "isDefault": true,
-      "name": "project",
-      "id": "4b3b6028-99cb-4199-aac2-733c24d03a9a",
+      "dataSource": {
+        "kind": "folder",
+        "config": {
+          "path": "项目管理",
+          "recursive": false
+        }
+      },
+      "newNotesFolder": "",
       "views": [
         {
           "config": {
@@ -80,10 +82,13 @@
           "id": "703f49b6-04d7-4d09-8413-088dad0996bb",
           "type": "gallery"
         }
-      ]
+      ],
+      "name": "project",
+      "id": "4b3b6028-99cb-4199-aac2-733c24d03a9a"
     }
   ],
   "preferences": {
+    "projectSizeLimit": 1000,
     "frontmatter": {
       "quoteStrings": "PLAIN"
     }

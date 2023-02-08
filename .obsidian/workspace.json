@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "90c610cc93392c69",
+        "id": "b4d138e95b815afa",
         "type": "tabs",
         "children": [
           {
-            "id": "e3f99109bd4c6e49",
+            "id": "32e8b85bb3b55e7a",
             "type": "leaf",
             "state": {
               "type": "empty",
@@ -51,6 +51,14 @@
                 "extraContext": false,
                 "sortOrder": "alphabetical"
               }
+            }
+          },
+          {
+            "id": "b6ac6a394803bd85",
+            "type": "leaf",
+            "state": {
+              "type": "starred",
+              "state": {}
             }
           }
         ]
@@ -137,21 +145,21 @@
       "markdown-importer:Open format converter": false,
       "workspaces:Manage workspace layouts": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
-      "obsidian-excalidraw-plugin:New Excalidraw drawing": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false,
       "obsidian-projects:Open projects": false
     }
   },
-  "active": "e3f99109bd4c6e49",
+  "active": "32e8b85bb3b55e7a",
   "lastOpenFiles": [
-    "项目管理/Why You Should Be Taking More Notes.md",
-    "项目管理/5 Mistakes I Made When I Started Using Obsidian.md",
-    "项目管理/What I Learned From Taking 15,000 Notes.md",
-    "主机运维/dnsmasq.md",
-    "主机运维/iptables.md",
-    "主机运维/Linux/Linux 权限管理.md",
-    "Untitled.md",
+    "项目记录.md",
+    "计算机基础.md",
+    "网络管理.md",
+    "网络安全.md",
+    "学习记录.md",
+    "wayland使用指南.md",
+    "Untitled 2.md",
     "Untitled 1.md",
-    "主机运维/Arch/arch tty 自动登陆.md",
-    "项目记录.md"
+    "Untitled.md",
+    "主机运维/Arch/静态网络.md"
   ]
 }
