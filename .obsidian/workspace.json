@@ -4,15 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "b4d138e95b815afa",
+        "id": "28f71070dbf3b202",
         "type": "tabs",
         "children": [
           {
-            "id": "32e8b85bb3b55e7a",
+            "id": "cea352ded12df01e",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "学习记录.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
             }
           }
         ]
@@ -89,6 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "学习记录.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +121,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "学习记录.md"
+              }
             }
           },
           {
@@ -145,21 +153,21 @@
       "markdown-importer:Open format converter": false,
       "workspaces:Manage workspace layouts": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
-      "obsidian-excalidraw-plugin:Create new drawing": false,
-      "obsidian-projects:Open projects": false
+      "obsidian-projects:Open projects": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "32e8b85bb3b55e7a",
+  "active": "cea352ded12df01e",
   "lastOpenFiles": [
-    "项目记录.md",
-    "计算机基础.md",
-    "网络管理.md",
-    "网络安全.md",
-    "学习记录.md",
     "wayland使用指南.md",
-    "Untitled 2.md",
-    "Untitled 1.md",
     "Untitled.md",
-    "主机运维/Arch/静态网络.md"
+    "主机运维/Others/Linux 字体调教指南.md",
+    "主机运维/Manjaro/锁屏.md",
+    "主机运维/Manjaro/manjaro.md",
+    "主机运维/Linux/蓝牙相关问题.md",
+    "主机运维/Linux/自动锁屏和休眠.md",
+    "主机运维/Manjaro/更换内核.md",
+    "其他文件/IMG/go-slice 20220123112805.png",
+    "gnome-keyring.md"
   ]
 }
