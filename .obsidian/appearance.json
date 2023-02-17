@@ -1,9 +1,9 @@
 {
-  "cssTheme": "Minimal",
+  "cssTheme": "",
   "theme": "moonstone",
   "translucency": false,
   "interfaceFontFamily": "",
-  "textFontFamily": "",
+  "textFontFamily": "更纱黑体 SC",
   "baseFontSize": 16,
   "enabledCssSnippets": [
     "external-link-edit-mode",
@@ -11,9 +11,9 @@
     "admonition-highlight-block",
     "custom-admonitions.ace703"
   ],
-  "monospaceFontFamily": "JetBrains Mono,Noto Sans Mono CJK SC",
-  "accentColor": "#3a77a6",
-  "nativeMenus": true,
+  "monospaceFontFamily": "",
+  "accentColor": "#3495df",
+  "nativeMenus": false,
   "baseFontSizeAction": false,
   "showViewHeader": false
 }

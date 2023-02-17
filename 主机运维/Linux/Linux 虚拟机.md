@@ -1,6 +1,8 @@
 ---
-Tag: qemu, kvm, Linux, Doc, TODO
+Date: 2023-02-15 15:11
+Tag: TODO, qemu, kvm, Linux, Doc
 ---
+
 
 ## QEMU/KVM 虚拟化
 
@@ -12,7 +14,7 @@ QEMU/KVM 是目前最流行的虚拟化技术，它基于 Linux 内核提供的 
 
 本文是我个人学习 KVM 的一个总结性文档，其目标是使用 KVM 作为桌面虚拟化软件。
 
-## 一、安装 QUEU/KVM
+### 一、安装 QUEU/KVM
 
 QEMU/KVM 环境需要安装很多的组件，它们各司其职：
 
@@ -31,25 +33,16 @@ QEMU/KVM 环境需要安装很多的组件，它们各司其职：
 安装命令：
 
 ```shell
-# archlinux/manjaro
-sudo pacman -S qemu-desktop virt-manager virt-viewer dnsmasq vde2 bridge-utils openbsd-netcat
+# archlinux
+sudo pacman -S qemu-desktop virt-manager virt-viewer dnsmasq vde2 bridge-utils openbsd-netcat edk2-ovmf
 
 # ubuntu,参考了官方文档，但未测试
 sudo apt install qemu-kvm libvirt-daemon-system virt-manager virt-viewer virtinst bridge-utils
-
-# centos,参考了官方文档，但未测试
-sudo yum groupinstall "Virtualization Host"
-sudo yum install virt-manager virt-viewer virt-install
-
-# opensuse
-# see: https://doc.opensuse.org/documentation/leap/virtualization/html/book-virt/cha-vt-installation.html
-sudo yast2 virtualization
-# enter to terminal ui, select kvm + kvm tools, and then install it.
 ```
 
 安装完成后，还不能直接使用，需要做些额外的工作。请继续往下走。
 
-### 1. libguestfs - 虚拟机磁盘映像处理工具
+#### 1. libguestfs - 虚拟机磁盘映像处理工具
 
 [libguestfs](https://libguestfs.org/) 是一个虚拟机磁盘映像处理工具，可用于直接修改/查看/虚拟机映像、转换映像格式等。
 
@@ -81,7 +74,7 @@ sudo apt install libguestfs-tools
 sudo yum install libguestfs-tools
 ```
 
-### 2. 启动 QEMU/KVM
+#### 2. 启动 QEMU/KVM
 
 通过 systemd 启动 libvirtd 后台服务：
 
@@ -90,7 +83,7 @@ sudo systemctl enable libvirtd.service
 sudo systemctl start libvirtd.service
 ```
 
-### 3. 让非 root 用户能正常使用 kvm
+#### 3. 让非 root 用户能正常使用 kvm
 
 qumu/kvm 装好后，默认情况下需要 root 权限才能正常使用它。 为了方便使用，首先编辑文件 `/etc/libvirt/libvirtd.conf`:
 
@@ -108,7 +101,7 @@ sudo usermod -aG libvirt $USER
 sudo systemctl restart libvirtd.service
 ```
 
-### 3. 启用嵌套虚拟化
+#### 4. 启用嵌套虚拟化
 
 如果你需要**在虚拟机中运行虚拟机**（比如在虚拟机里测试 katacontainers 等安全容器技术），那就需要启用内核模块 kvm_intel 实现嵌套虚拟化。
 
@@ -133,14 +126,14 @@ Y
 
 > 如下内容是进阶篇，主要介绍如何通过命令行来管理虚拟机磁盘，以及 KVM。 如果你还是 kvm 新手，建议先通过图形界面 virt-manager 熟悉熟悉，再往下继续读。
 
-## 二、虚拟机磁盘映像管理
+### 二、虚拟机磁盘映像管理
 
 这需要用到两个工具：
 
 1.  libguestfs: 虚拟机磁盘映像管理工具，前面介绍过了
 2.  qemu-img: qemu 的磁盘映像管理工具，用于创建磁盘、扩缩容磁盘、生成磁盘快照、查看磁盘信息、转换磁盘格式等等。
 
-```shell
+```
 # 创建磁盘
 qemu-img create -f qcow2 -o cluster_size=128K virt_disk.qcow2 20G
 
@@ -155,17 +148,17 @@ qemu-img convert -f raw -O qcow2 vm01.img vm01.qcow2  # raw => qcow2
 qemu-img convert -f qcow2 -O raw vm01.qcow2 vm01.img  # qcow2 => raw
 ```
 
-### 1. 导入 vmware 镜像
+#### 1. 导入vmware镜像
 
 直接从 vmware ova 文件导入 kvm，这种方式转换得到的镜像应该能直接用（网卡需要重新配置）：
 
-```shell
+```
 virt-v2v -i ova centos7-test01.ova -o local -os /vmhost/centos7-01  -of qcow2
 ```
 
 也可以先从 ova 中解压出 vmdk 磁盘映像，将 vmware 的 vmdk 文件转换成 qcow2 格式，然后再导入 kvm（网卡需要重新配置）：
 
-```shell
+```
 # 转换映像格式
 qemu-img convert -p -f vmdk -O qcow2 centos7-test01-disk1.vmdk centos7-test01.qcow2
 # 查看转换后的映像信息
@@ -174,15 +167,15 @@ qemu-img info centos7-test01.qcow2
 
 直接转换 vmdk 文件得到的 qcow2 镜像，启会报错，比如「磁盘无法挂载」。 根据 [Importing Virtual Machines and disk images - ProxmoxVE Docs](https://pve.proxmox.com/pve-docs/chapter-qm.html#_importing_virtual_machines_and_disk_images) 文档所言，需要在网上下载安装 MergeIDE.zip 组件， 另外启动虚拟机前，需要将硬盘类型改为 IDE，才能解决这个问题。
 
-### 2. 导入 img 镜像
+#### 2. 导入 img 镜像
 
 img 镜像文件，就是所谓的 raw 格式镜像，也被称为裸镜像，IO 速度比 qcow2 快，但是体积大，而且不支持快照等高级特性。 如果不追求 IO 性能的话，建议将它转换成 qcow2 再使用。
 
-```shell
+```
 qemu-img convert -f raw -O qcow2 vm01.img vm01.qcow2
 ```
 
-## 三、虚拟机管理
+### 三、虚拟机管理
 
 虚拟机管理可以使用命令行工具 `virsh`/`virt-install`，也可以使用 GUI 工具 `virt-manager`.
 
@@ -195,7 +188,7 @@ GUI 很傻瓜式，就不介绍了，这里主要介绍命令行工具 `virsh`/`
 
 大部分情况下，你都可以把下面命令中涉及到的 `domain` 理解成虚拟机。
 
-### 0. 设置默认 URI
+#### 0. 设置默认 URI
 
 `virsh`/`virt-install`/`virt-viewer` 等一系列 libvirt 命令，sudo virsh net-list –all 默认情况下会使用 `qemu:///session` 作为 URI 去连接 QEMU/KVM，只有 root 账号才会默认使用 `qemu:///system`.
 
@@ -209,7 +202,7 @@ GUI 很傻瓜式，就不介绍了，这里主要介绍命令行工具 `virsh`/`
 echo 'export LIBVIRT_DEFAULT_URI="qemu:///system"' >> ~/.bashrc
 ```
 
-### 1. 虚拟机网络
+#### 1. 虚拟机网络
 
 qemu-kvm 安装完成后，`qemu:///system` 环境中默认会创建一个 `default` 网络，而 `qemu:///session` 不提供默认的网络，需要手动创建。
 
@@ -239,7 +232,7 @@ $ sudo virsh net-list --all
 
 也可以创建新的虚拟机网络，这需要手动编写网络的 xml 配置，然后通过 `virsh net-define --file my-network.xml` 创建，这里就不详细介绍了，因为暂时用不到…
 
-### 2. 创建虚拟机 - virt-intall
+#### 2. 创建虚拟机 - virt-intall
 
 ```shell
 # 使用 iso 镜像创建全新的 proxmox 虚拟机，自动创建一个 60G 的磁盘。
@@ -268,7 +261,7 @@ virt-install --virt-type kvm \
 
 其中的 `--os-variant` 用于设定 OS 相关的优化配置，官方文档**强烈推荐**设定，其可选参数可以通过 `osinfo-query os` 查看。
 
-### 3. 虚拟机管理 - virsh
+#### 3. 虚拟机管理 - virsh
 
 虚拟机创建好后，可使用 virsh 管理虚拟机：
 

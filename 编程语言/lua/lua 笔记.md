@@ -1,8 +1,6 @@
 ---
-id: "编程语言/lua/lua 笔记.md"
-aliases:
-  - "基本语法"
-tags: []
+Date: 2023-02-15 15:02
+Tag: TODO
 ---
 
 ## 基本语法
