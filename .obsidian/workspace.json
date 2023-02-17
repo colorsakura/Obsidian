@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "615301b6da44bff4",
+        "id": "f634a42664cdc77b",
         "type": "tabs",
         "children": [
           {
-            "id": "5cf0075163346522",
+            "id": "c9db3eff932673c9",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "树莓派折腾记录.md",
+                "file": "计算机基础.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "树莓派折腾记录.md",
+                "file": "计算机基础.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "树莓派折腾记录.md"
+                "file": "计算机基础.md"
               }
             }
           },
@@ -146,17 +146,17 @@
       "workspaces:Manage workspace layouts": false
     }
   },
-  "active": "5cf0075163346522",
+  "active": "c9db3eff932673c9",
   "lastOpenFiles": [
+    "计算机基础.md",
+    "A-计科工程/Untitled 1.md",
     "网络管理.md",
     "网络安全.md",
-    "主机运维/Arch/静态网络.md",
-    "主机运维/Linux/Linux 权限管理.md",
-    "主机运维/Linux/Gnome 桌面环境.md",
-    "主机运维/Linux/Gitlab.md",
-    "主机运维/Linux/Flatpak.md",
-    "主机运维/Linux/fish.md",
-    "主机运维/Linux/Btrfs.md",
-    "主机运维/Linux/systemd.md"
+    "学习记录.md",
+    "Untitled.md",
+    "A计科工程/主机运维/Linux系统数据收集分析.md",
+    "A计科工程/主机运维/gnome-keyring.md",
+    "项目记录.md",
+    "A计科工程/主机运维/wayland使用指南.md"
   ]
 }
