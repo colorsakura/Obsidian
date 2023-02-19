@@ -11,7 +11,7 @@
     "admonition-highlight-block",
     "custom-admonitions.ace703"
   ],
-  "monospaceFontFamily": "",
+  "monospaceFontFamily": "JetBrainsMono Nerd Font",
   "accentColor": "#3495df",
   "nativeMenus": false,
   "baseFontSizeAction": false,

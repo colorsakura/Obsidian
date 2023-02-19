@@ -1,12 +1,12 @@
 [
   "obsidian-banners",
   "calendar",
-  "dataview",
   "obsidian-admonition",
   "table-editor-obsidian",
   "obsidian-excalidraw-plugin",
   "obsidian-tasks-plugin",
-  "obsidian-contextual-typography",
   "ProxyGithub",
-  "obsidian-projects"
+  "obsidian-projects",
+  "easy-typing-obsidian",
+  "better-word-count"
 ]
