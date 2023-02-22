@@ -1,11 +1,8 @@
 ---
-id: "dnsmasq.md"
-aliases:
-  - "基础配置"
-tags: []
-Date: 1671010440
-Tag: "TODO, DNS, Linux, Doc"
+Date: 2023-02-21 20:01
+Tag: TODO, DNS, Linux, Doc
 ---
+
 
 ## 基础配置
 

@@ -1,6 +1,6 @@
 {
   "promptDelete": false,
-  "readableLineLength": true,
+  "readableLineLength": false,
   "legacyEditor": false,
   "livePreview": true,
   "communityThemeSortOrder": "download",
@@ -8,7 +8,7 @@
   "showLineNumber": true,
   "strictLineBreaks": true,
   "showFrontmatter": true,
-  "spellcheck": false,
+  "spellcheck": true,
   "spellcheckLanguages": null,
   "smartIndentList": true,
   "showInlineTitle": false

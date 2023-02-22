@@ -3,7 +3,9 @@
 ```
 pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple
 
-sudo pip install jupyterlab
+# arch 
+sudo pacman -S python-jupyterlab_server
+#sudo pip install jupyterlab
 
 jupyter-lab
 ```

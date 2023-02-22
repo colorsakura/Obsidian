@@ -4,15 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "8e64ad3d2fe7537c",
+        "id": "16949b1bbeffe155",
         "type": "tabs",
         "children": [
           {
-            "id": "d3d22228a603ab7b",
+            "id": "6c6a687a8ec6cc73",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Untitled.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
             }
           }
         ]
@@ -81,6 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Untitled.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -107,7 +113,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Untitled.md"
+              }
             }
           },
           {
@@ -149,17 +157,17 @@
       "obsidian-projects:Open projects": false
     }
   },
-  "active": "d3d22228a603ab7b",
+  "active": "6c6a687a8ec6cc73",
   "lastOpenFiles": [
-    "项目记录.md",
-    "计算机基础.md",
     "网络管理.md",
     "网络安全.md",
     "学习记录.md",
-    "A-计科工程/Untitled 1.md",
+    "B数据分析/jupyter.md",
+    "A计科工程/主机运维/dnsmasq.md",
     "Untitled.md",
-    "A计科工程/主机运维/Linux系统数据收集分析.md",
-    "A计科工程/主机运维/gnome-keyring.md",
-    "A计科工程/主机运维/wayland使用指南.md"
+    "Linux.md",
+    "D每日笔记/2023-02-19.md",
+    "项目记录.md",
+    "计算机基础.md"
   ]
 }
