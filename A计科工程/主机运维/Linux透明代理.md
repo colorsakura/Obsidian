@@ -8,7 +8,6 @@ Tag: TODO, clash, nftables, tproxy
 
 主要使用的软件：clash-meta, nftables
 
-
 ## clash-meta 配置
 
 ```shell
@@ -23,7 +22,8 @@ sudo vim /etc/clash-meta/config.yaml
 ```
 
 启用透明代理所需要的配置
-```
+
+```conf
 ...
 
 routing-mark: 1
@@ -93,7 +93,7 @@ table inet clash {
         fib daddr type { unspec, local, anycast, multicast } return
         ip daddr @ipv4_addr return
         ip6 daddr @ipv6_addr return
-		# 不代理 NTP 服务器的端口，
+  # 不代理 NTP 服务器的端口，
         # 不加上这条规则会导致局域网内的设备无法通过 NTP 服务器同步时间。
         udp dport { 123 } return
         meta l4proto { tcp, udp } meta mark set 1 tproxy to :7893 accept

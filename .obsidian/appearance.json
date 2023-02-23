@@ -1,5 +1,5 @@
 {
-  "cssTheme": "",
+  "cssTheme": "Minimal",
   "theme": "obsidian",
   "translucency": false,
   "interfaceFontFamily": "",
@@ -9,7 +9,13 @@
     "external-link-edit-mode",
     "column",
     "admonition-highlight-block",
-    "custom-admonitions.ace703"
+    "clutter-free-headings",
+    "custom-admonitions.ace703",
+    "external-link-icons",
+    "folder-icons",
+    "general",
+    "image-grid",
+    "tag-pills"
   ],
   "monospaceFontFamily": "JetBrainsMono Nerd Font",
   "accentColor": "#3495df",
