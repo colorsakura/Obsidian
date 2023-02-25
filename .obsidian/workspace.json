@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "网络安全.md",
+                "file": "网络管理.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "网络安全.md",
+                "file": "网络管理.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +114,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "网络安全.md"
+                "file": "网络管理.md"
               }
             }
           },
@@ -156,14 +156,14 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "9976163a69209abf",
+  "active": "6c6a687a8ec6cc73",
   "lastOpenFiles": [
     "学习记录.md",
+    "网络安全.md",
     "A计科工程/主机运维/Linux透明代理.md",
     "H其他文件/PPT/demo.md",
     "Untitled.md",
     "网络管理.md",
-    "网络安全.md",
     "B数据分析/jupyter.md",
     "A计科工程/主机运维/dnsmasq.md",
     "Linux.md",

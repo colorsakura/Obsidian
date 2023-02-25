@@ -3,6 +3,7 @@ Date: 2023-02-15 15:11
 Tag: TODO, qemu, kvm, Linux, Doc
 ---
 
+# Linux 虚拟机
 
 ## QEMU/KVM 虚拟化
 
@@ -18,17 +19,16 @@ QEMU/KVM 是目前最流行的虚拟化技术，它基于 Linux 内核提供的 
 
 QEMU/KVM 环境需要安装很多的组件，它们各司其职：
 
-1.  qemu: 模拟各类输入输出设备（网卡、磁盘、USB端口等）
-    -   qemu 底层使用 kvm 模拟 CPU 和 RAM，比软件模拟的方式快很多。
-2.  libvirt: 提供简单且统一的工具和 API，用于管理虚拟机，屏蔽了底层的复杂结构。（支持 qemu-kvm/virtualbox/vmware）
-3.  ovmf: 为虚拟机启用 UEFI 支持
-4.  virt-manager: 用于管理虚拟机的 GUI 界面（可以管理远程 kvm 主机）。
-5.  virt-viewer: 通过 GUI 界面直接与虚拟机交互（可以管理远程 kvm 主机）。
-6.  dnsmasq vde2 bridge-utils openbsd-netcat: 网络相关组件，提供了以太网虚拟化、网络桥接、NAT网络等虚拟网络功能。
-    -   dnsmasq 提供了 NAT 虚拟网络的 DHCP 及 DNS 解析功能。
-    -   vde2: 以太网虚拟化
-    -   bridge-utils: 顾名思义，提供网络桥接相关的工具。
-    -   openbsd-netcat: TCP/IP 的瑞士军刀，详见 [socat & netcat](https://thiscute.world/posts/socat-netcat/)，这里不清楚是哪个网络组件会用到它。
+1. qemu: 模拟各类输入输出设备（网卡、磁盘、USB端口等）, 底层使用 kvm 模拟 CPU 和 RAM，比软件模拟的方式快很多。
+2. libvirt: 提供简单且统一的工具和 API，用于管理虚拟机，屏蔽了底层的复杂结构。（支持 qemu-kvm/virtualbox/vmware）
+3. ovmf: 为虚拟机启用 UEFI 支持
+4. virt-manager: 用于管理虚拟机的 GUI 界面（可以管理远程 kvm 主机）。
+5. virt-viewer: 通过 GUI 界面直接与虚拟机交互（可以管理远程 kvm 主机）。
+6. dnsmasq vde2 bridge-utils openbsd-netcat: 网络相关组件，提供了以太网虚拟化、网络桥接、NAT网络等虚拟网络功能。
+    - dnsmasq 提供了 NAT 虚拟网络的 DHCP 及 DNS 解析功能。
+    - vde2: 以太网虚拟化
+    - bridge-utils: 顾名思义，提供网络桥接相关的工具。
+    - openbsd-netcat: TCP/IP 的瑞士军刀，详见 [socat & netcat](https://thiscute.world/posts/socat-netcat/)，这里不清楚是哪个网络组件会用到它。
 
 安装命令：
 
@@ -48,15 +48,15 @@ sudo apt install qemu-kvm libvirt-daemon-system virt-manager virt-viewer virtins
 
 它提供的命令列表如下：
 
-1.  `virt-df centos.img`: 查看硬盘使用情况
-2.  `virt-ls centos.img /`: 列出目录文件
-3.  `virt-copy-out -d domain /etc/passwd /tmp`：在虚拟映像中执行文件复制
-4.  `virt-list-filesystems /file/xx.img`：查看文件系统信息
-5.  `virt-list-partitions /file/xx.img`：查看分区信息
-6.  `guestmount -a /file/xx.qcow2(raw/qcow2都支持) -m /dev/VolGroup/lv_root --rw /mnt`：直接将分区挂载到宿主机
-7.  `guestfish`: 交互式 shell，可运行上述所有命令。
-8.  `virt-v2v`: 将其他格式的虚拟机(比如 ova) 转换成 kvm 虚拟机。
-9.  `virt-p2v`: 将一台物理机转换成虚拟机。
+1. `virt-df centos.img`: 查看硬盘使用情况
+2. `virt-ls centos.img /`: 列出目录文件
+3. `virt-copy-out -d domain /etc/passwd /tmp`：在虚拟映像中执行文件复制
+4. `virt-list-filesystems /file/xx.img`：查看文件系统信息
+5. `virt-list-partitions /file/xx.img`：查看分区信息
+6. `guestmount -a /file/xx.qcow2(raw/qcow2都支持) -m /dev/VolGroup/lv_root --rw /mnt`：直接将分区挂载到宿主机
+7. `guestfish`: 交互式 shell，可运行上述所有命令。
+8. `virt-v2v`: 将其他格式的虚拟机(比如 ova) 转换成 kvm 虚拟机。
+9. `virt-p2v`: 将一台物理机转换成虚拟机。
 
 学习过程中可能会使用到上述命令，提前安装好总不会有错，安装命令如下：
 
@@ -87,16 +87,18 @@ sudo systemctl start libvirtd.service
 
 qumu/kvm 装好后，默认情况下需要 root 权限才能正常使用它。 为了方便使用，首先编辑文件 `/etc/libvirt/libvirtd.conf`:
 
-1.  `unix_sock_group = "libvirt"`，取消这一行的注释，使 `libvirt` 用户组能使用 unix 套接字。
-2.  `unix_sock_rw_perms = "0770"`，取消这一行的注释，使用户能读写 unix 套接字。
+1. `unix_sock_group = "libvirt"`，取消这一行的注释，使 `libvirt` 用户组能使用 unix 套接字。
+2. `unix_sock_rw_perms = "0770"`，取消这一行的注释，使用户能读写 unix 套接字。
 
 然后新建 libvirt 用户组，将当前用户加入该组：
+
 ```shell
 sudo newgrp libvirt
 sudo usermod -aG libvirt $USER
 ```
 
 最后重启 `libvirtd` 服务，应该就能正常使用了：
+
 ```shell
 sudo systemctl restart libvirtd.service
 ```
@@ -130,8 +132,8 @@ Y
 
 这需要用到两个工具：
 
-1.  libguestfs: 虚拟机磁盘映像管理工具，前面介绍过了
-2.  qemu-img: qemu 的磁盘映像管理工具，用于创建磁盘、扩缩容磁盘、生成磁盘快照、查看磁盘信息、转换磁盘格式等等。
+1. libguestfs: 虚拟机磁盘映像管理工具，前面介绍过了
+2. qemu-img: qemu 的磁盘映像管理工具，用于创建磁盘、扩缩容磁盘、生成磁盘快照、查看磁盘信息、转换磁盘格式等等。
 
 ```
 # 创建磁盘
@@ -183,8 +185,8 @@ GUI 很傻瓜式，就不介绍了，这里主要介绍命令行工具 `virsh`/`
 
 先介绍下 libvirt 中的几个概念：
 
-1.  Domain: 指代运行在虚拟机器上的操作系统的实例 - 一个虚拟机，或者用于启动虚拟机的配置。
-2.  Guest OS: 运行在 domain 中的虚拟操作系统。
+1. Domain: 指代运行在虚拟机器上的操作系统的实例 - 一个虚拟机，或者用于启动虚拟机的配置。
+2. Guest OS: 运行在 domain 中的虚拟操作系统。
 
 大部分情况下，你都可以把下面命令中涉及到的 `domain` 理解成虚拟机。
 
@@ -359,7 +361,7 @@ virsh detach-interface
 
 ## 参考
 
--   [Virtualization Guide - OpenSUSE](https://doc.opensuse.org/documentation/leap/virtualization/html/book-virt/index.html)
--   [Complete Installation of KVM, QEMU and Virt Manager on Arch Linux and Manjaro](https://computingforgeeks.com/complete-installation-of-kvmqemu-and-virt-manager-on-arch-linux-and-manjaro/)
--   [virtualization-libvirt - ubuntu docs](https://ubuntu.com/server/docs/virtualization-libvirt)
--   [RedHat Docs - KVM](https://developers.redhat.com/products/rhel/hello-world#fndtn-kvm)
+- [Virtualization Guide - OpenSUSE](https://doc.opensuse.org/documentation/leap/virtualization/html/book-virt/index.html)
+- [Complete Installation of KVM, QEMU and Virt Manager on Arch Linux and Manjaro](https://computingforgeeks.com/complete-installation-of-kvmqemu-and-virt-manager-on-arch-linux-and-manjaro/)
+- [virtualization-libvirt - ubuntu docs](https://ubuntu.com/server/docs/virtualization-libvirt)
+- [RedHat Docs - KVM](https://developers.redhat.com/products/rhel/hello-world#fndtn-kvm)
