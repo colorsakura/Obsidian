@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "网络管理.md",
+                "file": "改变计划.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -70,7 +70,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 226.5
+    "width": 226.5,
+    "collapsed": true
   },
   "right": {
     "id": "26711adbd0148b59",
@@ -86,7 +87,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "网络管理.md",
+                "file": "改变计划.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -114,7 +115,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "网络管理.md"
+                "file": "改变计划.md"
               }
             }
           },
@@ -156,14 +157,14 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "6c6a687a8ec6cc73",
+  "active": "9976163a69209abf",
   "lastOpenFiles": [
-    "学习记录.md",
     "网络安全.md",
+    "网络管理.md",
+    "学习记录.md",
     "A计科工程/主机运维/Linux透明代理.md",
     "H其他文件/PPT/demo.md",
     "Untitled.md",
-    "网络管理.md",
     "B数据分析/jupyter.md",
     "A计科工程/主机运维/dnsmasq.md",
     "Linux.md",
