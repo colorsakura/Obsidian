@@ -7,7 +7,7 @@ Tag: TODO, qemu, kvm, Linux, Doc
 
 ## QEMU/KVM 虚拟化
 
-QEMU/KVM 是目前最流行的虚拟化技术，它基于 Linux 内核提供的 kvm 模块，结构精简，性能损失小，而且开源免费（对比收费的 vmware），因此成了大部分企业的首选虚拟化方案。
+QEMU/KVM 是目前最流行的虚拟化技术，它基于 Linux 内核提供的 kvm 模块，结构精简，性能损失小，而且开源免费（对比收费的 Vmware），因此成了大部分企业的首选虚拟化方案。
 
 目前各大云厂商的虚拟化方案，新的服务器实例基本都是用的 KVM 技术。即使是起步最早，一直重度使用 Xen 的 AWS，从 EC2 C5 开始就改用了基于 KVM 定制的 Nitro 虚拟化技术。
 
@@ -34,7 +34,7 @@ QEMU/KVM 环境需要安装很多的组件，它们各司其职：
 
 ```shell
 # archlinux
-sudo pacman -S qemu-desktop virt-manager virt-viewer dnsmasq vde2 bridge-utils openbsd-netcat edk2-ovmf
+sudo pacman -S qemu-desktop virt-viewer dnsmasq vde2 bridge-utils openbsd-netcat edk2-ovmf
 
 # ubuntu,参考了官方文档，但未测试
 sudo apt install qemu-kvm libvirt-daemon-system virt-manager virt-viewer virtinst bridge-utils

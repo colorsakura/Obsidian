@@ -1,5 +1,10 @@
-起应是不想用lightdm/gdm之类的登录管理器  
-我用的zsh，先在用户的~/.zprofile加入，如果是bash则是~/.bash_profile
+---
+Date: 2023-03-01 15:25
+Tag: TODO, tty
+---
+
+起应是不想用 lightdm/gdm 之类的登录管理器  
+我用的 zsh，先在用户的~/. zprofile 加入，如果是 bash 则是~/. bash_profile
 
 ```shell
 if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
@@ -8,7 +13,7 @@ fi
 ```
 
 然后编辑你的  
-**/etc/systemd/system/getty.target.wants/getty@tty1.service**
+**/etc/systemd/system/getty. target. wants/ getty@tty1.service **
 
 ```
 [Service]
@@ -32,7 +37,7 @@ systemctl start getty@tty1.service
 ```
 
 这样设置之后启动还需要输入一次密码，如果想跳过密码则  
-编辑 /etc/pam.d/system-local-login
+编辑 /etc/pam. d/system-local-login
 ```
 #%PAM-1.0
 

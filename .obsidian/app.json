@@ -1,5 +1,5 @@
 {
-  "promptDelete": false,
+  "promptDelete": true,
   "readableLineLength": false,
   "legacyEditor": false,
   "livePreview": true,
@@ -8,8 +8,9 @@
   "showLineNumber": true,
   "strictLineBreaks": true,
   "showFrontmatter": true,
-  "spellcheck": true,
+  "spellcheck": false,
   "spellcheckLanguages": null,
   "smartIndentList": true,
-  "showInlineTitle": false
+  "showInlineTitle": false,
+  "trashOption": "local"
 }
