@@ -1,3 +1,8 @@
+---
+Date: 2023-03-02 17:07
+Tag: TODO, Linux, Gitlab
+---
+
 试用 `gitlab-ce` 搭建私人git管理服务器。
 内存要求>4GB
 

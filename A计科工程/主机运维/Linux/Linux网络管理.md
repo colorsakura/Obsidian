@@ -1,15 +1,15 @@
 ---
 Date: 2023-02-19 14:43
-Tag: TODO, network, systemd, linux, dns, dnsmasq
+Tag: DOC, network, systemd, linux, dns, dnsmasq
 ---
 
 # 网络管理方案
 
 `systemd` 目前正在统一 Linux, 并且多数发行版已采用 `systemd` 替代以前的 `init` ；
-当前的思路是采用最少的软件，最小依赖，并且官方支持。
-Linux 将使用 `systemd-networkd` 管理网络，无线网配合 `iwd` 使用，本地在配置 `dnsmasq` 作 DNS 缓存。
+当前的思路是采用最少的软件，最小依赖，并且官方支持的方案。
+Linux 将使用 `systemd-networkd` 管理网络，无线网配合 `iwd` 使用，本地配置 `dnsmasq` 作 DNS 缓存。
 
-> [!note] 
+> [!warning] 
 > 这里主要介绍配置有线网络，以及无线网络的过程。在开始配置前，需要把正在使用的网络管理服务停止掉，以避免出现冲突。
 
 ## 配置有线网络
@@ -17,28 +17,20 @@ Linux 将使用 `systemd-networkd` 管理网络，无线网配合 `iwd` 使用�
 有线网络主要配置时，考虑到可能使用手机 usb 连接共享收集的网络，为了保持命名的一致性，通过 bridge 来归一化所有有线连接。配置如下：
 
 1.  将所有有线连接都作为 `br0` 的底层设备
-
-```shell
-cat /etc/systemd/network/19-en.network
 ```
-
-```
-# /etc/systemd/network/19-en.network
+# /etc/systemd/network/20-ethernet.network
 [Match]
 Name=en*
+Name=eth*
 
 [Network]
 Bridge=br0
 ```
 
-`en*` 将匹配以 en 开头的所有设备。
+> [!note]
+>  `en*` 将匹配以 en 开头的所有设备。
 
 2.  定义 `br0` 设备
-
-```
-cat /etc/systemd/network/20-br0.netdev
-```
-
 ```
 # /etc/systemd/network/20-br0.netdev
 [NetDev]
@@ -47,13 +39,7 @@ Kind=bridge
 ```
 
 3.  配置 `br0` 的网络
-
 这里采用了 DHCP 的方式获取 ip，由于我采用了独立的 DNS 解析，这里配置不使用 DNS.
-
-```
-cat /etc/systemd/network/20-br0.network
-```
-
 ```
 # /etc/systemd/network/20-br0.network
 [Match]
@@ -66,9 +52,12 @@ Name=br0
 DHCP=yes
 IPForward=yes
 IPv6AcceptRA=true
+IPv6PrivacyExtensions=yes
 
-[DHCP]
-UseDNS=false
+[DHCPv4]
+RouteMetric=100
+
+[IPv6AcceptRA]
 RouteMetric=100
 ```
 
@@ -91,10 +80,6 @@ systemctl start iwd.service
 
 3.  设置无线网络的配置
 ```
-cat /etc/systemd/network/25-wireless.network
-```
-
-```
 # /etc/systemd/network/25-wireless.network
 [Match]
 Name=wl*
@@ -103,29 +88,32 @@ Name=wl*
 DHCP=yes
 IPForward=yes
 IPv6AcceptRA=true
+IPv6PrivacyExtensions=yes
 
-[DHCP]
-UseDNS=false
-RouteMetric=200
+[DHCPv4]
+RouteMetric=600
+
+[IPv6AcceptRA]
+RouteMetric=600
 ```
 
-## 启动服务及开机自启动
+> [!note] 
+> 有线网络和无线网络的 `RouteMetric` 的值是不同的，应该优先使用有线网络。
+
+## 启动服务
 
 使用 `systemctl start systemd-networkd` 启动服务，看配置是否生效，网络是否正常。
-
 在网络正常后，通过下面命令设置开机自启动，完成所有配置。
-
 ```
-systemctl enable iwd.service
-systemctl enable systemd-networkd.service
+systemctl enable --now iwd.service
+systemctl enable --now systemd-networkd.service
 ```
 
-## Issue
+## ISSUE
 
 ### Libvirt 网络无法启动问题
 
 在使用 systemd-networkd 管理网络后，libvirtd 开机无法自启动网卡，会有下面的报错：
-
 ```
 enabling IPv6 forwarding with RA routes without accept_ra set to 2 is likely to cause routes loss
 ```
@@ -137,7 +125,6 @@ enabling IPv6 forwarding with RA routes without accept_ra set to 2 is likely to 
 Note that kernel's implementation of the IPv 6 RA protocol is always disabled, regardless of this setting. If this option is enabled, a userspace implementation of the IPv 6 RA protocol is used, and the kernel's own implementation remains disabled, since systemd-networkd needs to know all details supplied in the advertisements, and these are not available from the kernel if the kernel's own implementation is used.
 
 目前通过在 libvirtd 的脚本中手动启动网卡来规避这个问题：
-
 ```
 $ cat /etc/systemd/system/libvirtd.service.d/override.conf
 ```
@@ -162,11 +149,11 @@ ExecStartPost=-/usr/bin/sysctl -w net.ipv6.conf.br0.accept_ra=0
 
 这个问题目前还没找到自动解决的办法。
 
-## Dnsmasq Setup
+## DNS 服务配置
 
 ## References
 
-https://lisongmin.github.io/os-systemd-networkd/
+[使用 systemd-networkd 管理网络]( https://lisongmin.github.io/os-systemd-networkd/ )
 https://linux.cn/lfs/LFS-BOOK-7.7-systemd/chapter07/network.html
 https://wiki.archlinux.org/title/Dnsmasq
 https://wiki.archlinux.org/title/Systemd-resolved

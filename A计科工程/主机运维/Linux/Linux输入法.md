@@ -1,6 +1,8 @@
 ---
-Tag: Linux, Input
+Date: 2023-03-02 17:08
+Tag: TODO, Fcitx5, ibus, 
 ---
+
 
 >[!warning] 只推荐常用的输入法，并且开发活跃的。目前输入法在 Linux 下属于薄弱项，兼容较差，Jetbrains 系无法正常使用。
 

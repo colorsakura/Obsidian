@@ -1,24 +1,19 @@
 {
   "cssTheme": "Blue Topaz",
-  "theme": "obsidian",
+  "theme": "system",
   "translucency": false,
-  "interfaceFontFamily": "",
+  "interfaceFontFamily": "更纱黑体 UI SC",
   "textFontFamily": "更纱黑体 SC",
   "baseFontSize": 16,
   "enabledCssSnippets": [
     "external-link-edit-mode",
     "column",
     "admonition-highlight-block",
-    "clutter-free-headings",
-    "custom-admonitions.ace703",
-    "external-link-icons",
     "folder-icons",
-    "general",
-    "image-grid",
-    "tag-pills"
+    "external-link-icons"
   ],
   "monospaceFontFamily": "JetBrainsMono Nerd Font",
-  "accentColor": "#3495df",
+  "accentColor": "",
   "nativeMenus": false,
   "baseFontSizeAction": false,
   "showViewHeader": false
