@@ -4,14 +4,15 @@
     {
       "fieldConfig": {},
       "defaultName": "",
-      "templates": [],
+      "templates": [
+        "H其他文件/模板/笔记.md"
+      ],
       "excludedNotes": [],
       "isDefault": true,
       "dataSource": {
-        "kind": "folder",
+        "kind": "tag",
         "config": {
-          "path": "项目管理",
-          "recursive": false
+          "tag": "#TODO"
         }
       },
       "newNotesFolder": "",
@@ -83,7 +84,7 @@
           "type": "gallery"
         }
       ],
-      "name": "project",
+      "name": "项目管理",
       "id": "4b3b6028-99cb-4199-aac2-733c24d03a9a"
     }
   ],

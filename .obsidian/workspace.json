@@ -4,15 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "63092e59bbfcbe17",
+        "id": "3502fb42ceeb400c",
         "type": "tabs",
         "children": [
           {
-            "id": "7e220e81551b715e",
+            "id": "b3f016095ce8532c",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "A计科工程/主机运维/Linux/Linux透明代理.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
             }
           }
         ]
@@ -65,7 +70,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 226.5
+    "width": 226.5,
+    "collapsed": true
   },
   "right": {
     "id": "26711adbd0148b59",
@@ -91,7 +97,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "A计科工程/主机运维/Linux/Linux透明代理.md"
+              }
             }
           },
           {
@@ -115,6 +123,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "A计科工程/主机运维/Linux/Linux透明代理.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -146,8 +155,13 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "9976163a69209abf",
+  "active": "b3f016095ce8532c",
   "lastOpenFiles": [
+    "改变计划.md",
+    "室内蔬菜种植.md",
+    "学习记录.md",
+    "项目记录.md",
+    "A计科工程/主机运维/Linux/collected.md",
     "E项目管理/irik.md",
     "C知识宝库/概率论/概率.md",
     "C知识宝库/概率论",
@@ -155,7 +169,6 @@
     "A计科工程/主机运维/Linux/Linux系统数据收集分析.md",
     "A计科工程/主机运维/Linux/Linux 虚拟机.md",
     "A计科工程/主机运维/Linux/Btrfs文件系统.md",
-    "学习记录.md",
     "H其他文件/PPT/demo.md",
     "G绘图文件/数据结构.md",
     "G绘图文件/irik-1206.md",
@@ -166,15 +179,11 @@
     "A计科工程/主机运维/Linux/wayland使用指南.md",
     "A计科工程/主机运维/Linux/Wireshark.md",
     "Untitled.md",
-    "A计科工程/主机运维/Linux/collected.md",
     "A计科工程/主机运维/Linux/fish.md",
     "A计科工程/主机运维/Linux/dnsmasq.md",
     "A计科工程/主机运维/Linux/Linux透明代理.md",
     "A计科工程/主机运维/Linux/Linux输入法.md",
     "A计科工程/主机运维/Linux/Linux 权限管理.md",
-    "A计科工程/主机运维/Linux/蓝牙相关问题.md",
-    "A计科工程/主机运维/Linux/自动锁屏和休眠.md",
-    "A计科工程/主机运维/Linux/搭建私人Gitlab.md",
     "新功能测试.canvas",
     "A计科工程/主机运维/Raspi"
   ]

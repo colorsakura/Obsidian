@@ -1,4 +1,7 @@
-# 简介
+---
+Date: 2023-03-07 16:22
+Tag: Go, Doc
+---
 
 Go 是一门开源的、表现力强的、简洁的、静态编译型语言。它在语言**级别支持协程**（Coroutine），让你轻松的编写并发性代码。Go 新颖的类型系统便于构建灵活的、**模块化**的应用程序。Go 能够快速的**编译为机器码**，同时支持**垃圾回收（并发标记清除）**、**运行时反射**等现代语言特性。
 
@@ -36,7 +39,6 @@ func main() {
 }
 ```
 
-
 ### 变量的初始化
 
 你可以在变量列表声明之后紧跟着初始化列表：
@@ -48,15 +50,13 @@ var i, j int = 1, 2
 var c, python, java = true, false, "no!"
 ```
 
-
-### 短声明变量 
+### 短声明变量
 
 使用 `:=` 操作符，可以**在函数体内部声明**变量并初始化，而不需要 var 关键字和变量类型说明（自动推导）：
 
 ```go
 c, python, java := true, false, "no!"
 ```
-
 
 这种语法**不能用在函数体外**，函数外的**每个语句都必须以关键字开头**（例如 var、func）。
 
@@ -75,7 +75,6 @@ fmt.Println(x)     // 打印1
 fmt.Println(x)     // 打印1，看不到子作用域的变量
 ```
 
-
 ### 变量的重复声明
 
 单个变量不能重复声明：
@@ -85,14 +84,12 @@ i := 0
 i := 1 // 错误
 ```
 
-
 但是多变量声明时，**只要其中一个是新变量，就可以重复**声明：
 
 ```go
 // 重复声明i
 i, j := 1, 0  
 ```
-
 
 ### 零值
 
@@ -136,7 +133,6 @@ f := 3.142         // float64
 g := 0.867 + 0.5i  // complex128
 ```
 
-
 ## 基本类型
 
 | 类型 |说明 |
@@ -159,7 +155,6 @@ const World = "Hello"
 const Truth = true
 ```
 
-
 ## 字符串
 
 Go 字符串的本质是一个 byte 切片（以及一些额外的属性）。字符串是不可变的。如果需要修改字符串的某个字符，可以使用 byte 切片：
@@ -170,7 +165,6 @@ xbytes := []byte(x)
 xbytes[0] = 'T'
 string(xbytes)
 ```
-
 
 但是需要注意，**单个字符可能存放在多个 byte**中。因此更新一段字符串，使用 rune 的 slice 可能更好，尽管单个字符也可能占用多个 rune（例如包含重音符号的字符）。
 
@@ -187,7 +181,6 @@ import "unicode/utf8"
 utf8.RuneCountInString(data)
 ```
 
-
 实际上 RuneCountInString 获取的是 rune 而非 char 数量，包含重音符号的字符，可能占据两个 rune。
 
 ### 获取字符
@@ -200,15 +193,13 @@ str := utf8string.NewString("你好")
 str.At(0)
 ```
 
-
-### 不一定是 UTF8 
+### 不一定是 UTF8
 
 ```go
 // 可以使用转义序列引入任意数据
 data := "A\xfeC"
 utf8.ValidString(data) // false
 ```
-
 
 ## 函数
 
@@ -219,7 +210,6 @@ func add(x int, y int) int {
     return x + y
 }
 ```
-
 
 可以注意到，变量的类型、函数的返回值类型，都是**后置声明**的。这种与众不同的语法风格，在进行复杂声明时能够保持可读性。
 
@@ -244,7 +234,6 @@ func main() {
     fmt.Println(a, b)  // Alex Wong
 }
 ```
-
 
 ### 返回值命名
 
@@ -272,7 +261,6 @@ func main() {
 }
 ```
 
-
 ### 作为值使用
 
 函数可以像任何值一样，被传递来传递去：
@@ -291,7 +279,6 @@ func main() {
     fmt.Println(add(1, 2, adder))
 }
 ```
-
 
 ### 闭包
 
@@ -313,7 +300,6 @@ func main() {
 }
 ```
 
-
 ### 可变参数
 
 Go 函数支持不定数量的参数，例如：
@@ -334,7 +320,6 @@ func main() {
 }
 ```
 
-
 切片可以展开为可变参数列表：
 
 ```go
@@ -347,7 +332,6 @@ func main() {
     printAll([]string{"A", "B", "C"}...) // 展开
 }
 ```
-
 
 ## 指针
 
@@ -364,7 +348,6 @@ var ip *int = &i
 fmt.Print(*ip) // 5
 ```
 
-
 但是，Go 语言不支持指针的运算。
 
 注意：**返回局部变量的指针是安全的，函数返回后此变量仍然存活**，这和 C 语言不同。
@@ -373,7 +356,7 @@ fmt.Print(*ip) // 5
 
 如果函数的入参是**结构**，而非结构的指针，则**实际传递的是结构的副本，所有字段均被浅拷贝**。
 
-通过**make、new、& **获得的对象，你不需要担心拷贝副本的开销或修改无效。也就是说，**传递“引用”的类型包括切片、map、通道、指针、函数**。**string 类型是不可变的，也按引用传递**。**数字、bool、结构等都是按值**传递。
+通过**make、new、&**获得的对象，你不需要担心拷贝副本的开销或修改无效。也就是说，**传递“引用”的类型包括切片、map、通道、指针、函数**。**string 类型是不可变的，也按引用传递**。**数字、bool、结构等都是按值**传递。
 
 **数组本身是传值**的，作为**函数参数时，你通常使用切片而非数组**。
 
@@ -393,14 +376,12 @@ func main() {
 }
 ```
 
-
 要访问结构中的字段，使用点号：
 
 ```go
 v := Vector3{1, 2, 3}
 fmt.Print(v.X)
 ```
-
 
 可以通过结构的指针来访问字段，语法和上面一样：
 
@@ -409,7 +390,6 @@ v := Vector3{1, 2, 3}
 pv := &v
 fmt.Print(pv.X)
 ```
-
 
 声明结构的不同方式：
 
@@ -426,7 +406,6 @@ fmt.Printf("%v %v %v %v", v1, v2, v3, *pv4)
 // {1 2 3} {0 0 0} {0 0 3} {0 0 3}
 ```
 
-
 ### 字段标签
 
 使用标签（Tag）你可以为结构的字段添加元数据。这些元数据可以通过反射调用获得。在决定如何存储结构到数据库，或者串行化为 JSON/XML 等格式时，常常利用字段标签。
@@ -439,13 +418,11 @@ type User struct {
 }
 ```
 
-
 如果值部分包含更多信息，可以使用逗号分隔：
 
 ```go
 Name string `json:"name,omitempty"`
 ```
-
 
 经常使用的标签键包括：
 
@@ -461,6 +438,7 @@ Name string `json:"name,omitempty"`
 | valid |包 github. com/asaskevich/govalidator 使用此键 |
 | schema |包 github. com/gorilla/schema 使用此键 |
 | csv |包 github. com/gocarina/gocsv 使用此键 |
+
 ### 空结构
 
 `struct{}` 的特点是**占用内存空间为零**：
@@ -470,14 +448,12 @@ var s struct{}
 fmt.Println(unsafe.Sizeof(s)) // 0
 ```
 
-
 因此可以用它作为占位符：
 
 ```go
 chan struct{}        // 仅仅用来传递信号，而非读写数据
 map[string]struct{}  // 实现Set结构 
 ```
-
 
 ## 数组
 
@@ -513,7 +489,6 @@ var ia [10]*int{9:new(int)}  // 为索引9分配内存
 *ia[9] = 10   // 解引用并赋值，已经分配内存的索引才能被赋值
 ```
 
-
 关于**数组，需要注意它的长度是一定的**，这和切片不同**。元素类型相同、长度也相同的数组，它们的类型才是一样的**。
 
 你**可以对数组元素进行取地址操作**：
@@ -522,7 +497,6 @@ var ia [10]*int{9:new(int)}  // 为索引9分配内存
 // 避免复制
 container := &dep.Spec.Template.Spec.Containers[0]
 ```
-
 
 数组在**传参、赋值时是传值**，不过参数通常都会用切片。
 
@@ -541,7 +515,6 @@ func(arr *[3]int) {
 }()
 ```
 
-
 或者，你可以使用切片。尽管切片本身是传值的，但是**其底层数组在函数内外共享**：
 
 ```go
@@ -550,7 +523,6 @@ func(arr []int) {
   arr[0] = 7
 }(x)
 ```
-
 
 但需注意，**这种方法不能用于增加切片元素，因为其底层数组可能被换掉**。
 
@@ -577,7 +549,6 @@ s := make([]int, 5, 10)
 s := []int{3:4}
 ```
 
-
 切片元素可以是任何类型，包括切片：
 
 ```go
@@ -593,7 +564,6 @@ for i := 0; i < len(matrix); i++ {
     fmt.Println()
 }
 ```
-
 
 Go 支持类似于 Python 的切片操作，`s[lo:hi]` 表示产生从索引 lo（包含）到 hi（不包含）的新切片。需要注意，进行切片操作后，新产生的**切片会共享底层数组**：
 
@@ -611,7 +581,6 @@ a[0:]
 a[:]
 ```
 
-
 要构造切片，可以调用 make 函数：
 
 ```go
@@ -619,7 +588,6 @@ a[:]
 s := make([]int, 10, 100)
 fmt.Print(len(s)) // 10
 ```
-
 
 切片的零值是 nil，nil 切片的长度、容量皆为 0。另外空切片的长度容量也都是0：
 
@@ -629,7 +597,6 @@ var nilSlice []int
 // 空切片，底层数组的指针为一个地址
 slice:=[]int{}
 ```
-
 
 要向切片的尾部添加元素，可以调用 append 函数。这个函数有可能导致创建新的底层数组。
 
@@ -642,7 +609,6 @@ s := []int{1}
 s1 := append(s, 2, 3, 4)
 fmt.Print(s1) // [1 2 3 4]
 ```
-
 
 在创建**新切片时，最好让切片的长度和容量一致**，这样 append 操作总会产生新的底层数组，这可以避免因为共享底层数组导致的奇怪问题。
 
@@ -669,7 +635,6 @@ for i,_ := range s {
     e.field = value
 }
 ```
-
 
 ## 包
 
@@ -704,7 +669,6 @@ func main() {
     fmt.Println("Random number: ", rand.Intn(100))
 }
 ```
-
 
 ### 名称导出
 
@@ -748,7 +712,6 @@ func IsBlank(str string) bool {
 }
 ```
 
-
 只要其所在的包被使用（如果是 main 包则一定被使用），则 init 函数一定会执行，并且肯定在 IsBlank 被调用之前。
 
 一个较为复杂的 Go 程序中，包初始化顺序如下：
@@ -765,7 +728,6 @@ func IsBlank(str string) bool {
 #    └── 按源文件名称依次执行init函数
 ```
 
-
 ### 迭代
 
 不管是切片，还是数组、映射，**for range 操作获取的都是元素的拷贝**。要想修改集合元素，需要使用索引：
@@ -775,7 +737,6 @@ for i,_ := range data {
     data[i] *= 10
 }
 ```
-
 
 **如果元素存放的是指针则可以直接解引用并修改**。
 
@@ -818,7 +779,6 @@ func main() {
 }
 ```
 
-
 ### 支持的键类型
 
 布尔值、数字、字符串、指针、通道、接口类型、结构，以及这些类型的数组，都可以作为映射的键。**切片、映射、函数不可以作为映射的键**。
@@ -852,7 +812,6 @@ users := map[string]User{
 alex := &users["Alex"] // 编译错误 
 ```
 
-
 ### 迭代时删除
 
 注意：在**迭代映射的过程中删除键值是安全的**：
@@ -864,7 +823,6 @@ for key := range m {
     }
 } 
 ```
-
 
 ## 方法
 
@@ -893,7 +851,6 @@ func main() {
 }
 ```
 
-
 注意：**方法仅仅是具有接收者的函数而已**。
 
 你也可以为其它（非 struct）类型定义方法，但是你**只能为当前包中声明的类型定义方法**：
@@ -911,7 +868,6 @@ func main() {
     fmt.Println(f.Abs())
 }
 ```
-
 
 ### 值作为接收者
 
@@ -938,7 +894,6 @@ func (ll *LatLng) isEastHemisphere() bool {
 }
 ```
 
-
 由于指针修改接收者状态的能力，第二种形式的方法定义要常用的多，此外第二种形式还**避免了不必要的值拷贝**。一般来说，一个类型上的方法，通常**都使用**指针接收者，或者值接收者，而不会混用。
 
 **调用方法时，你不需要对接收者进行取地址操作**，这和普通函数调用不一样。普通函数的参数如果要求指针，则你必须传入指针。
@@ -959,7 +914,6 @@ type GeoOps interface {
 }
 ```
 
-
 可以将实现了接口中定义了的方法的类型赋值给接口：
 
 ```go
@@ -969,7 +923,6 @@ var gops GeoOps
 gops = &jazxPos
 fmt.Println(gops.IsNorthHemisphere())
 ```
-
 
 ### 实现接口
 
@@ -999,7 +952,6 @@ gops = &ll
 gops.isEastHemisphere()
 ```
 
-
 还有一个陷阱需要注意：
 
 ```go
@@ -1010,7 +962,6 @@ println(e == nil)  // true    nil
 println(ei == nil) // false   (error, nil)   这三个都是判断变量本身是不是nil，即使将nil变量赋值给指针，指针也不是nil，因为它获得了类型信息
 println(ni == nil) // true    nil
 ```
-
 
 需要注意：
 
@@ -1029,18 +980,12 @@ if i.(bool) == nil {
 } 
 ```
 
-
-
-
 2. 否则，可以通过反射：
 
 ```go
 if reflect.ValueOf(i).IsNil() {
 }
 ```
-
-
-
 
 ### 空接口
 
@@ -1054,7 +999,6 @@ func Println(a ...interface{}) (n int, err error) {
 }
 ```
 
-
 ### 一些实践
 
 如果一个包仅暴露一个接口，可以将此接口直接命名为 Interface：
@@ -1067,7 +1011,6 @@ type Interface interface {
 }
 ```
 
-
 **不要将接口的指针作为入参**，只需要使用接口本身：
 
 ```shell
@@ -1075,7 +1018,6 @@ func sayHelloTo(user *user.Interface) { // NOT OK
     println((*user).GetName())
 }
 ```
-
 
 要避免拷贝，只需要让**类型的指针作为接口方法的接收者**即可。
 
@@ -1091,7 +1033,6 @@ func sayHelloTo(user *user.Interface) { // NOT OK
 ++i       // 错误
 data[i++] // 错误
 ```
-
 
 ### 位操作
 
@@ -1110,7 +1051,6 @@ fmt.Printf("%08b &^%08b = %08b [A 'AND NOT' B]\n", a, b, a&^b) // 10000010 &^000
 fmt.Printf("%08b&(^%08b)= %08b [A AND (NOT B)]\n", a, b, a&(^b)) // 10000010&(^00000010)= 10000000 [A AND (NOT B)]
 ```
 
-
 ## 类型断言
 
 使用下面的语法可以进行**类型断言，将接口类型强制转换为真实类型**，**或者**将接口转换为**另外一个接口**：
@@ -1125,7 +1065,6 @@ type IstioObject interface { ... }
 var object interface{} = ...
 item, ok := object.(IstioObject)
 ```
-
 
 如果指定两个变量来接收返回值，则：
 
@@ -1148,7 +1087,6 @@ switch val := gops.(type) {
 }
 ```
 
-
 ## new/make
 
 Go 支持两种变量分配原语：new、make，二者都是内置函数。
@@ -1161,7 +1099,6 @@ new 仅仅**用于分配内存，将其置零**，但是不初始化变量，仅
 // 为类型SyncedBuffer分配对应大小的内存并清零，然后返回一个 * SyncedBuffer
 p := new(SyncedBuffer)
 ```
-
 
 不同类型的零值具有不同含义：例如：
 
@@ -1185,13 +1122,11 @@ if _, err := os.Stat(path); os.IsNotExist(err) {
 }
 ```
 
-
 导入包，但是仅仅执行其 init 函数而不使用其导出的成员：
 
 ```go
 import _ "net/http/pprof"
 ```
-
 
 检查是否实现了指定的接口：
 
@@ -1201,8 +1136,7 @@ if _, ok := val.(json.Marshaler); ok {
 }
 ```
 
-
-## 类型嵌入 
+## 类型嵌入
 
 Go 没有提供典型的、类型驱动的子类化机制。但是，你可以通过在结构、接口内部嵌入其它类型，来达到类似于子类化的效果。
 
@@ -1231,7 +1165,6 @@ type ReadWriter interface {
     Writer
 }
 ```
-
 
 注意，**只有接口才能被嵌入到接口中**。
 
@@ -1262,7 +1195,6 @@ func main() {
 }
 ```
 
-
 结构可以同时包含普通字段、内嵌结构：
 
 ```go
@@ -1274,14 +1206,12 @@ type Job struct {
 job := &Job{command, log.New(os.Stderr, "Job: ", log.Ldate)}
 ```
 
-
 如果需要直接**引用内嵌类型，可以使用其类型名**：
 
 ```go
 //  使用类型名引用，不要导入包前缀
 job.Logger.Logf("%q: %s",...)
 ```
-
 
 注意，结构也可以内嵌接口：
 
@@ -1291,7 +1221,6 @@ type Registry struct {
     model.Controller  // 类型名Controller
 }
 ```
-
 
 **结构嵌入接口的意义是，相当于加了个“缺省适配”**，结构不必须实现任何方法，仅仅“覆盖”自己关注的方法即可。
 
@@ -1305,7 +1234,6 @@ aggregate.Registry{
     Controller:       kubectl,   // 直接通过类型名Controller引用
 } 
 ```
-
 
 ### 名字冲突问题
 
@@ -1337,7 +1265,6 @@ aggregate.Registry{
 type nodeName = string
 ```
 
-
 ### 类型定义
 
 下面的语法是定义一个新类型，两个类型不一样，必须强制转换：
@@ -1349,7 +1276,6 @@ var n nodeName = string("xenon")
 str := string(n) 
 ```
 
-
 对现有**非接口类型**进行类型定义，**新的类型不会继承原有类型的方法**：
 
 ```go
@@ -1358,7 +1284,6 @@ type myMutex sync.Mutex
 var mtx myMutex
 mtx.Lock() // 错误
 ```
-
 
 要想继承，可以使用匿名嵌套：
 
@@ -1370,7 +1295,6 @@ type myMutex struct {  
 var mtx myMutex
 mtx.Lock() // OK
 ```
-
 
 但是，**对于接口类型进行类型定义，方法则会被继承**。
 
@@ -1404,7 +1328,6 @@ for {
 }
 ```
 
-
 ### 循环变量取地址
 
 **不要尝试取循环变量的地址！**
@@ -1425,7 +1348,6 @@ for idx, solverConfig := range items {
 0xc00055eea0
 ```
 
-
 在上面的例子中，期望创建出三个不同配置的 Solver 对象，而实际上它们引用的 Config 完全一致。
 
 解决此问题的方法有两个：
@@ -1437,17 +1359,11 @@ copied := solverConfig
 &copied
 ```
 
-
-
-
 2. 如果希望得到原始值的指针：
 
 ```go
 &solverConfig[idx] 
 ```
-
-
-
 
 ### 循环和闭包
 
@@ -1464,7 +1380,6 @@ for _,v := range data {
 }
 ```
 
-
 解决办法是在循环体内定义局部变量：
 
 ```go
@@ -1476,7 +1391,6 @@ for _,v := range data {
 } 
 ```
 
-
 或者直接传参给 Goroutine：
 
 ```go
@@ -1486,7 +1400,6 @@ for _,v := range data {
     }(v)
 }
 ```
-
 
 再次强调：整个循环过程中，**for 语句引入的迭代变量是的内存地址是不变的，也就是说，整个迭代过程中只有一个变量，每次都在修改同一变量的值**，在循环体内**，传递此变量的地址是危险的，特别注意闭包这种隐晦的传递地址的形式**
 
@@ -1515,7 +1428,6 @@ if true {
  
 }
 ```
-
 
 ## switch
 
@@ -1550,8 +1462,7 @@ case v1.PodPending, v1.PodRunning: ...
 }
 ```
 
-
-## defer 
+## defer
 
 这个关键字可以让后面的语句延迟执行：
 
@@ -1562,7 +1473,6 @@ func main() {
 }
 // Hello World
 ```
-
 
 直到包围语句的函数（而非代码块）返回之前才执行，**因此在循环体中通过 defer 来进行清理是不可以的。解决办法是把循环体封装为函数**。
 
@@ -1577,7 +1487,6 @@ func main() {
 }
 ```
 
-
 需要注意，**defer 的表达式求值发生在声明时，而非实际执行时**：
 
 ```go
@@ -1585,7 +1494,6 @@ var i int = 1
 defer fmt.Println("result =>",func() int { return i * 2 }())  // 打印2而非4
 i++ 
 ```
-
 
 ## defer 的陷阱
 
@@ -1612,7 +1520,6 @@ if err != nil {
 defer resp.Body.Close()
 ```
 
-
 ### defer 函数参数估算时机
 
 defer 后面需要跟着函数调用，但是其**入参可以是任何表达式**。这些表达式的估算时机，是**正常执行流（非 Defer 栈）执行到 Defer 语句的**时候：
@@ -1626,7 +1533,6 @@ defer Println(buf.Len())           // 10
 buf.Write(make([]byte, 10))                           
 Println(buf.Len())                 // 20
 ```
-
 
 上面的例子中， defer 语句真正执行时使用的 buf 长度，是第 3 行 write 后的长度，而非第6行。
 
@@ -1644,7 +1550,6 @@ buf.Write(make([]byte, 10))
 Println(buf.Len())                 // 20
 ```
 
-
 这样就可以获得最终 buf 的长度，因为对 buf.Len ()的函数调用不**会提前发生**。
 
 ### 调用 os. Exit 时 defer 不会被执行
@@ -1659,7 +1564,6 @@ func deferExit() {
     os.Exit(0)
 }
 ```
-
 
 上面的 defer 不会执行。
 
@@ -1677,7 +1581,6 @@ loop:
     }
 ```
 
-
 ## goto
 
 可以实现无条件转移：
@@ -1687,7 +1590,6 @@ loop:
 label:
     x := 1
 ```
-
 
 # 常用库
 
@@ -1770,6 +1672,7 @@ label:
 | time |操控和访问时间 |
 | unicode |提供对 Unicode 的支持 |
 | unsafe |用于绕开 Go 的类型安全机制 |
+
 ## built-in
 
 ### true/false
@@ -1782,7 +1685,6 @@ const (
     false = 0 != 0
 )
 ```
-
 
 ### iota
 
@@ -1802,7 +1704,6 @@ func main() {
 }
 ```
 
-
 ### nil
 
 预定义的标识符，表示指针、通道、函数、接口、映射或者切片的零值。
@@ -1818,7 +1719,6 @@ func main() {
 ```go
 slice = append([]byte("hello "), "world")
 ```
-
 
 ### cap
 
@@ -1900,7 +1800,6 @@ func Worker(req *Request) {
 }
 ```
 
-
 ### print/println
 
 内置的打印函数：
@@ -1909,7 +1808,6 @@ func Worker(req *Request) {
 func print(args ...Type)
 func println(args ...Type)
 ```
-
 
 ### uintptr
 
@@ -1925,7 +1823,6 @@ type error interface {
 }
 ```
 
-
 fmt 包在打印时，会检测变量是否实现了该接口。
 
 很多函数都会返回 error 值，调用者应该检查该值是否为 nil，从而判断调用是否成功：
@@ -1939,7 +1836,6 @@ if err != nil {
 }
 fmt.Println(i)
 ```
-
 
 ## flag
 
@@ -1963,7 +1859,6 @@ func main() {
 } 
 ```
 
-
 ## log
 
 该包提供了基本的日志记录功能。示例用法：
@@ -1973,7 +1868,6 @@ log.Printf("Process id is %v", os.Getpid())
 log.Fatalf("Parent PID is %v", os.Getppid())  // 打印信息并执行panic()抛出恐慌
 log.Fatal("Fatal error")                      // 打印信息并执行os.Exit(1)
 ```
-
 
 输出内容比 fmt. Printf 多了当前时间的前缀。要配置输出格式，可以：
 
@@ -1996,7 +1890,6 @@ const (
 )
 ```
 
-
 ## reflect
 
 该包为 Go 语言提供了反射功能。
@@ -2010,7 +1903,6 @@ if reflect.ValueOf(req).Kind() != reflect.Ptr {
   
 } 
 ```
-
 
 ### 类型识别
 
@@ -2029,7 +1921,6 @@ intType := reflect.TypeOf(1)
 fmt.Println(alexType, intType) // main.User int
 ```
 
-
 ### 值识别
 
 Value 是一个结构，它保存任何一个对象的全部信息。
@@ -2044,7 +1935,6 @@ fmt.Printf("%T=%v\n", alexValue, alexValue) // reflect.Value={Alex 31}
 ValueOf(nil)
 ```
 
-
 要从 Value 获得**原始对象，可以调用 Value.Interface ()**方法：
 
 ```go
@@ -2052,7 +1942,6 @@ ValueOf(nil)
 alex, _ = alexValue.Interface().(User)
 fmt.Printf("%T=%v\n", alex, alex)           // main.User={Alex 31} 
 ```
-
 
 要判断一个值是否为零值，使用下面的代码：
 
@@ -2062,7 +1951,6 @@ func IsZero(v reflect.Value) bool {
     return !v.IsValid() || reflect.DeepEqual(v.Interface(), reflect.Zero(v.Type()).Interface())
 }
 ```
-
 
 ### 获取分类
 
@@ -2102,8 +1990,7 @@ const (
 )
 ```
 
-
-### 读写字段 
+### 读写字段
 
 ```go
 // 遍历字段
@@ -2111,7 +1998,6 @@ for i := 0; i < alexType.NumField(); i++ {
     fmt.Println(alexType.Field(i).Name)
 }
 ```
-
 
 写入结构的字段：
 
@@ -2139,7 +2025,6 @@ if alexValue.Kind() == reflect.Struct {
 fmt.Println(alex) // {Alex Wong 31}
 ```
 
-
 写入基本类型：
 
 ```go
@@ -2147,7 +2032,6 @@ age := 31
 reflect.ValueOf(&age).Elem().SetInt(32)
 fmt.Println(age) // 32
 ```
-
 
 ### 调用方法
 
@@ -2157,7 +2041,6 @@ fmt.Println(age) // 32
 alexPtrValue := reflect.ValueOf(&alex)
 sayHelloMthd := alexPtrValue.MethodByName("SayHello")
 ```
-
 
 MethodByName 根据名称来检索一个 Value（它必须是接口、结构等支持方法的对象）的方法，方法也是 Value 对象，但是它可被调用：
 
@@ -2172,17 +2055,15 @@ if sayHelloMthd.IsValid() {
 }
 ```
 
-
 总之，方法、方法的参数、方法的返回值，都是 Value。Value 和实际接口/结构之间可以转换。
 
-### 读取字段标签 
+### 读取字段标签
 
 ```go
 alex := User{"Alex", 31}
 tag := reflect.TypeOf(alex).Field(0).Tag
 fmt.Println(tag) // json:"userName"
 ```
-
 
 很多现有的包都会利用字段标签，例如：
 
@@ -2191,7 +2072,6 @@ json, _ := json.Marshal(alex)
 fmt.Printf("%v", string(json))
 // {"userName":"Alex","userAge":31}
 ```
-
 
 ## unsafe
 
@@ -2207,7 +2087,6 @@ fmt.Println(unsafe.Sizeof('1'))      // 4
 fmt.Println(unsafe.Sizeof("1"))      // 16
 fmt.Println(unsafe.Sizeof(new(int)))    // 8
 ```
-
 
 注意返回值仅仅和类型有关，和值没有任何关系。
 
@@ -2234,15 +2113,13 @@ fmt.Println(unsafe.Alignof(m))       // 8
 fmt.Println(unsafe.Alignof(p))       // 8
 ```
 
-
 对齐倍数都是 2 的幂，一般不会超过 8。你也可以基于反射来获取对齐倍数：
 
 ```go
 reflect.TypeOf(x).Align()
 ```
 
-
-### Offsetof 
+### Offsetof
 
 此函数用于获取结构中字段相对于结构起始内存地址的偏移量：
 
@@ -2256,15 +2133,13 @@ fmt.Println(unsafe.Offsetof(alex.age))   // 0
 fmt.Println(unsafe.Offsetof(alex.name))  // 8
 ```
 
-
 你也可以基于反射来获取偏移量：
 
 ```go
 reflect.TypeOf(u1).Field(i).Offset
 ```
 
-
-### Pointer 
+### Pointer
 
 unsafe. Pointer 是一种特殊的指针，它可以指向任何的类型，类似于 C 语言中的 void*
 
@@ -2276,7 +2151,6 @@ var fip *float32 = new(float32)
 uip = fip  // cannot use fip (type *float32) as type *uint8 in assignment
 ```
 
-
 但是 unsafe. Pointer 却可以和任何指针类型相互转换，包括 uintptr：
 
 ```go
@@ -2286,7 +2160,6 @@ var fip *float32 = new(float32)
 uip = (*uint8)(unsafe.Pointer(fip))
 fmt.Println(*uip)
 ```
-
 
 *T 不支持算术运算，但是 uintptr 却可以。利用 unsafe. Pointer 作为媒介，我们可以获得精确控制内存的能力：
 
@@ -2309,7 +2182,6 @@ pname := (*string)(unsafe.Pointer(base + os))
 fmt.Println(*user) 
 ```
 
-
 ## encoding/json
 
 ```go
@@ -2322,7 +2194,6 @@ out.WriteTo(writer)
 json.MarshalIndent(data, "", " ")
 ```
 
-
 对通过 HTTP 传递来的字节流解码为 JSON，**数字的真实类型可能是 float64**：
 
 ```go
@@ -2332,7 +2203,6 @@ err = json.Unmarshal(respBytes, &res)
 id := res["id"]
 task.testId = int(id.(float64)) 
 ```
-
 
 ## time
 
@@ -2365,14 +2235,12 @@ fmt.Printf("%v %v %v %v %v %v ", n.Year(), n.Month(), n.Day(), n.Hour(), n.Minut
 time := protobuf.Timestamp{Seconds: n.Unix()}
 ```
 
-
 time. Duration 表示一个时间长度：
 
 ```go
 // 解析，可以使用s、m、h等单位
 d, _ := time.ParseDuration("1s")
 ```
-
 
 它的本质就是纳秒数：
 
@@ -2389,7 +2257,6 @@ const (
 )
 ```
 
-
 你可以将 Duration 和整数进行算术运算：
 
 ```go
@@ -2397,13 +2264,11 @@ var d1 time.Duration = (60 * 1000) * time.Millisecond
 var d2 time.Duration = 2 * time.Minute
 ```
 
-
 也可以计算两个时间点之间的差距：
 
 ```go
 var duration time.Duration = endingTime.Sub(startingTime)
 ```
-
 
 ## math/rand
 
@@ -2416,7 +2281,6 @@ glog.Info(rand.Intn(10))
 glog.Info(rand.Intn(10))
 ```
 
-
 以上代码无论运行多少次，都输出 1、7。原因是使用的“源”是固定的。因此，要产生每次调用都不一样的随机数，需要每次使用不同的源：
 
 ```go
@@ -2428,7 +2292,6 @@ glog.Info(gen.Intn(1000))
 rand.Seed(time.Now().UnixNano())
 rand.Intn(100)
 ```
-
 
 ## os/exec
 
@@ -2447,7 +2310,6 @@ for key, val := range vars {
 cmd.Run()
 ```
 
-
 ### 输入输出
 
 ```go
@@ -2460,7 +2322,6 @@ cmd.Stdout = &out
 err := cmd.Run()
 ```
 
-
 也可以直接将标准输出/标准错误一起作为返回值：
 
 ```go
@@ -2471,7 +2332,6 @@ stdoutStderr, err := cmd.CombinedOutput()
 stdout, err := cmd.Output()
 ```
 
-
 ### 非阻塞
 
 要非阻塞的启动命令，但是不等待其返回，可以：
@@ -2481,13 +2341,11 @@ cmd := exec.Command("sleep", "5")
 err := cmd.Start()
 ```
 
-
 你可以稍后等待其结束：
 
 ```go
 cmd.Wait()
 ```
-
 
 ## os/signal
 
@@ -2507,7 +2365,6 @@ go func() {
 // 协程可以循环执行逻辑，直到stopCh关闭
 wait.Until(ctrl.runWorker, time.Second, stopCh)
 ```
-
 
 ## strconv
 
@@ -2564,14 +2421,12 @@ func FormatFloat(f float64, fmt byte, prec, bitSize int) string
 func ParseFloat(s string, bitSize int) (float64, error)
 ```
 
-
 代码示例：
 
 ```go
 strconv.ParseInt("FF", 16, 0)  // 255
 strconv.ParseInt("0xFF", 0, 0) // 255
 ```
-
 
 ## encoding/binary
 
@@ -2582,7 +2437,6 @@ var a []byte = []byte{0, 1, 2, 3}
 fmt.Println(binary.BigEndian.Uint32(a))
 fmt.Println(binary.LittleEndian.Uint32(a))
 ```
-
 
 ## glog
 
@@ -2602,7 +2456,6 @@ if glog.V(2) {
 glog.V(2).Infoln("处理了", nItems, "个条目")
 ```
 
-
 日志被缓冲，并周期性的 Flush，程序退出前你应该手工调用 Flush。默认情况下，所有日志被写入到临时目录的文件中。
 
 你可以通过命令行选项来改变 glog 的行为， flag. Parse 应该在任何日志打印函数调用前调用：
@@ -2615,6 +2468,7 @@ glog.V(2).Infoln("处理了", nItems, "个条目")
 | --log_dir="" |日志输出目录 |
 | --v=0 |输出日志的最低冗余级别 |
 | -vmodule=gopher*=3 |对于 gopher 开头的 Go 文件，其最低冗余级别设置为3 |
+
 ## encoding/json
 
 支持 JSON 的串行化、反串行化。下面的代码示例将 JSON 字符串反串行化为 map：
@@ -2635,7 +2489,6 @@ func main() {
 }
 ```
 
-
 ## gopkg. in/yaml. v2
 
 支持 YAML 格式的串行化、反串行化。下面的代码示例将 map 串行化为 YAML：
@@ -2654,7 +2507,6 @@ func main() {
     ioutil.WriteFile("configdump.yaml", data, os.ModePerm)
 }
 ```
-
 
 ## 基本工具库
 
@@ -2700,7 +2552,6 @@ func main() {
 }
 ```
 
-
 如果希望为任何自定义的类型生成上面这样的接口需要添加注释：
 
 ```go
@@ -2711,7 +2562,6 @@ type Car struct {
 //go:generate pie Cars.*
 type Cars []Car
 ```
-
 
 然后执行 `go generate` 会生成 `cars_pie.go` 文件，其中定义了上面那样的接口。
 
@@ -2728,7 +2578,6 @@ func (c *Car) Equals(c2 *Car) bool {
     return c.Name == c2.Name
 }
 ```
-
 
 ### thoas/go-funk
 
@@ -2765,6 +2614,7 @@ func (c *Car) Equals(c2 *Car) bool {
 | SliceOf |从单个元素创建切片 |
 | RandomInt |获得一个随机整数 |
 | RandomString |获得一个固定长度的随机字符串 |
+
 ## mholt/archiver
 
 ### 压缩/解压
@@ -2779,7 +2629,6 @@ err := archiver.Archive([]string{"testdata", "other/file.txt"}, "test.zip")
 // 解压缩
 err = archiver.Unarchive("test.tar.gz", "test")
 ```
-
 
 上面的代码自动根据扩展名来判断使用何种归档、压缩算法。你也可以明确指定需要使用的算法：
 
@@ -2796,7 +2645,6 @@ z := archiver.Zip{
 err := z.Archive([]string{"testdata", "other/file.txt"}, "/Users/matt/Desktop/test.zip")
 ```
 
-
 ### 探看文件
 
 下面是探看 Zip 中文件条目的例子：
@@ -2810,7 +2658,6 @@ err = z.Walk("/Users/matt/Desktop/test.zip", func(f archiver.File) error {
     return nil
 })
 ```
-
 
 ### 写入 HTTP 响应
 
@@ -2854,7 +2701,6 @@ for _, fname := range filenames {
 }
 ```
 
-
 ## archive/tar
 
 处理 Tar 格式的归档，写示例：
@@ -2877,7 +2723,6 @@ w.Close()
 ioutil.WriteFile("/tmp/chart.tar", buf.Bytes(), fileutil.PrivateFileMode)
 ```
 
-
 读示例：
 
 ```go
@@ -2889,7 +2734,6 @@ buf := make([]byte, header.Size)
 // 读取此条目的内容到缓冲区
 tr.Read(buf)
 ```
-
 
 ## compress/gzip
 
@@ -2914,7 +2758,6 @@ gw.Close()
 ioutil.WriteFile("/tmp/chart.tgz", buf.Bytes(), 0666) 
 ```
 
-
 下面是读的例子：
 
 ```go
@@ -2926,7 +2769,6 @@ if err != nil {
 defer gr.Close()
 tr := tar.NewReader(gr)
 ```
-
 
 ## 数据绑定/拷贝
 
@@ -2954,7 +2796,6 @@ decoder, _ := mapstructure.NewDecoder(&mapstructure.DecoderConfig{
 decoder.Decode(item)
 ```
 
-
 ### mitchellh/copystructure
 
 深拷贝（DeepCopy）对象，不管是 map、slice、pointer 都能递归的解引用并正确拷贝。示例：
@@ -2962,7 +2803,6 @@ decoder.Decode(item)
 ```go
 cs, _ := copystructure.Copy(allChartsProto)
 ```
-
 
 ### imdario/mergo
 
@@ -2978,7 +2818,6 @@ if err := mergo.Map(&dst, srcMap); err != nil {
 // 也可以将映射合并到映射，一定要记得对映射取地址（Why？本身就是传递引用）
 mergo.Map(&dstMap, srcMap)
 ```
-
 
 需要注意的是：将结构合并到映射时，不会递归合并。
 
@@ -3025,7 +2864,6 @@ func main() {
 }
 ```
 
-
 # 和 C/C++交互
 
 ## 对 C/C++的支持
@@ -3068,7 +2906,6 @@ func main() {
 }
 ```
 
-
 在构建时，一旦 go 发现 `import "C"` 语句，就会寻找目录中的非 go 源码。c/s/S 扩展名的文件会使用 C 编译器编译，cc/cpp/cxx 文件会使用 C++编译器编译。
 
 CFLAGS, CPPFLAGS, CXXFLAGS, FFLAGS, LDFLAGS 等环境变量可以通过伪指令 #cgo来定义 ：
@@ -3087,7 +2924,6 @@ import "C"
 import "C"
 ```
 
-
 在构建时，CGO_CFLAGS, CGO_CPPFLAGS, CGO_CXXFLAGS, CGO_FFLAGS, CGO_LDFLAGS 等环境变量被附加到上述指令引入的环境变量之后，构成构建 C 代码所需要的完整变量。特定于包的标记应该通过伪指令而非环境变量设置。
 
 包中所有 CPPFLAGS、CFLAGS 指令用于编译包中的 C 源码，所有 CPPFLAGS、CXXFLAGS 指令则用于编译 C++源码。
@@ -3099,7 +2935,6 @@ import "C"
 ```go
 // #cgo LDFLAGS: -L${SRCDIR}/libs -lfoo
 ```
-
 
 ### cgo
 
@@ -3133,7 +2968,7 @@ import "C"
 | complex float |C.complexfloat | |
 | complex double |C.complexdouble | |
 | void* |unsafe. Pointer |任何指针都可以转换为 unsafe. Pointer，unsafe. Pointer 也可以转换为任何类型的指针 |
-| __int128_t __uint128_t |[16]byte | |
+| __int128_t__uint128_t |[16]byte | |
 | char* |C.CString | |
 此外需要注意：
 
@@ -3170,7 +3005,6 @@ func main() {
 }
 ```
 
-
 ## C 调用 Go
 
 使用注释来标注某个函数可以导出供 C 使用：
@@ -3183,7 +3017,6 @@ func MyFunction(arg1, arg2 int, arg3 string) int64 {...}
 func MyFunction2(arg1, arg2 int, arg3 string) (int64, *C.char) {...}
 ```
 
-
 在头文件_cgo_export. h 中，可以看到如下形式的声明：
 
 ```c
@@ -3192,8 +3025,7 @@ extern int64 MyFunction(int arg1, int arg2, GoString arg3);
 extern struct MyFunction2_return MyFunction2(int arg1, int arg2, GoString arg3);
 ```
 
-
-## 指针的传递 
+## 指针的传递
 
 Go 是支持垃圾回收的语言，它需要知道每个指向 Go 内存的指针的具体位置，因此，在 C 和 Go 代码之间传递指针受到限制。
 
@@ -3231,7 +3063,7 @@ Go 代码不得在 C 内存中存储 Go 指针。C 代码则可以在 C 内存�
 | ----------- |----------- |
 | build |编译包及其依赖，但是不安装编译结果<br>当编译单个 main 包时，结果二进制文件的 basename 默认和第一个源文件（go build a.go b.go 输出a.exe）或者目录（go build unix/sam 输出 sam. exe）相同<br>当编译多个包或者单个非 main 包时，编译结果被丢弃，也就是仅仅验证编译是否可以通过<br>当编译包时，_test. go 结尾的文件被忽略<br>**格式：**<br>go build [-o output] [-i] [build flags] [packages]<br>**选项：**<br>-o  仅编译单个包时可用，显式指定输出的二进制文件或对象文件的名字<br>-i 安装编译目标的依赖<br>-a 强制重新构建所有包，即使已经 up-to-date<br>-v 编译后打印被编译包的名称<br>-buildmode mode 构建模式<br>-compiler name 使用的编译器，gccgo gc<br>-gccgoflags 'arg list' 编译器 gccgo 的标记<br>-gcflags 'arg list'  编译器 gc 的标记，参考 go tool compile -help<br>-installsuffix suffix 包安装路径名后缀<br>-ldflags 'flag list'  链接标记，参考 go tool link -help<br>-linkshared 与共享库进行链接，共享库使用 -buildmode=shared 创建<br>-pkgdir dir  从 dir 安装、加载所有包，而非默认位置<br>**构建模式：**<br>-buildmode=archive  构建非 main 包为. a 文件，main 包被忽略<br>-buildmode=c-archive  构建 main 包以及所有它导入的包为 C 归档文件<br>-buildmode=c-shared 构建 main 包以及所有它导入的包为 C 共享库<br>-buildmode=shared 构建非 main 包为共享库，main 包被忽略<br>-buildmode=exe 构建 main 包以及所有它导入的包为可执行文件<br>-buildmode=pie  构建为位置独立可执行文件（PIE）<br>-buildmode=plugin 构建为 Go 插件<br>**示例：**<br>export GOROOT=/home/alex/Go/sdk/1.9.2<br>export GOPATH=/home/alex/Go/workspaces/default<br>pushd /home/alex/Go/workspaces/default/src/digital-app &gt; /dev/null<br>export PATH=/home/alex/Go/sdk/1.9.2/bin/:$PATH<br> <br># 构建<br>go build -i -o build/digitalsrv<br> <br># 静态连接<br># CGO_ENABLED 提示使用 cgo 而非 go 作为编译器，以便进行静态连接<br># -a 重新构建所有依赖<br># -ldflags '-s'减小二进制文件大小<br>CGO_ENABLED=0 go build -i -a -o build/digitalsrv -ldflags '-s'<br> |
 | tool compile |将单个 Go 包编译为对象文件<br>**格式：**go tool compile [flags] file...<br>**选项：**<br>-I dir1 -I dir2 导入包的搜索路径，在搜索 $GOROOT/pkg/$ GOOS_$GOARCH 之后搜索<br>-N 禁用优化<br>-c int 编译时的并发度，默认 1<br>-dynlink 允许引用共享库中的 Go 符号<br>-l 禁用内联<br>-lang version 设置 Go 语言版本，例如-lang=go1.12<br>-largemodel 基于大内存模型的假设来编译<br>-pack 生成归档而非对象文件<br>-shared 生成能够链接到共享库的代码<br>-dwarf 生成 DWARF 符号<br> |
-| tool link |从 main 包中读取 Go 归档/object，以及它们的依赖，并链接为二进制文件<br>**格式：**<br>go tool link [flags] main. a<br> <br># 从 go build 调用<br>go build -ldflags "[flags]"<br>**选项：**<br>-D address 设置数据段地址<br>-T address 设置文本段地址<br>-E entry 设置入口符号名称<br>-H type 设置可执行文件格式类型，默认类型从 GOOS+GOARCH 推断<br>-I interpreter 设置使用的 ELF 动态链接器<br>-L dir1 -L dir2 在搜索 $GOROOT/pkg/$ GOOS_ $GOARCH之后，从dir1 dir2中搜索导入包<br>-X importpath.name=value设置导入路径中的字符串变量name的值为value。示例：<br>-X github.com/stefanprodan/flagger/pkg/version.REVISION=$ {GIT_COMMIT}"<br>上述选项只有当源码中定义了 REVISION 变量且它的值没有初始化、或者初始化为常量字符串表达式时有意义：<br>package version<br> <br>var VERSION = "0.8.0"<br>var REVISION = "unknown"<br>-a 反汇编输出<br>-buildid id 设置 Go 工具链的 build id<br>-buildmode mode 构建模式，默认 exe<br>-c Dump 出调用图<br>-compressdwarf 如果可能压缩 DWARF，默认 true<br>-cpuprofile file 将 CPU profile 写入到文件<br>-d 禁止生成动态可执行文件。控制是否生成动态头。默认情况下即使没有引用任何动态库也会生成动态头<br>-dumpdep Dump 出符号依赖图<br>-extar ar 设置外部归档程序（默认 ar），仅配合-buildmode=c-archive 使用<br>-extld linker 设置外部链接器（默认 clang 或 gcc）<br>-extldflags flags 空格分隔的，传递给外部链接器的选项<br>-installsuffix suffix 从 $GOROOT/pkg/$ GOOS_$GOARCH_suffix 中搜索包，而非 $GOROOT/pkg/$ GOOS_$GOARCH<br>-linkmode mode 设置链接模式，可选值 internal, external, auto<br>-linkshared 和已经安装的 Go 共享库进行链接<br>-msan 支持 C/C++内存消毒器<br>-n Dump 出符号表<br>-o 将输出写入到指定文件<br>-r dir1: dir2... 设置 ELF 动态链接器的搜索路径<br>-race 链接到竞态检测共享库<br>-s 移除符号表和调试信息<br>-shared 生成共享对象，隐含-linkmode external<br>-w 禁止 DWARF 生成<br>**链接模式：**<br>internal：解析并链接主机上的对象文件（ELF/Mach-O/PE ...）到最终可执行文件里面。由于实现宿主机链接器的全部功能存在困难，因此这种模式下能够链接的对象文件种类是受限的<br>external：为了支持链接到任何对象文件而不需要动态库，cgo 支持所谓外部链接模式。此模式下，所有 Go 代码被收集到 go. o 文件中，并通过宿主机链接器（通常 gcc）将 go. o 以及所有依赖的非 Go 的代码链接到最终可执行文件里面<br>大部分构建同时编译代码、调用链接器来创建二进制文件。在使用 cgo 的情况下，编译时期已经依赖 gcc，因此链接阶段再次依赖 gcc 没有问题<br> |
+| tool link |从 main 包中读取 Go 归档/object，以及它们的依赖，并链接为二进制文件<br>**格式：**<br>go tool link [flags] main. a<br> <br># 从 go build 调用<br>go build -ldflags "[flags]"<br>**选项：**<br>-D address 设置数据段地址<br>-T address 设置文本段地址<br>-E entry 设置入口符号名称<br>-H type 设置可执行文件格式类型，默认类型从 GOOS+GOARCH 推断<br>-I interpreter 设置使用的 ELF 动态链接器<br>-L dir1 -L dir2 在搜索 $GOROOT/pkg/$ GOOS_$GOARCH之后，从dir1 dir2中搜索导入包<br>-X importpath.name=value设置导入路径中的字符串变量name的值为value。示例：<br>-X github.com/stefanprodan/flagger/pkg/version.REVISION=$ {GIT_COMMIT}"<br>上述选项只有当源码中定义了 REVISION 变量且它的值没有初始化、或者初始化为常量字符串表达式时有意义：<br>package version<br> <br>var VERSION = "0.8.0"<br>var REVISION = "unknown"<br>-a 反汇编输出<br>-buildid id 设置 Go 工具链的 build id<br>-buildmode mode 构建模式，默认 exe<br>-c Dump 出调用图<br>-compressdwarf 如果可能压缩 DWARF，默认 true<br>-cpuprofile file 将 CPU profile 写入到文件<br>-d 禁止生成动态可执行文件。控制是否生成动态头。默认情况下即使没有引用任何动态库也会生成动态头<br>-dumpdep Dump 出符号依赖图<br>-extar ar 设置外部归档程序（默认 ar），仅配合-buildmode=c-archive 使用<br>-extld linker 设置外部链接器（默认 clang 或 gcc）<br>-extldflags flags 空格分隔的，传递给外部链接器的选项<br>-installsuffix suffix 从 $GOROOT/pkg/$ GOOS_$GOARCH_suffix 中搜索包，而非 $GOROOT/pkg/$ GOOS_$GOARCH<br>-linkmode mode 设置链接模式，可选值 internal, external, auto<br>-linkshared 和已经安装的 Go 共享库进行链接<br>-msan 支持 C/C++内存消毒器<br>-n Dump 出符号表<br>-o 将输出写入到指定文件<br>-r dir1: dir2... 设置 ELF 动态链接器的搜索路径<br>-race 链接到竞态检测共享库<br>-s 移除符号表和调试信息<br>-shared 生成共享对象，隐含-linkmode external<br>-w 禁止 DWARF 生成<br>**链接模式：**<br>internal：解析并链接主机上的对象文件（ELF/Mach-O/PE ...）到最终可执行文件里面。由于实现宿主机链接器的全部功能存在困难，因此这种模式下能够链接的对象文件种类是受限的<br>external：为了支持链接到任何对象文件而不需要动态库，cgo 支持所谓外部链接模式。此模式下，所有 Go 代码被收集到 go. o 文件中，并通过宿主机链接器（通常 gcc）将 go. o 以及所有依赖的非 Go 的代码链接到最终可执行文件里面<br>大部分构建同时编译代码、调用链接器来创建二进制文件。在使用 cgo 的情况下，编译时期已经依赖 gcc，因此链接阶段再次依赖 gcc 没有问题<br> |
 | clean |移除编译后的对象文件（Object files）<br>**格式：**<br>go clean [-i] [-r] [-n] [-x] [build flags] [packages]<br> |
 | doc |显示包或者符号的文档<br>**格式：**<br>go doc [-u] [-c] [package|[package.]symbol[. methodOrField]]<br> <br># 显示 fmt 包的 Errorf 函数的文档<br> go doc fmt Errorf<br> |
 | env |打印 Go 相关环境变量信息，相关的环境变量包括：<br>GOOS，目标操作系统，支持 darwin、freebsd、linux、windows、android 等<br>GOARCH，目标体系结构，支持 arm、arm64、386、amd64 等<br> |
@@ -3244,6 +3076,7 @@ Go 代码不得在 C 内存中存储 Go 指针。C 代码则可以在 C 内存�
 | run |编译并运行程序 |
 | test |测试指定的包 |
 | tool |运行指定的 Go tool |
+
 # 依赖管理
 
 ## vendor
@@ -3268,7 +3101,6 @@ glide 是 Go 语言的包管理工具，它能够管理 vendor 目录。
 curl https://glide.sh/get | sh
 ```
 
-
 ### 命令
 
 格式：`glide [global options] command [command options] [arguments...]`
@@ -3287,6 +3119,7 @@ curl https://glide.sh/get | sh
 | update |更新项目的依赖 |
 | list |列出所有的依赖项 |
 | cc |清除 Glide 缓存 |
+
 ## dep
 
 Go 语言的官方的试验阶段的依赖管理工具。需要 Go 1.9+版本。从 1.11 版本开始，Go 工具链内置了和 dep 差异很大的依赖管理机制。
@@ -3297,7 +3130,6 @@ Go 语言的官方的试验阶段的依赖管理工具。需要 Go 1.9+版本。
 go get -u github. com/golang/dep/cmd/dep
 ```
 
-
 ### 创建项目
 
 ```shell
@@ -3306,7 +3138,6 @@ cd $GOPATH/src/github. com/gmemcc/dep-study
  
 dep init # 自动生成 Gopkg. toml Gopkg. lock vendor/
 ```
-
 
 ### 管理依赖
 
@@ -3332,19 +3163,19 @@ dep ensure -update github. com/foo/bar
 dep ensure -update
 ```
 
-
 ### Gopkg. toml
 
 此文件由 dep init 自动生成，后续主要由人工编辑。此文件可以包含几种规则声明，以控制 dep 的行为：
 
 | 规则类型 |说明 |
 | ----------- |----------- |
-| constraints |定义直接依赖如何加入到依赖图中：<br> [[constraint]] <br># 导入路径<br>&nbsp;&nbsp; name = "github. com/user/project"<br># 导入的版本，可以指定 version branch 或 revision<br># version 操作符：<br># = 等于 ！= 不等于 &gt; 大于 &lt; 小于 &gt;= 大于等于 &lt;= 小于等于<br># - 版本范围，示例 1.2 - 1.4.5<br># ~ 小版本范围，示例 ~1.2.3 表示大于等于 1.2.3 但小于 1.3.0<br># ^ 大版本范围，示例 ^1.2.3 表示大于等于 1.2.3 但小于 2.0.0<br># xX* 通配符，示例&nbsp;&nbsp; 1.2. x 表示大于等于 1.2.0 但小于 1.3.0<br>&nbsp;&nbsp; version = "1.0.0"<br>&nbsp;&nbsp; branch = "master"<br># 通常是反模式，例如 Git 的 SHA1<br>&nbsp;&nbsp; revision = "abc123"<br> <br># 可选。此依赖的源码的替换位置（URL 或者导入路径），通常用在 fork 的场景下<br>&nbsp;&nbsp; source = "https://github. com/myfork/package. git"<br>&nbsp;&nbsp;[metadata]<br># 定义一些键值对，dep 本身不使用这些键值对<br> |
+| constraints |定义直接依赖如何加入到依赖图中：<br> [[constraint]] <br># 导入路径<br>&nbsp;&nbsp; name = "github. com/user/project"<br># 导入的版本，可以指定 version branch 或 revision<br># version 操作符：<br># = 等于 ！= 不等于 &gt; 大于 &lt; 小于 &gt;= 大于等于 &lt;= 小于等于<br># - 版本范围，示例 1.2 - 1.4.5<br># ~ 小版本范围，示例 ~1.2.3 表示大于等于 1.2.3 但小于 1.3.0<br># ^ 大版本范围，示例 ^1.2.3 表示大于等于 1.2.3 但小于 2.0.0<br># xX* 通配符，示例&nbsp;&nbsp; 1.2. x 表示大于等于 1.2.0 但小于 1.3.0<br>&nbsp;&nbsp; version = "1.0.0"<br>&nbsp;&nbsp; branch = "master"<br># 通常是反模式，例如 Git 的 SHA1<br>&nbsp;&nbsp; revision = "abc123"<br> <br># 可选。此依赖的源码的替换位置（URL 或者导入路径），通常用在 fork 的场景下<br>&nbsp;&nbsp; source = "<https://github.> com/myfork/package. git"<br>&nbsp;&nbsp;[metadata]<br># 定义一些键值对，dep 本身不使用这些键值对<br> |
 | overrides |覆盖所有依赖（直接或传递）的规则，应当小心使用。示例：<br> [[override]] <br>&nbsp;&nbsp; name = "k8s. io/api"<br>&nbsp;&nbsp; version = "kubernetes-1.11.0"<br> <br> [[override]] <br>&nbsp;&nbsp; name = "k8s. io/apimachinery"<br>&nbsp;&nbsp; version = "kubernetes-1.11.0"<br> <br> [[override]] <br>&nbsp;&nbsp; name = "k8s. io/code-generator"<br>&nbsp;&nbsp; version = "kubernetes-1.11.0"<br> <br> [[override]] <br>&nbsp;&nbsp; name = "k8s. io/client-go"<br>&nbsp;&nbsp; version = "kubernetes-1.11.0" <br> |
 | required |必须在任何 [[constraint]] 或 [[override]] 之前声明<br>dep 通过分析 go 代码中的 import 语句来构建一个依赖图。required/ignored 规则用于操控此依赖图<br>required 列出必须包含在 Gopkg. lock 中的包的列表，此列表会和当前项目导入的包合并。required 可以**强制声明一个未 import 的包为项目的直接依赖**<br>对于 linter、generator 或者其它开发工具，如果：<br>1. 被当前项目使用<br>2. 不被直接或传递的导入到当前项目<br>3. 你不需要把这些工具加入 GOPATH，或者你想锁定版本<br>则可以使用 required 规则声明：<br>required = ["k8s. io/code-generator/cmd/client-gen"]<br> |
 | ignored |必须在任何 [[constraint]] 或 [[override]] 之前声明<br>dep 通过分析 go 代码中的 import 语句来构建一个依赖图。required/ignored 规则用于操控此依赖图<br>required 列出 dep 进行静态代码分析时需要忽略的包，可以使用通配符：<br>ignored = ["github. com/user/project/badpkg*"]<br> |
 | metadata |定义供第三方工具使用的元数据，可以定义在根下，或者 constraint、override 下 |
 | prune |定义全局/某个项目的依赖修剪选项。这些选项决定了写入 vendor 时哪些文件被忽略<br>支持以下变量，取值均为布尔：<br>1. unused-packages 提示不在包导入图中出现的目录，应该被修剪掉<br>2. non-go 提示不被 Go 使用的文件应该修剪掉<br>3. go-tests 将 Go 测试文件修剪掉<br>dep init 会自动生成：<br>[prune]<br>&nbsp;&nbsp; go-tests = true<br>&nbsp;&nbsp; unused-packages = true<br>你可以为每个项目（依赖）定义修剪规则：<br>[prune]<br>&nbsp;&nbsp; non-go = true<br> <br>&nbsp;&nbsp; [[prune.project]] <br>&nbsp;&nbsp;&nbsp;&nbsp; name = "github. com/project/name"<br>&nbsp;&nbsp;&nbsp;&nbsp; go-tests = true<br>&nbsp;&nbsp;&nbsp;&nbsp; non-go = false<br> |
+
 ## vgo
 
 由于 Go 一直没有提供官方的依赖管理工具，导致了 dep，glide，govendor，godep 等工具群雄争霸的局面。vgo 是解决这种现状的早期尝试，vgo 即 Versioned go。
@@ -3354,7 +3185,6 @@ dep ensure -update
 ```shell
 go get -u golang. org/x/vgo 
 ```
-
 
 ### go. mod
 
@@ -3372,6 +3202,7 @@ vgo 具有同名的 CLI，可以使用的子命令包括：
 | get github. com/pkg |获取依赖的最新版本。依赖包数据会缓存到 GOPATH 路径下的 src/mod 目录<br> |
 | get github. com/ pkg@v1.0 |获取依赖的指定版本 |
 | mod -vendor |将依赖直接放在 vendor 目录中 |
+
 ## go modules
 
 从 vgo 发展而来。
@@ -3398,12 +3229,7 @@ go get foo@master
 go get foo@e3702bed2 
 ```
 
-
-
-
     2. 手工修改 go. mod 文件
-
-
 
 ### 代理
 
@@ -3416,7 +3242,6 @@ export GOPROXY= https://goproxy.io
 # 国内源
 export GOPROXY= https://goproxy.cn
 ```
-
 
 这样，所有模块都会通过此代理下载。
 
@@ -3432,13 +3257,11 @@ git config --global url." https://alex:***@git.pacloud.io".insteadOf " https://g
 git config --global url." git@git.tencent.com : ". insteadOf " https://git.tencent.com/"
 ```
 
-
 然后，需要设置跳过代理：
 
 ```shell
 export GOPRIVATE=*. pacloud. io,*. gmem. cc
 ```
-
 
 ### 命令
 
@@ -3484,7 +3307,6 @@ go mod tidy
 go mod vendor
 ```
 
-
 ### go. mod
 
 仅仅包含四个指令：
@@ -3495,6 +3317,7 @@ go mod vendor
 | require |声明依赖：<br>require (<br>&nbsp;&nbsp;&nbsp;&nbsp; github. com/some/dependency v1.2.3<br>&nbsp;&nbsp;&nbsp;&nbsp; github. com/another/dependency/v4 v4.0.0<br>)<br> |
 | replace |仅仅针对当前（主）模块，在构建主模块时，非主模块的 go. mod 中 replace 声明被忽略。该指令可以：<br>1. 用来映射导入路径（在你 Fork 一个项目并做补丁的情况下使用）：<br># 模块代码中使用的导入路径&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 实际寻找代码时的导入路径<br>replace example. com/original/import/path =&gt; /your/forked/import/path<br>2. 精确的控制依赖的版本：<br>replace example. com/some/dependency =&gt; example. com/some/dependency v1.2.3<br>3. 提示一个多模块协作项目的模块位于磁盘的绝对、相对路径：<br>module example. com/me/hello<br> <br>require (<br>&nbsp;&nbsp; example. com/me/goodbye v0.0.0<br>)<br> <br>replace git. yun. gmem. cc/eks/chart-service =&gt; ../chart-service<br>这种用法可以将依赖位置定位到磁盘，解除对 VCS 的依赖<br> |
 | exclude |仅仅针对当前（主）模块，在构建主模块时，非主模块的 go. mod 中 exclude 声明被忽略<br>该指令用于禁止某个直接或传递性的依赖包，例如：<br>exclude k8s. io/client-go v2.0.0-alpha. 0.0.20190313235726-6ee68ca5fd83+incompatible<br> |
+
 ### 模块
 
 一个 Go 项目通常会在 Git 上托管源码，例如 github. com/gmem/gotools，项目的代码库的 URL 称为代码库（Repo）。
@@ -3530,7 +3353,6 @@ monorepo-multi-mods
     └── pkgc
 ```
 
-
 逐级的 1: N 关系：**Repo ⇨ Module ⇨ Package ⇨ Source**。
 
 ### 依赖搜索模式
@@ -3560,12 +3382,7 @@ require (
 ) 
 ```
 
-
-
-
 6. Go 编译器会把下载的依赖包，缓存到`$GOPATH/pkg/mod`目录下
-
-
 
 ### 依赖版本选择
 
@@ -3588,7 +3405,6 @@ go. mod 一旦被创建，其内容将被 Go 工具链管理，执行 get/build/
 }
 ```
 
-
 标记为 Main: true 的模块，称为主模块（main module），即执行 Go 命令所在的目录。Go 会在当前目录，以及当前目录的祖先目录寻找 go. mod 文件。
 
 如果依赖打了发布版的 Tag，则不会使用最新版的代码的 Pseudo-version，而是**使用最新的发布版**。
@@ -3600,7 +3416,6 @@ go mod -require=github. com/gmem/gotools/ x@v1.0.0
 go mod -require=github. com/gmem/gotools/ y@v1.1.0
 ```
 
-
 上述命令修改 go. mod：
 
 ```shell
@@ -3610,20 +3425,17 @@ require (
 )
 ```
 
-
 你还可以**指定依赖表达式**：
 
 ```shell
 go mod -require='github. com/gmem/gotools/y@>=v1.1.0'
 ```
 
-
 使用 go get 命令，可以更新 go. mod 中的依赖为指定分支的最新 Commit：
 
 ```shell
 go get -u git. pacloud. io/pks/ helm-operator@master 
 ```
-
 
 ### 版本号格式
 
@@ -3641,13 +3453,11 @@ Pseudo-version 的格式是`v0.0.0-yyyymmddhhmmss-abcdefabcdef`。
 require helm. sh/helm v1.0.0 
 ```
 
-
 没有问题。但是如果主版本改成 3.x.x，引用：
 
 ```shell
 require helm. sh/helm v3.0.2 
 ```
-
 
 就会提示：require helm. sh/helm: version "v3.0.2" invalid: module contains a go. mod file, so major version must be compatible: should be v0 or v1, not v3
 
@@ -3657,7 +3467,6 @@ require helm. sh/helm v3.0.2 
 # Git 仓库地址 https://github.com/helm/helm 一直不变
 module helm. sh/helm/v3
 ```
-
 
 相应的，消费者这样引用：`require helm. sh/helm/v3 v3.0.2`
 
@@ -3670,7 +3479,6 @@ module helm. sh/helm/v3
 helm. sh/helm/v3 => git. pacloud. io/pks/helm/v3 v3.0.2
 ```
 
-
 ### 同步到 vendor
 
 使用下面的命令，可以将某个模块的全部依赖保存一份副本到根目录的 vendor 目录：
@@ -3679,13 +3487,11 @@ helm. sh/helm/v3 => git. pacloud. io/pks/helm/v3 v3.0.2
 go mod vendor
 ```
 
-
 这样，你就可以使用 vendor 下的包来构建当前模块了：
 
 ```shell
 go build -getmode=vendor tool. go
 ```
-
 
 生成的 vendor 还可以用来兼容 1.11 以前的版本，但是由于 1.11 以前的版本**不支持在 GOPATH 之外使用 vendor 机制**，因此你需要把代码库移动到$GOPATH/src 下。
 
@@ -3700,7 +3506,6 @@ export GOFLAGS=-mod=vendor
 # 或者
 go build -mod=vendor ...
 ```
-
 
 上述命令提示 Go 命令**使用 main 模块的 vendor 目录来满足依赖，而忽略 go. mod 中的指令**。
 
@@ -3769,7 +3574,6 @@ func main () {
 }
 ```
 
-
 ## 工程布局
 
 Go 官方没有提供开发工程的结构的标准布局，下面是 Go 生态系统中常用的一种布局：
@@ -3834,7 +3638,6 @@ Go 提供了一个轻量级的测试框架，此框架由`test`包和`go test`�
 go get github. com/golang/example/hello
 ```
 
-
 如果上述包不存在于本地工作区，则 go 命令会自动下载到工作区。如果上述包已经存在，则 go get 的行为和 go install 相同。
 
 ## Getter/Setter
@@ -3857,7 +3660,6 @@ func (user *User) SetName (name string) {
     user. name = name
 }
 ```
-
 
 ## 接口名称
 
@@ -3889,7 +3691,6 @@ func NewCTR (block Block, iv []byte) Streamgcflags
 // 实现 ...
 ```
 
-
 ## 内存
 
 Go 语言使用垃圾回收机制，这可能导致性能问题。要编写高性能的应用程序，应当尽量避免触发 GC。
@@ -3916,7 +3717,6 @@ type MyContainer struct {
 }
 ```
 
-
 而非：
 
 ```go
@@ -3924,7 +3724,6 @@ type MyContainer struct {
   outoflineStruct *OtherStruct
 }
 ```
-
 
 ### 不要提供需要内存分配的 API
 
@@ -3935,17 +3734,15 @@ type MyContainer struct {
 func (r *Reader) Read (buf []byte) (int, error)
 ```
 
-
 而不是：
 
 ```go
 func (r *Reader) Read () ([]byte, error)
 ```
 
-
 后者可能导致大量内存分配。
 
-### 关于 Goroutine 
+### 关于 Goroutine
 
 1. Goroutine**基本上只有栈的开销，一开始栈只有 2KB**
 
@@ -3969,7 +3766,6 @@ func main () {
 }
 ```
 
-
 # 远程调试
 
 ## 构建选项
@@ -3980,7 +3776,6 @@ func main () {
 go build -i -a -o build/eb-rdbg -gcflags="all=-N -l" -ldflags='-linkmode internal'
                                 -gcflags="-N -l"  # 1.10 之前的版本，用于保留调试信息
 ```
-
 
 ## 运行应用程序
 
@@ -3993,15 +3788,13 @@ go get -u github. com/derekparker/delve/cmd/dlv
 dlv --listen=: 2345 --headless=true --api-version=2 exec build/eb-rdbg
 ```
 
-
-## 连接到应用程序 
+## 连接到应用程序
 
 你需要连接到被调试应用程序：
 
 ```shell
 dlv connect localhost:2345
 ```
-
 
 如果使用 IDE，则更加简单。例如对于 Goland，你只需要创建一个 Go Remote 类型的 Run Configuration 即可。
 
@@ -4044,6 +3837,7 @@ dlv connect localhost:2345
 |  |args |打印程序参数 |
 |  |disassemble |执行反汇编 |
 |  |regs |打印寄存器内容 |
+
 # 常见问题
 
 ## 零散问题
@@ -4060,7 +3854,6 @@ dlv connect localhost:2345
 go build *. go
 ```
 
-
 ### 容器内报错 no such file or directory
 
 找不到可执行文件：could not launch process: fork/exec /eb-rdbg: no such file or directory
@@ -4069,7 +3862,7 @@ go build *. go
 
 ### go get 私有仓库报错 disabled by GOPRIVATE/GONOPROXY
 
-命令：`go get -u git. pacloud. io/pks/ addons-api-server@develop `
+命令：`go get -u git. pacloud. io/pks/ addons-api-server@develop`
 
 报错原因：可能因为执行命令时 Gitlab 正在处理 develop 分支的 Push
 

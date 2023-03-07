@@ -3,6 +3,8 @@ Date: 2023-02-21 20:14
 Tag: TODO, clash, nftables, tproxy
 ---
 
+# Linux 透明代理
+
 使用 Arch 已经有一段时间了，浏览器使用 pac 来控制代理还是有诸多不便，不同软件配置代理的方式不尽相同。
 于是就花点时间配置一下透明代理吧。
 
@@ -48,7 +50,6 @@ dns:
         geoip-code: CN
         ipcidr:
             - 240.0.0.0/4
-
 ...
 ```
 
@@ -93,7 +94,7 @@ table inet clash {
         fib daddr type { unspec, local, anycast, multicast } return
         ip daddr @ipv4_addr return
         ip6 daddr @ipv6_addr return
-  # 不代理 NTP 服务器的端口，
+        # 不代理 NTP 服务器的端口，
         # 不加上这条规则会导致局域网内的设备无法通过 NTP 服务器同步时间。
         udp dport { 123 } return
         meta l4proto { tcp, udp } meta mark set 1 tproxy to :7893 accept
@@ -114,7 +115,7 @@ table inet clash {
 
     chain mangle-prerouting {
         type filter hook prerouting priority mangle; policy accept;
-        iifname { lo, enp1s0 } meta l4proto { tcp, udp } ct direction original jump clash-tproxy
+        iifname { lo } meta l4proto { tcp, udp } ct direction original jump clash-tproxy
     }
 }
 ```
