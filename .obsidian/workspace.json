@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "3502fb42ceeb400c",
+        "id": "e90f26009930cea4",
         "type": "tabs",
         "children": [
           {
-            "id": "b3f016095ce8532c",
+            "id": "1206a06ac4804cbd",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "A计科工程/主机运维/Linux/Linux透明代理.md",
+                "file": "汇编实验.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -70,8 +70,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 226.5,
-    "collapsed": true
+    "width": 226.5
   },
   "right": {
     "id": "26711adbd0148b59",
@@ -98,7 +97,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "A计科工程/主机运维/Linux/Linux透明代理.md"
+                "file": "汇编实验.md"
               }
             }
           },
@@ -123,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "A计科工程/主机运维/Linux/Linux透明代理.md",
+                "file": "汇编实验.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -155,8 +154,12 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "b3f016095ce8532c",
+  "active": "1206a06ac4804cbd",
   "lastOpenFiles": [
+    "constraint.md",
+    "A计科工程/编程语言/python/类属性延迟计算.md",
+    "A计科工程/主机运维/Linux/Freedos 安装.md",
+    "qemu.md",
     "改变计划.md",
     "室内蔬菜种植.md",
     "学习记录.md",
@@ -180,10 +183,6 @@
     "A计科工程/主机运维/Linux/Wireshark.md",
     "Untitled.md",
     "A计科工程/主机运维/Linux/fish.md",
-    "A计科工程/主机运维/Linux/dnsmasq.md",
-    "A计科工程/主机运维/Linux/Linux透明代理.md",
-    "A计科工程/主机运维/Linux/Linux输入法.md",
-    "A计科工程/主机运维/Linux/Linux 权限管理.md",
     "新功能测试.canvas",
     "A计科工程/主机运维/Raspi"
   ]
