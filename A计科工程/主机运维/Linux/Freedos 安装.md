@@ -1,6 +1,6 @@
 ---
-Date: 2023-03-07 16:36
-Tag: Linux, qemu, dos, FreeDOS, Doc, TODO
+date: 2023-03-07 16:36
+tags: Linux, qemu, dos, FreeDOS, Doc, TODO
 ---
 
 # Freedos

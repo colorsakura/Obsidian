@@ -1,6 +1,6 @@
 ---
-Date: 2023-03-01 15:25
-Tag: TODO, tty
+date: "2023-03-01 15:25"
+tags: "TODO, tty"
 ---
 
 起应是不想用 lightdm/gdm 之类的登录管理器  

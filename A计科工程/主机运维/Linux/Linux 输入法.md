@@ -1,6 +1,6 @@
 ---
-Date: 2023-03-02 17:08
-Tag: TODO, Fcitx5, ibus, 
+date: 2023-03-02 17:08
+tags: TODO, Fcitx5, ibus, 
 ---
 
 

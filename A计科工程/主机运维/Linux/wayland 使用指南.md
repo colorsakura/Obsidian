@@ -1,6 +1,6 @@
 ---
-Date: 2023-02-08 17:46
-Tag: TODO, wayland, wayfire, x11, electron
+date: 2023-02-08 17:46
+tags: TODO, wayland, wayfire, x11, electron
 ---
 
 虽然 wayland 发展迅速，替换 x11 已是板上钉钉，但是目前还是存在很多问题，而且离不开 wayland。

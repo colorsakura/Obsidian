@@ -1,8 +1,5 @@
 ---
-id: "主机运维/Flatpak.md"
-aliases:
-  - "安装"
-tags: []
+tags:
 ---
 
 ## 安装

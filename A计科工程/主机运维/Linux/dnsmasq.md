@@ -1,6 +1,6 @@
 ---
-Date: 2023-02-21 20:01
-Tag: TODO, DNS, Linux, Doc
+date: 2023-02-21 20:01
+tags: TODO, DNS, Linux, Doc
 ---
 
 # dnsmasq

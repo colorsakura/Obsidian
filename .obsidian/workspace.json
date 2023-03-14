@@ -4,23 +4,27 @@
     "type": "split",
     "children": [
       {
-        "id": "e90f26009930cea4",
+        "id": "2ca1998001db383a",
         "type": "tabs",
         "children": [
           {
-            "id": "1206a06ac4804cbd",
+            "id": "4aad43762a6f7b36",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "汇编实验.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
+            }
+          },
+          {
+            "id": "4449f40f1a07efb1",
+            "type": "leaf",
+            "state": {
+              "type": "obsidian-projects",
+              "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -96,9 +100,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "汇编实验.md"
-              }
+              "state": {}
             }
           },
           {
@@ -109,8 +111,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       },
       {
         "id": "a7d5294bdc33b04a",
@@ -122,7 +123,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "汇编实验.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -149,40 +149,41 @@
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "markdown-importer:Open format converter": false,
-      "workspaces:Manage workspace layouts": false,
+      "workspaces:Manage workspace layouts": true,
       "obsidian-projects:Open projects": false,
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "1206a06ac4804cbd",
+  "active": "9976163a69209abf",
   "lastOpenFiles": [
-    "constraint.md",
-    "A计科工程/编程语言/python/类属性延迟计算.md",
-    "A计科工程/主机运维/Linux/Freedos 安装.md",
-    "qemu.md",
-    "改变计划.md",
-    "室内蔬菜种植.md",
-    "学习记录.md",
-    "项目记录.md",
-    "A计科工程/主机运维/Linux/collected.md",
-    "E项目管理/irik.md",
-    "C知识宝库/概率论/概率.md",
+    "A计科工程/主机运维/Manjaro/锁屏.md",
+    "C知识宝库/Git 提交规范.md",
+    "A计科工程/主机运维/Arch/Arch 安装手册.md",
+    "C知识宝库/JWT.md",
+    "A计科工程/计算机基础.md",
+    "A计科工程/网络安全.md",
+    "A计科工程/主机运维/域名.md",
+    "A计科工程/主机运维/Windwos 技巧.md",
+    "A计科工程/主机运维/Windows subsystem Linux.md",
+    "A计科工程/主机运维/Ubuntu.md",
+    "A计科工程/主机运维/Truenas Scale.md",
+    "A计科工程/主机运维/Scrapy.md",
+    "A计科工程/主机运维/Tools/ZFS.md",
+    "A计科工程/主机运维/Tools/tmux.md",
+    "A计科工程/主机运维/Tools/SMB.md",
+    "A计科工程/主机运维/Tools/screen.md",
+    "A计科工程/主机运维/Tools/podman.md",
+    "A计科工程/主机运维/Tools/mpv.md",
+    "A计科工程/主机运维/Tools/iwd.md",
+    "A计科工程/主机运维/Tools/iptables.md",
+    "A计科工程/主机运维/Tools/dmesg.md",
+    "A计科工程/主机运维/Tools/dd.md",
+    "A计科工程/主机运维/Raspi/树莓派折腾记录.md",
+    "A计科工程/主机运维/Others/Linux 字体调教指南.md",
+    "A计科工程/主机运维/Manjaro/manjaro.md",
+    "A计科工程/主机运维/Linux/蓝牙相关问题.md",
+    "E临时笔记/虚拟内存.canvas",
     "C知识宝库/概率论",
-    "A计科工程/主机运维/Linux/Linux网络管理.md",
-    "A计科工程/主机运维/Linux/Linux系统数据收集分析.md",
-    "A计科工程/主机运维/Linux/Linux 虚拟机.md",
-    "A计科工程/主机运维/Linux/Btrfs文件系统.md",
-    "H其他文件/PPT/demo.md",
-    "G绘图文件/数据结构.md",
-    "G绘图文件/irik-1206.md",
-    "G绘图文件/nastools.md",
-    "G绘图文件/iptables.md",
-    "G绘图文件/calculator.md",
-    "A计科工程/主机运维/Linux/vscode 手动安装.md",
-    "A计科工程/主机运维/Linux/wayland使用指南.md",
-    "A计科工程/主机运维/Linux/Wireshark.md",
-    "Untitled.md",
-    "A计科工程/主机运维/Linux/fish.md",
     "新功能测试.canvas",
     "A计科工程/主机运维/Raspi"
   ]

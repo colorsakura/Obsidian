@@ -1,6 +1,6 @@
 ---
-Date: 2022-12-09 10:33
-Tag: Linux, Arch, Doc, TODO
+date: 2022-12-09 10:33
+tags: Linux, Arch, Doc, TODO
 ---
 
 # Arch 安装手册

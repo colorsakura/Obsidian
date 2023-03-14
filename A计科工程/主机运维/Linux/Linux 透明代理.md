@@ -1,6 +1,6 @@
 ---
-Date: 2023-02-21 20:14
-Tag: TODO, clash, nftables, tproxy
+date: 2023-02-21 20:14
+tags: TODO, clash, nftables, tproxy
 ---
 
 # Linux 透明代理

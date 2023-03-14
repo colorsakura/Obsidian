@@ -1,9 +1,5 @@
 ---
-id: "主机运维/fish.md"
-aliases:
-  - "Fish 作为 login shell"
-tags: []
-Tag: "Fish, Shell, Linux, Arch"
+tags: "Fish, Shell, Linux, Arch"
 ---
 
 ## Fish 作为 login shell

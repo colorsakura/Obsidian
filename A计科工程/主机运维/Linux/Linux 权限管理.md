@@ -1,6 +1,6 @@
 ---
-Date: 2023-03-06 12:33
-Tag: Linux, Doc, TODO
+date: 2023-03-06 12:33
+tags: Linux, Doc, TODO
 ---
 
 # Linux 权限管理

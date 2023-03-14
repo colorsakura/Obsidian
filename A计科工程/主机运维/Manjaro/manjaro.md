@@ -1,3 +1,8 @@
+---
+date: 2023-03-14 20:40
+tags: TODO
+---
+
 ## 介绍
 
  **为了解决ArchLinux的“大bug”，Manjaro应运而生！**

@@ -2,12 +2,19 @@
   "version": 2,
   "projects": [
     {
-      "fieldConfig": {},
+      "fieldConfig": {
+        "tags": {
+          "options": [],
+          "richText": false
+        }
+      },
       "defaultName": "",
       "templates": [
         "H其他文件/模板/笔记.md"
       ],
-      "excludedNotes": [],
+      "excludedNotes": [
+        "H其他文件"
+      ],
       "isDefault": true,
       "dataSource": {
         "kind": "tag",
@@ -15,7 +22,7 @@
           "tag": "#TODO"
         }
       },
-      "newNotesFolder": "",
+      "newNotesFolder": "E临时笔记",
       "views": [
         {
           "config": {
@@ -25,8 +32,19 @@
               },
               "path": {
                 "hide": true
+              },
+              "published": {
+                "hide": true
+              },
+              "Tag": {
+                "width": 260
+              },
+              "tags": {
+                "width": 180
               }
-            }
+            },
+            "sortField": "date",
+            "sortAsc": true
           },
           "filter": {
             "conditions": []
@@ -40,8 +58,9 @@
         },
         {
           "config": {
-            "groupByField": "status",
-            "priorityField": "weight"
+            "groupByField": "",
+            "priorityField": "weight",
+            "includeFields": []
           },
           "filter": {
             "conditions": []
@@ -84,14 +103,61 @@
           "type": "gallery"
         }
       ],
-      "name": "项目管理",
+      "name": "进度管理",
       "id": "4b3b6028-99cb-4199-aac2-733c24d03a9a"
+    },
+    {
+      "fieldConfig": {},
+      "defaultName": "",
+      "templates": [
+        "H其他文件/模板/笔记.md"
+      ],
+      "excludedNotes": [],
+      "isDefault": false,
+      "dataSource": {
+        "kind": "tag",
+        "config": {
+          "tag": "#Doc"
+        }
+      },
+      "newNotesFolder": "",
+      "views": [
+        {
+          "config": {
+            "fieldConfig": {
+              "path": {
+                "hide": true
+              }
+            }
+          },
+          "filter": {
+            "conditions": []
+          },
+          "colors": {
+            "conditions": [
+              {
+                "color": "#ff0040",
+                "condition": {
+                  "field": "tags",
+                  "operator": "contains",
+                  "value": "TODO"
+                }
+              }
+            ]
+          },
+          "id": "e69b1c9f-d6e1-4611-8729-6351c62e641d",
+          "name": "Table",
+          "type": "table"
+        }
+      ],
+      "id": "64a2440b-bbf0-4e61-b860-486b389210b2",
+      "name": "笔记管理"
     }
   ],
   "preferences": {
     "projectSizeLimit": 1000,
     "frontmatter": {
-      "quoteStrings": "PLAIN"
+      "quoteStrings": "QUOTE_DOUBLE"
     }
   }
 }

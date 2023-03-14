@@ -12,5 +12,7 @@
   "spellcheckLanguages": null,
   "smartIndentList": true,
   "showInlineTitle": false,
-  "trashOption": "local"
+  "trashOption": "local",
+  "newFileLocation": "folder",
+  "newFileFolderPath": "E项目管理"
 }

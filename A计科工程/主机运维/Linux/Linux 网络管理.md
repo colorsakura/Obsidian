@@ -1,6 +1,6 @@
 ---
-Date: 2023-02-19 14:43
-Tag: DOC, network, systemd, linux, dns, dnsmasq
+date: 2023-02-19 14:43
+tags: DOC, network, systemd, linux, dns, dnsmasq
 ---
 
 # 网络管理方案
