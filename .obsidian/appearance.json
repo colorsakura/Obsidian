@@ -1,16 +1,21 @@
 {
-  "cssTheme": "Blue Topaz",
-  "theme": "system",
+  "cssTheme": "Minimal",
+  "theme": "moonstone",
   "translucency": false,
-  "interfaceFontFamily": "更纱黑体 UI SC",
-  "textFontFamily": "更纱黑体 SC",
+  "interfaceFontFamily": "",
+  "textFontFamily": "monospace",
   "baseFontSize": 16,
   "enabledCssSnippets": [
     "external-link-edit-mode",
     "column",
     "admonition-highlight-block",
     "folder-icons",
-    "external-link-icons"
+    "external-link-icons",
+    "clutter-free-headings",
+    "custom-admonitions.ace703",
+    "general",
+    "image-grid",
+    "tag-pills"
   ],
   "monospaceFontFamily": "",
   "accentColor": "",

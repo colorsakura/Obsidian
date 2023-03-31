@@ -2,8 +2,14 @@
   "calendar",
   "obsidian-excalidraw-plugin",
   "obsidian-projects",
-  "easy-typing-obsidian",
   "better-word-count",
-  "obsidian-style-settings",
-  "ProxyGithub"
+  "obsidian-tasks-plugin",
+  "dataview",
+  "obsidian-admonition",
+  "table-editor-obsidian",
+  "obsidian-banners",
+  "ProxyGithub",
+  "highlightr-plugin",
+  "obsidian-contextual-typography",
+  "obsidian-minimal-settings"
 ]

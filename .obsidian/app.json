@@ -14,5 +14,7 @@
   "showInlineTitle": false,
   "trashOption": "local",
   "newFileLocation": "folder",
-  "newFileFolderPath": "E项目管理"
+  "newFileFolderPath": "E项目管理",
+  "defaultViewMode": "preview",
+  "showUnsupportedFiles": true
 }

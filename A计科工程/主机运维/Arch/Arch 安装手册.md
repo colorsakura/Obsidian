@@ -12,11 +12,12 @@ tags: Linux, Arch, Doc, TODO
 5. 安装系统
 6. 配置系统
 
-详细的安装教程请参阅 [Arch Wiki 官方安装指南]( https://wiki.archlinux.org/title/Installation_guide_ (%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87))
+详细的安装教程请参阅:  [Arch Wiki 官方安装指南]( https://wiki.archlinux.org/title/Installation_guide_ (%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87))
 
 > [!note]
 > 一切以官方 wiki 为主，多看 wiki，多实践，才能有进步。
 
+---
 ## 一. 安装环境确定
 
 ### 1. 禁用 reflector 服务
@@ -34,6 +35,8 @@ systemctl status reflector.service
 ```
 
 同时，你可以使用 `Tab` 键在输入命令的时候对命令、参数或文件路径进行自动补全，提高效率的同时降低输入错误的风险。
+
+---
 
 ### 2. 安装 SSH 
 
@@ -53,6 +56,7 @@ passwd root
 > [!note]
 > 不要忘记设置 root 用户的密码
 
+---
 ### 3. 确认是否为 UEFI 模式
 
 禁用 `reflector` 服务后，我们再来确认一下是否为 `UEFI` 模式：
@@ -63,13 +67,11 @@ ls /sys/firmware/efi/efivars
 
 若输出了一堆东西（`efi` 变量），则说明已在 `UEFI` 模式。否则请确认你的启动方式是否为 `UEFI`。
 
+---
 ###  4. 连接网络
 
 > [!note]
 > archlinux 的安装**必须**要求网络环境。
-
-
-若为虚拟机且按照上一节 [虚拟机安装前的准备](https://arch.icekylin.online/rookie/pre-virt.html#_3-%E9%85%8D%E7%BD%AE-virtualbox) 进行了配置；同时宿主机连接了网络，那么虚拟机应该已经连接网络了。
 
 #### 使用无线连接：
 
@@ -83,7 +85,7 @@ station wlan0 connect wifi-name # 进行连接，注意这里无法输入中文�
 exit # 连接成功后退出
 ```
 
-若无线网卡无法显示，请按照上一节 [确保网络环境](https://arch.icekylin.online/rookie/pre-install.html#_1-%E7%A1%AE%E4%BF%9D%E7%BD%91%E7%BB%9C%E7%8E%AF%E5%A2%83) 的说明**确保你的无线网卡硬件开关处于打开状态**。
+若无线网卡无法显示，请按照的说明**确保你的无线网卡硬件开关处于打开状态**。
 
 你可以使用如下命令查看内核是否加载了你的无线网卡驱动。
 ```
@@ -136,10 +138,6 @@ timedatectl status # 检查服务状态
 vim /etc/pacman.d/mirrorlist
 ```
 
-如果不会使用 `vim` 编辑器，请参阅 [这里](https://arch.icekylin.online/rookie/basic-install.html)。
-
-`vim` 编辑器在安装和配置系统的过程中还需要使用多次。
-
 放在**最上面**的是会使用的软件仓库镜像源，推荐的镜像源如下：
 
 ```
@@ -151,17 +149,9 @@ Server = http://mirror.lzu.edu.cn/archlinux/$repo/os/$arch # 兰州大学开源�
 
 前车之鉴 —— 请不在这一步中添加 `archlinuxcn` 源！如果你在 `/etc/pacman.conf` 中添加了内容，请将它们删掉。
 
-## [#](https://arch.icekylin.online/rookie/basic-install.html#_7-分区和格式化-使用-btrfs-文件系统) 7. 分区和格式化（使用 Btrfs 文件系统）
+## 7. 分区和格式化（使用 Btrfs 文件系统）
 
-### [#](https://arch.icekylin.online/rookie/basic-install.html#_7-1-分区) 7-1. 分区
-
-ℹ️ 提示
-
-虚拟机安装请同时参阅步骤 [🆕 全新安装](https://arch.icekylin.online/rookie/basic-install-detail.html#%F0%9F%86%95-%E5%85%A8%E6%96%B0%E5%AE%89%E8%A3%85)。
-
-分区步骤对于有些人来说是个难点，如果有不理解的地方请参阅下一节 [基础安装详解](https://arch.icekylin.online/rookie/basic-install-detail.html#%F0%9F%92%BE-%E5%88%86%E5%8C%BA%E5%92%8C%E6%A0%BC%E5%BC%8F%E5%8C%96)。
-
-同时，分区其它说明也会在下一节 [基础安装详解](https://arch.icekylin.online/rookie/basic-install-detail.html#%F0%9F%92%BE-%E5%88%86%E5%8C%BA%E5%92%8C%E6%A0%BC%E5%BC%8F%E5%8C%96) 详细列出。
+### 7-1. 分区
 
 ☢️ 警告
 
@@ -210,8 +200,6 @@ lsblk # 显示当前分区情况
 cfdisk /dev/sdx # 对安装 archlinux 的磁盘分区
 ```
 
-![partition-2](https://arch.icekylin.online/assets/img/basic-install_partition-2.dee2f126.png)
-
 进入 `cfdisk` 分区工具之后，你会看到如图所示的界面。通过方向键 `↑` 和 `↓` 可以在要操作磁盘分区或空余空间中移动；通过方向键 `←` 和 `→` 在对当前高亮的磁盘分区或空余空间要执行的操作中移动。
 
 3.  首先创建 Swap 分区。选中 `Free space` > 再选中操作 `[New]` > 然后按下回车 `Enter` 以新建 `swap` 分区（类似 Windows 的交换文件）
@@ -223,12 +211,6 @@ cfdisk /dev/sdx # 对安装 archlinux 的磁盘分区
 单位可以自行输入，如 `GB`、`MB` 等等。
 
 5.  默认新建的类型是 `Linux filesystem`，我们需要将类型更改为 `Linux swap`。选中操作 `[Type]` > 然后按下回车 `Enter` > 通过方向键 `↑` 和 `↓` 选中 `Linux swap` > 最后按下回车 `Enter`
-
-![partition-5](https://arch.icekylin.online/assets/img/basic-install_partition-5.15568bf3.png)
-
-![partition-6](https://arch.icekylin.online/assets/img/basic-install_partition-6.9c78cdc9.png)
-
-![partition-7](https://arch.icekylin.online/assets/img/basic-install_partition-7.47f1410a.png)
 
 6.  我们再只需要一个分区即可（因为使用 `Btrfs` 文件系统，所以根目录和用户主目录在一个分区上），所以类似的：选中 `Free space` > 再选中操作 `[New]` > 然后按下回车 `Enter` 以新建分区
 

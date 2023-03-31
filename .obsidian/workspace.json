@@ -4,23 +4,33 @@
     "type": "split",
     "children": [
       {
-        "id": "2ca1998001db383a",
+        "id": "20f28ab4861520d1",
         "type": "tabs",
         "children": [
           {
-            "id": "4aad43762a6f7b36",
+            "id": "804d6c2d6dfbab86",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "texlive 安装.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
             }
           },
           {
-            "id": "4449f40f1a07efb1",
+            "id": "d241877e35c6351b",
             "type": "leaf",
             "state": {
-              "type": "obsidian-projects",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "ESP32.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
             }
           }
         ],
@@ -53,7 +63,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "latex",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -100,7 +110,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "ESP32.md"
+              }
             }
           },
           {
@@ -111,7 +123,8 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       },
       {
         "id": "a7d5294bdc33b04a",
@@ -123,6 +136,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "ESP32.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -151,40 +165,44 @@
       "markdown-importer:Open format converter": false,
       "workspaces:Manage workspace layouts": true,
       "obsidian-projects:Open projects": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "9976163a69209abf",
+  "active": "d241877e35c6351b",
   "lastOpenFiles": [
-    "A计科工程/主机运维/Manjaro/锁屏.md",
-    "C知识宝库/Git 提交规范.md",
+    "H其他文件/IMG/ESP32-devkit-pinout.png",
+    "texlive 安装.md",
+    "ESP32.md",
+    "TODO.md",
+    "A计科工程/LUKS 硬盘加密.md",
+    "C知识宝库/Markdown教程.md",
+    "I精美文档/Latex.pdf",
+    "A计科工程/主机运维/Linux/Btrfs 文件系统.md",
+    "A计科工程/Fcitx5 自定义词库.md",
+    "G绘图文件/数据结构.md",
+    "G绘图文件/Drawing 2023-03-26 23.43.22.excalidraw.md",
+    "Untitled.md",
+    "学习记录.md",
+    "室内蔬菜种植.md",
+    "改变计划.md",
+    "新功能测试.canvas",
+    "项目记录.md",
+    "A计科工程/vim 手册.md",
+    "A计科工程/GPG 简明教程.md",
+    "A计科工程/Linux 定时任务.md",
+    "A计科工程/汇编实验.md",
+    "D每日笔记/2023-03-22.md",
     "A计科工程/主机运维/Arch/Arch 安装手册.md",
-    "C知识宝库/JWT.md",
-    "A计科工程/计算机基础.md",
-    "A计科工程/网络安全.md",
-    "A计科工程/主机运维/域名.md",
-    "A计科工程/主机运维/Windwos 技巧.md",
-    "A计科工程/主机运维/Windows subsystem Linux.md",
-    "A计科工程/主机运维/Ubuntu.md",
-    "A计科工程/主机运维/Truenas Scale.md",
-    "A计科工程/主机运维/Scrapy.md",
-    "A计科工程/主机运维/Tools/ZFS.md",
-    "A计科工程/主机运维/Tools/tmux.md",
-    "A计科工程/主机运维/Tools/SMB.md",
-    "A计科工程/主机运维/Tools/screen.md",
-    "A计科工程/主机运维/Tools/podman.md",
-    "A计科工程/主机运维/Tools/mpv.md",
-    "A计科工程/主机运维/Tools/iwd.md",
-    "A计科工程/主机运维/Tools/iptables.md",
-    "A计科工程/主机运维/Tools/dmesg.md",
-    "A计科工程/主机运维/Tools/dd.md",
-    "A计科工程/主机运维/Raspi/树莓派折腾记录.md",
-    "A计科工程/主机运维/Others/Linux 字体调教指南.md",
+    "A计科工程/正则表达式.md",
+    "A计科工程/Linux 常用命令.md",
+    "H其他文件/模板/笔记.md",
+    "H其他文件/IMG/vim.png",
+    "A计科工程/编程语言/go/Go学习笔记.md",
+    "H其他文件/IMG/libime词库文件.png",
     "A计科工程/主机运维/Manjaro/manjaro.md",
-    "A计科工程/主机运维/Linux/蓝牙相关问题.md",
     "E临时笔记/虚拟内存.canvas",
     "C知识宝库/概率论",
-    "新功能测试.canvas",
     "A计科工程/主机运维/Raspi"
   ]
 }
