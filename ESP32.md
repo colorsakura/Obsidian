@@ -7,5 +7,9 @@ tags: TODO
 
 ---
 
+![[Pasted image 20230401211533.png]]
+
+---
+
 
 ![[ESP32-devkit-pinout.png]]

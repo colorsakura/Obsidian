@@ -13,19 +13,6 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "texlive 安装.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "d241877e35c6351b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
                 "file": "ESP32.md",
                 "mode": "source",
                 "backlinks": false,
@@ -33,8 +20,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -84,7 +70,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 226.5
+    "width": 226.5,
+    "collapsed": true
   },
   "right": {
     "id": "26711adbd0148b59",
@@ -164,16 +151,20 @@
       "command-palette:Open command palette": false,
       "markdown-importer:Open format converter": false,
       "workspaces:Manage workspace layouts": true,
+      "obsidian-excalidraw-plugin:Create new drawing": false,
       "obsidian-projects:Open projects": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false,
-      "obsidian-excalidraw-plugin:Create new drawing": false
+      "table-editor-obsidian:Advanced Tables Toolbar": false
     }
   },
-  "active": "d241877e35c6351b",
+  "active": "804d6c2d6dfbab86",
   "lastOpenFiles": [
-    "H其他文件/IMG/ESP32-devkit-pinout.png",
+    "Pasted image 20230401211533.png",
     "texlive 安装.md",
+    "新功能测试.canvas",
+    "改变计划.md",
+    "室内蔬菜种植.md",
     "ESP32.md",
+    "H其他文件/IMG/ESP32-devkit-pinout.png",
     "TODO.md",
     "A计科工程/LUKS 硬盘加密.md",
     "C知识宝库/Markdown教程.md",
@@ -184,9 +175,6 @@
     "G绘图文件/Drawing 2023-03-26 23.43.22.excalidraw.md",
     "Untitled.md",
     "学习记录.md",
-    "室内蔬菜种植.md",
-    "改变计划.md",
-    "新功能测试.canvas",
     "项目记录.md",
     "A计科工程/vim 手册.md",
     "A计科工程/GPG 简明教程.md",
