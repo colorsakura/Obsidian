@@ -4,17 +4,17 @@
     "type": "split",
     "children": [
       {
-        "id": "20f28ab4861520d1",
+        "id": "f8b5a5f2bf03c8be",
         "type": "tabs",
         "children": [
           {
-            "id": "804d6c2d6dfbab86",
+            "id": "6a80a07f2ecf9404",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "ESP32.md",
-                "mode": "source",
+                "file": "C知识宝库/Git 提交规范.md",
+                "mode": "preview",
                 "backlinks": false,
                 "source": false
               }
@@ -49,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "latex",
+                "query": "",
                 "matchingCase": true,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -70,8 +70,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 226.5,
-    "collapsed": true
+    "width": 226.5
   },
   "right": {
     "id": "26711adbd0148b59",
@@ -98,7 +97,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "ESP32.md"
+                "file": "C知识宝库/Git 提交规范.md"
               }
             }
           },
@@ -123,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "ESP32.md",
+                "file": "C知识宝库/Git 提交规范.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -151,44 +150,45 @@
       "command-palette:Open command palette": false,
       "markdown-importer:Open format converter": false,
       "workspaces:Manage workspace layouts": true,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
       "obsidian-excalidraw-plugin:Create new drawing": false,
-      "obsidian-projects:Open projects": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false
+      "obsidian-projects:Open projects": false
     }
   },
-  "active": "804d6c2d6dfbab86",
+  "active": "6a80a07f2ecf9404",
   "lastOpenFiles": [
-    "Pasted image 20230401211533.png",
     "texlive 安装.md",
-    "新功能测试.canvas",
+    "LUKS 加密.md",
+    "A计科工程/主机运维/Linux/Linux 透明代理.md",
+    "Untitled.md",
+    "回调函数.md",
+    "H其他文件/IMG/Pasted image 20230411123712.png",
+    "A计科工程/编程语言/go/Go学习笔记.md",
+    "项目记录.md",
+    "A计科工程/主机运维/Linux/Wireshark.md",
+    "D每日笔记/2022-05-22.md",
+    "A计科工程/主机运维/Linux/Linux 虚拟机.md",
+    "A计科工程/主机运维/Manjaro/锁屏.md",
+    "A计科工程/Fcitx5 自定义词库.md",
+    "A计科工程/主机运维/Linux/Linux 输入法.md",
+    "ESP32.md",
+    "H其他文件/IMG/Pasted image 20230401211533.png",
     "改变计划.md",
     "室内蔬菜种植.md",
-    "ESP32.md",
-    "H其他文件/IMG/ESP32-devkit-pinout.png",
+    "学习记录.md",
     "TODO.md",
+    "新功能测试.canvas",
+    "H其他文件/IMG/ESP32-devkit-pinout.png",
     "A计科工程/LUKS 硬盘加密.md",
     "C知识宝库/Markdown教程.md",
     "I精美文档/Latex.pdf",
     "A计科工程/主机运维/Linux/Btrfs 文件系统.md",
-    "A计科工程/Fcitx5 自定义词库.md",
     "G绘图文件/数据结构.md",
     "G绘图文件/Drawing 2023-03-26 23.43.22.excalidraw.md",
-    "Untitled.md",
-    "学习记录.md",
-    "项目记录.md",
     "A计科工程/vim 手册.md",
     "A计科工程/GPG 简明教程.md",
-    "A计科工程/Linux 定时任务.md",
-    "A计科工程/汇编实验.md",
-    "D每日笔记/2023-03-22.md",
-    "A计科工程/主机运维/Arch/Arch 安装手册.md",
-    "A计科工程/正则表达式.md",
-    "A计科工程/Linux 常用命令.md",
-    "H其他文件/模板/笔记.md",
     "H其他文件/IMG/vim.png",
-    "A计科工程/编程语言/go/Go学习笔记.md",
     "H其他文件/IMG/libime词库文件.png",
-    "A计科工程/主机运维/Manjaro/manjaro.md",
     "E临时笔记/虚拟内存.canvas",
     "C知识宝库/概率论",
     "A计科工程/主机运维/Raspi"

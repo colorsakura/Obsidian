@@ -1,9 +1,9 @@
 {
   "cssTheme": "Minimal",
-  "theme": "moonstone",
+  "theme": "obsidian",
   "translucency": false,
   "interfaceFontFamily": "",
-  "textFontFamily": "monospace",
+  "textFontFamily": "",
   "baseFontSize": 16,
   "enabledCssSnippets": [
     "external-link-edit-mode",
@@ -12,10 +12,10 @@
     "folder-icons",
     "external-link-icons",
     "clutter-free-headings",
-    "custom-admonitions.ace703",
     "general",
     "image-grid",
-    "tag-pills"
+    "tag-pills",
+    "custom-admonitions.ace703"
   ],
   "monospaceFontFamily": "",
   "accentColor": "",

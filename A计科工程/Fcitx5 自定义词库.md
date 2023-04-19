@@ -1,6 +1,6 @@
 ---
 date: 2023-03-16 01:23
-tags: TODO, Fcitx5
+tags: Fcitx5
 ---
 
 # Fcitx5 自定义词库
@@ -28,3 +28,7 @@ Arch 系统上, 词库目录在 `/usr/share/libime`. 内容如下图.
 ## 中文模式下输入英语单词
 
 经过测试, 这个功能是由 `spell` 这个选项提供的.
+
+## 用户输入历史
+
+位置: `.local/share/fcitx5/pinyin`

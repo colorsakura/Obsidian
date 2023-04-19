@@ -19,4 +19,5 @@ sudo usermod -aG wireshark $USER
 
 ## References
 
-https://wiki.archlinux.org/title/Wireshark
+- <https://wiki.archlinux.org/title/Wireshark>
+- <https://wiki.wireshark.org/CaptureSetup/CapturePrivileges#most-unixes>

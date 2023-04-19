@@ -8,7 +8,7 @@ tags: TODO, clash, nftables, tproxy
 使用 Arch 已经有一段时间了，浏览器使用 pac 来控制代理还是有诸多不便，不同软件配置代理的方式不尽相同。
 于是就花点时间配置一下透明代理吧。
 
-主要使用的软件：clash-meta, nftables
+主要使用的软件：`clash-meta`, `nftables`
 
 ## clash-meta 配置
 
@@ -23,11 +23,15 @@ sudo systemctl enable --now clash-meta
 sudo vim /etc/clash-meta/config.yaml
 ```
 
-启用透明代理所需要的配置
+```
+ip rule add fwmark 1 table 100
+ip route add local 0.0.0.0/0 dev lo table 100
+```
+
+启用透明代理 clash 所需要的配置
 
 ```conf
 ...
-
 routing-mark: 1
 sniffer:
     enable: true
@@ -54,6 +58,49 @@ dns:
 ```
 
 ## nftables 配置
+
+```conf
+include "/etc/nftables/ipv4-whitelist.nft"
+include "/etc/nftables/ipv4-private.nft"
+include "/etc/nftables/ipv4-chnroute.nft"
+
+define DIRECT-IPV4 = {
+    $whitelist_ipv4,
+    $private_ipv4,
+    $chnroute_ipv4,
+}
+
+table inet clash
+delete table inet clash
+
+table inet clash {
+    chain clash-tproxy {
+        fib daddr type { unspec, local, anycast, multicast } return
+        ip daddr $DIRECT-IPV4 return
+        # 不代理 NTP 服务器的端口，
+        # 不加上这条规则会导致局域网内的设备无法通过 NTP 服务器同步时间。
+        udp dport { 123 } return
+        meta l4proto { tcp, udp } meta mark set 1 tproxy to :7893 accept
+    }
+
+    chain clash-mark {
+        fib daddr type { unspec, local, anycast, multicast } return
+        ip daddr $DIRECT-IPV4 return
+        udp dport { 123 } return
+        meta mark set 1
+    }
+
+    chain mangle-output {
+        type route hook output priority mangle; policy accept;
+        meta l4proto { tcp, udp } mark != 1 ct direction original jump clash-mark
+    }
+
+    chain mangle-prerouting {
+        type filter hook prerouting priority mangle; policy accept;
+        iifname { lo } meta l4proto { tcp, udp } ct direction original jump clash-tproxy
+    }
+}
+```
 
 ```conf
 table inet clash
@@ -116,6 +163,46 @@ table inet clash {
     chain mangle-prerouting {
         type filter hook prerouting priority mangle; policy accept;
         iifname { lo } meta l4proto { tcp, udp } ct direction original jump clash-tproxy
+    }
+}
+```
+
+
+```nft
+include "/etc/nftables/ipv4-whitelist.nft"
+include "/etc/nftables/ipv4-private.nft"
+include "/etc/nftables/ipv4-chnroute.nft"
+
+define DIRECT-IPV4 = {
+    $whitelist_ipv4,
+    $private_ipv4,
+    $chnroute_ipv4,
+}
+
+table ip v2ray {
+    chain PREROUTING {
+        type filter hook prerouting priority filter; policy accept;
+        ip daddr $DIRECT-IPV4 return
+
+        meta l4proto { tcp, udp } ip daddr 10.12.0.0-10.12.0.255 return
+        meta mark 0x000000ff return
+        meta l4proto { tcp, udp } meta mark set 0x00000001 tproxy to 127.0.0.1:12345 accept
+    }
+
+    chain OUTPUT {
+        type route hook output priority filter; policy accept;
+        ip daddr $DIRECT-IPV4 return
+
+        meta l4proto { tcp, udp } ip daddr 10.12.0.0-10.12.0.255 return
+        meta mark 0x000000ff return
+        meta l4proto { tcp, udp } meta mark set 0x00000001 accept
+    }
+}
+
+table ip v2ray-filter {
+    chain DIVERT {
+        type filter hook prerouting priority mangle; policy accept;
+        meta l4proto tcp socket transparent 1 meta mark set 0x00000001 accept
     }
 }
 ```

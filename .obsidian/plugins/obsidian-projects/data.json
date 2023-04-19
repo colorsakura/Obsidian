@@ -40,7 +40,7 @@
                 "width": 260
               },
               "tags": {
-                "width": 180
+                "width": 325
               }
             },
             "sortField": "date",
@@ -158,6 +158,7 @@
     "projectSizeLimit": 1000,
     "frontmatter": {
       "quoteStrings": "QUOTE_DOUBLE"
-    }
+    },
+    "commands": []
   }
 }
