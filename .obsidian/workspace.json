@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "C知识宝库/Git 提交规范.md",
+                "file": "项目记录.md",
                 "mode": "preview",
                 "backlinks": false,
                 "source": false
@@ -97,7 +97,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "C知识宝库/Git 提交规范.md"
+                "file": "项目记录.md"
               }
             }
           },
@@ -122,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "C知识宝库/Git 提交规范.md",
+                "file": "项目记录.md",
                 "collapseAll": true,
                 "extraContext": true,
                 "sortOrder": "alphabetical",
@@ -137,8 +137,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 310.5,
-    "collapsed": true
+    "width": 310.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -157,36 +156,37 @@
   },
   "active": "6a80a07f2ecf9404",
   "lastOpenFiles": [
-    "texlive 安装.md",
-    "LUKS 加密.md",
-    "A计科工程/主机运维/Linux/Linux 透明代理.md",
-    "Untitled.md",
-    "回调函数.md",
-    "H其他文件/IMG/Pasted image 20230411123712.png",
-    "A计科工程/编程语言/go/Go学习笔记.md",
-    "项目记录.md",
-    "A计科工程/主机运维/Linux/Wireshark.md",
-    "D每日笔记/2022-05-22.md",
-    "A计科工程/主机运维/Linux/Linux 虚拟机.md",
-    "A计科工程/主机运维/Manjaro/锁屏.md",
     "A计科工程/Fcitx5 自定义词库.md",
-    "A计科工程/主机运维/Linux/Linux 输入法.md",
+    "E临时笔记/archlinux 包构建.md",
+    "E临时笔记/kvm.md",
+    "E临时笔记/Obsidian 教程.md",
     "ESP32.md",
-    "H其他文件/IMG/Pasted image 20230401211533.png",
+    "项目记录.md",
+    "新功能测试.canvas",
     "改变计划.md",
     "室内蔬菜种植.md",
     "学习记录.md",
     "TODO.md",
-    "新功能测试.canvas",
-    "H其他文件/IMG/ESP32-devkit-pinout.png",
+    "回调函数.md",
+    "LUKS 加密.md",
     "A计科工程/LUKS 硬盘加密.md",
+    "texlive 安装.md",
+    "C知识宝库/Git 提交规范.md",
+    "A计科工程/主机运维/Linux/Linux 透明代理.md",
+    "Untitled.md",
+    "H其他文件/IMG/Pasted image 20230411123712.png",
+    "A计科工程/编程语言/go/Go学习笔记.md",
+    "A计科工程/主机运维/Linux/Wireshark.md",
+    "D每日笔记/2022-05-22.md",
+    "A计科工程/主机运维/Linux/Linux 虚拟机.md",
+    "A计科工程/主机运维/Manjaro/锁屏.md",
+    "A计科工程/主机运维/Linux/Linux 输入法.md",
+    "H其他文件/IMG/Pasted image 20230401211533.png",
+    "H其他文件/IMG/ESP32-devkit-pinout.png",
     "C知识宝库/Markdown教程.md",
     "I精美文档/Latex.pdf",
     "A计科工程/主机运维/Linux/Btrfs 文件系统.md",
     "G绘图文件/数据结构.md",
-    "G绘图文件/Drawing 2023-03-26 23.43.22.excalidraw.md",
-    "A计科工程/vim 手册.md",
-    "A计科工程/GPG 简明教程.md",
     "H其他文件/IMG/vim.png",
     "H其他文件/IMG/libime词库文件.png",
     "E临时笔记/虚拟内存.canvas",
