@@ -1,0 +1,1 @@
+grim -g "$(slurp)"![[Pasted image 20230506192432.png]]
