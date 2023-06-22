@@ -1,4 +1,5 @@
 # ignore all markdown
 *.md
+*.pdf
 
 !*/*/*
