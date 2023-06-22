@@ -8,13 +8,16 @@
   "showLineNumber": true,
   "strictLineBreaks": true,
   "showFrontmatter": true,
-  "spellcheck": false,
-  "spellcheckLanguages": null,
+  "spellcheck": true,
+  "spellcheckLanguages": [
+    "en"
+  ],
   "smartIndentList": true,
   "showInlineTitle": false,
   "trashOption": "local",
   "newFileLocation": "folder",
-  "newFileFolderPath": "E项目管理",
+  "newFileFolderPath": "E临时笔记",
   "defaultViewMode": "source",
-  "showUnsupportedFiles": true
+  "showUnsupportedFiles": true,
+  "useMarkdownLinks": true
 }

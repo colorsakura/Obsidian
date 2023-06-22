@@ -1,6 +1,6 @@
 ---
 date: 2023-03-30 19:53
-tags: TODO, Tex, Arch
+tags: TODO, Tex, Arch, Latex, Doc/TODO
 ---
 
 # texlive 安装

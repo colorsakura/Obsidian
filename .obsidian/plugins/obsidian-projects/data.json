@@ -5,21 +5,18 @@
       "fieldConfig": {
         "tags": {
           "options": [],
-          "richText": false
+          "richText": true
         }
       },
       "defaultName": "",
-      "templates": [
-        "H其他文件/模板/笔记.md"
-      ],
-      "excludedNotes": [
-        "H其他文件"
-      ],
+      "templates": [],
+      "excludedNotes": [],
       "isDefault": true,
       "dataSource": {
-        "kind": "tag",
+        "kind": "folder",
         "config": {
-          "tag": "#TODO"
+          "path": "/",
+          "recursive": true
         }
       },
       "newNotesFolder": "E临时笔记",
@@ -37,10 +34,46 @@
                 "hide": true
               },
               "Tag": {
-                "width": 260
+                "width": 260,
+                "hide": true
               },
               "tags": {
-                "width": 325
+                "width": 325,
+                "hide": false
+              },
+              "backgroundColor": {
+                "width": 180,
+                "hide": true
+              },
+              "_class": {
+                "hide": true
+              },
+              "aliases": {
+                "hide": true
+              },
+              "backgroundImage": {
+                "hide": true
+              },
+              "Date": {
+                "hide": true
+              },
+              "excalidraw-plugin": {
+                "hide": true
+              },
+              "id": {
+                "hide": true
+              },
+              "marp": {
+                "hide": true
+              },
+              "paginate": {
+                "hide": true
+              },
+              "Tags": {
+                "hide": true
+              },
+              "theme": {
+                "hide": true
               }
             },
             "sortField": "date",
@@ -50,7 +83,16 @@
             "conditions": []
           },
           "colors": {
-            "conditions": []
+            "conditions": [
+              {
+                "color": "#df2a4e",
+                "condition": {
+                  "field": "tags",
+                  "operator": "contains",
+                  "value": "TODO"
+                }
+              }
+            ]
           },
           "name": "Table",
           "id": "12d96446-494e-43e2-92a0-95d16caa4db1",
@@ -60,7 +102,9 @@
           "config": {
             "groupByField": "",
             "priorityField": "weight",
-            "includeFields": []
+            "includeFields": [
+              "tags"
+            ]
           },
           "filter": {
             "conditions": []

@@ -1,6 +1,6 @@
 {
-  "cssTheme": "Things",
-  "theme": "system",
+  "cssTheme": "Minimal",
+  "theme": "moonstone",
   "translucency": false,
   "interfaceFontFamily": "",
   "textFontFamily": "",
@@ -18,7 +18,7 @@
     "custom-admonitions.ace703"
   ],
   "monospaceFontFamily": "",
-  "accentColor": "",
+  "accentColor": "#38b3cc",
   "nativeMenus": false,
   "baseFontSizeAction": false,
   "showViewHeader": false

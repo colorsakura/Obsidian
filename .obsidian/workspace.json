@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "5a6c6fda4e07b7f1",
+        "id": "cb87288b787ed7ba",
         "type": "tabs",
         "children": [
           {
-            "id": "348ae1c87ccf0e7d",
+            "id": "57ab48e3334dffcd",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "A计科工程/网络安全.md",
+                "file": "A计科工程/汇编实验.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -98,16 +98,8 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "A计科工程/网络安全.md"
+                "file": "A计科工程/汇编实验.md"
               }
-            }
-          },
-          {
-            "id": "ed8bf7cb95b06931",
-            "type": "leaf",
-            "state": {
-              "type": "calendar",
-              "state": {}
             }
           },
           {
@@ -116,6 +108,18 @@
             "state": {
               "type": "advanced-tables-toolbar",
               "state": {}
+            }
+          },
+          {
+            "id": "0e5e09cb735e9ec2",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "A计科工程/汇编实验.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
             }
           }
         ],
@@ -132,7 +136,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "A计科工程/网络安全.md",
+                "file": "A计科工程/汇编实验.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -165,23 +169,26 @@
       "obsidian-projects:Open projects": false
     }
   },
-  "active": "348ae1c87ccf0e7d",
+  "active": "57ab48e3334dffcd",
   "lastOpenFiles": [
-    "A计科工程/计算机基础.md",
+    "A计科工程/正则表达式.md",
+    "A计科工程/vim 手册.md",
+    "A计科工程/LUKS 硬盘加密.md",
+    "娱乐记录.md",
+    "TODO.md",
     "texlive 安装.md",
+    "学习记录.md",
+    "ESP32.md",
+    "Linux Kernel 参数.md",
+    "A计科工程/网络安全.md",
+    "A计科工程/计算机基础.md",
     "视频硬解.md",
     "A计科工程/主机运维/Linux/Linux 网络管理.md",
-    "TODO.md",
-    "娱乐记录.md",
-    "A计科工程/LUKS 硬盘加密.md",
     "回调函数.md",
     "新功能测试.canvas",
     "项目记录.md",
     "改变计划.md",
     "室内蔬菜种植.md",
-    "学习记录.md",
-    "ESP32.md",
-    "Linux Kernel 参数.md",
     "A计科工程/主机运维/Arch/Arch 安装手册.md",
     "A计科工程/编程语言/lua/lua 笔记.md",
     "A计科工程/编程语言/python/python 学习笔记.md",
@@ -191,9 +198,6 @@
     "A计科工程/编程语言/python/魔术方法.md",
     "C知识宝库/JWT.md",
     "C知识宝库/Markdown教程.md",
-    "C知识宝库/Git 提交规范.md",
-    "A计科工程/主机运维/Linux/Linux 虚拟机.md",
-    "A计科工程/vim 手册.md",
     "Pasted image 20230530071744.png",
     "I精美文档/Python语言及其应用 (Bill Lubanovic) (z-lib.org).pdf",
     "Pasted image 20230522231750.png",
