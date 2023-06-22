@@ -1,5 +1,5 @@
 {
-  "promptDelete": true,
+  "promptDelete": false,
   "readableLineLength": true,
   "legacyEditor": false,
   "livePreview": true,
@@ -15,6 +15,6 @@
   "trashOption": "local",
   "newFileLocation": "folder",
   "newFileFolderPath": "E项目管理",
-  "defaultViewMode": "preview",
+  "defaultViewMode": "source",
   "showUnsupportedFiles": true
 }

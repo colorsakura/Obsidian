@@ -79,7 +79,7 @@ sudo yum install libguestfs-tools
 通过 systemd 启动 libvirtd 后台服务：
 
 ```shell
-sudo systemctl enable libvirtd.service
+sudo systemctl enable --now libvirtd.service
 sudo systemctl start libvirtd.service
 ```
 

@@ -6,7 +6,6 @@ tags: Linux, Arch, Doc, TODO
 # Arch 安装手册
 
 1. 安装环境确定
-2. 配置网络(必须)
 3. 分区配置及格式化
 4. 挂载分区
 5. 安装系统
@@ -41,10 +40,10 @@ systemctl status reflector.service
 ### 2. 安装 SSH 
 
 > [!note]
-> 强烈推荐使用 ssh 远程安装，避免手动输入命令，减少不必要的麻烦。
+> 强烈推荐使用 ssh 远程安装，避免手动输入命令，减少输入错误, 避免安装失败。
 
 安装 `openssh` 服务，之后用ssh连接，避免使用丑陋的界面。
-```
+```shell
 # 安装之前配置镜像源比较好
 pacman -Sy openssh
 # 启动sshd服务
@@ -71,7 +70,7 @@ ls /sys/firmware/efi/efivars
 ###  4. 连接网络
 
 > [!note]
-> archlinux 的安装**必须**要求网络环境。
+> archlinux 的安装**<mark style="background: #FF5582A6;">必须</mark>**要求网络环境。
 
 #### 使用无线连接：
 
@@ -85,7 +84,7 @@ station wlan0 connect wifi-name # 进行连接，注意这里无法输入中文�
 exit # 连接成功后退出
 ```
 
-若无线网卡无法显示，请按照的说明**确保你的无线网卡硬件开关处于打开状态**。
+若无线网卡无法显示，请按照的说明 **确保你的无线网卡硬件开关处于打开状态**。
 
 你可以使用如下命令查看内核是否加载了你的无线网卡驱动。
 ```
@@ -149,9 +148,9 @@ Server = http://mirror.lzu.edu.cn/archlinux/$repo/os/$arch # 兰州大学开源�
 
 前车之鉴 —— 请不在这一步中添加 `archlinuxcn` 源！如果你在 `/etc/pacman.conf` 中添加了内容，请将它们删掉。
 
-## 7. 分区和格式化（使用 Btrfs 文件系统）
+## 二. 分区和格式化（使用 Btrfs 文件系统）
 
-### 7-1. 分区
+### 1. 分区
 
 ☢️ 警告
 

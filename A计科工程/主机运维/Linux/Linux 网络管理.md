@@ -46,7 +46,7 @@ Kind=bridge
 ```plain
 # /etc/systemd/network/20-br0.network
 [Match]
-Name=br0
+Name=en*
 
 [Network]
 # Address=192.168.0.2/24

@@ -59,7 +59,13 @@ dns:
 
 ## nftables 配置
 
-```conf
+### chnroute
+
+```shell
+curl 'http://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest' | awk -F\| '/CN\|ipv4/ { printf("%s/%d\n", $4, 32-log($5)/log(2)) }'| sed ':label;N;s/\n/, /;b label'|sed 's/$/& }/g'|sed 's/^/{ &/g' > ipv4-chnroute.nft
+```
+
+```nft
 include "/etc/nftables/ipv4-whitelist.nft"
 include "/etc/nftables/ipv4-private.nft"
 include "/etc/nftables/ipv4-chnroute.nft"
@@ -102,7 +108,7 @@ table inet clash {
 }
 ```
 
-```conf
+```nft
 table inet clash
 delete table inet clash
 
