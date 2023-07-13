@@ -1,6 +1,6 @@
 ---
 date: 2023-02-19 14:43
-tags: DOC, network, systemd, linux, dns, dnsmasq
+tags: doc, network, systemd, linux, dns, dnsmasq
 ---
 
 # 网络管理方案
@@ -46,7 +46,7 @@ Kind=bridge
 ```plain
 # /etc/systemd/network/20-br0.network
 [Match]
-Name=en*
+Name=br0
 
 [Network]
 # Address=192.168.0.2/24
@@ -128,7 +128,7 @@ systemctl enable --now systemd-networkd.service
 
 `man systemd.network` 可以看到 systemd-networkd 对这个参数的相关解释:
 
-Note that kernel's implementation of the IPv 6 RA protocol is always disabled, regardless of this setting. If this option is enabled, a userspace implementation of the IPv 6 RA protocol is used, and the kernel's own implementation remains disabled, since systemd-networkd needs to know all details supplied in the advertisements, and these are not available from the kernel if the kernel's own implementation is used.
+Note that kernel's implementation of the IPv6 RA protocol is always disabled, regardless of this setting. If this option is enabled, a userspace implementation of the IPv 6 RA protocol is used, and the kernel's own implementation remains disabled, since systemd-networkd needs to know all details supplied in the advertisements, and these are not available from the kernel if the kernel's own implementation is used.
 
 目前通过在 libvirtd 的脚本中手动启动网卡来规避这个问题：
 

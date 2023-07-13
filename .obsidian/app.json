@@ -2,7 +2,7 @@
   "promptDelete": false,
   "readableLineLength": true,
   "legacyEditor": false,
-  "livePreview": true,
+  "livePreview": false,
   "communityThemeSortOrder": "download",
   "alwaysUpdateLinks": true,
   "showLineNumber": true,
@@ -17,7 +17,7 @@
   "trashOption": "local",
   "newFileLocation": "folder",
   "newFileFolderPath": "E临时笔记",
-  "defaultViewMode": "source",
+  "defaultViewMode": "preview",
   "showUnsupportedFiles": true,
   "useMarkdownLinks": true
 }
