@@ -66,15 +66,37 @@ dns:
 curl 'http://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest' | awk -F\| '/CN\|ipv4/ { printf("%s/%d\n", $4, 32-log($5)/log(2)) }'| sed ':label;N;s/\n/, /;b label'|sed 's/$/& }/g'|sed 's/^/define chnroute_ipv4 = { &/g' > ipv4-chnroute.nft
 ```
 
-```nft
+```shell
+#!/usr/bin/nft -f
+
+flush ruleset
+
 include "/etc/nftables/ipv4-whitelist.nft"
 include "/etc/nftables/ipv4-private.nft"
 include "/etc/nftables/ipv4-chnroute.nft"
 
-define DIRECT-IPV4 = {
+define DIRECT = {
     $whitelist_ipv4,
     $private_ipv4,
     $chnroute_ipv4,
+}
+
+table inet firewall {
+  chain incoming {
+    type filter hook input priority 0; policy drop;
+
+    # established/related connections
+    ct state established,related accept
+
+    # loopback interface
+    iifname lo accept
+
+    # icmp: disable ping
+    icmp type echo-request drop
+
+    # open tcp ports: sshd (22), httpd (80)
+    tcp dport {ssh} accept
+  }
 }
 
 table inet clash
@@ -82,18 +104,82 @@ delete table inet clash
 
 table inet clash {
     chain clash-tproxy {
+        # debug
+        meta l4proto {tcp, udp} meta nftrace set 1
+
+        meta l4proto { tcp, udp } meta mark set 1 tproxy to :7893 accept
+    }
+
+    chain clash-mark {
+        meta mark set 1
+    }
+
+    chain mangle-output {
+        type route hook output priority mangle; policy accept;
+        fib daddr type { unspec, local, anycast, multicast } accept
+        ip daddr $DIRECT accept
+        meta l4proto { tcp, udp } mark != 1 ct direction original jump clash-mark
+    }
+
+    chain mangle-prerouting {
+        type filter hook prerouting priority mangle; policy accept;
+        meta l4proto { tcp, udp } th dport 53 accept
+        fib daddr type { unspec, local, anycast, multicast } accept
+        ip daddr $DIRECT accept
+        iifname { lo } meta l4proto { tcp, udp } ct direction original jump clash-tproxy
+    }
+}
+
+```
+
+
+```nft
+#!/usr/bin/nft -f
+
+flush ruleset
+
+include "/etc/nftables/ipv4-whitelist.nft"
+include "/etc/nftables/ipv4-private.nft"
+include "/etc/nftables/ipv4-chnroute.nft"
+
+define DIRECT = {
+    $whitelist_ipv4,
+    $private_ipv4,
+    $chnroute_ipv4,
+}
+
+table inet filter {
+        chain input {
+                 type filter hook input priority 0; policy drop;
+
+                 # accept any localhost traffic
+                 iif lo accept
+
+                 # accept traffic originated from us
+                 ct state established,related accept
+
+                 # accept neighbour discovery otherwise IPv6 connectivity breaks
+                 icmpv6 type { nd-neighbor-solicit, nd-router-advert, nd-neighbor-advert } accept
+
+        }
+}
+
+table inet clash
+delete table inet clash
+
+table inet clash {
+    chain clash-tproxy {
+        # Debug
+        meta l4proto {tcp, udp} meta nftrace set 1
+
         fib daddr type { unspec, local, anycast, multicast } return
-        ip daddr $DIRECT-IPV4 return
-        # 不代理 NTP 服务器的端口，
-        # 不加上这条规则会导致局域网内的设备无法通过 NTP 服务器同步时间。
-        udp dport { 123 } return
+        ip daddr $DIRECT return
         meta l4proto { tcp, udp } meta mark set 1 tproxy to :7893 accept
     }
 
     chain clash-mark {
         fib daddr type { unspec, local, anycast, multicast } return
-        ip daddr $DIRECT-IPV4 return
-        udp dport { 123 } return
+        ip daddr $DIRECT return
         meta mark set 1
     }
 
@@ -108,6 +194,8 @@ table inet clash {
     }
 }
 ```
+
+`sudo nft monitor trace`
 
 ```nft
 table inet clash
