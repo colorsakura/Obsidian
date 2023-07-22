@@ -1,4 +1,5 @@
 ---
+layout: note
 Date: 2023-03-07 16:22
 Tag: Go, Doc, TODO
 ---

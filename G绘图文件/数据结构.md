@@ -1,4 +1,5 @@
 ---
+layout: note
 
 excalidraw-plugin: parsed
 tags: [excalidraw]

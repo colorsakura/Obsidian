@@ -1,4 +1,5 @@
 ---
+layout: note
 date: 2023-02-08 17:46
 tags: TODO, wayland, wayfire, x11, electron
 ---

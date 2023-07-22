@@ -1,4 +1,5 @@
 ---
+layout: note
 date: 2023-02-21 20:01
 tags: TODO, DNS, Linux, Doc
 ---

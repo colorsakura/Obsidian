@@ -1,4 +1,5 @@
 ---
+layout: note
 date: 2023-03-21 14:48
 tags: Linux, GPG, Doc, TODO
 ---

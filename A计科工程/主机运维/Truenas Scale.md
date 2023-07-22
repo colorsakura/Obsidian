@@ -1,4 +1,5 @@
 ---
+layout: note
 tags: Nas
 ---
 ### emby 开心版 硬解

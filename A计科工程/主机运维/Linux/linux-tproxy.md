@@ -1,6 +1,14 @@
 ---
-date: 2023-02-21 20:14
-tags: TODO, clash, nftables, tproxy
+layout: note
+id: "linux-tproxy"
+aliases:
+  - "Linux 透明代理"
+tags:
+  - "TODO"
+  - "clash"
+  - "nftables"
+  - "tproxy"
+date: 1676981640
 ---
 
 # Linux 透明代理
@@ -131,7 +139,6 @@ table inet clash {
 }
 
 ```
-
 
 ```nft
 #!/usr/bin/nft -f

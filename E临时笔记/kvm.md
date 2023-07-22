@@ -1,4 +1,5 @@
 ---
+layout: note
 Date: 2023-03-09 12:38
 Tag: KVM, Linux, TODO, Doc
 ---

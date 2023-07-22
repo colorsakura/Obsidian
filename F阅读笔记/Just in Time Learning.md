@@ -1,4 +1,5 @@
 ---
+layout: note
 Tag: 方法论
 ---
 [Just in Time Learning](https://www.developgoodhabits.com/just-in-time-learning/)

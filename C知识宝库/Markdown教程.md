@@ -1,4 +1,5 @@
 ---
+layout: note
 Date: 2023-03-01 15:22
 Tag: TODO, Doc, Markdown
 ---

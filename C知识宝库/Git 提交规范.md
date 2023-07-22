@@ -1,4 +1,5 @@
 ---
+layout: note
 date: 2023-03-14 20:42
 tags: Git, Doc
 ---

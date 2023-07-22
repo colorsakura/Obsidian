@@ -1,4 +1,5 @@
 ---
+layout: note
 date: 2023-02-15 15:11
 tags: TODO, qemu, kvm, Linux, Doc
 ---

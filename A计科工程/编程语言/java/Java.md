@@ -1,3 +1,6 @@
+---
+layout: note
+---
 ## 安装
 
 1. Linux: 

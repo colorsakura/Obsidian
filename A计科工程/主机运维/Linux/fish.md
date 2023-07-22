@@ -1,4 +1,5 @@
 ---
+layout: note
 tags: "Fish, Shell, Linux, Arch"
 ---
 

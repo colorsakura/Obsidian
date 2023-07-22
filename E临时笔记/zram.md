@@ -1,4 +1,5 @@
 ---
+layout: note
 Date: 2023-03-08 16:30
 Tag: Linux, ram, zram, swap, TODO
 ---

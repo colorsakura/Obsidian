@@ -1,4 +1,5 @@
 ---
+layout: note
 date: "2023-03-12 15:56"
 tags: "Arch, Devtools, PKG, TODO"
 ---

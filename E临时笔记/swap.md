@@ -1,4 +1,5 @@
 ---
+layout: note
 date: 2023-06-28 09:45
 tags: TODO, Doc, swap, linux
 ---

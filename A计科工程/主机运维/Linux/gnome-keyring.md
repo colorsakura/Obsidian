@@ -1,4 +1,5 @@
 ---
+layout: note
 date: 2023-03-02 09:36
 tags: TODO
 ---

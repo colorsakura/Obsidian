@@ -1,4 +1,5 @@
 ---
+layout: note
 date: 2023-03-06 12:33
 tags: Linux, Doc, TODO
 ---

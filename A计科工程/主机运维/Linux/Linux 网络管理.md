@@ -1,4 +1,5 @@
 ---
+layout: note
 date: 2023-02-19 14:43
 tags: doc, network, systemd, linux, dns, dnsmasq
 ---

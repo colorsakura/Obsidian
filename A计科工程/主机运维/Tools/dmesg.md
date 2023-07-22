@@ -1,3 +1,6 @@
+---
+layout: note
+---
 dmesg 命令用于显示系统开机信息，可用于诊断系统故障。
 
 内核会将系统开机信息存储在ring buffer中，可以使用dmesg命令来查看，开机信息保存在`/var/log/dmesg`文件中。

@@ -1,3 +1,6 @@
+---
+layout: note
+---
 tmux
 
 ## 语法

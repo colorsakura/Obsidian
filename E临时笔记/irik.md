@@ -1,4 +1,5 @@
 ---
+layout: note
 Tag: Python, NAS, TODO, Doc
 ---
 

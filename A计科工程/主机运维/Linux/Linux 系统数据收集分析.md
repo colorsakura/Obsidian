@@ -1,4 +1,5 @@
 ---
+layout: note
 date: 2023-02-13 20:29
 tags: TODO, Linux, Grafana, Prometheus
 ---

@@ -1,4 +1,5 @@
 ---
+layout: note
 date: 2023-03-16 01:23
 tags: Fcitx5
 ---

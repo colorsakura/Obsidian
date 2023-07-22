@@ -1,3 +1,6 @@
+---
+layout: note
+---
 ## 常用命令
 
 - 搜索镜像：`podman search alpine`

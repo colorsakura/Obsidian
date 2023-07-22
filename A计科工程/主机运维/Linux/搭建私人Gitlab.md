@@ -1,4 +1,5 @@
 ---
+layout: note
 date: 2023-03-02 17:07
 tags: TODO, Linux, Gitlab
 ---
