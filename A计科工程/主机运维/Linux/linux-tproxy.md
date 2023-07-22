@@ -1,14 +1,9 @@
 ---
+date: 2023-07-22 13:13
+tags: TODO
 layout: note
-id: "linux-tproxy"
-aliases:
-  - "Linux 透明代理"
-tags:
-  - "TODO"
-  - "clash"
-  - "nftables"
-  - "tproxy"
-date: 1676981640
+---
+
 ---
 
 # Linux 透明代理
