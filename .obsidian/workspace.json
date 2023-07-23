@@ -4,20 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "914b905213797a1e",
+        "id": "15f8fbaf72353fb7",
         "type": "tabs",
         "children": [
           {
-            "id": "6d82a259f484bb57",
+            "id": "cef5aeb32826df42",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "A计科工程/主机运维/Windwos 技巧.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -70,7 +65,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 226.5
+    "width": 308.5
   },
   "right": {
     "id": "26711adbd0148b59",
@@ -79,7 +74,7 @@
       {
         "id": "c0fb8ee729656c74",
         "type": "tabs",
-        "dimension": 75.45871559633028,
+        "dimension": 56.81818181818182,
         "children": [
           {
             "id": "d6af472faf33d9bf",
@@ -97,9 +92,7 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "A计科工程/主机运维/Windwos 技巧.md"
-              }
+              "state": {}
             }
           },
           {
@@ -116,19 +109,18 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "A计科工程/主机运维/Windwos 技巧.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       },
       {
         "id": "a7d5294bdc33b04a",
         "type": "tabs",
-        "dimension": 24.541284403669724,
+        "dimension": 43.18181818181818,
         "children": [
           {
             "id": "506456b99c32f3f8",
@@ -136,7 +128,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "A计科工程/主机运维/Windwos 技巧.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -151,8 +142,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 328.5,
-    "collapsed": true
+    "width": 328.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -164,41 +154,41 @@
       "command-palette:Open command palette": false,
       "markdown-importer:Open format converter": false,
       "workspaces:Manage workspace layouts": true,
-      "obsidian-excalidraw-plugin:Create new drawing": false,
+      "obsidian-projects:Open projects": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
-      "obsidian-projects:Open projects": false
+      "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "6d82a259f484bb57",
+  "active": "cef5aeb32826df42",
   "lastOpenFiles": [
+    "C知识宝库/Markdown教程.md",
+    "A计科工程/主机运维/Linux/Arch/archlinux devtools.md",
+    "E临时笔记/虚拟内存.canvas",
+    "E临时笔记/swap.md",
+    "E临时笔记/qemu.md",
+    "E临时笔记/Obsidian 教程.md",
+    "E临时笔记/kvm.md",
+    "E临时笔记/network.md",
+    "E临时笔记/irik.md",
+    "E临时笔记/fish 教程.md",
+    "E临时笔记/ffmpeg.md",
+    "E临时笔记/constraint.md",
+    "E临时笔记/btrfs 文件系统.md",
+    "A计科工程/主机运维/Truenas Scale.md",
+    "A计科工程/主机运维/Scrapy.md",
+    "A计科工程/主机运维/Linux/Linux 网络管理.md",
+    "A计科工程/主机运维/Linux/Linux 系统数据收集分析.md",
+    "A计科工程/主机运维/Linux/Linux 权限管理.md",
+    "A计科工程/主机运维/Linux/fish.md",
+    "A计科工程/主机运维/Linux/Btrfs 文件系统.md",
+    "A计科工程/主机运维/Windwos 技巧.md",
     "A计科工程/主机运维/Windows subsystem Linux.md",
     "A计科工程/主机运维/Linux/wayland 使用指南.md",
     "A计科工程/主机运维/Linux/vscode 手动安装.md",
     "A计科工程/主机运维/Linux/steam 游戏平台.md",
     "A计科工程/主机运维/Linux/Linux 输入法.md",
     "A计科工程/主机运维/Linux/linux-tproxy.md",
-    "A计科工程/主机运维/Linux/Linux 虚拟机.md",
-    "A计科工程/主机运维/Linux/Freedos 安装.md",
-    "A计科工程/主机运维/Linux/gnome-keyring.md",
-    "H其他文件/模板/笔记.md",
-    "A计科工程/主机运维/Linux/Linux 系统数据收集分析.md",
-    "E临时笔记/计算机网络.md",
-    "A计科工程/主机运维/Linux/Linux 透明代理.md",
-    "E临时笔记/archlinux 包构建.md",
-    "E临时笔记/Obsidian 教程.md",
-    "E临时笔记/虚拟内存.canvas",
     "H其他文件/IMG/网络结构.png",
-    "G绘图文件/计算机网络.md",
-    "A计科工程/正则表达式.md",
-    "A计科工程/主机运维/Linux/Linux 网络管理.md",
-    "C知识宝库/正则表达式.md",
-    "A计科工程/编程语言/go/Go学习笔记.md",
-    "E临时笔记/constraint.md",
-    "A计科工程/主机运维/Linux/Btrfs 文件系统.md",
-    "A计科工程/计算机基础.md",
-    "改变计划.md",
-    "D每日笔记/2023-02-19.md",
-    "C知识宝库/数据结构.md",
     "新功能测试.canvas",
     "Pasted image 20230530071744.png",
     "I精美文档/Python语言及其应用 (Bill Lubanovic) (z-lib.org).pdf",
@@ -212,6 +202,6 @@
     "Pasted image 20230506192432.png",
     "I精美文档/Latex.pdf",
     "C知识宝库/概率论",
-    "A计科工程/主机运维/Raspi"
+    "A计科工程/主机运维/Linux/Raspi"
   ]
 }

@@ -19,5 +19,8 @@
   "newFileFolderPath": "E临时笔记",
   "defaultViewMode": "preview",
   "showUnsupportedFiles": true,
-  "useMarkdownLinks": true
+  "useMarkdownLinks": true,
+  "spellcheckDictionary": [
+    "chroot"
+  ]
 }

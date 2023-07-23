@@ -1,7 +1,7 @@
 ---
 layout: note
-date: 2023-03-01 15:06
-tags: FileSystem, Linux, Doc, TODO
+date: "2023-03-01 15:06"
+tags: "linux, doc, TODO, btrfs"
 ---
 
 # Btrfs

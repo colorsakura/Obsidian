@@ -69,6 +69,72 @@ dns:
 curl 'http://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest' | awk -F\| '/CN\|ipv4/ { printf("%s/%d\n", $4, 32-log($5)/log(2)) }'| sed ':label;N;s/\n/, /;b label'|sed 's/$/& }/g'|sed 's/^/define chnroute_ipv4 = { &/g' > ipv4-chnroute.nft
 ```
 
+```
+#!/usr/bin/nft -f
+
+flush ruleset
+
+include "/etc/nftables/ipv4-whitelist.nft"
+include "/etc/nftables/ipv4-private.nft"
+include "/etc/nftables/ipv4-chnroute.nft"
+
+define DIRECT-IPV4 = {
+    $whitelist_ipv4,
+    $private_ipv4,
+    $chnroute_ipv4,
+}
+
+table inet firewall {
+  chain input {
+    type filter hook input priority 0; policy drop;
+
+    # loopback interface
+    iif "lo" accept comment "Accept any localhost traffic"
+   	iif != "lo" ip daddr 127.0.0.0/8 counter packets 0 bytes 0 drop comment "drop connections to loopback not coming from loopback"
+   	ct state invalid log prefix "Invalid-Input: " level info flags all counter packets 0 bytes 0 drop comment "Drop invalid connections"
+
+    # icmp
+    icmp type echo-request limit rate 20 bytes/second burst 500 bytes counter packets 0 bytes 0 accept comment "No ping floods"
+    icmp type echo-request drop comment "No ping floods"
+    ct state { established, related } counter packets 0 bytes 0 accept comment "Accept traffic originated from us"
+	icmp type { destination-unreachable, router-advertisement, router-solicitation, time-exceeded, parameter-problem } accept comment "Accept ICMP"
+    ip protocol igmp accept comment "Accept IGMP"
+
+    # open tcp ports: sshd (22), httpd (80)
+    tcp dport { ssh } ct state new limit rate 15/minute log prefix "New SSH Connection: " counter accept comment "Avoid brute force on SSH"
+  }
+}
+
+table inet clash {
+    chain clash-tproxy {
+        # debug
+        # meta l4proto { tcp, udp } meta nftrace set 1
+
+        meta l4proto { tcp, udp } meta mark set 1 tproxy to :7893 accept
+    }
+
+    chain clash-mark {
+        meta mark set 1
+    }
+
+    chain mangle-output {
+        type route hook output priority mangle; policy accept;
+        fib daddr type { unspec, local, anycast, multicast } accept
+        ip daddr $DIRECT-IPV4 accept
+        meta l4proto { tcp, udp } mark != 1 ct direction original jump clash-mark
+    }
+
+    chain mangle-prerouting {
+        type filter hook prerouting priority mangle; policy accept;
+        meta l4proto { tcp, udp } th dport 53 accept
+        fib daddr type { unspec, local, anycast, multicast } accept
+        ip daddr $DIRECT-IPV4 accept
+        iif { lo } meta l4proto { tcp, udp } ct direction original jump clash-tproxy
+    }
+}
+
+```
+
 ```shell
 #!/usr/bin/nft -f
 

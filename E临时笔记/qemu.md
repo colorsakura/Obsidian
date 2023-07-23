@@ -1,7 +1,7 @@
 ---
 layout: note
 Date: 2023-03-08 11:32
-Tag: qemu, Linux, Doc, TODO
+Tag: qemu, linux, Doc, TODO
 ---
 
 # QEMU
