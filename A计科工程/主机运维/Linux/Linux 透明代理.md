@@ -8,9 +8,9 @@ layout: note
 
 # Linux 透明代理
 
-使用 Arch 已经有一段时间了，浏览器使用 `Pac` 来控制代理确实简单方便，但是有很多软件没办法方便地设置代理。所以需要花点时间配置一下透明代理。
+使用 archlinux 已经有一段时间了，浏览器使用 `Pac` 来控制代理确实简单方便，但是有很多软件没办法方便地设置代理。所以需要花点时间配置一下透明代理。
 
-主要使用的软件：`clash-meta`, `nftables`
+主要使用的软件：`clash-meta`, [[nftables]]
 
 ## clash-meta 配置
 
@@ -69,7 +69,7 @@ dns:
 curl 'http://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest' | awk -F\| '/CN\|ipv4/ { printf("%s/%d\n", $4, 32-log($5)/log(2)) }'| sed ':label;N;s/\n/, /;b label'|sed 's/$/& }/g'|sed 's/^/define chnroute_ipv4 = { &/g' > ipv4-chnroute.nft
 ```
 
-```
+```nft
 #!/usr/bin/nft -f
 
 flush ruleset

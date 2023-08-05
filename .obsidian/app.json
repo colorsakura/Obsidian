@@ -9,9 +9,7 @@
   "strictLineBreaks": true,
   "showFrontmatter": true,
   "spellcheck": true,
-  "spellcheckLanguages": [
-    "en"
-  ],
+  "spellcheckLanguages": null,
   "smartIndentList": true,
   "showInlineTitle": false,
   "trashOption": "local",

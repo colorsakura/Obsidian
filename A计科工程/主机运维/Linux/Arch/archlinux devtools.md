@@ -11,7 +11,10 @@ tags: "archlinux, devtools"
 `makepkg` 也可以打包，但是它使用的是本地的环境，无法验证相关依赖是否正确。
 使用`devtools`可以创建一个干净的虚拟环境。
 
-```
+> [!note] 不再推荐使用以下方法
+> 建议直接使用 devtools 提供的快捷脚本
+
+```shell
 # 定义环境变量
 CHROOT=$HOME/.chroot
 mkdir ~/.chroot
@@ -28,6 +31,7 @@ arch-nspawn $CHROOT/root pacman -Syu
 ## 打包
 
 在包含`PKGBUILD`文件目录下，运行：
+
 ```shell
 makechrootpkg -c -r $CHROOT
 ```
@@ -58,8 +62,12 @@ Flags:
 -U         Run makepkg as a specified user
 ```
 
-> [!note] 
+> [!note]
 > 这个虚拟的环境会复制本地系统的 pacman hook 文件
+
+> [!note]
+> 这些命令都是依靠底层的 `makepkg` ，需要传递参数给 `makepkg`，使用
+> `command -- [options]`
 
 ## 加速
 
@@ -69,7 +77,7 @@ Flags:
 - 安装 `sudo pacman -Sy devtools`
 
 每次重新准备干净 chroot 的过程特别慢，如何可以提速呢？
-可以考虑做一个 btrfs 镜像挂载到 `/var/lib/archbuild`，
+可以考虑使用 [[truncate]] 做一个 btrfs 镜像挂载到 `/var/lib/archbuild`，
 devtools 会自动使用 btrfs 来加速这个过程。参考制作过程：
 
 ```shell
@@ -79,7 +87,7 @@ sudo mount -o discard,compress=lzo,autodefrag /var/archbuild.img /var/lib/archbu
 echo "/var/archbuild.img /var/lib/archbuild btrfs defaults,discard,compress=lzo,autodefrag 0 0" | sudo tee /etc/fstab
 ```
 
-> [!note] 
+> [!note]
 > 如果本身就是 btrfs 文件系统，是否就不需要这个步骤了
 > 在创建 CHROOT 时，自动创建了一个子卷，应该就是用来加速的
 

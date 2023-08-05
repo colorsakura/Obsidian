@@ -6,7 +6,7 @@ tags: doc, network, systemd, linux, dns, dnsmasq
 
 # 网络管理方案
 
-`systemd` 目前正在统一 Linux, 并且多数发行版已采用 `systemd` 替代以前的 `init` ；
+[[systemd]] 目前正在统一 Linux, 并且多数发行版已采用 `systemd` 替代以前的 `init` ；
 当前的思路是采用最少的软件，最小依赖，并且官方支持的方案。
 Linux 将使用 `systemd-networkd` 管理网络，无线网配合 `iwd` 使用，本地配置 `dnsmasq` 作 DNS 缓存。
 
@@ -69,7 +69,7 @@ RouteMetric=100
 
 ## 配置无线网络
 
-接下来是无线网络的配置，无线网络采用 `iwd` 来管理 wifi。
+接下来是无线网络的配置，无线网络采用 [[iwd]] 来管理 wifi。
 
 -. 安装 iwd
 

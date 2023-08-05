@@ -4,15 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "15f8fbaf72353fb7",
+        "id": "38005c2054b60b25",
         "type": "tabs",
         "children": [
           {
-            "id": "cef5aeb32826df42",
+            "id": "f8907b8d6975050d",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Linux Kernel 参数.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
             }
           }
         ]
@@ -92,7 +97,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Linux Kernel 参数.md"
+              }
             }
           },
           {
@@ -109,13 +116,14 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Linux Kernel 参数.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       },
       {
         "id": "a7d5294bdc33b04a",
@@ -128,13 +136,14 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Linux Kernel 参数.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
                 "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
+                "unlinkedCollapsed": false
               }
             }
           }
@@ -159,47 +168,48 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "cef5aeb32826df42",
+  "active": "f8907b8d6975050d",
   "lastOpenFiles": [
-    "C知识宝库/Markdown教程.md",
+    "index.md",
+    "项目记录.md",
+    "视频硬解.md",
+    "A计科工程/编程语言/lua/lua 笔记.md",
+    "E临时笔记/firefox.md",
+    "ESP32.md",
+    "A计科工程/编程语言/c",
+    "A计科工程/编程语言/c.md",
+    "Pasted image 20230730020615.png",
+    "Pasted image 20230729211315.png",
+    "Pasted image 20230729205214.png",
+    "A计科工程/编程语言/python/python 学习笔记.md",
+    "A计科工程/编程语言/go/go学习笔记.md",
+    "A计科工程/编程语言/python/类属性延迟计算.md",
+    "A计科工程/编程语言/python/魔术方法.md",
+    "E临时笔记/icat-develop.md",
+    "A计科工程/主机运维/Linux/Linux 透明代理.md",
+    "E临时笔记/strace.md",
     "A计科工程/主机运维/Linux/Arch/archlinux devtools.md",
+    "Pasted image 20230728032812.png",
+    "E临时笔记/icat dev.md",
+    "H其他文件/IMG/cat strace.png",
+    "H其他文件/IMG/icat v0.1.0.png",
+    "E临时笔记/truncate.md",
+    "A计科工程/主机运维/Linux/Linux 网络管理.md",
+    "A计科工程/主机运维/Linux/Linux 虚拟机.md",
+    "E临时笔记/btrfs.md",
+    "H其他文件/模板/笔记.md",
+    "C知识宝库/Markdown教程.md",
     "E临时笔记/虚拟内存.canvas",
     "E临时笔记/swap.md",
     "E临时笔记/qemu.md",
     "E临时笔记/Obsidian 教程.md",
     "E临时笔记/kvm.md",
-    "E临时笔记/network.md",
-    "E临时笔记/irik.md",
-    "E临时笔记/fish 教程.md",
-    "E临时笔记/ffmpeg.md",
-    "E临时笔记/constraint.md",
-    "E临时笔记/btrfs 文件系统.md",
-    "A计科工程/主机运维/Truenas Scale.md",
-    "A计科工程/主机运维/Scrapy.md",
-    "A计科工程/主机运维/Linux/Linux 网络管理.md",
-    "A计科工程/主机运维/Linux/Linux 系统数据收集分析.md",
-    "A计科工程/主机运维/Linux/Linux 权限管理.md",
-    "A计科工程/主机运维/Linux/fish.md",
-    "A计科工程/主机运维/Linux/Btrfs 文件系统.md",
-    "A计科工程/主机运维/Windwos 技巧.md",
-    "A计科工程/主机运维/Windows subsystem Linux.md",
-    "A计科工程/主机运维/Linux/wayland 使用指南.md",
-    "A计科工程/主机运维/Linux/vscode 手动安装.md",
-    "A计科工程/主机运维/Linux/steam 游戏平台.md",
-    "A计科工程/主机运维/Linux/Linux 输入法.md",
-    "A计科工程/主机运维/Linux/linux-tproxy.md",
     "H其他文件/IMG/网络结构.png",
     "新功能测试.canvas",
     "Pasted image 20230530071744.png",
     "I精美文档/Python语言及其应用 (Bill Lubanovic) (z-lib.org).pdf",
     "Pasted image 20230522231750.png",
     "Pasted image 20230516224658.png",
-    "Pasted image 20230507130442.png",
-    "Pasted image 20230506193828.png",
-    "Pasted image 20230506193807.png",
-    "Pasted image 20230506193113.png",
-    "Pasted image 20230506192751.png",
-    "Pasted image 20230506192432.png",
     "I精美文档/Latex.pdf",
     "C知识宝库/概率论",
     "A计科工程/主机运维/Linux/Raspi"
