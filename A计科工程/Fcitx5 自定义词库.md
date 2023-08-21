@@ -9,7 +9,7 @@ tags: Fcitx5
 ## 自定义词库
 
 Fcitx5 拼音输入法的词库是由 `libime` 这个库提供的. 并且拼音和双拼使用同样的词库.
-Arch 系统上, 词库目录在 `/usr/share/libime`. 内容如下图. 
+Arch 系统上, 词库目录在 `/usr/share/libime`. 内容如下图.
 
 ![[libime词库文件.png]]
 

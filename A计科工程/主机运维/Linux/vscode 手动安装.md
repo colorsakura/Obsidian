@@ -1,7 +1,7 @@
 ---
-layout: note
 date: 2023-03-14 20:38
-tags: TODO
+tags: TODO, vscode, linux
+layout: note
 ---
 
 

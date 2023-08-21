@@ -1,21 +1,24 @@
 ---
 layout: note
 date: 2023-02-19 14:43
-tags: doc, network, systemd, linux, dns, dnsmasq
+tags: doc, network, systemd, linux, dns
 ---
 
-# 网络管理方案
+# 网络管理
 
 [[systemd]] 目前正在统一 Linux, 并且多数发行版已采用 `systemd` 替代以前的 `init` ；
 当前的思路是采用最少的软件，最小依赖，并且官方支持的方案。
-Linux 将使用 `systemd-networkd` 管理网络，无线网配合 `iwd` 使用，本地配置 `dnsmasq` 作 DNS 缓存。
+Linux 将使用 `systemd-networkd` 管理网络，无线网配合 `iwd` 使用，本地配置 `smartdns` 作 DNS 缓存。
 
 > [!warning]
 > 这里主要介绍配置有线网络，以及无线网络的过程。在开始配置前，需要把正在使用的网络管理服务停止掉，以避免出现冲突。
 
-## 配置有线网络
+---
 
-有线网络主要配置时，考虑到可能使用手机 usb 连接共享收集的网络，为了保持命名的一致性，通过 bridge 来归一化所有有线连接。配置如下：
+## 有线网络
+
+有线网络主要配置时，考虑到可能使用手机 usb 连接共享收集的网络，为了保持命名的一致性，
+通过 bridge 来归一化所有有线连接。配置如下：
 
 -. 将所有有线连接都作为 `br0` 的底层设备
 
@@ -29,8 +32,7 @@ Name=eth*
 Bridge=br0
 ```
 
-> [!note]
-> `en*` 将匹配以 en 开头的所有设备。
+> [!note] > `en*` � 匹配以 en 开头的所有设备。
 
 -. 定义 `br0` 设备
 
@@ -55,19 +57,15 @@ Name=br0
 # DNS=192.168.0.1
 DHCP=yes
 IPForward=yes
-IPv6AcceptRA=true
-IPv6PrivacyExtensions=yes
 
 [DHCPv4]
 RouteMetric=100
 
-[IPv6AcceptRA]
-RouteMetric=100
 ```
 
 以上是有线网络的所有配置。
 
-## 配置无线网络
+## 无线网络
 
 接下来是无线网络的配置，无线网络采用 [[iwd]] 来管理 wifi。
 
@@ -81,7 +79,7 @@ sudo pacman -S iwd
 -. 启动 iwd 服务
 
 ```shell
-systemctl start iwd.service
+systemctl enable --now iwd.service
 ```
 
 -. 设置无线网络的配置
@@ -94,13 +92,8 @@ Name=wl*
 [Network]
 DHCP=yes
 IPForward=yes
-IPv6AcceptRA=true
-IPv6PrivacyExtensions=yes
 
 [DHCPv4]
-RouteMetric=600
-
-[IPv6AcceptRA]
 RouteMetric=600
 ```
 
@@ -115,6 +108,71 @@ RouteMetric=600
 ```shell
 systemctl enable --now iwd.service
 systemctl enable --now systemd-networkd.service
+```
+
+## DNS
+
+### smartdns
+
+-. 安装
+
+```shell
+# archlinux
+sudo pacman -S smartdns
+```
+
+-. 简单配置
+
+```conf
+# 依赖 smartdns-china-list-git 包
+# （可选）引入额外的规则列表，用绝对路径
+conf-file /etc/smartdns/anti-ad-smartdns.conf
+conf-file /etc/smartdns/accelerated-domains.china.smartdns.conf
+conf-file /etc/smartdns/apple.china.smartdns.conf
+conf-file /etc/smartdns/google.china.smartdns.conf
+
+# 本地监听端口
+bind [::]:53
+
+# 启用测速
+speed-check-mode ping,tcp:80,tcp:443
+
+# 完全禁用IPv6
+force-AAAA-SOA yes
+# 启用双栈优选
+#dualstack-ip-selection yes
+#dualstack-ip-selection-threshold 15
+
+# log
+log-level info
+log-size 512M
+
+# 缓存大小
+# cache-size 4096
+# 持久化缓存
+cache-persist yes
+# 缓存文件存放位置
+cache-file /var/cache/smartdns.cache
+# 缓存预获取
+prefetch-domain yes
+# 过期缓存
+serve-expired yes
+
+# server
+# 阿里
+server-tls dns.alidns.com -group china
+# 腾讯
+server-tls dot.pub -group china
+# 360
+server-tls dot.360.cn -group china
+# Google
+server-tls dns.google
+```
+
+-. 启动
+
+```shell
+sudo systemctl enable --now smartdns.service
 ```
 
 ## ISSUE
@@ -157,11 +215,9 @@ ExecStartPost=-/usr/bin/sysctl -w net.ipv6.conf.br0.accept_ra=0
 
 这个问题目前还没找到自动解决的办法。
 
-## DNS 服务配置
-
 ## References
 
-[使用 systemd-networkd 管理网络]( https://lisongmin.github.io/os-systemd-networkd/ )
+[使用 systemd-networkd 管理网络](https://lisongmin.github.io/os-systemd-networkd/)
 <https://linux.cn/lfs/LFS-BOOK-7.7-systemd/chapter07/network.html>
 <https://wiki.archlinux.org/title/Dnsmasq>
 <https://wiki.archlinux.org/title/Systemd-resolved>
