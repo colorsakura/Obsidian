@@ -1,12 +1,12 @@
 ---
 layout: note
 date: 2023-03-16 01:23
-tags: Fcitx5
+tags: fcitx5, rime
 ---
 
-# Fcitx5 自定义词库
+## Fcitx5 Chinese Add On
 
-## 自定义词库
+### 自定义词库
 
 Fcitx5 拼音输入法的词库是由 `libime` 这个库提供的. 并且拼音和双拼使用同样的词库.
 Arch 系统上, 词库目录在 `/usr/share/libime`. 内容如下图.
@@ -19,17 +19,34 @@ Arch 系统上, 词库目录在 `/usr/share/libime`. 内容如下图.
 
 工具: `libime_pinyindict` txt 和 dict 互相转换工具
 格式: 词 拼音 词频
+
 ```txt
 我 wo 0
 我们 wo'meng 0
 ```
 
-> [!note] 词频建议全部为0, 不然无法转换, 原因暂时不明
+> [!note]
+> 词频建议全部为 0, 不然无法转换, 原因暂时不明。
+> 拼音不支持不正确的拼音格式。
 
-## 中文模式下输入英语单词
+### 中英混合输入
 
 经过测试, 这个功能是由 `spell` 这个选项提供的.
 
-## 用户输入历史
+### 用户输入历史
 
-位置: `.local/share/fcitx5/pinyin`
+位置: `~/.local/share/fcitx5/pinyin`
+
+## Fcitx5 Rime
+
+Rime 输入法可自定义程度较高，同时学习成本也高。
+目前使用其他大佬维护的方案。
+
+### 自定义词库
+
+(雾凇拼音)[https://github.com/iDvel/rime-ice]
+
+## 总结
+
+目前这两款输入法体验上没有较大的差距，Rime 支持中英
+混合输入。
