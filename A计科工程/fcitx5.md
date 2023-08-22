@@ -44,7 +44,28 @@ Rime 输入法可自定义程度较高，同时学习成本也高。
 
 ### 自定义词库
 
-(雾凇拼音)[https://github.com/iDvel/rime-ice]
+推荐使用[雾凇拼音](https://github.com/iDvel/rime-ice)
+
+```shell
+pkill fcitx5
+# 删除默认设置
+rm ~/.local/share/fcitx5/rime
+# 克隆远程仓库
+git clone htts://github.com/iDvel/rime-ice.git ~/.local/share/fcitx5/rime
+```
+
+不推荐去修改定制配置，雾凇拼音已经做的很好了，没有必要去浪费时间去折腾一个输入法。
+
+```shell
+cd ~/.local/share/fcitx5/rime
+git checkout -b zrm
+# 根据配置文件做简单修改
+git commit -a
+git format-patch commit_id -1
+# 保存 patch 文件即可
+git checkout main
+git apply xxx.patch
+```
 
 ## 总结
 

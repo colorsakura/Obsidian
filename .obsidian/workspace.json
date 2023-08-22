@@ -4,15 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "e6d04eb43178a5d7",
+        "id": "0f9c9ac4a05457ed",
         "type": "tabs",
         "children": [
           {
-            "id": "0f2aa86f57cb1e81",
+            "id": "49218153c6083aaa",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "娱乐记录.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
+              }
             }
           }
         ]
@@ -65,8 +70,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 308.5,
-    "collapsed": true
+    "width": 308.5
   },
   "right": {
     "id": "26711adbd0148b59",
@@ -93,7 +97,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "娱乐记录.md"
+              }
             }
           },
           {
@@ -110,6 +116,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "娱乐记录.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -129,6 +136,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "娱乐记录.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -161,8 +169,13 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "0f2aa86f57cb1e81",
+  "active": "49218153c6083aaa",
   "lastOpenFiles": [
+    "TODO.md",
+    "C知识宝库/Markdown教程.md",
+    "A计科工程/fcitx5.md",
+    "A计科工程/gpg.md",
+    "A计科工程/主机运维/Linux/Arch/Arch 安装手册.md",
     "Linux Kernel 参数.md",
     "index.md",
     "项目记录.md",
@@ -191,12 +204,7 @@
     "A计科工程/主机运维/Linux/Linux 网络管理.md",
     "A计科工程/主机运维/Linux/Linux 虚拟机.md",
     "E临时笔记/btrfs.md",
-    "H其他文件/模板/笔记.md",
-    "C知识宝库/Markdown教程.md",
     "E临时笔记/虚拟内存.canvas",
-    "E临时笔记/swap.md",
-    "E临时笔记/qemu.md",
-    "E临时笔记/Obsidian 教程.md",
     "H其他文件/IMG/网络结构.png",
     "新功能测试.canvas",
     "Pasted image 20230530071744.png",
