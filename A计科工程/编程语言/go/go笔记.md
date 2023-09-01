@@ -1,10 +1,10 @@
 ---
 layout: note
 Date: 2023-03-07 16:22
-Tag: Go, Doc, TODO
+Tag: go, doc
 ---
 
-Go 是一门开源的、表现力强的、简洁的、静态编译型语言。它在语言**级别支持协程**（Coroutine），让你轻松的编写并发性代码。Go 新颖的类型系统便于构建灵活的、**模块化**的应用程序。Go 能够快速的**编译为机器码**，同时支持**垃圾回收（并发标记清除）**、**运行时反射**等现代语言特性。
+Go 是一门开源的、表现力强的、简洁的、静态编译型语言。它在语言**级别支持协程**（Coroutine），让你轻松的编写并发性代码。Go 新颖的类型系统便于构建灵活的、**模块化**的应用程序。Go 能够快速的编译为**机器码**，同时支持**垃圾回收（并发标记清除）**、**运行时反射**等现代语言特性。
 
 多年来系统级编程语言没有出现新成员，然而计算领域发生重大的变化：
 
@@ -2971,7 +2971,7 @@ import "C"
 | complex float |C.complexfloat | |
 | complex double |C.complexdouble | |
 | void* |unsafe. Pointer |任何指针都可以转换为 unsafe. Pointer，unsafe. Pointer 也可以转换为任何类型的指针 |
-| __int128_t__uint128_t |[16]byte | |
+| __int128_t__uint128_t | [16]byte |  |
 | char* |C.CString | |
 此外需要注意：
 
@@ -3310,7 +3310,7 @@ go mod tidy
 go mod vendor
 ```
 
-### go. mod
+### go.mod
 
 仅仅包含四个指令：
 

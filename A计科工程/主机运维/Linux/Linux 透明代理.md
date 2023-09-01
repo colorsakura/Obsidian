@@ -69,6 +69,10 @@ dns:
 curl 'http://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest' | awk -F\| '/CN\|ipv4/ { printf("%s/%d\n", $4, 32-log($5)/log(2)) }'| sed ':label;N;s/\n/, /;b label'|sed 's/$/& }/g'|sed 's/^/define chnroute_ipv4 = { &/g' > ipv4-chnroute.nft
 ```
 
+```shell
+curl 'https://raw.githubusercontent.com/misakaio/chnroutes2/master/chnroutes.txt' | awk 'NR > 2 {printf"%s,\n", $1}' > 1.txt
+```
+
 ```nft
 #!/usr/bin/nft -f
 

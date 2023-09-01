@@ -1,7 +1,7 @@
 ---
 layout: note
 date: 2023-02-19 14:43
-tags: doc, network, systemd, linux, dns
+tags: doc, network, systemd, linux, dns, smartdns
 ---
 
 # 网络管理
@@ -32,7 +32,7 @@ Name=eth*
 Bridge=br0
 ```
 
-> [!note] > `en*` � 匹配以 en 开头的所有设备。
+> [!note] > `en*` 匹配以 en 开头的所有设备。
 
 -. 定义 `br0` 设备
 
@@ -92,9 +92,20 @@ Name=wl*
 [Network]
 DHCP=yes
 IPForward=yes
+IPv6AcceptRA=yes
+IPv6PrivacyExtensions=no
 
 [DHCPv4]
-RouteMetric=600
+UseDNS=false
+RouteMetric=400
+
+[DHCPv6]
+UseDNS=false
+RouteMetric=400
+
+[Route]
+Gateway=_dhcp4
+
 ```
 
 > [!note]
@@ -110,9 +121,13 @@ systemctl enable --now iwd.service
 systemctl enable --now systemd-networkd.service
 ```
 
+> [!note]
+> 在 `/usr/lib/systemd/system/systemd-networkd-wait-online.service` 中 `ExecStart` 后面
+> 加上 `--any`。避免因为多个网络接口，导致其他服务延迟。
+
 ## DNS
 
-### smartdns
+### [[smartdns]]
 
 -. 安装
 
@@ -176,44 +191,6 @@ sudo systemctl enable --now smartdns.service
 ```
 
 ## ISSUE
-
-### Libvirt 网络无法启动问题
-
-在使用 systemd-networkd 管理网络后，libvirtd 开机无法自启动网卡，会有下面的报错：
-
-> enabling IPv6 forwarding with RA routes without accept_ra set to 2 is likely to cause routes loss
-
-[相关问题单链接](https://bugzilla.redhat.com/show_bug.cgi?id=1639087)
-
-`man systemd.network` 可以看到 systemd-networkd 对这个参数的相关解释:
-
-Note that kernel's implementation of the IPv6 RA protocol is always disabled, regardless of this setting. If this option is enabled, a userspace implementation of the IPv 6 RA protocol is used, and the kernel's own implementation remains disabled, since systemd-networkd needs to know all details supplied in the advertisements, and these are not available from the kernel if the kernel's own implementation is used.
-
-目前通过在 libvirtd 的脚本中手动启动网卡来规避这个问题：
-
-```shell
-cat /etc/systemd/system/libvirtd.service.d/override.conf
-```
-
-```
-[Service]
-# set accept_ra
-ExecStartPost=-/usr/bin/sysctl -w net.ipv6.conf.wlan0.accept_ra=2
-ExecStartPost=-/usr/bin/sysctl -w net.ipv6.conf.br0.accept_ra=2
-# start network
-ExecStartPost=-/usr/bin/virsh net-start --network net99
-ExecStartPost=-/usr/bin/virsh net-start --network net100
-ExecStartPost=-/usr/bin/virsh net-start --network default
-# unset accept_ra
-ExecStartPost=-/usr/bin/sysctl -w net.ipv6.conf.wlan0.accept_ra=0
-ExecStartPost=-/usr/bin/sysctl -w net.ipv6.conf.br0.accept_ra=0
-```
-
-- Libvirtd 有虚拟机运行时，br0 拔网线后，ip 不会自动消失
-
-在 libvirtd 没有虚拟机运行时，拔网线后，上面自动分配的 ip 会被 systemd-networkd 清理掉，但如果 libvirtd 有虚拟机正在运行，那么拔网线后，br0 上面的 ip 不会清理，路由仍然存在，这导致拔网线后，不能自动切换到 wlan0 运行，因为 br0 的路由优先级比较高。
-
-这个问题目前还没找到自动解决的办法。
 
 ## References
 
