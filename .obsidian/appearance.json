@@ -1,0 +1,25 @@
+{
+  "cssTheme": "Minimal",
+  "theme": "obsidian",
+  "translucency": false,
+  "interfaceFontFamily": "",
+  "textFontFamily": "",
+  "baseFontSize": 16,
+  "enabledCssSnippets": [
+    "external-link-edit-mode",
+    "column",
+    "admonition-highlight-block",
+    "folder-icons",
+    "external-link-icons",
+    "clutter-free-headings",
+    "general",
+    "image-grid",
+    "tag-pills",
+    "custom-admonitions.ace703"
+  ],
+  "monospaceFontFamily": "",
+  "accentColor": "#38b3cc",
+  "nativeMenus": false,
+  "baseFontSizeAction": false,
+  "showViewHeader": false
+}

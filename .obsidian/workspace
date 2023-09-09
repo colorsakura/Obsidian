@@ -1,0 +1,132 @@
+{
+  "main": {
+    "id": "3161ea528514f826",
+    "type": "split",
+    "children": [
+      {
+        "id": "b188277133200291",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "python 学习笔记.md",
+            "mode": "source",
+            "backlinks": false,
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "580d3d01a79333f1",
+    "type": "split",
+    "children": [
+      {
+        "id": "8637fcf8d91e61c7",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9976163a69209abf",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "e5265671da606cbe",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "26711adbd0148b59",
+    "type": "split",
+    "children": [
+      {
+        "id": "c0fb8ee729656c74",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "17f565e3a3617521",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          },
+          {
+            "id": "506456b99c32f3f8",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "python 学习笔记.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "d6af472faf33d9bf",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "3cb319fe45a5b6b6",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "python 学习笔记.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "b188277133200291",
+  "lastOpenFiles": [
+    "Python 记录.md",
+    "truenas scale.md",
+    "Untitled.md",
+    "主机运维/tools/podman.md",
+    "项目记录.md",
+    "学习记录.md",
+    "主机运维/archlinux/archlinux 安装.md",
+    "主机运维/archlinux/arch tty 自动登陆.md",
+    "计算机基础.md"
+  ]
+}
