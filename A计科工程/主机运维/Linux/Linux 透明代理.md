@@ -6,11 +6,7 @@ layout: note
 
 # Linux 透明代理
 
-<<<<<<< HEAD
 使用 Arch Linux 已经有一段时间了，浏览器使用 `Pac` 来控制代理确实简单方便，但是有很多软件没办法方便地设置代理。所以需要花点时间配置一下透明代理。
-=======
-使用 archlinux 已经有一段时间了，浏览器使用 `Pac` 来控制代理确实简单方便，但是有很多软件没办法方便地设置代理。所以需要花点时间配置一下透明代理。
->>>>>>> 59c4a509c9fc2ce9a90d12530ac7446ad5d85991
 
 主要使用的软件：`clash-meta`, [[nftables]]
 
@@ -74,11 +70,7 @@ curl 'http://ftp.apnic.net/apnic/stats/apnic/delegated-apnic-latest' | awk -F\| 
 ```
 
 ```shell
-<<<<<<< HEAD
 curl 'https://raw.githubusercontent.com/misakaio/chnroutes2/master/chnroutes.txt' | awk 'NR > 2 {printf"%s,\n", $1}' | sed ':label;N;s/\n/ /;b label'|sed 's/$/& }/g'|sed 's/^/define chnroute_ipv4 = { &/g' > ipv4-chnroute.nft
-=======
-curl 'https://raw.githubusercontent.com/misakaio/chnroutes2/master/chnroutes.txt' | awk 'NR > 2 {printf"%s,\n", $1}' > 1.txt
->>>>>>> 59c4a509c9fc2ce9a90d12530ac7446ad5d85991
 ```
 
 ```nft
