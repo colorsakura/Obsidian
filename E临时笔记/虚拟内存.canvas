@@ -1,0 +1,7 @@
+{
+	"nodes":[
+		{"id":"21fd9da457d2e5cd","x":-520,"y":-200,"width":400,"height":400,"type":"link","url":"https://wiki.archlinux.org/title/Zswap#Toggling_zswap"},
+		{"id":"a8e2bf83b5570a16","x":-40,"y":-200,"width":400,"height":400,"type":"link","url":"https://wiki.archlinux.org/title/Zram"}
+	],
+	"edges":[]
+}

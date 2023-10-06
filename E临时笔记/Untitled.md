@@ -1,0 +1,3 @@
+```markdown
+[guid]::NewGuid()
+```

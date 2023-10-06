@@ -1,0 +1,224 @@
+{
+  "version": 2,
+  "projects": [
+    {
+      "fieldConfig": {
+        "tags": {
+          "options": [],
+          "richText": true
+        }
+      },
+      "defaultName": "",
+      "templates": [],
+      "excludedNotes": [],
+      "isDefault": true,
+      "dataSource": {
+        "kind": "folder",
+        "config": {
+          "path": "/",
+          "recursive": true
+        }
+      },
+      "newNotesFolder": "E临时笔记",
+      "views": [
+        {
+          "config": {
+            "fieldConfig": {
+              "name": {
+                "width": 360
+              },
+              "path": {
+                "hide": true
+              },
+              "published": {
+                "hide": true
+              },
+              "Tag": {
+                "width": 260,
+                "hide": true
+              },
+              "tags": {
+                "width": 325,
+                "hide": false
+              },
+              "backgroundColor": {
+                "width": 180,
+                "hide": true
+              },
+              "_class": {
+                "hide": true
+              },
+              "aliases": {
+                "hide": true
+              },
+              "backgroundImage": {
+                "hide": true
+              },
+              "Date": {
+                "hide": true
+              },
+              "excalidraw-plugin": {
+                "hide": true
+              },
+              "id": {
+                "hide": true
+              },
+              "marp": {
+                "hide": true
+              },
+              "paginate": {
+                "hide": true
+              },
+              "Tags": {
+                "hide": true
+              },
+              "theme": {
+                "hide": true
+              }
+            },
+            "sortField": "date",
+            "sortAsc": true
+          },
+          "filter": {
+            "conditions": []
+          },
+          "colors": {
+            "conditions": [
+              {
+                "color": "#df2a4e",
+                "condition": {
+                  "field": "tags",
+                  "operator": "contains",
+                  "value": "TODO"
+                }
+              }
+            ]
+          },
+          "sort": {
+            "criteria": []
+          },
+          "name": "Table",
+          "id": "12d96446-494e-43e2-92a0-95d16caa4db1",
+          "type": "table"
+        },
+        {
+          "config": {
+            "groupByField": "",
+            "priorityField": "weight",
+            "includeFields": [
+              "tags"
+            ]
+          },
+          "filter": {
+            "conditions": []
+          },
+          "colors": {
+            "conditions": []
+          },
+          "sort": {
+            "criteria": []
+          },
+          "name": "Board",
+          "id": "f224b6d4-7bcb-4c16-b96d-5b4433791dcf",
+          "type": "board"
+        },
+        {
+          "config": {
+            "interval": "month",
+            "dateField": "due",
+            "checkField": "published"
+          },
+          "filter": {
+            "conditions": []
+          },
+          "colors": {
+            "conditions": []
+          },
+          "sort": {
+            "criteria": []
+          },
+          "name": "Calendar",
+          "id": "44e98560-bdfd-4786-b175-d6bffb55bfc8",
+          "type": "calendar"
+        },
+        {
+          "config": {
+            "coverField": "image"
+          },
+          "filter": {
+            "conditions": []
+          },
+          "colors": {
+            "conditions": []
+          },
+          "sort": {
+            "criteria": []
+          },
+          "name": "Gallery",
+          "id": "703f49b6-04d7-4d09-8413-088dad0996bb",
+          "type": "gallery"
+        }
+      ],
+      "name": "进度管理",
+      "id": "4b3b6028-99cb-4199-aac2-733c24d03a9a"
+    },
+    {
+      "fieldConfig": {},
+      "defaultName": "",
+      "templates": [
+        "H其他文件/模板/笔记.md"
+      ],
+      "excludedNotes": [],
+      "isDefault": false,
+      "dataSource": {
+        "kind": "tag",
+        "config": {
+          "tag": "#Doc"
+        }
+      },
+      "newNotesFolder": "",
+      "views": [
+        {
+          "config": {
+            "fieldConfig": {
+              "path": {
+                "hide": true
+              }
+            }
+          },
+          "filter": {
+            "conditions": []
+          },
+          "colors": {
+            "conditions": [
+              {
+                "color": "#ff0040",
+                "condition": {
+                  "field": "tags",
+                  "operator": "contains",
+                  "value": "TODO"
+                }
+              }
+            ]
+          },
+          "sort": {
+            "criteria": []
+          },
+          "id": "e69b1c9f-d6e1-4611-8729-6351c62e641d",
+          "name": "Table",
+          "type": "table"
+        }
+      ],
+      "id": "64a2440b-bbf0-4e61-b860-486b389210b2",
+      "name": "文档管理"
+    }
+  ],
+  "preferences": {
+    "projectSizeLimit": 1000,
+    "frontmatter": {
+      "quoteStrings": "QUOTE_DOUBLE"
+    },
+    "commands": [],
+    "linkBehavior": "open-editor"
+  }
+}
