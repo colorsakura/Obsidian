@@ -84,7 +84,11 @@
   "mdCSS": "",
   "scriptEngineSettings": {},
   "defaultTrayMode": false,
+<<<<<<< HEAD
   "previousRelease": "1.9.20",
+=======
+  "previousRelease": "1.9.19",
+>>>>>>> 59c4a509c9fc2ce9a90d12530ac7446ad5d85991
   "showReleaseNotes": true,
   "showNewVersionNotification": true,
   "mathjaxSourceURL": "https://cdn.jsdelivr.net/npm/mathjax@3.2.1/es5/tex-svg.js",

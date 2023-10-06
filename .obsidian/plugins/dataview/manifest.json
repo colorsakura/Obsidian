@@ -1,7 +1,11 @@
 {
   "id": "dataview",
   "name": "Dataview",
+<<<<<<< HEAD
   "version": "0.5.59",
+=======
+  "version": "0.5.56",
+>>>>>>> 59c4a509c9fc2ce9a90d12530ac7446ad5d85991
   "minAppVersion": "0.13.11",
   "description": "Complex data views for the data-obsessed.",
   "author": "Michael Brenan <blacksmithgu@gmail.com>",

@@ -414,6 +414,7 @@ div.excalidraw-draginfo {
 
 .excalidraw-svg svg a {
   text-decoration: none;
+<<<<<<< HEAD
 }
 
 .excalidraw .Modal {
@@ -423,4 +424,6 @@ div.excalidraw-draginfo {
   max-height: initial;
   width: initial;
   height: initial;
+=======
+>>>>>>> 59c4a509c9fc2ce9a90d12530ac7446ad5d85991
 }

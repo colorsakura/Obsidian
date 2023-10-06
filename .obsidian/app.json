@@ -1,1 +1,28 @@
+<<<<<<< HEAD
 {}
+=======
+{
+  "promptDelete": false,
+  "readableLineLength": true,
+  "legacyEditor": false,
+  "livePreview": false,
+  "communityThemeSortOrder": "download",
+  "alwaysUpdateLinks": true,
+  "showLineNumber": true,
+  "strictLineBreaks": true,
+  "showFrontmatter": true,
+  "spellcheck": false,
+  "spellcheckLanguages": null,
+  "smartIndentList": true,
+  "showInlineTitle": false,
+  "trashOption": "local",
+  "newFileLocation": "folder",
+  "newFileFolderPath": "E临时笔记",
+  "defaultViewMode": "preview",
+  "showUnsupportedFiles": true,
+  "useMarkdownLinks": true,
+  "spellcheckDictionary": [
+    "chroot"
+  ]
+}
+>>>>>>> 59c4a509c9fc2ce9a90d12530ac7446ad5d85991

@@ -4,27 +4,51 @@
   "switcher": true,
   "graph": true,
   "backlink": true,
+<<<<<<< HEAD
   "canvas": true,
   "outgoing-link": true,
   "tag-pane": true,
   "properties": false,
+=======
+  "outgoing-link": true,
+  "tag-pane": true,
+>>>>>>> 59c4a509c9fc2ce9a90d12530ac7446ad5d85991
   "page-preview": true,
   "daily-notes": true,
   "templates": true,
   "note-composer": true,
   "command-palette": true,
+<<<<<<< HEAD
   "slash-command": false,
   "editor-status": true,
   "bookmarks": true,
   "markdown-importer": false,
+=======
+  "slash-command": true,
+  "editor-status": true,
+  "starred": true,
+  "markdown-importer": true,
+>>>>>>> 59c4a509c9fc2ce9a90d12530ac7446ad5d85991
   "zk-prefixer": false,
   "random-note": false,
   "outline": true,
   "word-count": true,
+<<<<<<< HEAD
   "slides": false,
   "audio-recorder": false,
   "workspaces": false,
   "file-recovery": true,
   "publish": false,
   "sync": false
+=======
+  "slides": true,
+  "audio-recorder": false,
+  "workspaces": true,
+  "file-recovery": true,
+  "publish": false,
+  "sync": false,
+  "canvas": true,
+  "bookmarks": true,
+  "properties": true
+>>>>>>> 59c4a509c9fc2ce9a90d12530ac7446ad5d85991
 }
