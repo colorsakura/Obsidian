@@ -57,7 +57,9 @@ https://github.com/RikudouPatrickstar/JetBrainsRuntime-for-Linux-x64
 sudo dnf install fcitx5 fcitx5-chinese-addons fcitx5-configtool fcitx5-autostart
 ```
 
+### fcitx5-rime
 
+目前输入法已经转移到 fcitx5-rime, 主要原因是备份用户词库简单. 随着使用时间的推移, 词库会越来越适合自己.虽然配置文件比较复杂, 但是网上有比较完善的成品方案, 后续可以慢慢地修改, 使其达到完美.
 
 
 

@@ -1,18 +1,14 @@
 {
   "userAdmonitions": {},
   "syntaxHighlight": false,
-  "copyButton": true,
-<<<<<<< HEAD
+  "copyButton": false,
   "version": "10.1.1",
-=======
-  "version": "10.0.1",
->>>>>>> 59c4a509c9fc2ce9a90d12530ac7446ad5d85991
-  "autoCollapse": true,
+  "autoCollapse": false,
   "defaultCollapseType": "open",
   "injectColor": true,
   "parseTitles": true,
   "dropShadow": true,
-  "hideEmpty": true,
+  "hideEmpty": false,
   "open": {
     "admonitions": true,
     "icons": true,
@@ -23,6 +19,6 @@
   "useFontAwesome": true,
   "rpgDownloadedOnce": false,
   "msDocConverted": false,
-  "useSnippet": true,
-  "snippetPath": "custom-admonitions.ace703"
+  "useSnippet": false,
+  "snippetPath": "custom-admonitions.27d7a2"
 }

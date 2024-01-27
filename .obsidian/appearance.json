@@ -1,33 +1,9 @@
 {
-<<<<<<< HEAD
   "accentColor": "",
-  "enabledCssSnippets": [
-    "custom-admonitions.ace703"
-  ],
-  "cssTheme": "Minimal"
-=======
   "cssTheme": "Minimal",
-  "theme": "obsidian",
-  "translucency": false,
-  "interfaceFontFamily": "",
-  "textFontFamily": "",
-  "baseFontSize": 16,
-  "enabledCssSnippets": [
-    "external-link-edit-mode",
-    "column",
-    "admonition-highlight-block",
-    "folder-icons",
-    "external-link-icons",
-    "clutter-free-headings",
-    "general",
-    "image-grid",
-    "tag-pills",
-    "custom-admonitions.ace703"
-  ],
-  "monospaceFontFamily": "",
-  "accentColor": "#38b3cc",
+  "theme": "system",
   "nativeMenus": false,
-  "baseFontSizeAction": false,
-  "showViewHeader": false
->>>>>>> 59c4a509c9fc2ce9a90d12530ac7446ad5d85991
+  "enabledCssSnippets": [
+    "custom-admonitions.ace703"
+  ]
 }

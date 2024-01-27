@@ -7,29 +7,16 @@
   "canvas",
   "outgoing-link",
   "tag-pane",
-<<<<<<< HEAD
-=======
   "properties",
->>>>>>> 59c4a509c9fc2ce9a90d12530ac7446ad5d85991
   "page-preview",
   "daily-notes",
   "templates",
   "note-composer",
   "command-palette",
-<<<<<<< HEAD
-  "editor-status",
-  "bookmarks",
-  "outline",
-  "word-count",
-=======
   "slash-command",
   "editor-status",
   "bookmarks",
-  "markdown-importer",
   "outline",
   "word-count",
-  "slides",
-  "workspaces",
->>>>>>> 59c4a509c9fc2ce9a90d12530ac7446ad5d85991
   "file-recovery"
 ]

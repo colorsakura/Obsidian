@@ -1,15 +1,11 @@
 [
-  "obsidian-excalidraw-plugin",
-  "obsidian-projects",
-  "better-word-count",
-  "dataview",
-  "obsidian-admonition",
   "table-editor-obsidian",
-  "highlightr-plugin",
+  "better-word-count",
   "obsidian-contextual-typography",
-<<<<<<< HEAD
-=======
-  "obsidian-languagetool-plugin",
->>>>>>> 59c4a509c9fc2ce9a90d12530ac7446ad5d85991
-  "easy-typing-obsidian"
+  "easy-typing-obsidian",
+  "highlightr-plugin",
+  "obsidian-admonition",
+  "dataview",
+  "obsidian-excalidraw-plugin",
+  "obsidian-minimal-settings"
 ]

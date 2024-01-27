@@ -1,36 +1,34 @@
 ---
-layout: note
 date: 2022-12-09 10:33
 tags: Linux, Arch, Doc, TODO
+layout: note
+lang: zh-CN
 ---
 
 # Arch 安装手册
 
-1. 安装环境确定
-3. 分区配置及格式化
-4. 挂载分区
-5. 安装系统
-6. 配置系统
-
-详细的安装教程请参阅:  [Arch Wiki 官方安装指南]( https://wiki.archlinux.org/title/Installation_guide_ (%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87))
+详细的安装教程请参阅: [Arch Wiki 官方安装指南](https://wiki.archlinux.org/title/Installation_guide_ "%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87")
 
 > [!note]
 > 一切以官方 wiki 为主，多看 wiki，多实践，才能有进步。
 
 ---
-## 一. 安装环境确定
 
-### 1. 禁用 reflector 服务
+## 1 安装环境确定
+
+### 1.1 禁用 reflector 服务
 
 2020 年，archlinux 安装镜像中加入了 `reflector` 服务，它会自己更新 `mirrorlist`（软件包管理器 `pacman` 的软件源）。在特定情况下，它会误删某些有用的源信息。这里进入安装环境后的第一件事就是将其禁用。也许它是一个好用的工具，但是很明显，因为地理上造成的特殊网络环境，这项服务并不适合中国大陆用户启用。
 
-1.  通过以下命令将该服务禁用：
-```
+1. 通过以下命令将该服务禁用:
+
+```shell
 systemctl stop reflector.service
 ```
 
-2.  通过以下命令查看该服务是否被禁用，按下 `q` 退出结果输出：
-```
+2. 通过以下命令查看该服务是否被禁用，按下 `q` 退出结果输出:
+
+```shell
 systemctl status reflector.service
 ```
 
@@ -38,12 +36,79 @@ systemctl status reflector.service
 
 ---
 
-### 2. 安装 SSH 
+### 1.2 确认是否为 UEFI 模式
+
+禁用 `reflector` 服务后，我们再来确认一下是否为 `UEFI` 模式：
+
+```shell
+ls /sys/firmware/efi/efivars
+```
+
+若输出了一堆东西（`efi` 变量），则说明已在 `UEFI` 模式。否则请确认你的启动方式是否为 `UEFI`。
+
+---
+
+### 1.3 连接网络
+
+> [!note]
+> archlinux 的安装**<mark style="background: #FF5582A6;">必须</mark>**要求网络环境。
+
+#### 1.3.1 使用无线连接：
+
+使用 `iwctl` 进行连接：
+
+```shell
+iwctl # 进入交互式命令行
+device list # 列出无线网卡设备名，比如无线网卡看到叫 wlan0
+station wlan0 scan # 扫描网络
+station wlan0 get-networks # 列出所有 wifi 网络
+station wlan0 connect wifi-name # 进行连接，注意这里无法输入中文。回车后输入密码即可
+exit # 连接成功后退出
+```
+
+若无线网卡无法显示，请按照的说明 **确保你的无线网卡硬件开关处于打开状态**。
+
+你可以使用如下命令查看内核是否加载了你的无线网卡驱动。
+
+```shell
+lspci -k | grep Network
+```
+
+以我的硬件为例，输出如下：
+
+```plain
+00:14.3 Network controller: Intel Corporation Wi-Fi 6 AX201 (rev 20)
+```
+
+部分无线网卡不兼容，请考虑使用有线连接安装 archlinux，比如用 usb 连接手机共享网络
+
+#### 1.3.2 使用有线连接：
+
+正常来说，只要插上一个已经联网的路由器分出的网线（DHCP），直接就能联网。
+可以等待几秒等网络建立连接后再进行下一步测试网络的操作。
+若笔记本没有网线接口请使用带网线接口的扩展坞。
+
+#### 1.3.3 测试网络连通性
+
+通过 `ping` 命令测试网络连通性：
+
+```shell
+ping www.bilibili.com
+```
+
+稍等片刻，若能看到数据返回，即说明已经联网。与 Windows 不同的是，需要按下 `Ctrl` + `C` 手动退出 `ping` 命令。
+
+如果无线网络还是无法连接，请使用 `ip link` 命令查看无线网卡设备，使用 `ip link set <设备名> up` 命令激活对应的无线网卡。若看到类似 `Operation not possible due to RF-kill` 的报错，继续尝试 `rfkill unblock wifi` 来解锁无线网卡。
+
+如有需要，可以参考 [archWiki 相关内容](<https://wiki.archlinux.org/title/Network_configuration_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)/Wireless_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)#%E6%A3%80%E6%9F%A5%E8%AE%BE%E5%A4%87%E7%8A%B6%E6%80%81>)
+
+### 1.4 安装 SSH
 
 > [!note]
 > 强烈推荐使用 ssh 远程安装，避免手动输入命令，减少输入错误, 避免安装失败。
 
 安装 `openssh` 服务，之后用ssh连接，避免使用丑陋的界面。
+
 ```shell
 # 安装之前配置镜像源比较好
 pacman -Sy openssh
@@ -57,71 +122,8 @@ passwd root
 > 不要忘记设置 root 用户的密码
 
 ---
-### 3. 确认是否为 UEFI 模式
 
-禁用 `reflector` 服务后，我们再来确认一下是否为 `UEFI` 模式：
-
-```
-ls /sys/firmware/efi/efivars
-```
-
-若输出了一堆东西（`efi` 变量），则说明已在 `UEFI` 模式。否则请确认你的启动方式是否为 `UEFI`。
-
----
-###  4. 连接网络
-
-> [!note]
-> archlinux 的安装**<mark style="background: #FF5582A6;">必须</mark>**要求网络环境。
-
-#### 使用无线连接：
-
-使用 `iwctl` 进行连接：
-```
-iwctl # 进入交互式命令行
-device list # 列出无线网卡设备名，比如无线网卡看到叫 wlan0
-station wlan0 scan # 扫描网络
-station wlan0 get-networks # 列出所有 wifi 网络
-station wlan0 connect wifi-name # 进行连接，注意这里无法输入中文。回车后输入密码即可
-exit # 连接成功后退出
-```
-
-若无线网卡无法显示，请按照的说明 **确保你的无线网卡硬件开关处于打开状态**。
-
-你可以使用如下命令查看内核是否加载了你的无线网卡驱动。
-```
-lspci -k | grep Network
-```
-
-以我的硬件为例，输出如下：
-```
-00:14.3 Network controller: Intel Corporation Wi-Fi 6 AX201 (rev 20)
-```
-
-部分无线网卡不兼容，请考虑使用有线连接安装 archlinux，比如用 usb 连接手机共享网络
-
-#### 使用有线连接：
-
-正常来说，只要插上一个已经联网的路由器分出的网线（DHCP），直接就能联网。
-
-可以等待几秒等网络建立连接后再进行下一步测试网络的操作。
-
-若笔记本没有网线接口请使用带网线接口的扩展坞。
-
-### 5. 测试网络连通性
-
-通过 `ping` 命令测试网络连通性：
-
-```
-ping www.bilibili.com
-```
-
-稍等片刻，若能看到数据返回，即说明已经联网。与 Windows 不同的是，需要按下 `Ctrl` + `C` 手动退出 `ping` 命令。
-
-如果无线网络还是无法连接，请使用 `ip link` 命令查看无线网卡设备，使用 `ip link set <设备名> up` 命令激活对应的无线网卡。若看到类似 `Operation not possible due to RF-kill` 的报错，继续尝试 `rfkill unblock wifi` 来解锁无线网卡。
-
-如有需要，可以参考 [archWiki 相关内容](https://wiki.archlinux.org/title/Network_configuration_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)/Wireless_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)#%E6%A3%80%E6%9F%A5%E8%AE%BE%E5%A4%87%E7%8A%B6%E6%80%81)
-
-### 6. 更新系统时钟
+### 1.5 更新系统时钟
 
 使用 `timedatectl` 确保系统时间是准确的。这一步**不是**可选的，正确的系统时间对于部分程序来说非常重要：
 
@@ -130,7 +132,7 @@ timedatectl set-ntp true # 将系统时间与网络时间进行同步
 timedatectl status # 检查服务状态
 ```
 
-### 7. 更换软件仓库镜像源
+### 1.6 更换软件仓库镜像源
 
 使用 `vim` 编辑器修改 `/etc/pacman.d/mirrorlist` 文件。将 `pacman` 软件仓库源更换为国内软件仓库镜像源：
 
@@ -149,24 +151,17 @@ Server = http://mirror.lzu.edu.cn/archlinux/$repo/os/$arch # 兰州大学开源�
 
 前车之鉴 —— 请不在这一步中添加 `archlinuxcn` 源！如果你在 `/etc/pacman.conf` 中添加了内容，请将它们删掉。
 
-## 二. 分区和格式化（使用 Btrfs 文件系统）
+## 2 分区和格式化（使用 Btrfs 文件系统）
 
-### 1. 分区
+### 2.1 分区
 
-☢️ 警告
+> [!warning]
+> 分区操作的部分命令具有危险性！除非你知道每一个命令在干什么，否则请不要执行！同时，请提前做好数据备份，防止数据丢失！
 
-分区操作的部分命令具有危险性！除非你知道每一个命令在干什么，否则请不要执行！
-
-同时，请提前做好数据备份，防止数据丢失！
-
-本指南考虑到多数情况，在这里首先介绍 win10 和 archlinux 在一个磁盘上双系统的分区配置。
-
--   `/` 根目录：`>= 128GB`（和用户主目录在同一个 `Btrfs` 文件系统上）
--   `/home` 用户主目录：`>= 128GB`（和根目录在同一个 `Btrfs` 文件系统上）
--   `/boot/efi` EFI 分区：`256MB`（由电脑厂商或 Windows 决定，无需再次创建）
--   Swap 分区：`>= 电脑实际运行内存的 60%`（设置这个大小是为了配置休眠准备）
-
-ℹ️ 提示
+- `/` 根目录：`>= 128GB`（和用户主目录在同一个 `Btrfs` 文件系统上）
+- `/home` 用户主目录：`>= 128GB`（和根目录在同一个 `Btrfs` 文件系统上）
+- `/boot/efi` EFI 分区：`256MB`（由电脑厂商或 Windows 决定，无需再次创建）
+- Swap 分区：`>= 电脑实际运行内存的 60%`（设置这个大小是为了配置休眠准备）
 
 因为采用 `Btrfs` 文件系统，所以根目录和用户主目录实际在一个分区上，只是在不同的子卷上而已。这里根目录和用户主目录的大小仅为参考，一般来说日常使用的 linux 分配 128GB 已经够用了。
 
@@ -240,7 +235,7 @@ cfdisk /dev/sdx # 对安装 archlinux 的磁盘分区
 
 常见的错误包括不小心把 Windows 的分区删掉了 😥。
 
-10.  分区完成后，使用 `fdisk` 或 `lsblk` 命令复查分区情况：
+10. 分区完成后，使用 `fdisk` 或 `lsblk` 命令复查分区情况：
 
 ```
 fdisk -l # 复查磁盘情况
@@ -271,8 +266,8 @@ mkfs.btrfs -L myArch /dev/sdxn
 ```
 
 > 📑 命令参数说明：
-> 
-> -   `-L` 选项后指定该分区的 `LABLE`，这里以 `myArch` 为例，也可以自定义，但不能使用特殊字符以及空格，且最好有意义
+>
+> - `-L` 选项后指定该分区的 `LABLE`，这里以 `myArch` 为例，也可以自定义，但不能使用特殊字符以及空格，且最好有意义
 
 ![mkbtrfs_step-1](https://arch.icekylin.online/assets/img/basic-install_mkbtrfs-1.d756349c.png)
 
@@ -283,10 +278,10 @@ mount -t btrfs -o compress=zstd /dev/sdxn /mnt
 ```
 
 > 📑 命令参数说明：
-> 
-> -   `-t` 选项后指定挂载分区文件系统类型
-> -   `-o` 选项后添加挂载参数：
->     -   `compress=zstd` —— 开启透明压缩
+>
+> - `-t` 选项后指定挂载分区文件系统类型
+> - `-o` 选项后添加挂载参数：
+>   - `compress=zstd` —— 开启透明压缩
 
 3.  使用 `df` 命令复查挂载情况：
 
@@ -365,9 +360,9 @@ pacstrap /mnt base base-devel linux linux-firmware
 ```
 
 > 📑 命令参数说明：
-> 
-> -   `base-devel` —— `base-devel` 在 `AUR` 包的安装过程中是必须用到的
-> -   `linux` —— 内核软件包，这里建议先不要替换为其它内核
+>
+> - `base-devel` —— `base-devel` 在 `AUR` 包的安装过程中是必须用到的
+> - `linux` —— 内核软件包，这里建议先不要替换为其它内核
 
 ![pacstrap_step-1](https://arch.icekylin.online/assets/img/basic-install_pacstrap-1.260b502d.png)
 
@@ -378,9 +373,9 @@ pacstrap /mnt iwd neovim sudo fish
 ```
 
 > 📑 命令参数说明：
-> 
-> -   `zsh` —— `zsh-completions` 如果你是 bash 的爱好者，请把这两个包换成`bash-completion`
-> -   如果你是第一次接触*nix 系统的新手，不建议换成 bash
+>
+> - `zsh` —— `zsh-completions` 如果你是 bash 的爱好者，请把这两个包换成`bash-completion`
+> - 如果你是第一次接触\*nix 系统的新手，不建议换成 bash
 
 ![pacstrap_step-2](https://arch.icekylin.online/assets/img/basic-install_pacstrap-2.28b53013.png)
 
@@ -489,7 +484,7 @@ ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
 ![set-name-and-timezone_step-3](https://arch.icekylin.online/assets/img/basic-install_set-name-and-timezone-3.eace972f.png)
 
 > #### [#](https://arch.icekylin.online/rookie/basic-install.html#🍧-碎碎念) 🍧 碎碎念
-> 
+>
 > 不要找北京啦！这里没有北京，只有上海啦！🚀
 
 ℹ️ 提示
@@ -571,11 +566,11 @@ pacman -S amd-ucode # AMD
 
 ## [#](https://arch.icekylin.online/rookie/basic-install.html#_17-安装引导程序) 17. 安装引导程序
 
-如有需要可以参阅 [archWiki 相关内容](https://wiki.archlinux.org/title/GRUB_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87))
+如有需要可以参阅 [archWiki 相关内容](<https://wiki.archlinux.org/title/GRUB_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)
 
-[](https://wiki.archlinux.org/title/GRUB_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87))
+[](<https://wiki.archlinux.org/title/GRUB_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)
 
-[](https://wiki.archlinux.org/title/GRUB_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87))。
+[](<https://wiki.archlinux.org/title/GRUB_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87)>)。
 
 1.  安装相应的包：
 
@@ -584,11 +579,11 @@ pacman -S grub efibootmgr os-prober
 ```
 
 > 📑 命令参数说明：
-> 
-> -   `-S` 选项后指定要通过 `pacman` 包管理器安装的包：
->     -   `grub` —— 启动引导器
->     -   `efibootmgr` —— `efibootmgr` 被 `grub` 脚本用来将启动项写入 NVRAM
->     -   `os-prober` —— 为了能够引导 win10，需要安装 `os-prober` 以检测到它
+>
+> - `-S` 选项后指定要通过 `pacman` 包管理器安装的包：
+>   - `grub` —— 启动引导器
+>   - `efibootmgr` —— `efibootmgr` 被 `grub` 脚本用来将启动项写入 NVRAM
+>   - `os-prober` —— 为了能够引导 win10，需要安装 `os-prober` 以检测到它
 
 2.  安装 GRUB 到 EFI 分区：
 
@@ -597,9 +592,9 @@ grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=ARCH
 ```
 
 > 📑 命令参数说明：
-> 
-> -   `--efi-directory=/boot/efi` —— 将 `grubx64.efi` 安装到之前的指定位置（EFI 分区）
-> -   `--bootloader-id=ARCH` —— 取名为 `ARCH`
+>
+> - `--efi-directory=/boot/efi` —— 将 `grubx64.efi` 安装到之前的指定位置（EFI 分区）
+> - `--bootloader-id=ARCH` —— 取名为 `ARCH`
 
 ![grub_step-1](https://arch.icekylin.online/assets/img/basic-install_grub-1.37daecad.png)
 
@@ -611,13 +606,13 @@ vim /etc/default/grub
 
 进行如下修改：
 
--   去掉 `GRUB_CMDLINE_LINUX_DEFAULT` 一行中最后的 `quiet` 参数
--   把 `loglevel` 的数值从 `3` 改成 `5`。这样是为了后续如果出现系统错误，方便排错
--   加入 `nowatchdog` 参数，这可以显著提高开关机速度
+- 去掉 `GRUB_CMDLINE_LINUX_DEFAULT` 一行中最后的 `quiet` 参数
+- 把 `loglevel` 的数值从 `3` 改成 `5`。这样是为了后续如果出现系统错误，方便排错
+- 加入 `nowatchdog` 参数，这可以显著提高开关机速度
 
 ![grub_step-2](https://arch.icekylin.online/assets/img/basic-install_grub-2.e91e91fd.png)
 
--   为了引导 win10，则还需要添加新的一行 `GRUB_DISABLE_OS_PROBER=false`
+- 为了引导 win10，则还需要添加新的一行 `GRUB_DISABLE_OS_PROBER=false`
 
 ```
 # GRUB boot loader configuration
@@ -715,48 +710,3 @@ iwctl # 和之前的方式一样，连接无线网络
 ```
 pacman -S neofetch
 ```
-
-5.  使用 `neofetch` 打印系统信息：
-
-```
-neofetch
-```
-
-![neofetch](https://arch.icekylin.online/assets/img/basic-install_neofetch.00413a2e.png)
-
-> #### [#](https://arch.icekylin.online/rookie/basic-install.html#🍧-碎碎念-1) 🍧 碎碎念
-> 
-> 又到了 `neofetch` 的时间了吗？
-
-## [#](https://arch.icekylin.online/rookie/basic-install.html#🎉-祝贺-🎉) 🎉 祝贺！🎉
-
-到此为止，一个基础的、无图形界面的 archlinux 已经安装完成了！这时你应该可以感到满满的满足感（即使你还没有见到图形化的界面）。好好享受一下成功安装 archlinux 的喜悦吧！
-
-如果你对本节的部分步骤不理解，请仔细阅读下一节 [基础安装详解](https://arch.icekylin.online/rookie/basic-install-detail.html)。在此之后，我们来安装图形界面。
-
-ℹ️ 提示
-
-你可以使用以下命令关机：
-
-```
-shutdown -h now
-```
-
-ℹ️ 提示
-
-archlinux 在 2021 年 4 月在安装镜像中内置了一个 [安装脚本](https://archlinux.org/packages/extra/any/archinstall/)
-
-[](https://archlinux.org/packages/extra/any/archinstall/)
-
-[](https://archlinux.org/packages/extra/any/archinstall/)，类似一个一键安装脚本，提供一些选项，即可快速安装（填问卷安系统）。和所有一键安装脚本类似，提供自动化，但不灵活的安装过程。缺陷包括但不限于：
-
-1.  只提供有限的文件系统格式
-2.  只可限定在一个磁盘
-3.  不能指定软件仓库镜像源
-4.  只提供有限的桌面选择
-5.  自动分区不可手动干预
-6.  输入错误直接崩溃退出
-7.  仅支持 UEFI 等
-
-不建议使用这个安装脚本，除了以上各种原因，初学者也无法在这种安装过程中学到任何东西。如果你因为某些原因需要快速启动一个基础的 archlinux 环境，那么可以尝试此脚本。
-
