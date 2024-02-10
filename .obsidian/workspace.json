@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "d9a2287c47c51d74",
+        "id": "250c77611c4c842d",
         "type": "tabs",
         "children": [
           {
-            "id": "57a8760b3b27a145",
+            "id": "79b249c4d979a659",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -148,7 +148,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
+    "width": 311.5,
     "collapsed": true
   },
   "left-ribbon": {
@@ -163,8 +163,12 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "57a8760b3b27a145",
+  "active": "79b249c4d979a659",
   "lastOpenFiles": [
+    "C知识宝库/Markdown教程.md",
+    "A计科工程/编程语言/Go/Golang 笔记.md",
+    "A计科工程/编程语言/Go/字符串.md",
+    "A计科工程/主机运维/Linux/Linux 透明代理.md",
     "ESP32.md",
     "Rime.md",
     "ltex.md",
@@ -175,13 +179,10 @@
     "H其他文件/IMG/Pasted image 20230903180957 1.png",
     "H其他文件/IMG/Pasted image 20230730020615 1.png",
     "阅读记录.md",
-    "A计科工程/编程语言/Go/Golang 笔记.md",
     "F阅读娱乐/阅读/秒懂设计模式2021.md~",
     "F阅读娱乐/阅读/秒懂设计模式2021.md",
     "F阅读娱乐/阅读/秒懂设计模式2021.lmd",
     "A计科工程/编程语言/Go/字符串.md~",
-    "A计科工程/编程语言/Go/字符串.md",
-    "A计科工程/主机运维/Linux/Linux 透明代理.md",
     "A计科工程/主机运维/Linux/Linux 字体调教指南.md",
     "F阅读娱乐/阅读/76878451-9303-4d73-9c64-e56d309348be.md",
     "回调函数.md",
@@ -199,7 +200,6 @@
     "E临时笔记/strace.md",
     "E临时笔记/qemu.md",
     "E临时笔记/Obsidian.md",
-    "E临时笔记/kvm.md",
     "新功能测试.canvas",
     "Untitled.canvas"
   ]
