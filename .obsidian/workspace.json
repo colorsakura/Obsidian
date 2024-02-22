@@ -4,19 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "250c77611c4c842d",
+        "id": "579cbbbe49f67656",
         "type": "tabs",
         "children": [
           {
-            "id": "79b249c4d979a659",
+            "id": "fb697eb3784780f7",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "excalidraw",
               "state": {
-                "file": "A计科工程/主机运维/Linux/Linux 透明代理.md",
-                "mode": "source",
-                "backlinks": false,
-                "source": false
+                "file": "Excalidraw/Linux Lancher.excalidraw.md"
               }
             }
           }
@@ -70,8 +67,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "729cbd70bd48bb1d",
@@ -87,7 +83,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "A计科工程/主机运维/Linux/Linux 透明代理.md",
+                "file": "Excalidraw/Linux Lancher.excalidraw.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +100,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "A计科工程/主机运维/Linux/Linux 透明代理.md",
+                "file": "Excalidraw/Linux Lancher.excalidraw.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -127,7 +123,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "A计科工程/主机运维/Linux/Linux 透明代理.md"
+                "file": "Excalidraw/Linux Lancher.excalidraw.md"
               }
             }
           },
@@ -163,12 +159,15 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "79b249c4d979a659",
+  "active": "fb697eb3784780f7",
   "lastOpenFiles": [
+    "Excalidraw/Linux Lancher.excalidraw.md",
+    "Excalidraw",
+    "A计科工程/主机运维/Linux/Linux 透明代理.md",
+    "A计科工程/主机运维/Linux/nftables.md",
     "C知识宝库/Markdown教程.md",
     "A计科工程/编程语言/Go/Golang 笔记.md",
     "A计科工程/编程语言/Go/字符串.md",
-    "A计科工程/主机运维/Linux/Linux 透明代理.md",
     "ESP32.md",
     "Rime.md",
     "ltex.md",
@@ -198,8 +197,6 @@
     "E临时笔记/systemd-networkd.md",
     "E临时笔记/Rime.md",
     "E临时笔记/strace.md",
-    "E临时笔记/qemu.md",
-    "E临时笔记/Obsidian.md",
     "新功能测试.canvas",
     "Untitled.canvas"
   ]
