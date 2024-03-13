@@ -3,12 +3,12 @@ layout: note
 
 excalidraw-plugin: parsed
 tags: [excalidraw]
-
 ---
-==⚠  Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠==
 
+==⚠ Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠==
 
 # Text Elements
+
 开始 ^wIweq0Co
 
 环境检查 ^RkyCc2gN
@@ -47,7 +47,9 @@ BT下载器 ^kso1ovNK
 服务启动 ^vwv9Bwpx
 
 %%
+
 # Drawing
+
 ```compressed-json
 N4KAkARALgngDgUwgLgAQQQDwMYEMA2AlgCYBOuA7hADTgQBuCpAzoQPYB2KqATL
 
@@ -551,4 +553,5 @@ gdPFiv2qIYAQHKAVBG081Db+N4QCre5onALlzYAgBwBXA9AdgLOm6lE/IlOScAMK
 
 RsZbBwQ1PkAA2CAA
 ```
+
 %%

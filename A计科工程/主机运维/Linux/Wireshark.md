@@ -14,6 +14,7 @@ sudo pacman -S wireshark-qt
 ```
 
 将用户添加到 wireshark 用户组，避免使用 root 运行。
+
 ```shell
 sudo usermod -aG wireshark $USER
 ```

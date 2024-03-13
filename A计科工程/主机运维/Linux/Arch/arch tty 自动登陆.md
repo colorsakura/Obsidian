@@ -30,6 +30,7 @@ Type=idle
 ```
 
 然后执行
+
 ```
 systemctl daemon-reload
 
@@ -39,6 +40,7 @@ systemctl start getty@tty1.service
 
 这样设置之后启动还需要输入一次密码，如果想跳过密码则  
 编辑 /etc/pam. d/system-local-login
+
 ```
 #%PAM-1.0
 

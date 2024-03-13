@@ -4,9 +4,7 @@ date: 2023-03-14 20:41
 tags: TODO
 ---
 
-
 ## Linux 下的字体可以很漂亮! 当然，这里是 Linux，你需要一点小小的配置。
-
 
 很长时间以来，Linux上的中文字体呈现一直……不容乐观。但是随着 FreeType2 由于专利过期默认开启了高质量的 LCD 优化，以及一批高质量的开源字体的公布，Linux 上的中文字体渲染已经可以和 macOS 扳扳手腕了。
 
@@ -15,7 +13,6 @@ tags: TODO
 （Windows 的字体渲染从技术上来说是相当先进的，问题是在中文字体的选择上实在是不忍直视……）
 
 （其实 macOS 的糊成一片的渲染方式也有它的问题，但这就不在本文讨论范围之内了。）
-
 
 ## 太长不看版
 
@@ -35,35 +32,27 @@ sudo pacman -S noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-sarasa-gothic
 
 这是我选择字体：
 
--   拉丁字体
-    
-    -   **Noto Sans** - 无衬线
-        
-    -   **Noto Serif** - 衬线
-        
-    -   **Sarasa Term SC** - 等宽（也可以直接使用 Iosevka Term 以节省空间，但可能会导致 Emacs 中的渲染 bug）
-        
-        -   这是一种拉丁文字符严格为半宽的字体，中英文混排时很协调。如果不适应这种较瘦的字体风格，则可以尝试使用 **Adobe Source Pro** ， **Cascadia Code** 或 **Fira Code** 。
-            
--   中文字体
-    
-    -   **Noto Sans CJK SC** （又称 思源黑体）
-        
-    -   **Noto Serif CJK SC** （又称 思源宋体）
-        
+- 拉丁字体
+
+  - **Noto Sans** - 无衬线
+  - **Noto Serif** - 衬线
+  - **Sarasa Term SC** - 等宽（也可以直接使用 Iosevka Term 以节省空间，但可能会导致 Emacs 中的渲染 bug）
+
+    - 这是一种拉丁文字符严格为半宽的字体，中英文混排时很协调。如果不适应这种较瘦的字体风格，则可以尝试使用 **Adobe Source Pro** ， **Cascadia Code** 或 **Fira Code** 。
+
+- 中文字体
+
+  - **Noto Sans CJK SC** （又称 思源黑体）
+  - **Noto Serif CJK SC** （又称 思源宋体）
 
 ## 安装字体
 
 这里同样使用 Arch Linux 举例，其他发行版请搜索相应的软件仓库。
 
--   `noto-fonts` Noto Sans, Noto Serif
-    
--   `noto-fonts-cjk` Noto Sans CJK SC, Noto Serif CJK SC
-    
--   `noto-fonts-emoji` Noto Emoji
-    
--   `ttf-sarasa-gothic` Sarasa Term SC
-    
+- `noto-fonts` Noto Sans, Noto Serif
+- `noto-fonts-cjk` Noto Sans CJK SC, Noto Serif CJK SC
+- `noto-fonts-emoji` Noto Emoji
+- `ttf-sarasa-gothic` Sarasa Term SC
 
 ## 配置
 
@@ -71,13 +60,13 @@ sudo pacman -S noto-fonts noto-fonts-cjk noto-fonts-emoji ttf-sarasa-gothic
 
 然而……
 
- ![默认配置下的 Installation Guide](https://szclsya.me/img/fonts/archwiki-wrongfont.jpg)
+![默认配置下的 Installation Guide](https://szclsya.me/img/fonts/archwiki-wrongfont.jpg)
 
 默认配置下的 Installation Guide
 
 看上去不大对劲，不是么？
 
- ![破案了](https://szclsya.me/img/fonts/archwiki-fontsused.jpg)
+![破案了](https://szclsya.me/img/fonts/archwiki-fontsused.jpg)
 
 破案了
 
@@ -273,9 +262,7 @@ DPI 即为 Dots per inch (每英尺点数), 可简单理解为显示器的像素
 
 还有几点需要注意:
 
--   有一些比较老的程序会忽略 Fontconfig 的设置，需要修改 [Xresources](https://wiki.archlinux.org/index.php/Font_configuration#Applications_without_fontconfig_support). ArchWiki 上提供的事例配置应该足够了。
-    
--   很多程序有自己的字体配置。一般而言，将无衬线字体设置成 `sans-serif`, 将衬线字体设置成 `serif`, 将等宽字体设置成 `monospace`, 就会遵循 fontconfig 的设置了。
-    
+- 有一些比较老的程序会忽略 Fontconfig 的设置，需要修改 [Xresources](https://wiki.archlinux.org/index.php/Font_configuration#Applications_without_fontconfig_support). ArchWiki 上提供的事例配置应该足够了。
+- 很多程序有自己的字体配置。一般而言，将无衬线字体设置成 `sans-serif`, 将衬线字体设置成 `serif`, 将等宽字体设置成 `monospace`, 就会遵循 fontconfig 的设置了。
 
 [1](https://szclsya.me/zh-cn/posts/fonts/linux-config-guide/#footnote-reference-1)

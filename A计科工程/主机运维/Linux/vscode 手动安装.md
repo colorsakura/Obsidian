@@ -4,7 +4,6 @@ tags: TODO, vscode, linux
 layout: note
 ---
 
-
 vscode 无法登陆， vscode 无法输入中文
 
 ## 前景
@@ -22,7 +21,6 @@ manjaro 官方源安装的 `code-oss`，点击登陆，显示loading ，无法�
 - 6. `xdg-settings set default-url-scheme-handler code-oss code-oss-url-handler.desktop`
 
 [解决](https://github.com/MicrosoftDocs/live-share/issues/3153)
-
 
 ![[Pasted image 20220505195744.png]]
 ![[Pasted image 20220505195834.png]]

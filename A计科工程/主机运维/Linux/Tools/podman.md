@@ -1,6 +1,7 @@
 ---
 layout: note
 ---
+
 ## 常用命令
 
 - 搜索镜像：`podman search alpine`
@@ -14,10 +15,11 @@ layout: note
 `vim /etc/containers/register.conf`
 
 配置内容：
+
 ```
 unqualified-search-registries = ["docker.io"]
 
-[[registry]] 
-prefix = "docker.io" 
+[[registry]]
+prefix = "docker.io"
 location = "9gzrq6w1.mirror.aliyuncs.com"
 ```

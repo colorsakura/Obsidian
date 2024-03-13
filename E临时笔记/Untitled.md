@@ -1,3 +1,3 @@
 ```markdown
-[guid]::NewGuid()
+[guid]: :NewGuid()
 ```

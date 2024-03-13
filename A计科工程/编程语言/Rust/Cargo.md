@@ -4,8 +4,6 @@ tags: TODO, rust
 layout: note
 ---
 
-# 
+#
 
 ---
-
-

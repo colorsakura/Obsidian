@@ -136,17 +136,17 @@ g := 0.867 + 0.5i  // complex128
 
 ## 基本类型
 
-Go  作为**强类型语言**, 隐式的类型转换是不被允许的.
+Go 作为**强类型语言**, 隐式的类型转换是不被允许的.
 
-| 类型 |说明 |
-| ----------- |----------- |
-| bool |布尔型，取值 true / false |
-| string |字符串，双引号包围<br>多行字符串使用反引号包围<br> |
-| 定长整数 |对应不同的位数（1、2、4、8 字节）：<br>有符号类型：int8 int16 int32 int64<br>无负号类型：uint8 uint16 uint32 uint64<br> |
-| rune |字面意思是“符文”，实际上是 int32 的别名，代表一个 Unicode 代码点（Code Point）<br>代码点和字符唯一性的对应，例如 U+2318（十六进制 2318）对应字符⌘<br>rune 的直接量语法和 Java 中的 char 类型一致：<br>var r rune = '⌘'<br>fmt.Printf ("%v %c %x", r, r, r)&nbsp;&nbsp;// 8984 ⌘ 2318&nbsp;<br> |
-| 不定长整数 |int、uint、uintptr 在 32bit 的系统上通常为 32 位；在 64bit 的系统上通常为 64位 |
-| 浮点数 |float32、float64 |
-| 复数 |complex64、complex128<br>示例：<br>var z complex128 = cmplx.Sqrt (-5 + 12i)<br>const f = "%T (%v)\n"<br>fmt.Printf (f, z, z)&nbsp;&nbsp;// complex128 ((2+3i))<br> |
+| 类型       | 说明                                                                                                                                                                                                                                                                                           |
+| ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| bool       | 布尔型，取值 true / false                                                                                                                                                                                                                                                                      |
+| string     | 字符串，双引号包围<br>多行字符串使用反引号包围<br>                                                                                                                                                                                                                                             |
+| 定长整数   | 对应不同的位数（1、2、4、8 字节）：<br>有符号类型：int8 int16 int32 int64<br>无负号类型：uint8 uint16 uint32 uint64<br>                                                                                                                                                                        |
+| rune       | 字面意思是“符文”，实际上是 int32 的别名，代表一个 Unicode 代码点（Code Point）<br>代码点和字符唯一性的对应，例如 U+2318（十六进制 2318）对应字符⌘<br>rune 的直接量语法和 Java 中的 char 类型一致：<br>var r rune = '⌘'<br>fmt.Printf ("%v %c %x", r, r, r)&nbsp;&nbsp;// 8984 ⌘ 2318&nbsp;<br> |
+| 不定长整数 | int、uint、uintptr 在 32bit 的系统上通常为 32 位；在 64bit 的系统上通常为 64位                                                                                                                                                                                                                 |
+| 浮点数     | float32、float64                                                                                                                                                                                                                                                                               |
+| 复数       | complex64、complex128<br>示例：<br>var z complex128 = cmplx.Sqrt (-5 + 12i)<br>const f = "%T (%v)\n"<br>fmt.Printf (f, z, z)&nbsp;&nbsp;// complex128 ((2+3i))<br>                                                                                                                             |
 
 ## 常量
 
@@ -429,18 +429,18 @@ Name string `json:"name,omitempty"`
 
 经常使用的标签键包括：
 
-| 标签键 |说明 |
-| ----------- |----------- |
-| json |包 encoding/json 使用此键，具体查看 json.Marshal () |
-| xml |包 encoding/xml 使用此键，具体查看 xml.Marshal () |
-| bson |包 gobson 使用此键，具体查看 bson.Marshal () |
-| protobuf |包 github. com/golang/protobuf/proto 使用此键 |
-| yaml |包 gopkg. in/yaml. v2 使用此键，具体查看 yaml.Marshal () |
-| db |包 github. com/jmoiron/sqlx 使用此键 |
-| orm |包 github. com/astaxie/beego/orm 使用此键 |
-| valid |包 github. com/asaskevich/govalidator 使用此键 |
-| schema |包 github. com/gorilla/schema 使用此键 |
-| csv |包 github. com/gocarina/gocsv 使用此键 |
+| 标签键   | 说明                                                     |
+| -------- | -------------------------------------------------------- |
+| json     | 包 encoding/json 使用此键，具体查看 json.Marshal ()      |
+| xml      | 包 encoding/xml 使用此键，具体查看 xml.Marshal ()        |
+| bson     | 包 gobson 使用此键，具体查看 bson.Marshal ()             |
+| protobuf | 包 github. com/golang/protobuf/proto 使用此键            |
+| yaml     | 包 gopkg. in/yaml. v2 使用此键，具体查看 yaml.Marshal () |
+| db       | 包 github. com/jmoiron/sqlx 使用此键                     |
+| orm      | 包 github. com/astaxie/beego/orm 使用此键                |
+| valid    | 包 github. com/asaskevich/govalidator 使用此键           |
+| schema   | 包 github. com/gorilla/schema 使用此键                   |
+| csv      | 包 github. com/gocarina/gocsv 使用此键                   |
 
 ### 空结构
 
@@ -878,7 +878,7 @@ func main() {
 
 ### 指针作为接收者
 
-可以为指针定义方法，也就是将指针作为方法的接收者。接收者声明为*T 也是为 T 类型定义方法，但是 T 本身不能是指针。
+可以为指针定义方法，也就是将指针作为方法的接收者。接收者声明为\*T 也是为 T 类型定义方法，但是 T 本身不能是指针。
 
 基于**指针接收者定义方法，你就可以修改接收者的状态**，这种行为类似于 C 语言。
 
@@ -901,7 +901,7 @@ func (ll *LatLng) isEastHemisphere() bool {
 
 **调用方法时，你不需要对接收者进行取地址操作**，这和普通函数调用不一样。普通函数的参数如果要求指针，则你必须传入指针。
 
-***T 支持的方法集是：以*T 为接收者的方法集 + 以 T 为接收者的方法集**。因此*T 支持的方法可能比 T 多。
+***T 支持的方法集是：以*T 为接收者的方法集 + 以 T 为接收者的方法集**。因此\*T 支持的方法可能比 T 多。
 
 ## 接口
 
@@ -1373,7 +1373,7 @@ copied := solverConfig
 下面的代码有问题，所有 Goroutine 打印的都是 data 最后一个元素的值：
 
 ```go
-data =[]int{1,2,3,4,5} 
+data =[]int{1,2,3,4,5}
 for _,v := range data {
     go func() {
         fmt.Println(v)  // 5 5 5 5 5
@@ -1422,7 +1422,7 @@ if i < 1 {
     fmt.Print(i)
 }
  
-// if - else if - else 
+// if - else if - else
 if true {
     
 } else if false {
@@ -1533,7 +1533,7 @@ Println(buf.Len())                 // 0
 buf.Write(make([]byte, 10))  
 Println(buf.Len())                 // 10
 defer Println(buf.Len())           // 10
-buf.Write(make([]byte, 10))                           
+buf.Write(make([]byte, 10))                          
 Println(buf.Len())                 // 20
 ```
 
@@ -1598,83 +1598,83 @@ label:
 
 ## 标准库列表
 
-| 标准库 |说明 |
-| ----------- |----------- |
-| archive/tar |对 Tar 归档格式的支持 |
-| archive/zip |对 Zip 归档格式的支持 |
-| [bufio](https://blog.gmem.cc/go-io-programming) |装饰 io. Reader/io. Writer |
-| bytes |操控[]byte，也就是字节切片 |
-| compress/bzip2 |实现 bzip2 解压缩算法 |
-| compress/flate |实现 DEFLATE 压锁算法 |
-| compress/gzip |支持读写 gzip 格式 |
-| compress/lzw |支持读写 lzw 格式{"userName": "Alex","userAge": 31} |
-| compress/zlib |支持读写 zlib 格式 |
-| container/heap |为任何实现了 heap 接口的类型提供“堆”操作。堆（heap）是实现优先级队列的一种方式 |
-| container/list |实现双向链表 |
-| container/ring |实现环形列表 |
-| context |定义 Context 类型 |
-| crypto/* |加解密相关包 |
-| [database/sql](https://blog.gmem.cc/go-database-programming) |为 SQL 数据库提供一般性接口 |
-| database/sql/driver |定义数据库驱动程序需要实现的接口 |
-| debug/* |调试相关的包 |
-| encoding |编解码（Marshaler/Unmarshaler）相关的通用接口 |
-| encoding/base64 |支持 Base64 编码格式：<br>// 编码<br>base64.StdEncoding.EncodeToString ([]byte{})<br> |
-| encoding/hex |支持 Hex 编码格式 |
-| encoding/json |支持 JSON 格式 |
-| encoding/xml |支持 XML 格式 |
-| encoding/binary |在[]byte 和数字之间进行转换：<br> |
-| errors |包含操控 error 的函数 |
-| flag |实现命令行选项解析的功能 |
-| fmt |格式化输入输出，类似于 C 语言的 printf/scanf |
-| hash/* |实现散列算法 |
-| html |用于处理 HTML 的转义 |
-| html/template |实现事件驱动的、生成 HTML 的模板，支持防代码注入 |
-| image/* |2D 图形库，支持 gif/jpeg/png 等图像格式 |
-| index/suffixarray |基于内存中的 suffix array 实现对数复杂度的子串搜索 |
-| [io](https://blog.gmem.cc/go-io-programming) |提供 IO 操作原语 |
-| [io/ioutil](https://blog.gmem.cc/go-io-programming) |包含一些 IO 工具函数 |
-| log |一个简单的日志包 |
-| glog |Google 内部 C++日志框架的复制品<br> |
-| log/syslog |提供访问系统日志服务的功能 |
-| math |包含基本的常量和数学函数 |
-| math/big |支持任意精度的算术运算 |
-| math/bits |支持按位的计算 |
-| math/cmplx |支持复数的计算 |
-| math/rand |支持伪随机数<br> |
-| mime |实现了部分 MIME 规范 |
-| mine/multipart |支持 MIME Multipart 解析 |
-| net |提供可移植的网络 IO 接口，包括 TCP/IP、UDP、Unix 域套接字、DNS 解析 |
-| net/http |提供 HTTP 客户端和服务器实现 |
-| net/http/cgi |提供 CGI 实现 |
-| net/http/fcgi |实现 FastCGI 协议 |
-| net/http/httptest |提供用于 HTTP 测试的工具 |
-| net/http/httptrace |在 HTTP 客户端请求内部追踪事件 |
-| net/http/httputil |HTTP 相关工具函数 |
-| net/http/pprof |收集 HTTP 服务器运行时信息，供 pprof 分析 |
-| net/mail |电子邮件解析/extend-kubernetes-with-custom-resources |
-| net/smtp |SMTP 协议支持 |
-| net/rpc |支持跨越网络来访问对象导出的方法 |
-| net/rpc/jsonrpc |实现基于 JSON-RPC 1.0 的服务器/客户端编码方式 |
-| net/url |解析 URL |
-| os |平台独立的操作系统功能函数 |
-| os/exec |运行外部命令 |
-| os/signal |支持访问发送到当前进程的信号<br> |
-| os/user |根据名称或者 ID 来查找 OS 用户 |
-| path |操控基于 / 的路径 |
-| path/filepath |操控文件名路径 |
-| reflect |实现了运行时反射，允许程序操控任何类型的对象 |
-| regexp |提供正则表达式支持 |
-| runtime |包含用于和 Go 运行时系统进行交互的操作，例如控制 Goroutine |
-| sort |提供排序切片或者用户定义集合的原语 |
-| strconv |为基本数据类型提供到/从字符串展现的转换<br>// bool 转换为字符串<br>strconv.FormatBool (v)<br>// 字符串转换为 int<br>strconv.Atoi ("1")<br> |
-| strings |提供操控基于 UTF-8 的字符串的函数 |
-| sync |提供基本的同步原语，例如互斥量 |
-| sync/atomic |提供低级别的原子内存原语，用于设计同步算法 |
-| syscall |支持低级别的系统调用 |
-| testing |用于支持 Go 包的自动化测试 |
-| time |操控和访问时间 |
-| unicode |提供对 Unicode 的支持 |
-| unsafe |用于绕开 Go 的类型安全机制 |
+| 标准库                                                       | 说明                                                                                                                                       |
+| ------------------------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| archive/tar                                                  | 对 Tar 归档格式的支持                                                                                                                      |
+| archive/zip                                                  | 对 Zip 归档格式的支持                                                                                                                      |
+| [bufio](https://blog.gmem.cc/go-io-programming)              | 装饰 io. Reader/io. Writer                                                                                                                 |
+| bytes                                                        | 操控[]byte，也就是字节切片                                                                                                                 |
+| compress/bzip2                                               | 实现 bzip2 解压缩算法                                                                                                                      |
+| compress/flate                                               | 实现 DEFLATE 压锁算法                                                                                                                      |
+| compress/gzip                                                | 支持读写 gzip 格式                                                                                                                         |
+| compress/lzw                                                 | 支持读写 lzw 格式{"userName": "Alex","userAge": 31}                                                                                        |
+| compress/zlib                                                | 支持读写 zlib 格式                                                                                                                         |
+| container/heap                                               | 为任何实现了 heap 接口的类型提供“堆”操作。堆（heap）是实现优先级队列的一种方式                                                             |
+| container/list                                               | 实现双向链表                                                                                                                               |
+| container/ring                                               | 实现环形列表                                                                                                                               |
+| context                                                      | 定义 Context 类型                                                                                                                          |
+| crypto/\*                                                    | 加解密相关包                                                                                                                               |
+| [database/sql](https://blog.gmem.cc/go-database-programming) | 为 SQL 数据库提供一般性接口                                                                                                                |
+| database/sql/driver                                          | 定义数据库驱动程序需要实现的接口                                                                                                           |
+| debug/\*                                                     | 调试相关的包                                                                                                                               |
+| encoding                                                     | 编解码（Marshaler/Unmarshaler）相关的通用接口                                                                                              |
+| encoding/base64                                              | 支持 Base64 编码格式：<br>// 编码<br>base64.StdEncoding.EncodeToString ([]byte{})<br>                                                      |
+| encoding/hex                                                 | 支持 Hex 编码格式                                                                                                                          |
+| encoding/json                                                | 支持 JSON 格式                                                                                                                             |
+| encoding/xml                                                 | 支持 XML 格式                                                                                                                              |
+| encoding/binary                                              | 在[]byte 和数字之间进行转换：<br>                                                                                                          |
+| errors                                                       | 包含操控 error 的函数                                                                                                                      |
+| flag                                                         | 实现命令行选项解析的功能                                                                                                                   |
+| fmt                                                          | 格式化输入输出，类似于 C 语言的 printf/scanf                                                                                               |
+| hash/\*                                                      | 实现散列算法                                                                                                                               |
+| html                                                         | 用于处理 HTML 的转义                                                                                                                       |
+| html/template                                                | 实现事件驱动的、生成 HTML 的模板，支持防代码注入                                                                                           |
+| image/\*                                                     | 2D 图形库，支持 gif/jpeg/png 等图像格式                                                                                                    |
+| index/suffixarray                                            | 基于内存中的 suffix array 实现对数复杂度的子串搜索                                                                                         |
+| [io](https://blog.gmem.cc/go-io-programming)                 | 提供 IO 操作原语                                                                                                                           |
+| [io/ioutil](https://blog.gmem.cc/go-io-programming)          | 包含一些 IO 工具函数                                                                                                                       |
+| log                                                          | 一个简单的日志包                                                                                                                           |
+| glog                                                         | Google 内部 C++日志框架的复制品<br>                                                                                                        |
+| log/syslog                                                   | 提供访问系统日志服务的功能                                                                                                                 |
+| math                                                         | 包含基本的常量和数学函数                                                                                                                   |
+| math/big                                                     | 支持任意精度的算术运算                                                                                                                     |
+| math/bits                                                    | 支持按位的计算                                                                                                                             |
+| math/cmplx                                                   | 支持复数的计算                                                                                                                             |
+| math/rand                                                    | 支持伪随机数<br>                                                                                                                           |
+| mime                                                         | 实现了部分 MIME 规范                                                                                                                       |
+| mine/multipart                                               | 支持 MIME Multipart 解析                                                                                                                   |
+| net                                                          | 提供可移植的网络 IO 接口，包括 TCP/IP、UDP、Unix 域套接字、DNS 解析                                                                        |
+| net/http                                                     | 提供 HTTP 客户端和服务器实现                                                                                                               |
+| net/http/cgi                                                 | 提供 CGI 实现                                                                                                                              |
+| net/http/fcgi                                                | 实现 FastCGI 协议                                                                                                                          |
+| net/http/httptest                                            | 提供用于 HTTP 测试的工具                                                                                                                   |
+| net/http/httptrace                                           | 在 HTTP 客户端请求内部追踪事件                                                                                                             |
+| net/http/httputil                                            | HTTP 相关工具函数                                                                                                                          |
+| net/http/pprof                                               | 收集 HTTP 服务器运行时信息，供 pprof 分析                                                                                                  |
+| net/mail                                                     | 电子邮件解析/extend-kubernetes-with-custom-resources                                                                                       |
+| net/smtp                                                     | SMTP 协议支持                                                                                                                              |
+| net/rpc                                                      | 支持跨越网络来访问对象导出的方法                                                                                                           |
+| net/rpc/jsonrpc                                              | 实现基于 JSON-RPC 1.0 的服务器/客户端编码方式                                                                                              |
+| net/url                                                      | 解析 URL                                                                                                                                   |
+| os                                                           | 平台独立的操作系统功能函数                                                                                                                 |
+| os/exec                                                      | 运行外部命令                                                                                                                               |
+| os/signal                                                    | 支持访问发送到当前进程的信号<br>                                                                                                           |
+| os/user                                                      | 根据名称或者 ID 来查找 OS 用户                                                                                                             |
+| path                                                         | 操控基于 / 的路径                                                                                                                          |
+| path/filepath                                                | 操控文件名路径                                                                                                                             |
+| reflect                                                      | 实现了运行时反射，允许程序操控任何类型的对象                                                                                               |
+| regexp                                                       | 提供正则表达式支持                                                                                                                         |
+| runtime                                                      | 包含用于和 Go 运行时系统进行交互的操作，例如控制 Goroutine                                                                                 |
+| sort                                                         | 提供排序切片或者用户定义集合的原语                                                                                                         |
+| strconv                                                      | 为基本数据类型提供到/从字符串展现的转换<br>// bool 转换为字符串<br>strconv.FormatBool (v)<br>// 字符串转换为 int<br>strconv.Atoi ("1")<br> |
+| strings                                                      | 提供操控基于 UTF-8 的字符串的函数                                                                                                          |
+| sync                                                         | 提供基本的同步原语，例如互斥量                                                                                                             |
+| sync/atomic                                                  | 提供低级别的原子内存原语，用于设计同步算法                                                                                                 |
+| syscall                                                      | 支持低级别的系统调用                                                                                                                       |
+| testing                                                      | 用于支持 Go 包的自动化测试                                                                                                                 |
+| time                                                         | 操控和访问时间                                                                                                                             |
+| unicode                                                      | 提供对 Unicode 的支持                                                                                                                      |
+| unsafe                                                       | 用于绕开 Go 的类型安全机制                                                                                                                 |
 
 ## built-in
 
@@ -2144,7 +2144,7 @@ reflect.TypeOf(u1).Field(i).Offset
 
 ### Pointer
 
-unsafe. Pointer 是一种特殊的指针，它可以指向任何的类型，类似于 C 语言中的 void*
+unsafe. Pointer 是一种特殊的指针，它可以指向任何的类型，类似于 C 语言中的 void\*
 
 不同具体类型的指针是无法相互转换的：
 
@@ -2164,7 +2164,7 @@ uip = (*uint8)(unsafe.Pointer(fip))
 fmt.Println(*uip)
 ```
 
-*T 不支持算术运算，但是 uintptr 却可以。利用 unsafe. Pointer 作为媒介，我们可以获得精确控制内存的能力：
+\*T 不支持算术运算，但是 uintptr 却可以。利用 unsafe. Pointer 作为媒介，我们可以获得精确控制内存的能力：
 
 ```go
 type User struct {
@@ -2231,7 +2231,7 @@ time.Parse("2006-01-02T15:04:05Z07:00", str)
 println(n.Unix())               // UNIX纪元，秒
 println(n.UnixNano() / 1000000) // UNIX纪元，毫秒
  
-// 获取各字段 2018 January 2 18 16 47 
+// 获取各字段 2018 January 2 18 16 47
 fmt.Printf("%v %v %v %v %v %v ", n.Year(), n.Month(), n.Day(), n.Hour(), n.Minute(), n.Second())
  
 // ProtoBuf时间戳
@@ -2463,14 +2463,14 @@ glog.V(2).Infoln("处理了", nItems, "个条目")
 
 你可以通过命令行选项来改变 glog 的行为， flag. Parse 应该在任何日志打印函数调用前调用：
 
-| 命令行选项示例 |说明 |
-| ----------- |----------- |
-| --logtostderr=false |日志被输出到标准错误而非文件 |
-| --alsologtostderr |同时输出到文件和标准错误 |
-| --stderrthreshold=ERROR |输出到标准错误的最低严重级别 |
-| --log_dir="" |日志输出目录 |
-| --v=0 |输出日志的最低冗余级别 |
-| -vmodule=gopher*=3 |对于 gopher 开头的 Go 文件，其最低冗余级别设置为3 |
+| 命令行选项示例          | 说明                                              |
+| ----------------------- | ------------------------------------------------- |
+| --logtostderr=false     | 日志被输出到标准错误而非文件                      |
+| --alsologtostderr       | 同时输出到文件和标准错误                          |
+| --stderrthreshold=ERROR | 输出到标准错误的最低严重级别                      |
+| --log_dir=""            | 日志输出目录                                      |
+| --v=0                   | 输出日志的最低冗余级别                            |
+| -vmodule=gopher\*=3     | 对于 gopher 开头的 Go 文件，其最低冗余级别设置为3 |
 
 ## encoding/json
 
@@ -2592,31 +2592,31 @@ func (c *Car) Equals(c2 *Car) bool {
 
 3. 任何可迭代对象的元素查找、过滤、迭代、去重
 
-| 函数 |说明 |
-| ----------- |----------- |
-| Contains |检查元素是否存在（于切片、映射、数组） |
-| IndexOf<br>LastIndexOf |获得元素的索引或 -1 |
-| ToMap |将一个字段作为 pivot（键），转换结构为 map |
-| Filter |使用 Predicate 函数来过滤切片 |
-| Find |使用 Predicate 函数来查找切片元素 |
-| Map |在映射、切片之间进行相互转换 |
-| Get |使用路径导航的形式检索值：funk.Get (foo, "Bar. Bars. Bar. Name") |
-| Keys |获取结构、映射的字段名/键数组 |
-| Values |获取结构、映射的字段值、值数组 |
-| ForEach |迭代映射、切片 |
-| ForEachRight |反向迭代映射、切片 |
-| Chunk |将切片划分为子切片，每个子切片具有指定的大小 |
-| FlattenDeep |递归的扁平化多维数组 |
-| Uniq |数组去重 |
-| Drop |去除数组/切片的前 N 个元素 |
-| Initial |获取数组/切片除后 N 个的全部元素 |
-| Tail |获取数组/切片除前 N 个的全部元素 |
-| Shuffle |将指定数组进行元素重排，放到新数组中 |
-| Sum |数组元素求和 |
-| Reverse |获取反向数组 |
-| SliceOf |从单个元素创建切片 |
-| RandomInt |获得一个随机整数 |
-| RandomString |获得一个固定长度的随机字符串 |
+| 函数                   | 说明                                                             |
+| ---------------------- | ---------------------------------------------------------------- |
+| Contains               | 检查元素是否存在（于切片、映射、数组）                           |
+| IndexOf<br>LastIndexOf | 获得元素的索引或 -1                                              |
+| ToMap                  | 将一个字段作为 pivot（键），转换结构为 map                       |
+| Filter                 | 使用 Predicate 函数来过滤切片                                    |
+| Find                   | 使用 Predicate 函数来查找切片元素                                |
+| Map                    | 在映射、切片之间进行相互转换                                     |
+| Get                    | 使用路径导航的形式检索值：funk.Get (foo, "Bar. Bars. Bar. Name") |
+| Keys                   | 获取结构、映射的字段名/键数组                                    |
+| Values                 | 获取结构、映射的字段值、值数组                                   |
+| ForEach                | 迭代映射、切片                                                   |
+| ForEachRight           | 反向迭代映射、切片                                               |
+| Chunk                  | 将切片划分为子切片，每个子切片具有指定的大小                     |
+| FlattenDeep            | 递归的扁平化多维数组                                             |
+| Uniq                   | 数组去重                                                         |
+| Drop                   | 去除数组/切片的前 N 个元素                                       |
+| Initial                | 获取数组/切片除后 N 个的全部元素                                 |
+| Tail                   | 获取数组/切片除前 N 个的全部元素                                 |
+| Shuffle                | 将指定数组进行元素重排，放到新数组中                             |
+| Sum                    | 数组元素求和                                                     |
+| Reverse                | 获取反向数组                                                     |
+| SliceOf                | 从单个元素创建切片                                               |
+| RandomInt              | 获得一个随机整数                                                 |
+| RandomString           | 获得一个固定长度的随机字符串                                     |
 
 ## mholt/archiver
 
@@ -2953,29 +2953,30 @@ import "C"
 
 标准的 C 数字类型映射到的 Go 类型如下表：
 
-| C 类型 |Go 类型 |备注 |
-| ----------- |----------- |----------- |
-| char |C.char | |
-| signed char |C.schar | |
-| unsigned char |C.uchar | |
-| short |C.short | |
-| unsigned short |C.ushort | |
-| int |C.int | |
-| unsigned int |C.uint | |
-| long |C.long | |
-| unsigned long |C.ulong | |
-| long long |C.longlong |/extend-kubernetes-with-custom-resources |
-| unsigned long long |C.ulonglong | |
-| float |C.float | |
-| double |C.double | |
-| complex float |C.complexfloat | |
-| complex double |C.complexdouble | |
-| void* |unsafe. Pointer |任何指针都可以转换为 unsafe. Pointer，unsafe. Pointer 也可以转换为任何类型的指针 |
-| __int128_t__uint128_t | [16]byte |  |
-| char* |C.CString | |
+| C 类型                | Go 类型         | 备注                                                                             |
+| --------------------- | --------------- | -------------------------------------------------------------------------------- |
+| char                  | C.char          |                                                                                  |
+| signed char           | C.schar         |                                                                                  |
+| unsigned char         | C.uchar         |                                                                                  |
+| short                 | C.short         |                                                                                  |
+| unsigned short        | C.ushort        |                                                                                  |
+| int                   | C.int           |                                                                                  |
+| unsigned int          | C.uint          |                                                                                  |
+| long                  | C.long          |                                                                                  |
+| unsigned long         | C.ulong         |                                                                                  |
+| long long             | C.longlong      | /extend-kubernetes-with-custom-resources                                         |
+| unsigned long long    | C.ulonglong     |                                                                                  |
+| float                 | C.float         |                                                                                  |
+| double                | C.double        |                                                                                  |
+| complex float         | C.complexfloat  |                                                                                  |
+| complex double        | C.complexdouble |                                                                                  |
+| void\*                | unsafe. Pointer | 任何指针都可以转换为 unsafe. Pointer，unsafe. Pointer 也可以转换为任何类型的指针 |
+| **int128_t**uint128_t | [16]byte        |                                                                                  |
+| char\*                | C.CString       |                                                                                  |
+
 此外需要注意：
 
-1. 如果需要直接访问 C 的 struct、union、enum 类型，为类型名字前缀 struct_、union_、enum_
+1. 如果需要直接访问 C 的 struct、union、enum 类型，为类型名字前缀 struct*、union*、enum\_
 
 2. 要获得任何 C 类型的尺寸，调用C.sizeof_T
 
@@ -3020,7 +3021,7 @@ func MyFunction(arg1, arg2 int, arg3 string) int64 {...}
 func MyFunction2(arg1, arg2 int, arg3 string) (int64, *C.char) {...}
 ```
 
-在头文件_cgo_export. h 中，可以看到如下形式的声明：
+在头文件\_cgo_export. h 中，可以看到如下形式的声明：
 
 ```c
 extern int64 MyFunction(int arg1, int arg2, GoString arg3);
@@ -3062,23 +3063,23 @@ Go 代码不得在 C 内存中存储 Go 指针。C 代码则可以在 C 内存�
 
 注意，某些子命令的行为会受到 `GO111MODULE` 环境变量的影响。
 
-| 子命令 |说明 |
-| ----------- |----------- |
-| build |编译包及其依赖，但是不安装编译结果<br>当编译单个 main 包时，结果二进制文件的 basename 默认和第一个源文件（go build a.go b.go 输出a.exe）或者目录（go build unix/sam 输出 sam. exe）相同<br>当编译多个包或者单个非 main 包时，编译结果被丢弃，也就是仅仅验证编译是否可以通过<br>当编译包时，_test. go 结尾的文件被忽略<br>**格式：**<br>go build [-o output] [-i] [build flags] [packages]<br>**选项：**<br>-o  仅编译单个包时可用，显式指定输出的二进制文件或对象文件的名字<br>-i 安装编译目标的依赖<br>-a 强制重新构建所有包，即使已经 up-to-date<br>-v 编译后打印被编译包的名称<br>-buildmode mode 构建模式<br>-compiler name 使用的编译器，gccgo gc<br>-gccgoflags 'arg list' 编译器 gccgo 的标记<br>-gcflags 'arg list'  编译器 gc 的标记，参考 go tool compile -help<br>-installsuffix suffix 包安装路径名后缀<br>-ldflags 'flag list'  链接标记，参考 go tool link -help<br>-linkshared 与共享库进行链接，共享库使用 -buildmode=shared 创建<br>-pkgdir dir  从 dir 安装、加载所有包，而非默认位置<br>**构建模式：**<br>-buildmode=archive  构建非 main 包为. a 文件，main 包被忽略<br>-buildmode=c-archive  构建 main 包以及所有它导入的包为 C 归档文件<br>-buildmode=c-shared 构建 main 包以及所有它导入的包为 C 共享库<br>-buildmode=shared 构建非 main 包为共享库，main 包被忽略<br>-buildmode=exe 构建 main 包以及所有它导入的包为可执行文件<br>-buildmode=pie  构建为位置独立可执行文件（PIE）<br>-buildmode=plugin 构建为 Go 插件<br>**示例：**<br>export GOROOT=/home/alex/Go/sdk/1.9.2<br>export GOPATH=/home/alex/Go/workspaces/default<br>pushd /home/alex/Go/workspaces/default/src/digital-app &gt; /dev/null<br>export PATH=/home/alex/Go/sdk/1.9.2/bin/:$PATH<br> <br># 构建<br>go build -i -o build/digitalsrv<br> <br># 静态连接<br># CGO_ENABLED 提示使用 cgo 而非 go 作为编译器，以便进行静态连接<br># -a 重新构建所有依赖<br># -ldflags '-s'减小二进制文件大小<br>CGO_ENABLED=0 go build -i -a -o build/digitalsrv -ldflags '-s'<br> |
-| tool compile |将单个 Go 包编译为对象文件<br>**格式：**go tool compile [flags] file...<br>**选项：**<br>-I dir1 -I dir2 导入包的搜索路径，在搜索 $GOROOT/pkg/$ GOOS_$GOARCH 之后搜索<br>-N 禁用优化<br>-c int 编译时的并发度，默认 1<br>-dynlink 允许引用共享库中的 Go 符号<br>-l 禁用内联<br>-lang version 设置 Go 语言版本，例如-lang=go1.12<br>-largemodel 基于大内存模型的假设来编译<br>-pack 生成归档而非对象文件<br>-shared 生成能够链接到共享库的代码<br>-dwarf 生成 DWARF 符号<br> |
-| tool link |从 main 包中读取 Go 归档/object，以及它们的依赖，并链接为二进制文件<br>**格式：**<br>go tool link [flags] main. a<br> <br># 从 go build 调用<br>go build -ldflags "[flags]"<br>**选项：**<br>-D address 设置数据段地址<br>-T address 设置文本段地址<br>-E entry 设置入口符号名称<br>-H type 设置可执行文件格式类型，默认类型从 GOOS+GOARCH 推断<br>-I interpreter 设置使用的 ELF 动态链接器<br>-L dir1 -L dir2 在搜索 $GOROOT/pkg/$ GOOS_$GOARCH之后，从dir1 dir2中搜索导入包<br>-X importpath.name=value设置导入路径中的字符串变量name的值为value。示例：<br>-X github.com/stefanprodan/flagger/pkg/version.REVISION=$ {GIT_COMMIT}"<br>上述选项只有当源码中定义了 REVISION 变量且它的值没有初始化、或者初始化为常量字符串表达式时有意义：<br>package version<br> <br>var VERSION = "0.8.0"<br>var REVISION = "unknown"<br>-a 反汇编输出<br>-buildid id 设置 Go 工具链的 build id<br>-buildmode mode 构建模式，默认 exe<br>-c Dump 出调用图<br>-compressdwarf 如果可能压缩 DWARF，默认 true<br>-cpuprofile file 将 CPU profile 写入到文件<br>-d 禁止生成动态可执行文件。控制是否生成动态头。默认情况下即使没有引用任何动态库也会生成动态头<br>-dumpdep Dump 出符号依赖图<br>-extar ar 设置外部归档程序（默认 ar），仅配合-buildmode=c-archive 使用<br>-extld linker 设置外部链接器（默认 clang 或 gcc）<br>-extldflags flags 空格分隔的，传递给外部链接器的选项<br>-installsuffix suffix 从 $GOROOT/pkg/$ GOOS_$GOARCH_suffix 中搜索包，而非 $GOROOT/pkg/$ GOOS_$GOARCH<br>-linkmode mode 设置链接模式，可选值 internal, external, auto<br>-linkshared 和已经安装的 Go 共享库进行链接<br>-msan 支持 C/C++内存消毒器<br>-n Dump 出符号表<br>-o 将输出写入到指定文件<br>-r dir1: dir2... 设置 ELF 动态链接器的搜索路径<br>-race 链接到竞态检测共享库<br>-s 移除符号表和调试信息<br>-shared 生成共享对象，隐含-linkmode external<br>-w 禁止 DWARF 生成<br>**链接模式：**<br>internal：解析并链接主机上的对象文件（ELF/Mach-O/PE ...）到最终可执行文件里面。由于实现宿主机链接器的全部功能存在困难，因此这种模式下能够链接的对象文件种类是受限的<br>external：为了支持链接到任何对象文件而不需要动态库，cgo 支持所谓外部链接模式。此模式下，所有 Go 代码被收集到 go. o 文件中，并通过宿主机链接器（通常 gcc）将 go. o 以及所有依赖的非 Go 的代码链接到最终可执行文件里面<br>大部分构建同时编译代码、调用链接器来创建二进制文件。在使用 cgo 的情况下，编译时期已经依赖 gcc，因此链接阶段再次依赖 gcc 没有问题<br> |
-| clean |移除编译后的对象文件（Object files）<br>**格式：**<br>go clean [-i] [-r] [-n] [-x] [build flags] [packages]<br> |
-| doc |显示包或者符号的文档<br>**格式：**<br>go doc [-u] [-c] [package|[package.]symbol[. methodOrField]]<br> <br># 显示 fmt 包的 Errorf 函数的文档<br> go doc fmt Errorf<br> |
-| env |打印 Go 相关环境变量信息，相关的环境变量包括：<br>GOOS，目标操作系统，支持 darwin、freebsd、linux、windows、android 等<br>GOARCH，目标体系结构，支持 arm、arm64、386、amd64 等<br> |
-| fix |针对指定的包运行 Go fix 命令。Fix 能够查找到使用旧 API 的 Go 程序，并将其替换为新 API。升级到新版本的 Go 之后，可以调用此命令<br> |
-| fmt |指定指定的包源代码运行 gofmt |
-| generate |通过处理源文件，产生 Go 文件 |
-| get |下载并安装包及其依赖<br>**格式：**go get [-d] [-f] [-fix] [-insecure] [-t] [-u] [build flags] [packages]<br>**选项：**<br>-d 仅仅下载，不安装<br>-f 配合-u，不去检查是否每个 import 语句对应的包以及从它的原始代码仓库检出<br>-fix  在解析依赖、构建代码之前，对下载的包运行 fix tool<br>-t 同时下载构建测试代码所需的依赖<br>-insecure 允许通过非安全连接下载代码<br>-u 使用网络下载包及其依赖<br>-v 显示详细输出<br> |
-| install |编译并安装包及其依赖 |
-| list |列出包 |
-| run |编译并运行程序 |
-| test |测试指定的包 |
-| tool |运行指定的 Go tool |
+| 子命令       | 说明                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| ------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ |
+| build        | 编译包及其依赖，但是不安装编译结果<br>当编译单个 main 包时，结果二进制文件的 basename 默认和第一个源文件（go build a.go b.go 输出a.exe）或者目录（go build unix/sam 输出 sam. exe）相同<br>当编译多个包或者单个非 main 包时，编译结果被丢弃，也就是仅仅验证编译是否可以通过<br>当编译包时，\_test. go 结尾的文件被忽略<br>**格式：**<br>go build [-o output] [-i] [build flags] [packages]<br>**选项：**<br>-o  仅编译单个包时可用，显式指定输出的二进制文件或对象文件的名字<br>-i 安装编译目标的依赖<br>-a 强制重新构建所有包，即使已经 up-to-date<br>-v 编译后打印被编译包的名称<br>-buildmode mode 构建模式<br>-compiler name 使用的编译器，gccgo gc<br>-gccgoflags 'arg list' 编译器 gccgo 的标记<br>-gcflags 'arg list'  编译器 gc 的标记，参考 go tool compile -help<br>-installsuffix suffix 包安装路径名后缀<br>-ldflags 'flag list'  链接标记，参考 go tool link -help<br>-linkshared 与共享库进行链接，共享库使用 -buildmode=shared 创建<br>-pkgdir dir  从 dir 安装、加载所有包，而非默认位置<br>**构建模式：**<br>-buildmode=archive  构建非 main 包为. a 文件，main 包被忽略<br>-buildmode=c-archive  构建 main 包以及所有它导入的包为 C 归档文件<br>-buildmode=c-shared 构建 main 包以及所有它导入的包为 C 共享库<br>-buildmode=shared 构建非 main 包为共享库，main 包被忽略<br>-buildmode=exe 构建 main 包以及所有它导入的包为可执行文件<br>-buildmode=pie  构建为位置独立可执行文件（PIE）<br>-buildmode=plugin 构建为 Go 插件<br>**示例：**<br>export GOROOT=/home/alex/Go/sdk/1.9.2<br>export GOPATH=/home/alex/Go/workspaces/default<br>pushd /home/alex/Go/workspaces/default/src/digital-app &gt; /dev/null<br>export PATH=/home/alex/Go/sdk/1.9.2/bin/:$PATH<br> <br># 构建<br>go build -i -o build/digitalsrv<br> <br># 静态连接<br># CGO_ENABLED 提示使用 cgo 而非 go 作为编译器，以便进行静态连接<br># -a 重新构建所有依赖<br># -ldflags '-s'减小二进制文件大小<br>CGO_ENABLED=0 go build -i -a -o build/digitalsrv -ldflags '-s'<br>                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| tool compile | 将单个 Go 包编译为对象文件<br>**格式：**go tool compile [flags] file...<br>**选项：**<br>-I dir1 -I dir2 导入包的搜索路径，在搜索 $GOROOT/pkg/$ GOOS\_$GOARCH 之后搜索<br>-N 禁用优化<br>-c int 编译时的并发度，默认 1<br>-dynlink 允许引用共享库中的 Go 符号<br>-l 禁用内联<br>-lang version 设置 Go 语言版本，例如-lang=go1.12<br>-largemodel 基于大内存模型的假设来编译<br>-pack 生成归档而非对象文件<br>-shared 生成能够链接到共享库的代码<br>-dwarf 生成 DWARF 符号<br>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| tool link    | 从 main 包中读取 Go 归档/object，以及它们的依赖，并链接为二进制文件<br>**格式：**<br>go tool link [flags] main. a<br> <br># 从 go build 调用<br>go build -ldflags "[flags]"<br>**选项：**<br>-D address 设置数据段地址<br>-T address 设置文本段地址<br>-E entry 设置入口符号名称<br>-H type 设置可执行文件格式类型，默认类型从 GOOS+GOARCH 推断<br>-I interpreter 设置使用的 ELF 动态链接器<br>-L dir1 -L dir2 在搜索 $GOROOT/pkg/$ GOOS*$GOARCH之后，从dir1 dir2中搜索导入包<br>-X importpath.name=value设置导入路径中的字符串变量name的值为value。示例：<br>-X github.com/stefanprodan/flagger/pkg/version.REVISION=$ {GIT_COMMIT}"<br>上述选项只有当源码中定义了 REVISION 变量且它的值没有初始化、或者初始化为常量字符串表达式时有意义：<br>package version<br> <br>var VERSION = "0.8.0"<br>var REVISION = "unknown"<br>-a 反汇编输出<br>-buildid id 设置 Go 工具链的 build id<br>-buildmode mode 构建模式，默认 exe<br>-c Dump 出调用图<br>-compressdwarf 如果可能压缩 DWARF，默认 true<br>-cpuprofile file 将 CPU profile 写入到文件<br>-d 禁止生成动态可执行文件。控制是否生成动态头。默认情况下即使没有引用任何动态库也会生成动态头<br>-dumpdep Dump 出符号依赖图<br>-extar ar 设置外部归档程序（默认 ar），仅配合-buildmode=c-archive 使用<br>-extld linker 设置外部链接器（默认 clang 或 gcc）<br>-extldflags flags 空格分隔的，传递给外部链接器的选项<br>-installsuffix suffix 从 $GOROOT/pkg/$ GOOS*$GOARCH_suffix 中搜索包，而非 $GOROOT/pkg/$ GOOS\_$GOARCH<br>-linkmode mode 设置链接模式，可选值 internal, external, auto<br>-linkshared 和已经安装的 Go 共享库进行链接<br>-msan 支持 C/C++内存消毒器<br>-n Dump 出符号表<br>-o 将输出写入到指定文件<br>-r dir1: dir2... 设置 ELF 动态链接器的搜索路径<br>-race 链接到竞态检测共享库<br>-s 移除符号表和调试信息<br>-shared 生成共享对象，隐含-linkmode external<br>-w 禁止 DWARF 生成<br>**链接模式：**<br>internal：解析并链接主机上的对象文件（ELF/Mach-O/PE ...）到最终可执行文件里面。由于实现宿主机链接器的全部功能存在困难，因此这种模式下能够链接的对象文件种类是受限的<br>external：为了支持链接到任何对象文件而不需要动态库，cgo 支持所谓外部链接模式。此模式下，所有 Go 代码被收集到 go. o 文件中，并通过宿主机链接器（通常 gcc）将 go. o 以及所有依赖的非 Go 的代码链接到最终可执行文件里面<br>大部分构建同时编译代码、调用链接器来创建二进制文件。在使用 cgo 的情况下，编译时期已经依赖 gcc，因此链接阶段再次依赖 gcc 没有问题<br> |
+| clean        | 移除编译后的对象文件（Object files）<br>**格式：**<br>go clean [-i] [-r] [-n] [-x] [build flags] [packages]<br>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| doc          | 显示包或者符号的文档<br>**格式：**<br>go doc [-u] [-c] [package                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                | [package.]symbol[. methodOrField]]<br> <br># 显示 fmt 包的 Errorf 函数的文档<br> go doc fmt Errorf<br> |
+| env          | 打印 Go 相关环境变量信息，相关的环境变量包括：<br>GOOS，目标操作系统，支持 darwin、freebsd、linux、windows、android 等<br>GOARCH，目标体系结构，支持 arm、arm64、386、amd64 等<br>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| fix          | 针对指定的包运行 Go fix 命令。Fix 能够查找到使用旧 API 的 Go 程序，并将其替换为新 API。升级到新版本的 Go 之后，可以调用此命令<br>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| fmt          | 指定指定的包源代码运行 gofmt                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| generate     | 通过处理源文件，产生 Go 文件                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| get          | 下载并安装包及其依赖<br>**格式：**go get [-d] [-f] [-fix] [-insecure] [-t] [-u] [build flags] [packages]<br>**选项：**<br>-d 仅仅下载，不安装<br>-f 配合-u，不去检查是否每个 import 语句对应的包以及从它的原始代码仓库检出<br>-fix  在解析依赖、构建代码之前，对下载的包运行 fix tool<br>-t 同时下载构建测试代码所需的依赖<br>-insecure 允许通过非安全连接下载代码<br>-u 使用网络下载包及其依赖<br>-v 显示详细输出<br>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| install      | 编译并安装包及其依赖                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| list         | 列出包                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| run          | 编译并运行程序                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| test         | 测试指定的包                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| tool         | 运行指定的 Go tool                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 
 # 依赖管理
 
@@ -3110,18 +3111,18 @@ curl https://glide.sh/get | sh
 
 常用子命令：
 
-| 子命令 |说明 |
-| ----------- |----------- |
-| create |别名 init，创建一个新工程，包含 glide. yaml 文件 |
-| cw |config-wizard，自动扫描代码中的依赖，给出依赖版本的建议 |
-| get |下载一或多个包到 vendor 目录，并在 glide. yaml 中添加依赖项 |
-| rm |从 glide. yaml 中移除依赖，重新生成 lock 文件 |
-| import |从其它依赖管理系统中导入文件 |
-| nv |列出目录下所有 non-vendor 路径，如果不希望测试依赖的包，可以：<br>go test $(glide novendor)<br> |
-| install |安装项目的依赖，读取 glide. lock 文件，根据其中的 commit id 来安装特定版本的包<br>如果 glide. lock 文件不存在，则此命令自动调用 glide update 并生成 glide. lock<br> |
-| update |更新项目的依赖 |
-| list |列出所有的依赖项 |
-| cc |清除 Glide 缓存 |
+| 子命令  | 说明                                                                                                                                                                |
+| ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| create  | 别名 init，创建一个新工程，包含 glide. yaml 文件                                                                                                                    |
+| cw      | config-wizard，自动扫描代码中的依赖，给出依赖版本的建议                                                                                                             |
+| get     | 下载一或多个包到 vendor 目录，并在 glide. yaml 中添加依赖项                                                                                                         |
+| rm      | 从 glide. yaml 中移除依赖，重新生成 lock 文件                                                                                                                       |
+| import  | 从其它依赖管理系统中导入文件                                                                                                                                        |
+| nv      | 列出目录下所有 non-vendor 路径，如果不希望测试依赖的包，可以：<br>go test $(glide novendor)<br>                                                                     |
+| install | 安装项目的依赖，读取 glide. lock 文件，根据其中的 commit id 来安装特定版本的包<br>如果 glide. lock 文件不存在，则此命令自动调用 glide update 并生成 glide. lock<br> |
+| update  | 更新项目的依赖                                                                                                                                                      |
+| list    | 列出所有的依赖项                                                                                                                                                    |
+| cc      | 清除 Glide 缓存                                                                                                                                                     |
 
 ## dep
 
@@ -3170,14 +3171,14 @@ dep ensure -update
 
 此文件由 dep init 自动生成，后续主要由人工编辑。此文件可以包含几种规则声明，以控制 dep 的行为：
 
-| 规则类型 |说明 |
-| ----------- |----------- |
-| constraints |定义直接依赖如何加入到依赖图中：<br> [[constraint]] <br># 导入路径<br>&nbsp;&nbsp; name = "github. com/user/project"<br># 导入的版本，可以指定 version branch 或 revision<br># version 操作符：<br># = 等于 ！= 不等于 &gt; 大于 &lt; 小于 &gt;= 大于等于 &lt;= 小于等于<br># - 版本范围，示例 1.2 - 1.4.5<br># ~ 小版本范围，示例 ~1.2.3 表示大于等于 1.2.3 但小于 1.3.0<br># ^ 大版本范围，示例 ^1.2.3 表示大于等于 1.2.3 但小于 2.0.0<br># xX* 通配符，示例&nbsp;&nbsp; 1.2. x 表示大于等于 1.2.0 但小于 1.3.0<br>&nbsp;&nbsp; version = "1.0.0"<br>&nbsp;&nbsp; branch = "master"<br># 通常是反模式，例如 Git 的 SHA1<br>&nbsp;&nbsp; revision = "abc123"<br> <br># 可选。此依赖的源码的替换位置（URL 或者导入路径），通常用在 fork 的场景下<br>&nbsp;&nbsp; source = "<https://github.> com/myfork/package. git"<br>&nbsp;&nbsp;[metadata]<br># 定义一些键值对，dep 本身不使用这些键值对<br> |
-| overrides |覆盖所有依赖（直接或传递）的规则，应当小心使用。示例：<br> [[override]] <br>&nbsp;&nbsp; name = "k8s. io/api"<br>&nbsp;&nbsp; version = "kubernetes-1.11.0"<br> <br> [[override]] <br>&nbsp;&nbsp; name = "k8s. io/apimachinery"<br>&nbsp;&nbsp; version = "kubernetes-1.11.0"<br> <br> [[override]] <br>&nbsp;&nbsp; name = "k8s. io/code-generator"<br>&nbsp;&nbsp; version = "kubernetes-1.11.0"<br> <br> [[override]] <br>&nbsp;&nbsp; name = "k8s. io/client-go"<br>&nbsp;&nbsp; version = "kubernetes-1.11.0" <br> |
-| required |必须在任何 [[constraint]] 或 [[override]] 之前声明<br>dep 通过分析 go 代码中的 import 语句来构建一个依赖图。required/ignored 规则用于操控此依赖图<br>required 列出必须包含在 Gopkg. lock 中的包的列表，此列表会和当前项目导入的包合并。required 可以**强制声明一个未 import 的包为项目的直接依赖**<br>对于 linter、generator 或者其它开发工具，如果：<br>1. 被当前项目使用<br>2. 不被直接或传递的导入到当前项目<br>3. 你不需要把这些工具加入 GOPATH，或者你想锁定版本<br>则可以使用 required 规则声明：<br>required = ["k8s. io/code-generator/cmd/client-gen"]<br> |
-| ignored |必须在任何 [[constraint]] 或 [[override]] 之前声明<br>dep 通过分析 go 代码中的 import 语句来构建一个依赖图。required/ignored 规则用于操控此依赖图<br>required 列出 dep 进行静态代码分析时需要忽略的包，可以使用通配符：<br>ignored = ["github. com/user/project/badpkg*"]<br> |
-| metadata |定义供第三方工具使用的元数据，可以定义在根下，或者 constraint、override 下 |
-| prune |定义全局/某个项目的依赖修剪选项。这些选项决定了写入 vendor 时哪些文件被忽略<br>支持以下变量，取值均为布尔：<br>1. unused-packages 提示不在包导入图中出现的目录，应该被修剪掉<br>2. non-go 提示不被 Go 使用的文件应该修剪掉<br>3. go-tests 将 Go 测试文件修剪掉<br>dep init 会自动生成：<br>[prune]<br>&nbsp;&nbsp; go-tests = true<br>&nbsp;&nbsp; unused-packages = true<br>你可以为每个项目（依赖）定义修剪规则：<br>[prune]<br>&nbsp;&nbsp; non-go = true<br> <br>&nbsp;&nbsp; [[prune.project]] <br>&nbsp;&nbsp;&nbsp;&nbsp; name = "github. com/project/name"<br>&nbsp;&nbsp;&nbsp;&nbsp; go-tests = true<br>&nbsp;&nbsp;&nbsp;&nbsp; non-go = false<br> |
+| 规则类型    | 说明                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| ----------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| constraints | 定义直接依赖如何加入到依赖图中：<br> [[constraint]] <br># 导入路径<br>&nbsp;&nbsp; name = "github. com/user/project"<br># 导入的版本，可以指定 version branch 或 revision<br># version 操作符：<br># = 等于 ！= 不等于 &gt; 大于 &lt; 小于 &gt;= 大于等于 &lt;= 小于等于<br># - 版本范围，示例 1.2 - 1.4.5<br># ~ 小版本范围，示例 ~1.2.3 表示大于等于 1.2.3 但小于 1.3.0<br># ^ 大版本范围，示例 ^1.2.3 表示大于等于 1.2.3 但小于 2.0.0<br># xX\* 通配符，示例&nbsp;&nbsp; 1.2. x 表示大于等于 1.2.0 但小于 1.3.0<br>&nbsp;&nbsp; version = "1.0.0"<br>&nbsp;&nbsp; branch = "master"<br># 通常是反模式，例如 Git 的 SHA1<br>&nbsp;&nbsp; revision = "abc123"<br> <br># 可选。此依赖的源码的替换位置（URL 或者导入路径），通常用在 fork 的场景下<br>&nbsp;&nbsp; source = "<https://github.> com/myfork/package. git"<br>&nbsp;&nbsp;[metadata]<br># 定义一些键值对，dep 本身不使用这些键值对<br> |
+| overrides   | 覆盖所有依赖（直接或传递）的规则，应当小心使用。示例：<br> [[override]] <br>&nbsp;&nbsp; name = "k8s. io/api"<br>&nbsp;&nbsp; version = "kubernetes-1.11.0"<br> <br> [[override]] <br>&nbsp;&nbsp; name = "k8s. io/apimachinery"<br>&nbsp;&nbsp; version = "kubernetes-1.11.0"<br> <br> [[override]] <br>&nbsp;&nbsp; name = "k8s. io/code-generator"<br>&nbsp;&nbsp; version = "kubernetes-1.11.0"<br> <br> [[override]] <br>&nbsp;&nbsp; name = "k8s. io/client-go"<br>&nbsp;&nbsp; version = "kubernetes-1.11.0" <br>                                                                                                                                                                                                                                                                                                                                                                           |
+| required    | 必须在任何 [[constraint]] 或 [[override]] 之前声明<br>dep 通过分析 go 代码中的 import 语句来构建一个依赖图。required/ignored 规则用于操控此依赖图<br>required 列出必须包含在 Gopkg. lock 中的包的列表，此列表会和当前项目导入的包合并。required 可以**强制声明一个未 import 的包为项目的直接依赖**<br>对于 linter、generator 或者其它开发工具，如果：<br>1. 被当前项目使用<br>2. 不被直接或传递的导入到当前项目<br>3. 你不需要把这些工具加入 GOPATH，或者你想锁定版本<br>则可以使用 required 规则声明：<br>required = ["k8s. io/code-generator/cmd/client-gen"]<br>                                                                                                                                                                                                                                                                                                                                |
+| ignored     | 必须在任何 [[constraint]] 或 [[override]] 之前声明<br>dep 通过分析 go 代码中的 import 语句来构建一个依赖图。required/ignored 规则用于操控此依赖图<br>required 列出 dep 进行静态代码分析时需要忽略的包，可以使用通配符：<br>ignored = ["github. com/user/project/badpkg*"]<br>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+| metadata    | 定义供第三方工具使用的元数据，可以定义在根下，或者 constraint、override 下                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| prune       | 定义全局/某个项目的依赖修剪选项。这些选项决定了写入 vendor 时哪些文件被忽略<br>支持以下变量，取值均为布尔：<br>1. unused-packages 提示不在包导入图中出现的目录，应该被修剪掉<br>2. non-go 提示不被 Go 使用的文件应该修剪掉<br>3. go-tests 将 Go 测试文件修剪掉<br>dep init 会自动生成：<br>[prune]<br>&nbsp;&nbsp; go-tests = true<br>&nbsp;&nbsp; unused-packages = true<br>你可以为每个项目（依赖）定义修剪规则：<br>[prune]<br>&nbsp;&nbsp; non-go = true<br> <br>&nbsp;&nbsp; [[prune.project]] <br>&nbsp;&nbsp;&nbsp;&nbsp; name = "github. com/project/name"<br>&nbsp;&nbsp;&nbsp;&nbsp; go-tests = true<br>&nbsp;&nbsp;&nbsp;&nbsp; non-go = false<br>                                                                                                                                                                                                                                      |
 
 ## vgo
 
@@ -3186,7 +3187,7 @@ dep ensure -update
 ### 安装
 
 ```shell
-go get -u golang. org/x/vgo 
+go get -u golang. org/x/vgo
 ```
 
 ### go. mod
@@ -3197,14 +3198,14 @@ go get -u golang. org/x/vgo
 
 vgo 具有同名的 CLI，可以使用的子命令包括：
 
-| 子命令 |说明 |
-| ----------- |----------- |
-| install |安装依赖 |
-| build |编译项目 |
-| run |运行项目 |
-| get github. com/pkg |获取依赖的最新版本。依赖包数据会缓存到 GOPATH 路径下的 src/mod 目录<br> |
-| get github. com/ pkg@v1.0 |获取依赖的指定版本 |
-| mod -vendor |将依赖直接放在 vendor 目录中 |
+| 子命令                    | 说明                                                                    |
+| ------------------------- | ----------------------------------------------------------------------- |
+| install                   | 安装依赖                                                                |
+| build                     | 编译项目                                                                |
+| run                       | 运行项目                                                                |
+| get github. com/pkg       | 获取依赖的最新版本。依赖包数据会缓存到 GOPATH 路径下的 src/mod 目录<br> |
+| get github. com/ pkg@v1.0 | 获取依赖的指定版本                                                      |
+| mod -vendor               | 将依赖直接放在 vendor 目录中                                            |
 
 ## go modules
 
@@ -3224,7 +3225,7 @@ Go modules 在 1.11 属于试验特性，环境变量`GO111MODULE`用于控制�
 
 3. 如果需要限定依赖的版本，你可以选用以下方法之一：
 
-    1. 使用 go get，例如：
+   1. 使用 go get，例如：
 
 ```shell
 go get foo@v1.2.3
@@ -3270,16 +3271,17 @@ export GOPRIVATE=*. pacloud. io,*. gmem. cc
 
 Go modules 在`go mod`下定义了若干子命令：
 
-| 子命令 |说明 |
-| ----------- |----------- |
-| init |初始化一个新模块，示例：<br>cd gotools<br>go mod init github. com/gmemcc/gotools<br> |
-| download |将模块下载到本地缓存 |
-| edit |编辑 go. mod |
-| graph |打印模块依赖图 |
-| tidy |添加缺失的、移除多余的模块 |
-| vendor |将依赖的副本拷贝到 vendor 目录 |
-| verify |验证依赖是否满足期望 |
-| why |解释包或模块为何被 main 模块需要：<br>go mod why github. com/coreos/etcd<br> |
+| 子命令   | 说明                                                                                 |
+| -------- | ------------------------------------------------------------------------------------ |
+| init     | 初始化一个新模块，示例：<br>cd gotools<br>go mod init github. com/gmemcc/gotools<br> |
+| download | 将模块下载到本地缓存                                                                 |
+| edit     | 编辑 go. mod                                                                         |
+| graph    | 打印模块依赖图                                                                       |
+| tidy     | 添加缺失的、移除多余的模块                                                           |
+| vendor   | 将依赖的副本拷贝到 vendor 目录                                                       |
+| verify   | 验证依赖是否满足期望                                                                 |
+| why      | 解释包或模块为何被 main 模块需要：<br>go mod why github. com/coreos/etcd<br>         |
+
 此外，你还可能用到以下 Go 命令：
 
 ```shell
@@ -3314,12 +3316,12 @@ go mod vendor
 
 仅仅包含四个指令：
 
-| 指令 |说明 |
-| ----------- |----------- |
-| module |声明当前模块的标识：module github. com/my/thing<br>此标识提供了模块路径（module path），模块中所有包的导入路径，都以此模块路径为前缀。模块路径 + 包相对于 go. mod 的路径共同决定了包的导入路径<br> |
-| require |声明依赖：<br>require (<br>&nbsp;&nbsp;&nbsp;&nbsp; github. com/some/dependency v1.2.3<br>&nbsp;&nbsp;&nbsp;&nbsp; github. com/another/dependency/v4 v4.0.0<br>)<br> |
-| replace |仅仅针对当前（主）模块，在构建主模块时，非主模块的 go. mod 中 replace 声明被忽略。该指令可以：<br>1. 用来映射导入路径（在你 Fork 一个项目并做补丁的情况下使用）：<br># 模块代码中使用的导入路径&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 实际寻找代码时的导入路径<br>replace example. com/original/import/path =&gt; /your/forked/import/path<br>2. 精确的控制依赖的版本：<br>replace example. com/some/dependency =&gt; example. com/some/dependency v1.2.3<br>3. 提示一个多模块协作项目的模块位于磁盘的绝对、相对路径：<br>module example. com/me/hello<br> <br>require (<br>&nbsp;&nbsp; example. com/me/goodbye v0.0.0<br>)<br> <br>replace git. yun. gmem. cc/eks/chart-service =&gt; ../chart-service<br>这种用法可以将依赖位置定位到磁盘，解除对 VCS 的依赖<br> |
-| exclude |仅仅针对当前（主）模块，在构建主模块时，非主模块的 go. mod 中 exclude 声明被忽略<br>该指令用于禁止某个直接或传递性的依赖包，例如：<br>exclude k8s. io/client-go v2.0.0-alpha. 0.0.20190313235726-6ee68ca5fd83+incompatible<br> |
+| 指令    | 说明                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| module  | 声明当前模块的标识：module github. com/my/thing<br>此标识提供了模块路径（module path），模块中所有包的导入路径，都以此模块路径为前缀。模块路径 + 包相对于 go. mod 的路径共同决定了包的导入路径<br>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| require | 声明依赖：<br>require (<br>&nbsp;&nbsp;&nbsp;&nbsp; github. com/some/dependency v1.2.3<br>&nbsp;&nbsp;&nbsp;&nbsp; github. com/another/dependency/v4 v4.0.0<br>)<br>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
+| replace | 仅仅针对当前（主）模块，在构建主模块时，非主模块的 go. mod 中 replace 声明被忽略。该指令可以：<br>1. 用来映射导入路径（在你 Fork 一个项目并做补丁的情况下使用）：<br># 模块代码中使用的导入路径&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 实际寻找代码时的导入路径<br>replace example. com/original/import/path =&gt; /your/forked/import/path<br>2. 精确的控制依赖的版本：<br>replace example. com/some/dependency =&gt; example. com/some/dependency v1.2.3<br>3. 提示一个多模块协作项目的模块位于磁盘的绝对、相对路径：<br>module example. com/me/hello<br> <br>require (<br>&nbsp;&nbsp; example. com/me/goodbye v0.0.0<br>)<br> <br>replace git. yun. gmem. cc/eks/chart-service =&gt; ../chart-service<br>这种用法可以将依赖位置定位到磁盘，解除对 VCS 的依赖<br> |
+| exclude | 仅仅针对当前（主）模块，在构建主模块时，非主模块的 go. mod 中 exclude 声明被忽略<br>该指令用于禁止某个直接或传递性的依赖包，例如：<br>exclude k8s. io/client-go v2.0.0-alpha. 0.0.20190313235726-6ee68ca5fd83+incompatible<br>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
 
 ### 模块
 
@@ -3477,7 +3479,7 @@ module helm. sh/helm/v3
 
 ```shell
 #                                          注意这个 v3 不能少，否则报错
-# replace git. pacloud. io/pks/helm: version "v3.0.2" invalid: module contains a go. mod file, 
+# replace git. pacloud. io/pks/helm: version "v3.0.2" invalid: module contains a go. mod file,
 # so major version must be compatible: should be v0 or v1, not v3
 helm. sh/helm/v3 => git. pacloud. io/pks/helm/v3 v3.0.2
 ```
@@ -3805,41 +3807,41 @@ dlv connect localhost:2345
 
 连接到被调试应用程序后，你会看到`(dlv)`命令提示符，以下命令可用：
 
-|   |命令 |说明 |
-| ----------- |----------- |----------- |
-| h |help |显示命令列表，或者显示某个命令的帮助：<br># 显示命令列表<br>help<br># 显示 config 命令的帮助信息<br>help config <br> |
-|  |config |进行 dlv 配置：<br># 列出配置<br>config -list<br> <br># 保存位置到磁盘，覆盖当前配置文件<br>config -save<br>示例：<br># 进行源码路径映射<br>config substitute-path /go/src /home/alex/Go/workspaces/default/src <br> |
-| b |break |设置断点，格式：break [name] &lt; linespec&gt;<br>其中 linespec 格式可以是：<br>1. *&lt; address&gt;，内存地址<br>2. &lt; filename&gt;:&lt; line&gt;，文件路径和行号，文件路径可以是部分路径，甚至仅仅是 basename，只要不产生歧义即可<br>3. +&lt; offset&gt;，当前行的后面 N 行<br>4. -&lt; offset&gt;，当前行的前面 N 行<br>5. &lt; function&gt;[:&lt; line&gt;]，指定函数的第 N 行，函数的完整形式&lt; package&gt;. (*&lt; receiver type&gt;).&lt; function name&gt;，但是仅仅 function name 是必须的，其它的可以省略（只要不产生歧义）<br>6. /&lt; regex&gt;/，匹配正则式的位置<br>示例：<br>b pkg/cmd/cli/restic/server. go:156 <br> |
-| cond |condition |设置条件式断点：condition &lt; breakpoint name or id&gt; &lt; boolean expression&gt; |
-| bp |breakpoints |列出断点 |
-|  |clear |删除一个断点：clear &lt; breakpoint name or id&gt; |
-|  |clearall |删除全部断点 |
-|  |on |到达断点时执行命令：on &lt; breakpoint name or id&gt; &lt; command&gt;，可用命令 print, stack, goroutine |
-| c |continue |执行到下一个断点，或者程序结束 |
-|  |locals |打印本地变量：[goroutine &lt; n&gt;] [frame &lt; m&gt;] locals [-v] [&lt; regex&gt;] |
-|  |vars |打印包变量：vars [-v] [&lt; regex&gt;] |
-|  |print |估算一个表达式的值：[goroutine &lt; n&gt;] [frame &lt; m&gt;] print &lt; expression&gt; |
-|  |whatis |打印表达式的类型：whatis &lt; expression&gt; |
-|  |set |设置变量的值：[goroutine &lt; n&gt;] [frame &lt; m&gt;] set &lt; variable&gt; = &lt; value&gt; |
-| n |next |Step Over：next [count]，count 指定前进多少行 |
-| s |step |单步跟踪，遇到函数会自动 Step Into |
-| so |stepout |Step Out |
-| bt |stack |打印当前调用栈 |
-|  |up |向上移动帧，可以同时指定在其上执行命令：up [&lt; m&gt;] &lt; command&gt; |
-|  |down |向下移动帧，可以同时指定在其上执行命令：down [&lt; m&gt;] &lt; command&gt; |
-|  |frame |设置当前帧，或者在一个指定的帧上执行命令 ：frame &lt; m&gt; &lt; command&gt; |
-| l |list |列出当前调用栈对应的源码<br>也可以指定列出任何协程的源码：[goroutine &lt; n&gt;] [frame &lt; m&gt;] list [&lt; linespec&gt;]<br> |
-|  |funcs |列出函数，一般都要带正则式，否则太多了： |
-| gr |goroutine |显示协程，或者切换当前协程：goroutine &lt; id&gt; &lt; command&gt; |
-| grs |goroutines |列出所有协程 |
-|  |libraries |列出加载的动态库 |
-|  |sources |列出所有源文件清单 |
-|  |restart |重启被调试进程，dlv 进程保持不变 |
-| q |exit |退出调试客户端 |
-|  |deferred |在延迟调用上下文中执行命令 |
-|  |args |打印程序参数 |
-|  |disassemble |执行反汇编 |
-|  |regs |打印寄存器内容 |
+|      | 命令        | 说明                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| ---- | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| h    | help        | 显示命令列表，或者显示某个命令的帮助：<br># 显示命令列表<br>help<br># 显示 config 命令的帮助信息<br>help config <br>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+|      | config      | 进行 dlv 配置：<br># 列出配置<br>config -list<br> <br># 保存位置到磁盘，覆盖当前配置文件<br>config -save<br>示例：<br># 进行源码路径映射<br>config substitute-path /go/src /home/alex/Go/workspaces/default/src <br>                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| b    | break       | 设置断点，格式：break [name] &lt; linespec&gt;<br>其中 linespec 格式可以是：<br>1. _&lt; address&gt;，内存地址<br>2. &lt; filename&gt;:&lt; line&gt;，文件路径和行号，文件路径可以是部分路径，甚至仅仅是 basename，只要不产生歧义即可<br>3. +&lt; offset&gt;，当前行的后面 N 行<br>4. -&lt; offset&gt;，当前行的前面 N 行<br>5. &lt; function&gt;[:&lt; line&gt;]，指定函数的第 N 行，函数的完整形式&lt; package&gt;. (_&lt; receiver type&gt;).&lt; function name&gt;，但是仅仅 function name 是必须的，其它的可以省略（只要不产生歧义）<br>6. /&lt; regex&gt;/，匹配正则式的位置<br>示例：<br>b pkg/cmd/cli/restic/server. go:156 <br> |
+| cond | condition   | 设置条件式断点：condition &lt; breakpoint name or id&gt; &lt; boolean expression&gt;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| bp   | breakpoints | 列出断点                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+|      | clear       | 删除一个断点：clear &lt; breakpoint name or id&gt;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+|      | clearall    | 删除全部断点                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+|      | on          | 到达断点时执行命令：on &lt; breakpoint name or id&gt; &lt; command&gt;，可用命令 print, stack, goroutine                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| c    | continue    | 执行到下一个断点，或者程序结束                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+|      | locals      | 打印本地变量：[goroutine &lt; n&gt;] [frame &lt; m&gt;] locals [-v] [&lt; regex&gt;]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+|      | vars        | 打印包变量：vars [-v] [&lt; regex&gt;]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+|      | print       | 估算一个表达式的值：[goroutine &lt; n&gt;] [frame &lt; m&gt;] print &lt; expression&gt;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+|      | whatis      | 打印表达式的类型：whatis &lt; expression&gt;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+|      | set         | 设置变量的值：[goroutine &lt; n&gt;] [frame &lt; m&gt;] set &lt; variable&gt; = &lt; value&gt;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| n    | next        | Step Over：next [count]，count 指定前进多少行                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| s    | step        | 单步跟踪，遇到函数会自动 Step Into                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| so   | stepout     | Step Out                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| bt   | stack       | 打印当前调用栈                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+|      | up          | 向上移动帧，可以同时指定在其上执行命令：up [&lt; m&gt;] &lt; command&gt;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+|      | down        | 向下移动帧，可以同时指定在其上执行命令：down [&lt; m&gt;] &lt; command&gt;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+|      | frame       | 设置当前帧，或者在一个指定的帧上执行命令 ：frame &lt; m&gt; &lt; command&gt;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| l    | list        | 列出当前调用栈对应的源码<br>也可以指定列出任何协程的源码：[goroutine &lt; n&gt;] [frame &lt; m&gt;] list [&lt; linespec&gt;]<br>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+|      | funcs       | 列出函数，一般都要带正则式，否则太多了：                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| gr   | goroutine   | 显示协程，或者切换当前协程：goroutine &lt; id&gt; &lt; command&gt;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| grs  | goroutines  | 列出所有协程                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+|      | libraries   | 列出加载的动态库                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+|      | sources     | 列出所有源文件清单                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+|      | restart     | 重启被调试进程，dlv 进程保持不变                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| q    | exit        | 退出调试客户端                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+|      | deferred    | 在延迟调用上下文中执行命令                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+|      | args        | 打印程序参数                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+|      | disassemble | 执行反汇编                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
+|      | regs        | 打印寄存器内容                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 
 # 常见问题
 

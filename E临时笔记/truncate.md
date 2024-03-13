@@ -8,7 +8,6 @@ layout: note
 
 ---
 
-
 ## 参考
 
 1. [gnu coreutils-truncate](https://www.gnu.org/software/coreutils/manual/html_node/truncate-invocation.html#truncate-invocation)

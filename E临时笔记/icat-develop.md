@@ -21,10 +21,11 @@ layout: note
 
 'show-ends'
 ![](Pasted%20image%2020230730020615%201.png)
+
 - cat:
 
   ![](cat%20strace.png)
 
 - uu-cat:
-v0.0.20
-![](Pasted%20image%2020230729211315%201.png)
+  v0.0.20
+  ![](Pasted%20image%2020230729211315%201.png)

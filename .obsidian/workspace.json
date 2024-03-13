@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "index.md",
+                "file": "D每日笔记/2022-05-02.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "index.md",
+                "file": "D每日笔记/2022-05-02.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "index.md",
+                "file": "D每日笔记/2022-05-02.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "index.md"
+                "file": "D每日笔记/2022-05-02.md"
               }
             }
           },
@@ -140,6 +140,14 @@
                 "showSearch": false,
                 "searchQuery": ""
               }
+            }
+          },
+          {
+            "id": "96e789b068ba3050",
+            "type": "leaf",
+            "state": {
+              "type": "timeline",
+              "state": {}
             }
           }
         ],
@@ -159,13 +167,19 @@
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
-      "obsidian-excalidraw-plugin:Create new drawing": false
+      "obsidian-excalidraw-plugin:Create new drawing": false,
+      "obsidian-day-planner:Timeline": false
     }
   },
   "active": "992a633baf27e2ed",
   "lastOpenFiles": [
-    "A计科工程.md",
+    "D每日笔记/2022-05-03.md",
+    "D每日笔记/2022-05-09.md",
+    "D每日笔记/2022-05-02.md",
+    "C知识宝库/翻译积累.md",
     "index.md",
+    "C知识宝库/Markdown教程.md",
+    "A计科工程.md",
     "KDE 6 体验报告.md",
     "Untitled",
     "Bilibili福利社兑换.md",
@@ -174,7 +188,6 @@
     "Excalidraw",
     "A计科工程/主机运维/Linux/Linux 透明代理.md",
     "A计科工程/主机运维/Linux/nftables.md",
-    "C知识宝库/Markdown教程.md",
     "A计科工程/编程语言/Go/Golang 笔记.md",
     "A计科工程/编程语言/Go/字符串.md",
     "ESP32.md",
@@ -196,11 +209,7 @@
     "娱乐记录.md",
     "学习记录.md",
     "输入法测试.md",
-    "项目记录.md",
-    "E临时笔记/计算机网络.md",
     "E临时笔记/虚拟内存.canvas",
-    "E临时笔记/wine.md",
-    "E临时笔记/Untitled 1.md",
     "新功能测试.canvas",
     "Untitled.canvas"
   ]

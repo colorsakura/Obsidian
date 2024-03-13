@@ -3,12 +3,12 @@ layout: note
 
 excalidraw-plugin: parsed
 tags: [excalidraw]
-
 ---
-==⚠  Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠==
 
+==⚠ Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠==
 
 # Text Elements
+
 网卡 ^5EdKHo23
 
 内核空间 ^ZAS1RDgo
@@ -16,7 +16,9 @@ tags: [excalidraw]
 用户空间 ^m5VkCs1t
 
 %%
+
 # Drawing
+
 ```compressed-json
 N4KAkARALgngDgUwgLgAQQQDwMYEMA2AlgCYBOuA7hADTgQBuCpAzoQPYB2KqATL
 
@@ -208,4 +210,5 @@ mw9/qHSwmancmdB6FD7o8bBmmInSmom/NQaPiumSmoAymdAX5Jlw1I0hmWnem8nA
 
 N6wgA===
 ```
+
 %%

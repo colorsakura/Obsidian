@@ -7,5 +7,3 @@ layout: note
 # SMARTDNS
 
 ---
-
-

@@ -3,12 +3,12 @@ layout: note
 
 excalidraw-plugin: parsed
 tags: [excalidraw]
-
 ---
-==⚠  Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠==
 
+==⚠ Switch to EXCALIDRAW VIEW in the MORE OPTIONS menu of this document. ⚠==
 
 # Text Elements
+
 string ^qJGrM8gO
 
 start ^W5Cc3mxt
@@ -35,7 +35,9 @@ yes ^D40g28DI
 no ^Kyolpg16
 
 %%
+
 # Drawing
+
 ```compressed-json
 N4KAkARALgngDgUwgLgAQQQDwMYEMA2AlgCYBOuA7hADTgQBuCpAzoQPYB2KqATL
 
@@ -413,4 +415,5 @@ QKOFRizga9HClfQGp9J9xqYxAGXcZvTb5IrwBAaoE7qZSfhTJdACSLcw+SfhKwQA
 
 A===
 ```
+
 %%

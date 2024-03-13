@@ -26,10 +26,10 @@ QEMU/KVM 环境需要安装很多的组件，它们各司其职：
 4. virt-manager: 用于管理虚拟机的 GUI 界面（可以管理远程 kvm 主机）。
 5. virt-viewer: 通过 GUI 界面直接与虚拟机交互（可以管理远程 kvm 主机）。
 6. dnsmasq vde2 bridge-utils openbsd-netcat: 网络相关组件，提供了以太网虚拟化、网络桥接、NAT网络等虚拟网络功能。
-    - dnsmasq 提供了 NAT 虚拟网络的 DHCP 及 DNS 解析功能。
-    - vde2: 以太网虚拟化
-    - bridge-utils: 顾名思义，提供网络桥接相关的工具。
-    - openbsd-netcat: TCP/IP 的瑞士军刀，详见 [socat & netcat](https://thiscute.world/posts/socat-netcat/)，这里不清楚是哪个网络组件会用到它。
+   - dnsmasq 提供了 NAT 虚拟网络的 DHCP 及 DNS 解析功能。
+   - vde2: 以太网虚拟化
+   - bridge-utils: 顾名思义，提供网络桥接相关的工具。
+   - openbsd-netcat: TCP/IP 的瑞士军刀，详见 [socat & netcat](https://thiscute.world/posts/socat-netcat/)，这里不清楚是哪个网络组件会用到它。
 
 安装命令：
 
@@ -119,7 +119,7 @@ echo "options kvm-intel nested=1" | sudo tee /etc/modprobe.d/kvm-intel.conf
 验证嵌套虚拟化已经启用：
 
 ```shell
-$ cat /sys/module/kvm_intel/parameters/nested 
+$ cat /sys/module/kvm_intel/parameters/nested
 Y
 ```
 

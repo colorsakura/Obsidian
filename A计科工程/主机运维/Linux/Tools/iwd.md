@@ -7,7 +7,8 @@ tags:
   - linux
 ---
 
-# IWD 
+# IWD
 
 ---
+
 https://wiki.archlinux.org/title/Iwd

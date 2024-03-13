@@ -12,5 +12,4 @@ tags: TODO
 
 ---
 
-
 ![[ESP32-devkit-pinout.png]]
