@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "579cbbbe49f67656",
+        "id": "44a910c9b9578fe0",
         "type": "tabs",
         "children": [
           {
-            "id": "fb697eb3784780f7",
+            "id": "992a633baf27e2ed",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "C知识宝库/数据结构.md",
+                "file": "index.md",
                 "mode": "source",
                 "backlinks": false,
                 "source": false
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "C知识宝库/数据结构.md",
+                "file": "index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "C知识宝库/数据结构.md",
+                "file": "index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "C知识宝库/数据结构.md"
+                "file": "index.md"
               }
             }
           },
@@ -162,8 +162,14 @@
       "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "fb697eb3784780f7",
+  "active": "992a633baf27e2ed",
   "lastOpenFiles": [
+    "A计科工程.md",
+    "index.md",
+    "KDE 6 体验报告.md",
+    "Untitled",
+    "Bilibili福利社兑换.md",
+    "C知识宝库/数据结构.md",
     "Excalidraw/Linux Lancher.excalidraw.md",
     "Excalidraw",
     "A计科工程/主机运维/Linux/Linux 透明代理.md",
@@ -174,7 +180,6 @@
     "ESP32.md",
     "Rime.md",
     "ltex.md",
-    "index.md",
     "H其他文件/IMG/Pasted image 20230903181204 1.png",
     "H其他文件/IMG/Pasted image 20230729211315 1.png",
     "H其他文件/IMG/Pasted image 20230729205214 1.png",
@@ -196,10 +201,6 @@
     "E临时笔记/虚拟内存.canvas",
     "E临时笔记/wine.md",
     "E临时笔记/Untitled 1.md",
-    "E临时笔记/Untitled.md",
-    "E临时笔记/systemd-networkd.md",
-    "E临时笔记/Rime.md",
-    "E临时笔记/strace.md",
     "新功能测试.canvas",
     "Untitled.canvas"
   ]
