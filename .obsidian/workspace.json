@@ -11,9 +11,12 @@
             "id": "fb697eb3784780f7",
             "type": "leaf",
             "state": {
-              "type": "excalidraw",
+              "type": "markdown",
               "state": {
-                "file": "Excalidraw/Linux Lancher.excalidraw.md"
+                "file": "C知识宝库/数据结构.md",
+                "mode": "source",
+                "backlinks": false,
+                "source": false
               }
             }
           }
@@ -83,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Excalidraw/Linux Lancher.excalidraw.md",
+                "file": "C知识宝库/数据结构.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -100,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Excalidraw/Linux Lancher.excalidraw.md",
+                "file": "C知识宝库/数据结构.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -123,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Excalidraw/Linux Lancher.excalidraw.md"
+                "file": "C知识宝库/数据结构.md"
               }
             }
           },
