@@ -4,18 +4,18 @@
     "type": "split",
     "children": [
       {
-        "id": "44a910c9b9578fe0",
+        "id": "5305516096e772a0",
         "type": "tabs",
         "children": [
           {
-            "id": "992a633baf27e2ed",
+            "id": "82c254e974455cb1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "D每日笔记/2022-05-02.md",
+                "file": "index.md",
                 "mode": "source",
-                "backlinks": false,
+                "backlinks": true,
                 "source": false
               }
             }
@@ -70,7 +70,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 281.5
   },
   "right": {
     "id": "729cbd70bd48bb1d",
@@ -86,7 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "D每日笔记/2022-05-02.md",
+                "file": "index.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "D每日笔记/2022-05-02.md",
+                "file": "index.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +126,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "D每日笔记/2022-05-02.md"
+                "file": "index.md"
               }
             }
           },
@@ -171,46 +171,47 @@
       "obsidian-day-planner:Timeline": false
     }
   },
-  "active": "992a633baf27e2ed",
+  "active": "82c254e974455cb1",
   "lastOpenFiles": [
-    "D每日笔记/2022-05-03.md",
-    "D每日笔记/2022-05-09.md",
-    "D每日笔记/2022-05-02.md",
-    "C知识宝库/翻译积累.md",
+    "代办列表.md",
+    "E临时笔记/htop.md",
+    "项目记录.md",
+    "阅读记录.md",
+    "常用工具.md",
+    "学习记录.md",
+    "娱乐记录.md",
     "index.md",
-    "C知识宝库/Markdown教程.md",
-    "A计科工程.md",
-    "KDE 6 体验报告.md",
-    "Untitled",
-    "Bilibili福利社兑换.md",
-    "C知识宝库/数据结构.md",
-    "Excalidraw/Linux Lancher.excalidraw.md",
-    "Excalidraw",
-    "A计科工程/主机运维/Linux/Linux 透明代理.md",
-    "A计科工程/主机运维/Linux/nftables.md",
-    "A计科工程/编程语言/Go/Golang 笔记.md",
-    "A计科工程/编程语言/Go/字符串.md",
-    "ESP32.md",
-    "Rime.md",
+    "Untitled 1.md",
+    "H其他文件/模板/笔记.md",
+    "H其他文件/模板/日记.md",
+    "H其他文件/模板/阅读.md",
+    "H其他文件/IMG/htop-ui.png",
+    "Untitled.canvas",
+    "E临时笔记/texlive.md",
+    "E临时笔记/Rime 1.md",
     "ltex.md",
+    "E临时笔记/javascript笔记.md",
+    "E临时笔记/KDE 6 体验报告.md",
+    "A计科工程/主机运维/Linux/Linux 虚拟机.md",
+    "E临时笔记/kvm.md",
+    "E临时笔记/Rime.md",
+    "E临时笔记/计算机网络.md",
+    "E临时笔记/虚拟内存.canvas",
+    "E临时笔记/wine.md",
+    "E临时笔记/zram.md",
+    "E临时笔记/Untitled.md",
+    "E临时笔记/Untitled 1.md",
+    "E临时笔记/go.md",
+    "Untitled",
+    "Excalidraw",
     "H其他文件/IMG/Pasted image 20230903181204 1.png",
     "H其他文件/IMG/Pasted image 20230729211315 1.png",
     "H其他文件/IMG/Pasted image 20230729205214 1.png",
     "H其他文件/IMG/Pasted image 20230903180957 1.png",
     "H其他文件/IMG/Pasted image 20230730020615 1.png",
-    "阅读记录.md",
     "F阅读娱乐/阅读/秒懂设计模式2021.md~",
-    "F阅读娱乐/阅读/秒懂设计模式2021.md",
     "F阅读娱乐/阅读/秒懂设计模式2021.lmd",
     "A计科工程/编程语言/Go/字符串.md~",
-    "A计科工程/主机运维/Linux/Linux 字体调教指南.md",
-    "F阅读娱乐/阅读/76878451-9303-4d73-9c64-e56d309348be.md",
-    "回调函数.md",
-    "娱乐记录.md",
-    "学习记录.md",
-    "输入法测试.md",
-    "E临时笔记/虚拟内存.canvas",
-    "新功能测试.canvas",
-    "Untitled.canvas"
+    "新功能测试.canvas"
   ]
 }

@@ -360,6 +360,10 @@ virsh detach-device
 virsh detach-interface
 ```
 
+## VirtualBox
+
+## VMware
+
 ## 参考
 
 - [Virtualization Guide - OpenSUSE](https://doc.opensuse.org/documentation/leap/virtualization/html/book-virt/index.html)
