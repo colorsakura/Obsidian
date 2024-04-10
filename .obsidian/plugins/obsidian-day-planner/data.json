@@ -23,8 +23,12 @@
   "showUnscheduledNestedTasks": true,
   "showNow": true,
   "showNext": true,
-  "pluginVersion": "0.19.6",
+  "pluginVersion": "0.20.3",
   "showCompletedTasks": true,
   "showSubtasksInTaskBlocks": true,
-  "icals": []
+  "icals": [],
+  "colorOverrides": [],
+  "editMode": "simple",
+  "copyOnDrag": false,
+  "releaseNotes": true
 }

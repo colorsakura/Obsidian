@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "5305516096e772a0",
+        "id": "4b2becf8fe2bf06c",
         "type": "tabs",
         "children": [
           {
-            "id": "82c254e974455cb1",
+            "id": "1af67fbec39d3757",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "index.md",
+                "file": "A计科工程/主机运维/Linux/Tools/tmux.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -49,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tmux",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -66,11 +66,13 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 281.5
+    "width": 281.5,
+    "collapsed": true
   },
   "right": {
     "id": "729cbd70bd48bb1d",
@@ -86,7 +88,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "index.md",
+                "file": "A计科工程/主机运维/Linux/Tools/tmux.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +105,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "index.md",
+                "file": "A计科工程/主机运维/Linux/Tools/tmux.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +128,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "index.md"
+                "file": "A计科工程/主机运维/Linux/Tools/tmux.md"
               }
             }
           },
@@ -143,7 +145,7 @@
             }
           },
           {
-            "id": "96e789b068ba3050",
+            "id": "ecba2674d86c2f52",
             "type": "leaf",
             "state": {
               "type": "timeline",
@@ -151,7 +153,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
@@ -167,41 +169,41 @@
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
-      "obsidian-excalidraw-plugin:Create new drawing": false,
-      "obsidian-day-planner:Timeline": false
+      "obsidian-day-planner:Timeline": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false
     }
   },
-  "active": "82c254e974455cb1",
+  "active": "1af67fbec39d3757",
   "lastOpenFiles": [
+    "A计科工程/编程语言/Lua/Lua 笔记.md",
+    "F阅读娱乐/阅读/Just in Time Learning.md",
+    "F阅读娱乐/阅读/Overlord.md",
+    "F阅读娱乐/阅读/秒懂设计模式2021.md",
+    "F阅读娱乐/阅读/费曼学习法.md",
+    "F阅读娱乐/写作/2024-01-07.md",
+    "G绘图文件/计算机网络.md",
+    "G绘图文件/数据结构.md",
+    "G绘图文件/nastools.md",
+    "G绘图文件/Linux Lancher.excalidraw.md",
+    "G绘图文件/calculator.md",
+    "G绘图文件/iptables.md",
+    "常用工具.md",
+    "index.md",
+    "E临时笔记/strace.md",
+    "E临时笔记/iperf.md",
     "代办列表.md",
     "E临时笔记/htop.md",
     "项目记录.md",
     "阅读记录.md",
-    "常用工具.md",
     "学习记录.md",
     "娱乐记录.md",
-    "index.md",
     "Untitled 1.md",
     "H其他文件/模板/笔记.md",
     "H其他文件/模板/日记.md",
     "H其他文件/模板/阅读.md",
     "H其他文件/IMG/htop-ui.png",
     "Untitled.canvas",
-    "E临时笔记/texlive.md",
-    "E临时笔记/Rime 1.md",
-    "ltex.md",
-    "E临时笔记/javascript笔记.md",
-    "E临时笔记/KDE 6 体验报告.md",
-    "A计科工程/主机运维/Linux/Linux 虚拟机.md",
-    "E临时笔记/kvm.md",
-    "E临时笔记/Rime.md",
-    "E临时笔记/计算机网络.md",
     "E临时笔记/虚拟内存.canvas",
-    "E临时笔记/wine.md",
-    "E临时笔记/zram.md",
-    "E临时笔记/Untitled.md",
-    "E临时笔记/Untitled 1.md",
-    "E临时笔记/go.md",
     "Untitled",
     "Excalidraw",
     "H其他文件/IMG/Pasted image 20230903181204 1.png",
