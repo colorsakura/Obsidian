@@ -11,9 +11,24 @@
             "id": "1af67fbec39d3757",
             "type": "leaf",
             "state": {
+              "type": "canvas",
+              "state": {
+                "file": "E临时笔记/虚拟内存.canvas",
+                "viewState": {
+                  "x": -80,
+                  "y": 0,
+                  "zoom": -0.4697145918991582
+                }
+              }
+            }
+          },
+          {
+            "id": "d20afb39f58ce184",
+            "type": "leaf",
+            "state": {
               "type": "markdown",
               "state": {
-                "file": "A计科工程/主机运维/Linux/Tools/tmux.md",
+                "file": "编辑器之王.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -49,7 +64,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tmux",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -66,13 +81,11 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 281.5,
-    "collapsed": true
+    "width": 281.5
   },
   "right": {
     "id": "729cbd70bd48bb1d",
@@ -88,7 +101,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "A计科工程/主机运维/Linux/Tools/tmux.md",
+                "file": "E临时笔记/虚拟内存.canvas",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -105,7 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "A计科工程/主机运维/Linux/Tools/tmux.md",
+                "file": "E临时笔记/虚拟内存.canvas",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -128,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "A计科工程/主机运维/Linux/Tools/tmux.md"
+                "file": "E临时笔记/虚拟内存.canvas"
               }
             }
           },
@@ -175,6 +188,8 @@
   },
   "active": "1af67fbec39d3757",
   "lastOpenFiles": [
+    "A计科工程/主机运维/Linux/Tools/tmux.md",
+    "编辑器之王.md",
     "A计科工程/编程语言/Lua/Lua 笔记.md",
     "F阅读娱乐/阅读/Just in Time Learning.md",
     "F阅读娱乐/阅读/Overlord.md",
@@ -199,8 +214,6 @@
     "娱乐记录.md",
     "Untitled 1.md",
     "H其他文件/模板/笔记.md",
-    "H其他文件/模板/日记.md",
-    "H其他文件/模板/阅读.md",
     "H其他文件/IMG/htop-ui.png",
     "Untitled.canvas",
     "E临时笔记/虚拟内存.canvas",
