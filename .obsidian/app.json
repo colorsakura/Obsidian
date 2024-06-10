@@ -1,6 +1,3 @@
 {
-  "alwaysUpdateLinks": true,
-  "showUnsupportedFiles": true,
-  "readableLineLength": true,
-  "spellcheck": false
+  "alwaysUpdateLinks": true
 }

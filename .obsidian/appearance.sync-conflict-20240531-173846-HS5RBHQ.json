@@ -1,0 +1,9 @@
+{
+  "accentColor": "",
+  "cssTheme": "Minimal",
+  "theme": "system",
+  "nativeMenus": false,
+  "enabledCssSnippets": [
+    "custom-admonitions.ace703"
+  ]
+}

@@ -1,7 +1,9 @@
 ---
 layout: note
 date: 2023-03-20 17:21
-tags: TODO
+tags:
+  - TODO
+  - linux
 ---
 
 # Linux 常用命令

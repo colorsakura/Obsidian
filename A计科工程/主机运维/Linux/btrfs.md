@@ -29,6 +29,10 @@ btrfs send -p /root_backup /root_backup_new | btrfs receive /backup
 
 `root_backup` 快照名，`backup` 存放文件夹，`root_backup_new` 增量快照名
 
+## 去重
+
+[[Bees]] 是一款专用于 btrfs 文件系统的去重工具.
+
 ## References
 
 - <https://btrfs.readthedocs.io/en/latest/index.html>
