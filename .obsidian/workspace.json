@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "011d6b1fb4bed8cd",
+        "id": "b55f217aac10b53b",
         "type": "tabs",
         "children": [
           {
-            "id": "52bdef84a5886971",
+            "id": "c370d82958dc2ff3",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "A计科工程/主机运维/Windows/Windows 系统优化.md",
+                "file": "A计科工程/主机运维/Linux/Linux 透明代理.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
@@ -49,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "awk",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -66,12 +66,12 @@
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "7d2e615d9854af5d",
@@ -87,7 +87,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "A计科工程/主机运维/Windows/Windows 系统优化.md",
+                "file": "A计科工程/主机运维/Linux/Linux 透明代理.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -104,7 +104,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "A计科工程/主机运维/Windows/Windows 系统优化.md",
+                "file": "A计科工程/主机运维/Linux/Linux 透明代理.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -127,12 +127,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "A计科工程/主机运维/Windows/Windows 系统优化.md"
+                "file": "A计科工程/主机运维/Linux/Linux 透明代理.md"
               }
             }
           },
           {
-            "id": "c269bbea4f8c52e6",
+            "id": "55f1ddcb8f279a8c",
             "type": "leaf",
             "state": {
               "type": "timeline",
@@ -156,13 +156,26 @@
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
-      "obsidian-day-planner:Timeline": false,
-      "obsidian-excalidraw-plugin:Create new drawing": false
+      "obsidian-excalidraw-plugin:Create new drawing": false,
+      "obsidian-day-planner:Timeline": false
     }
   },
-  "active": "52bdef84a5886971",
+  "active": "c370d82958dc2ff3",
   "lastOpenFiles": [
+    "A计科工程/编程语言/Go/Golang 笔记.md",
+    "A计科工程/主机运维/Linux/~syncthing~Linux 美化.md.tmp",
+    "代办列表.md",
+    "isync.md",
+    "A计科工程/编程语言/Zig/Zig 笔记.md",
+    "A计科工程/编程语言/Python/Python 笔记.md",
+    "A计科工程/编程语言/Python/类属性延迟计算.md",
+    "A计科工程/编程语言/Python/魔术方法.md",
+    "A计科工程/主机运维/Windows/Windows 系统优化.md",
+    "A计科工程/主机运维/Windows/MSVC 环境搭建.md",
     "C知识宝库/达芬奇剪辑.md",
+    "项目记录.md",
+    "常用工具.md",
+    "编辑器之王.md",
     "F阅读娱乐/文案/叛逆的鲁鲁修/爱情向.md",
     "H其他文件/IMG/达芬奇.png",
     "F阅读娱乐/文案/叛逆的鲁鲁修",
@@ -171,8 +184,6 @@
     "A计科工程/主机运维/Linux 定时任务.md",
     "F阅读娱乐/写作/2024-01-07.md",
     "E临时笔记/zram.md",
-    "A计科工程/主机运维/Windows/Windows 系统优化.md",
-    "代办列表.md",
     "娱乐记录.md",
     "H其他文件/IMG/windows fonts replace.webp",
     "C知识宝库/Skip Lists.md",
@@ -180,10 +191,6 @@
     "A计科工程/主机运维/Linux/Linux 美化.md",
     "阅读记录.md",
     "学习记录.md",
-    "项目记录.md",
-    "编辑器之王.md",
-    "常用工具.md",
-    "A计科工程/主机运维/Windows/MSVC 环境搭建.md",
     "A计科工程/Potplayer.md",
     "A计科工程/主机运维/Windows"
   ]
