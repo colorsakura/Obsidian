@@ -6,7 +6,7 @@ tags: doc, network, systemd, linux, dns, smartdns
 
 # 网络管理
 
-[[systemd]] 目前正在统一 Linux, 并且多数发行版已采用 `systemd` 替代以前的 `init` ；
+[[Systemd]] 目前正在统一 Linux, 并且多数发行版已采用 `systemd` 替代以前的 `init` ；
 当前的思路是采用最少的软件，最小依赖，并且官方支持的方案。
 Linux 将使用 [[systemd-networkd]] 管理网络，无线网配合 [[iwd]] 使用，本地配置 [[smartdns]] 作 DNS 缓存。
 

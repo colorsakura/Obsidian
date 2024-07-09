@@ -1,0 +1,193 @@
+{
+  "main": {
+    "id": "80b9afbe77e357ac",
+    "type": "split",
+    "children": [
+      {
+        "id": "54386007dc2b925f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "cf2ae60f9df5c5b6",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "3befa7e1bf4cbbd2",
+    "type": "split",
+    "children": [
+      {
+        "id": "aa9d9cd4ee008038",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "76684a349846ef84",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "3edcccebb110c494",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "a9367ce719387575",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 239.5
+  },
+  "right": {
+    "id": "7d2e615d9854af5d",
+    "type": "split",
+    "children": [
+      {
+        "id": "6e8f54e95635c121",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "69bc2685d715bf1a",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": true,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "655e3c76fde5720b",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "e08894ecdc6df2c6",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "2616c279537101f0",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          },
+          {
+            "id": "55f1ddcb8f279a8c",
+            "type": "leaf",
+            "state": {
+              "type": "timeline",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 3
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false,
+      "obsidian-day-planner:Timeline": false
+    }
+  },
+  "active": "cf2ae60f9df5c5b6",
+  "lastOpenFiles": [
+    "A计科工程/编程语言/C++/C++ 笔记.md",
+    "A计科工程/编程语言/C/C 笔记.md",
+    "A计科工程/编程语言/Go/Golang 笔记.md",
+    "A计科工程/编程语言/Go/字符串.md",
+    "A计科工程/编程语言/Python/Python 笔记.md",
+    "A计科工程/主机运维/Windows/MSVC 环境搭建.md",
+    "A计科工程/编程语言/C++",
+    "Untitled.md",
+    "A计科工程/主机运维/Linux/Linux 网络管理.sync-conflict-20240619-193956-CCGQIRG.md",
+    "C知识宝库/Git.sync-conflict-20240619-193956-CCGQIRG.md",
+    "A计科工程/主机运维/Linux/Tools/podman.sync-conflict-20240619-193959-N2AQZFJ.md",
+    "A计科工程/主机运维/Linux/smartdns.sync-conflict-20240619-193959-N2AQZFJ.md",
+    "A计科工程/主机运维/cgit.sync-conflict-20240619-193959-N2AQZFJ.md",
+    "E临时笔记/firefox.sync-conflict-20240619-193959-N2AQZFJ.md",
+    "A计科工程/正则表达式.sync-conflict-20240619-193959-N2AQZFJ.md",
+    "G绘图文件/iptables.sync-conflict-20240619-193959-N2AQZFJ.md",
+    "娱乐记录.sync-conflict-20240619-193959-N2AQZFJ.md",
+    "代办列表.sync-conflict-20240619-193959-N2AQZFJ.md",
+    "A计科工程/主机运维/Linux/Arch/Arch 安装手册.sync-conflict-20240619-193959-N2AQZFJ.md",
+    "A计科工程/汇编实验.sync-conflict-20240619-193959-N2AQZFJ.md",
+    "A计科工程/主机运维/Linux/蓝牙相关问题.sync-conflict-20240619-193959-N2AQZFJ.md",
+    "E临时笔记/iperf.sync-conflict-20240619-193959-N2AQZFJ.md",
+    "D每日笔记/2022-05-22.sync-conflict-20240619-193959-N2AQZFJ.md",
+    "C知识宝库/对数.sync-conflict-20240619-193959-N2AQZFJ.md",
+    "A计科工程/主机运维/Linux/Tools/dmesg.sync-conflict-20240619-193959-N2AQZFJ.md",
+    "A计科工程/主机运维/Truenas Scale.sync-conflict-20240619-193959-N2AQZFJ.md",
+    "D每日笔记/2022-05-03.sync-conflict-20240619-193959-N2AQZFJ.md",
+    "H其他文件/IMG/msvc_install_selections.png",
+    "E临时笔记/虚拟内存.sync-conflict-20240619-193957-N2AQZFJ.canvas",
+    "H其他文件/IMG/vc_buildtool.png",
+    "A计科工程/操作系统",
+    "A计科工程/主机运维/Linux/~syncthing~Linux 美化.md.tmp",
+    "H其他文件/IMG/达芬奇.png",
+    "F阅读娱乐/文案/叛逆的鲁鲁修",
+    "F阅读娱乐/文案",
+    "H其他文件/IMG/windows fonts replace.webp",
+    "A计科工程/主机运维/Windows"
+  ]
+}
