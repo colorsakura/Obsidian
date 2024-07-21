@@ -7,7 +7,6 @@ layout: note
 # C 学习笔记
 
 ---
-
 ## 概述
 
 一个简单的 C 程序。
@@ -15,7 +14,7 @@ layout: note
 ```c
 #include <stdio.h>
 
-int main(int argc, char *argv[] {
+int main(int argc, char *argv[]) {
     printf("Hello Wolrd!\n");
     return 0;
 })

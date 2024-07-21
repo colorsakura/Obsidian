@@ -1,7 +1,8 @@
 ---
 layout: note
 date: 2023-03-14 20:42
-tags: Git, Doc
+tags:
+  - Doc
 ---
 
 # 约定式提交

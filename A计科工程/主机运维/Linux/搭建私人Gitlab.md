@@ -1,7 +1,8 @@
 ---
 layout: note
 date: 2023-03-02 17:07
-tags: TODO, Linux, Gitlab
+tags:
+  - TODO
 ---
 
 试用 `gitlab-ce` 搭建私人git管理服务器。

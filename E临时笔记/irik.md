@@ -1,6 +1,7 @@
 ---
 layout: note
-Tag: Python, NAS, TODO, Doc
+tags:
+  - TODO
 ---
 
 ## TODO

@@ -4,23 +4,37 @@
     "type": "split",
     "children": [
       {
-        "id": "bbf7800efc60f439",
+        "id": "1ad2c45a0a65dd9d",
         "type": "tabs",
         "children": [
           {
-            "id": "de2687b102103b15",
+            "id": "59bc549d1f2b9e7a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "A计科工程/Potplayer.md",
+                "file": "A计科工程/操作系统/Linux/信号.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "b97c9c83bb7e7753",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "位运算.md",
                 "mode": "source",
                 "backlinks": true,
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -87,9 +101,9 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "A计科工程/Potplayer.md",
+                "file": "位运算.md",
                 "collapseAll": true,
-                "extraContext": false,
+                "extraContext": true,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
@@ -104,7 +118,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "A计科工程/Potplayer.md",
+                "file": "位运算.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -127,7 +141,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "A计科工程/Potplayer.md"
+                "file": "位运算.md"
               }
             }
           },
@@ -157,30 +171,43 @@
       "command-palette:Open command palette": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
       "obsidian-excalidraw-plugin:Create new drawing": false,
-      "obsidian-day-planner:Timeline": false
+      "obsidian-day-planner:Timeline": false,
+      "workspaces:Manage workspace layouts": false
     }
   },
-  "active": "de2687b102103b15",
+  "active": "b97c9c83bb7e7753",
   "lastOpenFiles": [
-    "编辑器之王.md",
-    "C知识宝库/Obsidian.md",
-    "A计科工程/主机运维/Linux/Systemd.md",
-    "阅读记录.md",
-    "娱乐记录.md",
-    "学习记录.md",
-    "项目记录.md",
-    "A计科工程/主机运维/Linux/Linux 字体调教指南.md",
-    "A计科工程/主机运维/Linux/wayland 使用指南.md",
-    "A计科工程/主机运维/Linux/Linux 网络管理.md",
-    "A计科工程/主机运维/Linux/systemd.md",
+    "A计科工程/操作系统/Linux/信号.md",
+    "位运算.md",
+    "E临时笔记/计算机网络.md",
+    "A计科工程/操作系统/Linux",
+    "A计科工程/主机运维/Linux/fish.md",
+    "A计科工程/编程语言/C/C 笔记.md",
+    "E临时笔记/fish.md",
+    "lwip.md",
+    "Untitled.md",
+    "H其他文件/PPT/demo.md",
+    "Freertos.md",
+    "C知识宝库/Git 提交规范.md",
+    "A计科工程/主机运维/Linux/搭建私人Gitlab.md",
+    "E临时笔记/irik.md",
+    "A计科工程/主机运维/luks.md",
+    "Clion.md",
     "下载工具.md",
-    "A计科工程/主机运维/Linux 软件清单.md",
-    "A计科工程/主机运维/Windows/笔记.md",
-    "A计科工程/计算机基础.sync-conflict-20240701-093603-2FMBRDL.md",
-    "A计科工程/编程语言/Zig/Zig 笔记.sync-conflict-20240701-093603-2FMBRDL.md",
-    "A计科工程/主机运维/Windows/MSVC 环境搭建.sync-conflict-20240701-093603-2FMBRDL.md",
-    "A计科工程/网络安全.sync-conflict-20240701-093603-2FMBRDL.md",
-    "A计科工程/汇编学习.sync-conflict-20240701-093603-2FMBRDL.md",
+    "isync.md",
+    "index.md",
+    "H其他文件/IMG/Pasted image 20240715074142.png",
+    "ESP32.md",
+    "E临时笔记/systemd-networkd.md",
+    "E临时笔记/qemu.md",
+    "E临时笔记/Rime.md",
+    "E临时笔记/Rime 1.md",
+    "A计科工程/主机运维/Linux/蓝牙相关问题.md",
+    "A计科工程/主机运维/Linux/Raspi/树莓派折腾记录.md",
+    "C知识宝库/翻译积累.md",
+    "A计科工程/操作系统/Freertos",
+    "H其他文件/IMG/ESP32-devkit-pinout.png",
+    "H其他文件/IMG/cat strace.png",
     "A计科工程/编程语言/Zig/~syncthing~Zig 笔记.sync-conflict-20240701-093603-2FMBRDL.md.tmp",
     "A计科工程/~syncthing~计算机基础.sync-conflict-20240701-093603-2FMBRDL.md.tmp",
     "A计科工程/主机运维/Windows/~syncthing~MSVC 环境搭建.sync-conflict-20240701-093603-2FMBRDL.md.tmp",
@@ -188,20 +215,11 @@
     "A计科工程/~syncthing~汇编学习.sync-conflict-20240701-093603-2FMBRDL.md.tmp",
     "A计科工程/~syncthing~fcitx5.md.tmp",
     "A计科工程/主机运维/Linux/~syncthing~Systemd.md.tmp",
-    "A计科工程/汇编实验.md",
-    "A计科工程/汇编学习.md",
-    "A计科工程/计算机基础.md",
-    "A计科工程/网络安全.md",
-    "A计科工程/Python 虚拟环境.md",
-    "Untitled.md",
     "H其他文件/IMG/msbuild.png",
-    "A计科工程/编程语言/Zig/Zig 笔记.md",
     "A计科工程/编程语言/C++",
     "H其他文件/IMG/msvc_install_selections.png",
     "E临时笔记/虚拟内存.sync-conflict-20240619-193957-N2AQZFJ.canvas",
     "H其他文件/IMG/vc_buildtool.png",
-    "A计科工程/操作系统",
-    "A计科工程/主机运维/Linux/~syncthing~Linux 美化.md.tmp",
     "H其他文件/IMG/达芬奇.png",
     "H其他文件/IMG/windows fonts replace.webp"
   ]

@@ -37,4 +37,5 @@ custom_channels:
 
 运行 `conda clean -i` 清除索引缓存，保证用的是镜像站提供的索引。
 运行 `conda create -n myenv numpy` 测试一下吧
+
 ## 参考链接

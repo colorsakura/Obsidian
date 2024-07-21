@@ -1,8 +1,10 @@
 ---
 date: 2022-12-09 10:33
-tags: Linux, Arch, Doc, TODO
+tags:
+  - TODO
+  - linux
+  - archlinux
 layout: note
-lang: zh-CN
 ---
 
 # Arch 安装手册

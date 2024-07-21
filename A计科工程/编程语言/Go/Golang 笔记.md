@@ -2911,7 +2911,7 @@ func main() {
 
 在构建时，一旦 go 发现 `import "C"` 语句，就会寻找目录中的非 go 源码。c/s/S 扩展名的文件会使用 C 编译器编译，cc/cpp/cxx 文件会使用 C++编译器编译。
 
-CFLAGS, CPPFLAGS, CXXFLAGS, FFLAGS, LDFLAGS 等环境变量可以通过伪指令 #cgo来定义 ：
+CFLAGS, CPPFLAGS, CXXFLAGS, FFLAGS, LDFLAGS 等环境变量可以通过伪指令`#cgo`来定义 ：
 
 ```go
 // #cgo CFLAGS: -DPNG_DEBUG=1

@@ -2,6 +2,8 @@
 layout: note
 tags: "fish, shell, linux, arch"
 ---
+## 
+
 
 ## Fish 作为 login shell
 
